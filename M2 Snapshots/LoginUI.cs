@@ -55,15 +55,8 @@ namespace M2_Snapshots
                 {
                     username = userTB.Text;
                     password = passwordTB.Text;
+
                     MainMenu main = new MainMenu();
-                    MainMenu.main.loginLabel.Enabled = false;
-                    MainMenu.main.loginPanel.Enabled = false;
-                    MainMenu.main.studentPic.Enabled = true;
-                    MainMenu.main.teacherPic.Enabled = true;
-                    MainMenu.main.adminPic.Enabled = true;
-                    MainMenu.main.classPic.Enabled = true;
-                    MainMenu.main.paymentPic.Enabled = true;
-                    MainMenu.main.academicPic.Enabled = true;
                     main.Show();
                     
                     this.Hide();
