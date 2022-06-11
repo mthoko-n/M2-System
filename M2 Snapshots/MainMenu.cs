@@ -16,12 +16,7 @@ namespace M2_Snapshots
         public static MainMenu main;
         public Label loginLabel;
         public Panel loginPanel;
-        public PictureBox studentPic;
-        public PictureBox teacherPic;
-        public PictureBox adminPic;
-        public PictureBox paymentPic;
-        public PictureBox classPic;
-        public PictureBox academicPic;
+      
 
         public MainMenu()
         {
@@ -29,12 +24,8 @@ namespace M2_Snapshots
             main = this;
             loginPanel = LoginPnl;
             loginLabel = LoginLbl;
-            studentPic = StudentPB;
-            teacherPic = TeacherPB;
-            adminPic = AdminPB;
-            paymentPic = PaymentPB;
-            classPic = ClassPB;
-            academicPic = AcademicPB;
+           
+          
 
     }
 

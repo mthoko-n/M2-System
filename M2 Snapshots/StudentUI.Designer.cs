@@ -28,126 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.stuUpdateBtn = new System.Windows.Forms.Button();
+            this.stuRemoveBtn = new System.Windows.Forms.Button();
+            this.stuViewBtn = new System.Windows.Forms.Button();
+            this.stuDOB = new System.Windows.Forms.TextBox();
+            this.stuFeesTB = new System.Windows.Forms.TextBox();
+            this.stuIdTB = new System.Windows.Forms.TextBox();
+            this.stuAddressTB = new System.Windows.Forms.TextBox();
+            this.stuLastNameTB = new System.Windows.Forms.TextBox();
+            this.stuFeesLbl = new System.Windows.Forms.Label();
+            this.stuAddBtn = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.stuNameLbl = new System.Windows.Forms.Label();
+            this.stuLastNameLbl = new System.Windows.Forms.Label();
+            this.stuAddrLbl = new System.Windows.Forms.Label();
+            this.stuGenderLbl = new System.Windows.Forms.Label();
+            this.stuNameTB = new System.Windows.Forms.TextBox();
+            this.stuSearchLbl = new System.Windows.Forms.Label();
+            this.stuHeadingLbl = new System.Windows.Forms.Label();
+            this.stuSearchTB = new System.Windows.Forms.TextBox();
+            this.stuIdLbl = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.stuParentNoTB = new System.Windows.Forms.TextBox();
+            this.stuParentNoLbl = new System.Windows.Forms.Label();
+            this.studentDGV = new System.Windows.Forms.DataGridView();
+            this.stuGenderCB = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentDGV)).BeginInit();
             this.SuspendLayout();
             // 
-            // button4
+            // stuUpdateBtn
             // 
-            this.button4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(644, 483);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 40);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Update";
-            this.button4.UseVisualStyleBackColor = false;
+            this.stuUpdateBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.stuUpdateBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuUpdateBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.stuUpdateBtn.Location = new System.Drawing.Point(644, 483);
+            this.stuUpdateBtn.Name = "stuUpdateBtn";
+            this.stuUpdateBtn.Size = new System.Drawing.Size(98, 40);
+            this.stuUpdateBtn.TabIndex = 17;
+            this.stuUpdateBtn.Text = "Update";
+            this.stuUpdateBtn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // stuRemoveBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(196, 483);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 40);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Remove";
-            this.button2.UseVisualStyleBackColor = false;
+            this.stuRemoveBtn.BackColor = System.Drawing.Color.Red;
+            this.stuRemoveBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuRemoveBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.stuRemoveBtn.Location = new System.Drawing.Point(196, 483);
+            this.stuRemoveBtn.Name = "stuRemoveBtn";
+            this.stuRemoveBtn.Size = new System.Drawing.Size(98, 40);
+            this.stuRemoveBtn.TabIndex = 15;
+            this.stuRemoveBtn.Text = "Remove";
+            this.stuRemoveBtn.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // stuViewBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(41, 483);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 40);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "View Details";
-            this.button1.UseVisualStyleBackColor = false;
+            this.stuViewBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.stuViewBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuViewBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.stuViewBtn.Location = new System.Drawing.Point(41, 483);
+            this.stuViewBtn.Name = "stuViewBtn";
+            this.stuViewBtn.Size = new System.Drawing.Size(98, 40);
+            this.stuViewBtn.TabIndex = 14;
+            this.stuViewBtn.Text = "View Details";
+            this.stuViewBtn.UseVisualStyleBackColor = false;
             // 
-            // textBox9
+            // stuDOB
             // 
-            this.textBox9.Location = new System.Drawing.Point(482, 80);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(185, 20);
-            this.textBox9.TabIndex = 18;
+            this.stuDOB.Location = new System.Drawing.Point(482, 80);
+            this.stuDOB.Name = "stuDOB";
+            this.stuDOB.Size = new System.Drawing.Size(185, 20);
+            this.stuDOB.TabIndex = 18;
             // 
-            // textBox8
+            // stuFeesTB
             // 
-            this.textBox8.Location = new System.Drawing.Point(482, 130);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(185, 20);
-            this.textBox8.TabIndex = 17;
+            this.stuFeesTB.Location = new System.Drawing.Point(482, 130);
+            this.stuFeesTB.Name = "stuFeesTB";
+            this.stuFeesTB.Size = new System.Drawing.Size(185, 20);
+            this.stuFeesTB.TabIndex = 17;
             // 
-            // textBox7
+            // stuIdTB
             // 
-            this.textBox7.Location = new System.Drawing.Point(482, 37);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(185, 20);
-            this.textBox7.TabIndex = 16;
+            this.stuIdTB.Location = new System.Drawing.Point(482, 37);
+            this.stuIdTB.Name = "stuIdTB";
+            this.stuIdTB.Size = new System.Drawing.Size(185, 20);
+            this.stuIdTB.TabIndex = 16;
             // 
-            // textBox6
+            // stuAddressTB
             // 
-            this.textBox6.Location = new System.Drawing.Point(112, 192);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(185, 20);
-            this.textBox6.TabIndex = 15;
+            this.stuAddressTB.Location = new System.Drawing.Point(112, 192);
+            this.stuAddressTB.Name = "stuAddressTB";
+            this.stuAddressTB.Size = new System.Drawing.Size(185, 20);
+            this.stuAddressTB.TabIndex = 15;
             // 
-            // textBox4
+            // stuLastNameTB
             // 
-            this.textBox4.Location = new System.Drawing.Point(111, 80);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(185, 20);
-            this.textBox4.TabIndex = 13;
+            this.stuLastNameTB.Location = new System.Drawing.Point(111, 80);
+            this.stuLastNameTB.Name = "stuLastNameTB";
+            this.stuLastNameTB.Size = new System.Drawing.Size(185, 20);
+            this.stuLastNameTB.TabIndex = 13;
             // 
-            // label10
+            // stuFeesLbl
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(349, 136);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 14);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Fees Balance:";
+            this.stuFeesLbl.AutoSize = true;
+            this.stuFeesLbl.Location = new System.Drawing.Point(349, 136);
+            this.stuFeesLbl.Name = "stuFeesLbl";
+            this.stuFeesLbl.Size = new System.Drawing.Size(82, 14);
+            this.stuFeesLbl.TabIndex = 12;
+            this.stuFeesLbl.Text = "Fees Balance:";
             // 
-            // button3
+            // stuAddBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(428, 483);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 40);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Add Student";
-            this.button3.UseVisualStyleBackColor = false;
+            this.stuAddBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.stuAddBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuAddBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.stuAddBtn.Location = new System.Drawing.Point(428, 483);
+            this.stuAddBtn.Name = "stuAddBtn";
+            this.stuAddBtn.Size = new System.Drawing.Size(98, 40);
+            this.stuAddBtn.TabIndex = 16;
+            this.stuAddBtn.Text = "Add Student";
+            this.stuAddBtn.UseVisualStyleBackColor = false;
+            this.stuAddBtn.Click += new System.EventHandler(this.button3_Click);
             // 
             // label9
             // 
@@ -158,119 +159,111 @@
             this.label9.TabIndex = 11;
             this.label9.Text = "Date Of Birth:";
             // 
-            // label3
+            // stuNameLbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(19, 40);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 14);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Name:";
+            this.stuNameLbl.AutoSize = true;
+            this.stuNameLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuNameLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.stuNameLbl.Location = new System.Drawing.Point(19, 40);
+            this.stuNameLbl.Name = "stuNameLbl";
+            this.stuNameLbl.Size = new System.Drawing.Size(41, 14);
+            this.stuNameLbl.TabIndex = 5;
+            this.stuNameLbl.Text = "Name:";
             // 
-            // label4
+            // stuLastNameLbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 86);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 14);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Last Name:";
+            this.stuLastNameLbl.AutoSize = true;
+            this.stuLastNameLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuLastNameLbl.Location = new System.Drawing.Point(19, 86);
+            this.stuLastNameLbl.Name = "stuLastNameLbl";
+            this.stuLastNameLbl.Size = new System.Drawing.Size(68, 14);
+            this.stuLastNameLbl.TabIndex = 6;
+            this.stuLastNameLbl.Text = "Last Name:";
+            this.stuLastNameLbl.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label7
+            // stuAddrLbl
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(19, 198);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 14);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Address:";
+            this.stuAddrLbl.AutoSize = true;
+            this.stuAddrLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuAddrLbl.Location = new System.Drawing.Point(19, 198);
+            this.stuAddrLbl.Name = "stuAddrLbl";
+            this.stuAddrLbl.Size = new System.Drawing.Size(58, 14);
+            this.stuAddrLbl.TabIndex = 9;
+            this.stuAddrLbl.Text = "Address:";
             // 
-            // label6
+            // stuGenderLbl
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 140);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 14);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Gender:";
+            this.stuGenderLbl.AutoSize = true;
+            this.stuGenderLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuGenderLbl.Location = new System.Drawing.Point(19, 140);
+            this.stuGenderLbl.Name = "stuGenderLbl";
+            this.stuGenderLbl.Size = new System.Drawing.Size(51, 14);
+            this.stuGenderLbl.TabIndex = 8;
+            this.stuGenderLbl.Text = "Gender:";
             // 
-            // textBox3
+            // stuNameTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(111, 37);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(185, 20);
-            this.textBox3.TabIndex = 5;
+            this.stuNameTB.Location = new System.Drawing.Point(111, 37);
+            this.stuNameTB.Name = "stuNameTB";
+            this.stuNameTB.Size = new System.Drawing.Size(185, 20);
+            this.stuNameTB.TabIndex = 5;
             // 
-            // textBox2
+            // stuSearchLbl
             // 
-            this.textBox2.Location = new System.Drawing.Point(41, 57);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(701, 159);
-            this.textBox2.TabIndex = 12;
+            this.stuSearchLbl.AutoSize = true;
+            this.stuSearchLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuSearchLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.stuSearchLbl.Location = new System.Drawing.Point(470, 22);
+            this.stuSearchLbl.Name = "stuSearchLbl";
+            this.stuSearchLbl.Size = new System.Drawing.Size(82, 14);
+            this.stuSearchLbl.TabIndex = 11;
+            this.stuSearchLbl.Text = "Search Student";
             // 
-            // label2
+            // stuHeadingLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(470, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 14);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Search Student";
+            this.stuHeadingLbl.AutoSize = true;
+            this.stuHeadingLbl.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuHeadingLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.stuHeadingLbl.Location = new System.Drawing.Point(36, 12);
+            this.stuHeadingLbl.Name = "stuHeadingLbl";
+            this.stuHeadingLbl.Size = new System.Drawing.Size(173, 27);
+            this.stuHeadingLbl.TabIndex = 10;
+            this.stuHeadingLbl.Text = "Student Details";
             // 
-            // label1
+            // stuSearchTB
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(36, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 27);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Student Details";
+            this.stuSearchTB.Location = new System.Drawing.Point(579, 19);
+            this.stuSearchTB.Name = "stuSearchTB";
+            this.stuSearchTB.Size = new System.Drawing.Size(163, 20);
+            this.stuSearchTB.TabIndex = 9;
             // 
-            // textBox1
+            // stuIdLbl
             // 
-            this.textBox1.Location = new System.Drawing.Point(579, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(349, 40);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 14);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Student ID:";
+            this.stuIdLbl.AutoSize = true;
+            this.stuIdLbl.Location = new System.Drawing.Point(349, 40);
+            this.stuIdLbl.Name = "stuIdLbl";
+            this.stuIdLbl.Size = new System.Drawing.Size(66, 14);
+            this.stuIdLbl.TabIndex = 10;
+            this.stuIdLbl.Text = "Student ID:";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.stuGenderCB);
+            this.groupBox1.Controls.Add(this.stuParentNoTB);
+            this.groupBox1.Controls.Add(this.stuParentNoLbl);
+            this.groupBox1.Controls.Add(this.stuDOB);
+            this.groupBox1.Controls.Add(this.stuFeesTB);
+            this.groupBox1.Controls.Add(this.stuIdTB);
+            this.groupBox1.Controls.Add(this.stuAddressTB);
+            this.groupBox1.Controls.Add(this.stuLastNameTB);
+            this.groupBox1.Controls.Add(this.stuFeesLbl);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.stuNameLbl);
+            this.groupBox1.Controls.Add(this.stuIdLbl);
+            this.groupBox1.Controls.Add(this.stuLastNameLbl);
+            this.groupBox1.Controls.Add(this.stuAddrLbl);
+            this.groupBox1.Controls.Add(this.stuGenderLbl);
+            this.groupBox1.Controls.Add(this.stuNameTB);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(41, 234);
@@ -281,62 +274,60 @@
             this.groupBox1.Text = "Add/Update Student";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // radioButton1
+            // stuParentNoTB
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(112, 136);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(51, 18);
-            this.radioButton1.TabIndex = 19;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.stuParentNoTB.Location = new System.Drawing.Point(482, 192);
+            this.stuParentNoTB.Name = "stuParentNoTB";
+            this.stuParentNoTB.Size = new System.Drawing.Size(185, 20);
+            this.stuParentNoTB.TabIndex = 22;
             // 
-            // radioButton2
+            // stuParentNoLbl
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(225, 136);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(65, 18);
-            this.radioButton2.TabIndex = 20;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.stuParentNoLbl.AutoSize = true;
+            this.stuParentNoLbl.Location = new System.Drawing.Point(349, 195);
+            this.stuParentNoLbl.Name = "stuParentNoLbl";
+            this.stuParentNoLbl.Size = new System.Drawing.Size(63, 14);
+            this.stuParentNoLbl.TabIndex = 21;
+            this.stuParentNoLbl.Text = "Parent No:";
             // 
-            // textBox5
+            // studentDGV
             // 
-            this.textBox5.Location = new System.Drawing.Point(482, 192);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(185, 20);
-            this.textBox5.TabIndex = 22;
+            this.studentDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.studentDGV.Location = new System.Drawing.Point(41, 66);
+            this.studentDGV.Name = "studentDGV";
+            this.studentDGV.Size = new System.Drawing.Size(701, 150);
+            this.studentDGV.TabIndex = 18;
             // 
-            // label5
+            // stuGenderCB
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(349, 195);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 14);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Parent No:";
+            this.stuGenderCB.FormattingEnabled = true;
+            this.stuGenderCB.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.stuGenderCB.Location = new System.Drawing.Point(111, 133);
+            this.stuGenderCB.Name = "stuGenderCB";
+            this.stuGenderCB.Size = new System.Drawing.Size(186, 22);
+            this.stuGenderCB.TabIndex = 23;
             // 
             // StudentUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 535);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.studentDGV);
+            this.Controls.Add(this.stuUpdateBtn);
+            this.Controls.Add(this.stuRemoveBtn);
+            this.Controls.Add(this.stuViewBtn);
+            this.Controls.Add(this.stuAddBtn);
+            this.Controls.Add(this.stuSearchLbl);
+            this.Controls.Add(this.stuHeadingLbl);
+            this.Controls.Add(this.stuSearchTB);
             this.Controls.Add(this.groupBox1);
             this.Name = "StudentUI";
             this.Text = "StudentUI";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,31 +335,30 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button stuUpdateBtn;
+        private System.Windows.Forms.Button stuRemoveBtn;
+        private System.Windows.Forms.Button stuViewBtn;
+        private System.Windows.Forms.TextBox stuDOB;
+        private System.Windows.Forms.TextBox stuFeesTB;
+        private System.Windows.Forms.TextBox stuIdTB;
+        private System.Windows.Forms.TextBox stuAddressTB;
+        private System.Windows.Forms.TextBox stuLastNameTB;
+        private System.Windows.Forms.Label stuFeesLbl;
+        private System.Windows.Forms.Button stuAddBtn;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label stuNameLbl;
+        private System.Windows.Forms.Label stuLastNameLbl;
+        private System.Windows.Forms.Label stuAddrLbl;
+        private System.Windows.Forms.Label stuGenderLbl;
+        private System.Windows.Forms.TextBox stuNameTB;
+        private System.Windows.Forms.Label stuSearchLbl;
+        private System.Windows.Forms.Label stuHeadingLbl;
+        private System.Windows.Forms.TextBox stuSearchTB;
+        private System.Windows.Forms.Label stuIdLbl;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox stuParentNoTB;
+        private System.Windows.Forms.Label stuParentNoLbl;
+        private System.Windows.Forms.DataGridView studentDGV;
+        private System.Windows.Forms.ComboBox stuGenderCB;
     }
 }
