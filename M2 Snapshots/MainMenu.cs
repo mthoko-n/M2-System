@@ -91,13 +91,7 @@ namespace M2_Snapshots
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            StudentPB.Enabled = false;
-            TeacherPB.Enabled = false;
-            PaymentPB.Enabled = false;
-            ClassPB.Enabled = false;
-            AdminPB.Enabled = false;
-            SubjectPB.Enabled = false;
-            AcademicPB.Enabled = false;
+            
 
         }
                               
