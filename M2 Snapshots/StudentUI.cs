@@ -32,7 +32,7 @@ namespace M2_Snapshots
             con.Open();
             int age = DateTime.Today.Year - stuDateTimePicker.Value.Year;
             stuAgeTB.Text = age.ToString();
-            SqlCommand command = new SqlCommand("INSERT INTO student values('"+int.Parse(stuIdTB.Text)+ "','" + int.Parse(stuClassIdTB.Text)+ "','" + stuNameTB.Text+ "','" + stuLastNameTB.Text + "','" + stuAddressTB.Text + "','" + stuEmailTB.Text + "','" + age+ "','" + stuGenderCB.Text+ "','" + stuDateTimePicker.Text + "','" + decimal.Parse(stuFeesTB.Text) + "','" + int.Parse(stuParentNoTB.Text) + "')", con);
+            SqlCommand command = new SqlCommand("INSERT INTO students values('"+stuIdTB.Text+ "','" + stuClassIdTB.Text+ "','" + stuNameTB.Text+ "','" + stuLastNameTB.Text + "','" + stuAddressTB.Text + "','" + stuEmailTB.Text + "','" + age.ToString()+ "','" + stuGenderCB.Text+ "','" + stuDateTimePicker.Text + "','" + decimal.Parse(stuFeesTB.Text) + "','" + int.Parse(stuParentNoTB.Text) + "')", con);
 
             command.ExecuteNonQuery();
             MessageBox.Show("Successfully added","Success!",MessageBoxButtons.OK);
@@ -41,7 +41,7 @@ namespace M2_Snapshots
         }
         void BindData()
         {
-            SqlCommand command = new SqlCommand("SELECT* FROM student", con);
+            SqlCommand command = new SqlCommand("SELECT* FROM students", con);
             SqlDataAdapter sd = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             sd.Fill(dt);
