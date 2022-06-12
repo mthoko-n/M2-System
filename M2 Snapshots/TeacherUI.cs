@@ -31,9 +31,16 @@ namespace M2_Snapshots
             con.Open();
             SqlCommand command = new SqlCommand("INSERT INTO Teachers values('"+ textBox5.Text + "','"+ textBox3.Text + "','" + textBox4.Text +"','" + textBox8.Text+ "','" + textBox9.Text+ "','" + comboBox1.Text+ "','" + textBox7.Text + "','" + textBox6.Text+ "')", con);
 
+            command.ExecuteNonQuery();
+            MessageBox.Show("Successfully added", "Success!", MessageBoxButtons.OK);
+            con.Close();
+            BindData2();
         }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        void BindData2()
+        {
+            SqlCommand command = new SqlCommand("SELECT* FROM Teachers", con);
+        }
+            private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
