@@ -18,7 +18,10 @@ namespace M2_Snapshots
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection("Data Source=146.230.177.46;Initial Catalog=GroupPmb2;Persist Security Info=True;User ID=GroupPmb2;Password=***********");
+        SqlConnection con = new SqlConnection("Data Source=146.230.177.46;Initial Catalog=GroupPmb2;Persist Security Info=True;User ID=GroupPmb2;Password=b45dc2");
+
+
+        
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -26,10 +29,45 @@ namespace M2_Snapshots
 
         private void button3_Click(object sender, EventArgs e)
         {
+            con.Open();
+            int age = DateTime.Today.Year - stuDateTimePicker.Value.Year;
+            stuAgeTB.Text = age.ToString();
+            SqlCommand command = new SqlCommand("INSERT INTO student values('"+int.Parse(stuIdTB.Text)+ "','" + int.Parse(stuClassIdTB.Text)+ "','" + stuNameTB.Text+ "','" + stuLastNameTB.Text + "','" + stuAddressTB.Text + "','" + stuEmailTB.Text + "','" + age+ "','" + stuGenderCB.Text+ "','" + stuDateTimePicker.Text + "','" + decimal.Parse(stuFeesTB.Text) + "','" + int.Parse(stuParentNoTB.Text) + "')", con);
+
+            command.ExecuteNonQuery();
+            MessageBox.Show("Successfully added","Success!",MessageBoxButtons.OK);
+            con.Close();
+            BindData();
+        }
+        void BindData()
+        {
+            SqlCommand command = new SqlCommand("SELECT* FROM student", con);
+            SqlDataAdapter sd = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sd.Fill(dt);
+            studentDGV.DataSource = dt;
+        }
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void StudentUI_Load(object sender, EventArgs e)
+        {
+            BindData();
+        }
+
+        private void stuRemoveBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stuUpdateBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stuViewBtn_Click(object sender, EventArgs e)
         {
 
         }
