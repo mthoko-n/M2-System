@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -52,8 +54,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +62,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(224, 177);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(65, 18);
+            this.radioButton2.Size = new System.Drawing.Size(80, 20);
             this.radioButton2.TabIndex = 20;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Female";
@@ -75,7 +75,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(21, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 27);
+            this.label1.Size = new System.Drawing.Size(223, 33);
             this.label1.TabIndex = 19;
             this.label1.Text = "Teacher Details";
             // 
@@ -83,7 +83,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(564, 21);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
+            this.textBox1.Size = new System.Drawing.Size(163, 23);
             this.textBox1.TabIndex = 18;
             // 
             // groupBox1
@@ -114,12 +114,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Teacher";
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(111, 130);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(185, 23);
+            this.textBox5.TabIndex = 22;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(19, 136);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 16);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Teacher ID:";
+            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(111, 177);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(51, 18);
+            this.radioButton1.Size = new System.Drawing.Size(63, 20);
             this.radioButton1.TabIndex = 19;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Male";
@@ -129,35 +146,35 @@
             // 
             this.textBox9.Location = new System.Drawing.Point(482, 80);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(185, 20);
+            this.textBox9.Size = new System.Drawing.Size(185, 23);
             this.textBox9.TabIndex = 18;
             // 
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(482, 175);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(185, 20);
+            this.textBox8.Size = new System.Drawing.Size(185, 23);
             this.textBox8.TabIndex = 17;
             // 
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(482, 37);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(185, 20);
+            this.textBox7.Size = new System.Drawing.Size(185, 23);
             this.textBox7.TabIndex = 16;
             // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(482, 130);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(185, 20);
+            this.textBox6.Size = new System.Drawing.Size(185, 23);
             this.textBox6.TabIndex = 15;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(111, 80);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(185, 20);
+            this.textBox4.Size = new System.Drawing.Size(185, 23);
             this.textBox4.TabIndex = 13;
             // 
             // label10
@@ -165,7 +182,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(349, 177);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 14);
+            this.label10.Size = new System.Drawing.Size(49, 16);
             this.label10.TabIndex = 12;
             this.label10.Text = "Email:";
             // 
@@ -174,7 +191,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(349, 86);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 14);
+            this.label9.Size = new System.Drawing.Size(110, 16);
             this.label9.TabIndex = 11;
             this.label9.Text = "Teachers Title:";
             // 
@@ -185,7 +202,7 @@
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(19, 40);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 14);
+            this.label3.Size = new System.Drawing.Size(51, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Name:";
             // 
@@ -194,7 +211,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(349, 40);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 14);
+            this.label8.Size = new System.Drawing.Size(98, 16);
             this.label8.TabIndex = 10;
             this.label8.Text = "Cell Number:";
             // 
@@ -204,7 +221,7 @@
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(19, 86);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 14);
+            this.label4.Size = new System.Drawing.Size(84, 16);
             this.label4.TabIndex = 6;
             this.label4.Text = "Last Name:";
             // 
@@ -214,7 +231,7 @@
             this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(349, 136);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 14);
+            this.label7.Size = new System.Drawing.Size(70, 16);
             this.label7.TabIndex = 9;
             this.label7.Text = "Address:";
             // 
@@ -224,7 +241,7 @@
             this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(18, 181);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 14);
+            this.label6.Size = new System.Drawing.Size(65, 16);
             this.label6.TabIndex = 8;
             this.label6.Text = "Gender:";
             // 
@@ -232,7 +249,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(111, 37);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(185, 20);
+            this.textBox3.Size = new System.Drawing.Size(185, 23);
             this.textBox3.TabIndex = 5;
             // 
             // label2
@@ -242,7 +259,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(455, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 14);
+            this.label2.Size = new System.Drawing.Size(108, 16);
             this.label2.TabIndex = 20;
             this.label2.Text = "Search Teacher";
             // 
@@ -289,6 +306,7 @@
             this.button3.TabIndex = 25;
             this.button3.Text = "Add Teacher";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -302,26 +320,9 @@
             this.button4.Text = "Update";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(111, 130);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(185, 20);
-            this.textBox5.TabIndex = 22;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 136);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 14);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Teacher ID:";
-            // 
             // TeacherUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(780, 557);
