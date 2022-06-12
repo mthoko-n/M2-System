@@ -76,5 +76,10 @@ namespace M2_Snapshots
         {
 
         }
+
+        private void stuGenderCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

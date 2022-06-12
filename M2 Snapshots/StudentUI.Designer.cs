@@ -382,6 +382,7 @@
             this.stuGenderCB.Name = "stuGenderCB";
             this.stuGenderCB.Size = new System.Drawing.Size(271, 24);
             this.stuGenderCB.TabIndex = 23;
+            this.stuGenderCB.SelectedIndexChanged += new System.EventHandler(this.stuGenderCB_SelectedIndexChanged);
             // 
             // stuParentNoTB
             // 
