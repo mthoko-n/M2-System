@@ -39,10 +39,10 @@ namespace M2_Snapshots
         void BindData2()
         {
             SqlCommand command = new SqlCommand("SELECT* FROM Teachers", con);
-            SqlDataAdapter sd = new SqlDataAdapter(command);
-            DataTable dt = new DataTable();
-            sd.Fill(dt);
-            TeacherDGV.DataSource = dt;
+            SqlDataAdapter ss = new SqlDataAdapter(command);
+            DataTable dd = new DataTable();
+            ss.Fill(dd);
+            TeacherDGV.DataSource = dd;
         }
         private void TeacherUI_Load(object sender, EventArgs e)
         {
