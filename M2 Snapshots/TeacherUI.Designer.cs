@@ -325,7 +325,7 @@
             this.TeacherDGV.Margin = new System.Windows.Forms.Padding(4);
             this.TeacherDGV.Name = "TeacherDGV";
             this.TeacherDGV.RowHeadersWidth = 51;
-            this.TeacherDGV.Size = new System.Drawing.Size(877, 171);
+            this.TeacherDGV.Size = new System.Drawing.Size(870, 171);
             this.TeacherDGV.TabIndex = 18;
             // 
             // TeacherUI
