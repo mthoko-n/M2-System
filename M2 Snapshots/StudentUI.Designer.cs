@@ -107,7 +107,7 @@
             // 
             // stuFeesTB
             // 
-            this.stuFeesTB.Location = new System.Drawing.Point(700, 196);
+            this.stuFeesTB.Location = new System.Drawing.Point(1097, 238);
             this.stuFeesTB.Margin = new System.Windows.Forms.Padding(4);
             this.stuFeesTB.Name = "stuFeesTB";
             this.stuFeesTB.Size = new System.Drawing.Size(269, 23);
@@ -141,7 +141,7 @@
             // stuFeesLbl
             // 
             this.stuFeesLbl.AutoSize = true;
-            this.stuFeesLbl.Location = new System.Drawing.Point(531, 199);
+            this.stuFeesLbl.Location = new System.Drawing.Point(928, 241);
             this.stuFeesLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.stuFeesLbl.Name = "stuFeesLbl";
             this.stuFeesLbl.Size = new System.Drawing.Size(107, 16);
@@ -165,7 +165,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(536, 106);
+            this.label9.Location = new System.Drawing.Point(933, 148);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(102, 16);
@@ -211,7 +211,7 @@
             // 
             this.stuGenderLbl.AutoSize = true;
             this.stuGenderLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuGenderLbl.Location = new System.Drawing.Point(572, 46);
+            this.stuGenderLbl.Location = new System.Drawing.Point(969, 88);
             this.stuGenderLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.stuGenderLbl.Name = "stuGenderLbl";
             this.stuGenderLbl.Size = new System.Drawing.Size(65, 16);
@@ -298,7 +298,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1047, 342);
+            this.groupBox1.Size = new System.Drawing.Size(1505, 342);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Student";
@@ -327,7 +327,7 @@
             // 
             this.stuDateTimePicker.CustomFormat = "dd-MM-yyyy";
             this.stuDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.stuDateTimePicker.Location = new System.Drawing.Point(700, 106);
+            this.stuDateTimePicker.Location = new System.Drawing.Point(1097, 148);
             this.stuDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.stuDateTimePicker.Name = "stuDateTimePicker";
             this.stuDateTimePicker.Size = new System.Drawing.Size(269, 23);
@@ -335,7 +335,7 @@
             // 
             // stuAgeTB
             // 
-            this.stuAgeTB.Location = new System.Drawing.Point(700, 146);
+            this.stuAgeTB.Location = new System.Drawing.Point(1097, 188);
             this.stuAgeTB.Margin = new System.Windows.Forms.Padding(4);
             this.stuAgeTB.Name = "stuAgeTB";
             this.stuAgeTB.ReadOnly = true;
@@ -345,7 +345,7 @@
             // stuAgeLbl
             // 
             this.stuAgeLbl.AutoSize = true;
-            this.stuAgeLbl.Location = new System.Drawing.Point(597, 154);
+            this.stuAgeLbl.Location = new System.Drawing.Point(994, 196);
             this.stuAgeLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.stuAgeLbl.Name = "stuAgeLbl";
             this.stuAgeLbl.Size = new System.Drawing.Size(39, 16);
@@ -377,7 +377,7 @@
             this.stuGenderCB.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.stuGenderCB.Location = new System.Drawing.Point(700, 36);
+            this.stuGenderCB.Location = new System.Drawing.Point(1097, 78);
             this.stuGenderCB.Margin = new System.Windows.Forms.Padding(4);
             this.stuGenderCB.Name = "stuGenderCB";
             this.stuGenderCB.Size = new System.Drawing.Size(271, 24);
@@ -385,7 +385,7 @@
             // 
             // stuParentNoTB
             // 
-            this.stuParentNoTB.Location = new System.Drawing.Point(700, 251);
+            this.stuParentNoTB.Location = new System.Drawing.Point(1097, 293);
             this.stuParentNoTB.Margin = new System.Windows.Forms.Padding(4);
             this.stuParentNoTB.Name = "stuParentNoTB";
             this.stuParentNoTB.Size = new System.Drawing.Size(269, 23);
@@ -394,7 +394,7 @@
             // stuParentNoLbl
             // 
             this.stuParentNoLbl.AutoSize = true;
-            this.stuParentNoLbl.Location = new System.Drawing.Point(556, 258);
+            this.stuParentNoLbl.Location = new System.Drawing.Point(953, 300);
             this.stuParentNoLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.stuParentNoLbl.Name = "stuParentNoLbl";
             this.stuParentNoLbl.Size = new System.Drawing.Size(81, 16);
@@ -408,7 +408,7 @@
             this.studentDGV.Margin = new System.Windows.Forms.Padding(4);
             this.studentDGV.Name = "studentDGV";
             this.studentDGV.RowHeadersWidth = 51;
-            this.studentDGV.Size = new System.Drawing.Size(1118, 185);
+            this.studentDGV.Size = new System.Drawing.Size(1505, 185);
             this.studentDGV.TabIndex = 18;
             // 
             // StudentUI
