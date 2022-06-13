@@ -69,7 +69,7 @@
             this.stuUpdateBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stuUpdateBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.stuUpdateBtn.Location = new System.Drawing.Point(859, 660);
-            this.stuUpdateBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuUpdateBtn.Margin = new System.Windows.Forms.Padding(4);
             this.stuUpdateBtn.Name = "stuUpdateBtn";
             this.stuUpdateBtn.Size = new System.Drawing.Size(131, 49);
             this.stuUpdateBtn.TabIndex = 17;
@@ -83,7 +83,7 @@
             this.stuRemoveBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stuRemoveBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.stuRemoveBtn.Location = new System.Drawing.Point(261, 660);
-            this.stuRemoveBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuRemoveBtn.Margin = new System.Windows.Forms.Padding(4);
             this.stuRemoveBtn.Name = "stuRemoveBtn";
             this.stuRemoveBtn.Size = new System.Drawing.Size(131, 49);
             this.stuRemoveBtn.TabIndex = 15;
@@ -97,7 +97,7 @@
             this.stuViewBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stuViewBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.stuViewBtn.Location = new System.Drawing.Point(55, 660);
-            this.stuViewBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuViewBtn.Margin = new System.Windows.Forms.Padding(4);
             this.stuViewBtn.Name = "stuViewBtn";
             this.stuViewBtn.Size = new System.Drawing.Size(131, 49);
             this.stuViewBtn.TabIndex = 14;
@@ -108,7 +108,7 @@
             // stuFeesTB
             // 
             this.stuFeesTB.Location = new System.Drawing.Point(700, 196);
-            this.stuFeesTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuFeesTB.Margin = new System.Windows.Forms.Padding(4);
             this.stuFeesTB.Name = "stuFeesTB";
             this.stuFeesTB.Size = new System.Drawing.Size(269, 23);
             this.stuFeesTB.TabIndex = 17;
@@ -116,7 +116,7 @@
             // stuIdTB
             // 
             this.stuIdTB.Location = new System.Drawing.Point(149, 38);
-            this.stuIdTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuIdTB.Margin = new System.Windows.Forms.Padding(4);
             this.stuIdTB.Name = "stuIdTB";
             this.stuIdTB.Size = new System.Drawing.Size(269, 23);
             this.stuIdTB.TabIndex = 16;
@@ -125,7 +125,7 @@
             // stuAddressTB
             // 
             this.stuAddressTB.Location = new System.Drawing.Point(149, 251);
-            this.stuAddressTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuAddressTB.Margin = new System.Windows.Forms.Padding(4);
             this.stuAddressTB.Name = "stuAddressTB";
             this.stuAddressTB.Size = new System.Drawing.Size(269, 23);
             this.stuAddressTB.TabIndex = 15;
@@ -133,7 +133,7 @@
             // stuLastNameTB
             // 
             this.stuLastNameTB.Location = new System.Drawing.Point(149, 196);
-            this.stuLastNameTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuLastNameTB.Margin = new System.Windows.Forms.Padding(4);
             this.stuLastNameTB.Name = "stuLastNameTB";
             this.stuLastNameTB.Size = new System.Drawing.Size(269, 23);
             this.stuLastNameTB.TabIndex = 13;
@@ -154,7 +154,7 @@
             this.stuAddBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stuAddBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.stuAddBtn.Location = new System.Drawing.Point(571, 660);
-            this.stuAddBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuAddBtn.Margin = new System.Windows.Forms.Padding(4);
             this.stuAddBtn.Name = "stuAddBtn";
             this.stuAddBtn.Size = new System.Drawing.Size(131, 49);
             this.stuAddBtn.TabIndex = 16;
@@ -221,7 +221,7 @@
             // stuNameTB
             // 
             this.stuNameTB.Location = new System.Drawing.Point(149, 139);
-            this.stuNameTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuNameTB.Margin = new System.Windows.Forms.Padding(4);
             this.stuNameTB.Name = "stuNameTB";
             this.stuNameTB.Size = new System.Drawing.Size(269, 23);
             this.stuNameTB.TabIndex = 5;
@@ -253,7 +253,7 @@
             // stuSearchTB
             // 
             this.stuSearchTB.Location = new System.Drawing.Point(772, 23);
-            this.stuSearchTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuSearchTB.Margin = new System.Windows.Forms.Padding(4);
             this.stuSearchTB.Name = "stuSearchTB";
             this.stuSearchTB.Size = new System.Drawing.Size(216, 22);
             this.stuSearchTB.TabIndex = 9;
@@ -295,9 +295,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(55, 288);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1047, 342);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
@@ -307,7 +307,7 @@
             // stuEmailTB
             // 
             this.stuEmailTB.Location = new System.Drawing.Point(149, 298);
-            this.stuEmailTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuEmailTB.Margin = new System.Windows.Forms.Padding(4);
             this.stuEmailTB.Name = "stuEmailTB";
             this.stuEmailTB.Size = new System.Drawing.Size(269, 23);
             this.stuEmailTB.TabIndex = 30;
@@ -328,7 +328,7 @@
             this.stuDateTimePicker.CustomFormat = "dd-MM-yyyy";
             this.stuDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.stuDateTimePicker.Location = new System.Drawing.Point(700, 106);
-            this.stuDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.stuDateTimePicker.Name = "stuDateTimePicker";
             this.stuDateTimePicker.Size = new System.Drawing.Size(269, 23);
             this.stuDateTimePicker.TabIndex = 28;
@@ -336,7 +336,7 @@
             // stuAgeTB
             // 
             this.stuAgeTB.Location = new System.Drawing.Point(700, 146);
-            this.stuAgeTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuAgeTB.Margin = new System.Windows.Forms.Padding(4);
             this.stuAgeTB.Name = "stuAgeTB";
             this.stuAgeTB.ReadOnly = true;
             this.stuAgeTB.Size = new System.Drawing.Size(269, 23);
@@ -355,7 +355,7 @@
             // stuClassIdTB
             // 
             this.stuClassIdTB.Location = new System.Drawing.Point(149, 87);
-            this.stuClassIdTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuClassIdTB.Margin = new System.Windows.Forms.Padding(4);
             this.stuClassIdTB.Name = "stuClassIdTB";
             this.stuClassIdTB.Size = new System.Drawing.Size(269, 23);
             this.stuClassIdTB.TabIndex = 25;
@@ -378,7 +378,7 @@
             "Male",
             "Female"});
             this.stuGenderCB.Location = new System.Drawing.Point(700, 36);
-            this.stuGenderCB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuGenderCB.Margin = new System.Windows.Forms.Padding(4);
             this.stuGenderCB.Name = "stuGenderCB";
             this.stuGenderCB.Size = new System.Drawing.Size(271, 24);
             this.stuGenderCB.TabIndex = 23;
@@ -386,7 +386,7 @@
             // stuParentNoTB
             // 
             this.stuParentNoTB.Location = new System.Drawing.Point(700, 251);
-            this.stuParentNoTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuParentNoTB.Margin = new System.Windows.Forms.Padding(4);
             this.stuParentNoTB.Name = "stuParentNoTB";
             this.stuParentNoTB.Size = new System.Drawing.Size(269, 23);
             this.stuParentNoTB.TabIndex = 22;
@@ -405,10 +405,10 @@
             // 
             this.studentDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.studentDGV.Location = new System.Drawing.Point(55, 81);
-            this.studentDGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.studentDGV.Margin = new System.Windows.Forms.Padding(4);
             this.studentDGV.Name = "studentDGV";
             this.studentDGV.RowHeadersWidth = 51;
-            this.studentDGV.Size = new System.Drawing.Size(1528, 185);
+            this.studentDGV.Size = new System.Drawing.Size(1118, 185);
             this.studentDGV.TabIndex = 18;
             // 
             // StudentUI
@@ -425,7 +425,7 @@
             this.Controls.Add(this.stuHeadingLbl);
             this.Controls.Add(this.stuSearchTB);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StudentUI";
             this.Text = "StudentUI";
             this.Load += new System.EventHandler(this.StudentUI_Load);

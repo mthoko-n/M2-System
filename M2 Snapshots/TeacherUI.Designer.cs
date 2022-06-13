@@ -98,7 +98,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(26, 248);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1142, 234);
+            this.groupBox1.Size = new System.Drawing.Size(878, 234);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Teacher";
@@ -135,7 +135,7 @@
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(811, 80);
+            this.textBox9.Location = new System.Drawing.Point(668, 82);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(185, 23);
             this.textBox9.TabIndex = 18;
@@ -143,7 +143,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(811, 175);
+            this.textBox8.Location = new System.Drawing.Point(668, 177);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(185, 23);
             this.textBox8.TabIndex = 17;
@@ -151,7 +151,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(811, 37);
+            this.textBox7.Location = new System.Drawing.Point(668, 39);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(185, 23);
             this.textBox7.TabIndex = 16;
@@ -159,7 +159,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(811, 130);
+            this.textBox6.Location = new System.Drawing.Point(668, 132);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(185, 23);
             this.textBox6.TabIndex = 15;
@@ -176,7 +176,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(678, 177);
+            this.label10.Location = new System.Drawing.Point(535, 179);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 16);
             this.label10.TabIndex = 12;
@@ -185,7 +185,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(678, 86);
+            this.label9.Location = new System.Drawing.Point(535, 88);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(110, 16);
             this.label9.TabIndex = 11;
@@ -205,7 +205,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(678, 40);
+            this.label8.Location = new System.Drawing.Point(535, 42);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(98, 16);
             this.label8.TabIndex = 10;
@@ -225,7 +225,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(678, 136);
+            this.label7.Location = new System.Drawing.Point(535, 138);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 16);
             this.label7.TabIndex = 9;
@@ -274,7 +274,7 @@
             this.button2.BackColor = System.Drawing.Color.Red;
             this.button2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(432, 503);
+            this.button2.Location = new System.Drawing.Point(226, 506);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 40);
             this.button2.TabIndex = 24;
@@ -286,7 +286,7 @@
             this.button1.BackColor = System.Drawing.Color.RoyalBlue;
             this.button1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(277, 503);
+            this.button1.Location = new System.Drawing.Point(71, 506);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 40);
             this.button1.TabIndex = 23;
@@ -298,7 +298,7 @@
             this.button3.BackColor = System.Drawing.Color.RoyalBlue;
             this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(664, 500);
+            this.button3.Location = new System.Drawing.Point(458, 503);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(98, 40);
             this.button3.TabIndex = 25;
@@ -311,7 +311,7 @@
             this.button4.BackColor = System.Drawing.Color.RoyalBlue;
             this.button4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(880, 500);
+            this.button4.Location = new System.Drawing.Point(674, 503);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(98, 40);
             this.button4.TabIndex = 26;
@@ -325,7 +325,7 @@
             this.TeacherDGV.Margin = new System.Windows.Forms.Padding(4);
             this.TeacherDGV.Name = "TeacherDGV";
             this.TeacherDGV.RowHeadersWidth = 51;
-            this.TeacherDGV.Size = new System.Drawing.Size(1141, 171);
+            this.TeacherDGV.Size = new System.Drawing.Size(877, 171);
             this.TeacherDGV.TabIndex = 18;
             // 
             // TeacherUI
@@ -333,7 +333,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1272, 566);
+            this.ClientSize = new System.Drawing.Size(938, 566);
             this.Controls.Add(this.TeacherDGV);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
