@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -52,8 +53,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.TeacherDGV = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TeacherDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -100,6 +102,18 @@
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Teacher";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.comboBox1.Location = new System.Drawing.Point(111, 176);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(185, 24);
+            this.comboBox1.TabIndex = 23;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox5
             // 
@@ -226,7 +240,6 @@
             this.label6.Size = new System.Drawing.Size(65, 16);
             this.label6.TabIndex = 8;
             this.label6.Text = "Gender:";
-          
             // 
             // textBox3
             // 
@@ -254,6 +267,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(701, 171);
             this.textBox2.TabIndex = 21;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button2
             // 
@@ -304,17 +318,15 @@
             this.button4.Text = "Update";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // TeacherDGV
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(111, 176);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(185, 24);
-            this.comboBox1.TabIndex = 23;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.TeacherDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TeacherDGV.Location = new System.Drawing.Point(26, 59);
+            this.TeacherDGV.Margin = new System.Windows.Forms.Padding(4);
+            this.TeacherDGV.Name = "TeacherDGV";
+            this.TeacherDGV.RowHeadersWidth = 51;
+            this.TeacherDGV.Size = new System.Drawing.Size(701, 171);
+            this.TeacherDGV.TabIndex = 18;
             // 
             // TeacherUI
             // 
@@ -322,6 +334,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(780, 557);
+            this.Controls.Add(this.TeacherDGV);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox1);
@@ -334,8 +347,10 @@
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "TeacherUI";
             this.Text = "TeacherUI";
+            this.Load += new System.EventHandler(this.TeacherUI_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TeacherDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,6 +375,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DataGridView TeacherDGV;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button2;

@@ -39,8 +39,16 @@ namespace M2_Snapshots
         void BindData2()
         {
             SqlCommand command = new SqlCommand("SELECT* FROM Teachers", con);
+            SqlDataAdapter sd = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sd.Fill(dt);
+            TeacherDGV.DataSource = dt;
         }
-            private void textBox3_TextChanged(object sender, EventArgs e)
+        private void TeacherUI_Load(object sender, EventArgs e)
+        {
+            BindData2();
+        }
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -76,6 +84,11 @@ namespace M2_Snapshots
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
