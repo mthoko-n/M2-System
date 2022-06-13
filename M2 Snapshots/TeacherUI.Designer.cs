@@ -96,9 +96,9 @@
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox1.Location = new System.Drawing.Point(26, 245);
+            this.groupBox1.Location = new System.Drawing.Point(26, 248);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(701, 234);
+            this.groupBox1.Size = new System.Drawing.Size(1142, 234);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Teacher";
@@ -274,7 +274,7 @@
             this.button2.BackColor = System.Drawing.Color.Red;
             this.button2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(181, 488);
+            this.button2.Location = new System.Drawing.Point(432, 503);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 40);
             this.button2.TabIndex = 24;
@@ -286,7 +286,7 @@
             this.button1.BackColor = System.Drawing.Color.RoyalBlue;
             this.button1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(26, 488);
+            this.button1.Location = new System.Drawing.Point(277, 503);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 40);
             this.button1.TabIndex = 23;
@@ -298,7 +298,7 @@
             this.button3.BackColor = System.Drawing.Color.RoyalBlue;
             this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(413, 485);
+            this.button3.Location = new System.Drawing.Point(664, 500);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(98, 40);
             this.button3.TabIndex = 25;
@@ -311,7 +311,7 @@
             this.button4.BackColor = System.Drawing.Color.RoyalBlue;
             this.button4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(629, 485);
+            this.button4.Location = new System.Drawing.Point(880, 500);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(98, 40);
             this.button4.TabIndex = 26;
@@ -321,11 +321,11 @@
             // TeacherDGV
             // 
             this.TeacherDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TeacherDGV.Location = new System.Drawing.Point(26, 59);
+            this.TeacherDGV.Location = new System.Drawing.Point(27, 59);
             this.TeacherDGV.Margin = new System.Windows.Forms.Padding(4);
             this.TeacherDGV.Name = "TeacherDGV";
             this.TeacherDGV.RowHeadersWidth = 51;
-            this.TeacherDGV.Size = new System.Drawing.Size(701, 171);
+            this.TeacherDGV.Size = new System.Drawing.Size(1141, 171);
             this.TeacherDGV.TabIndex = 18;
             // 
             // TeacherUI
@@ -333,7 +333,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(780, 557);
+            this.ClientSize = new System.Drawing.Size(1272, 566);
             this.Controls.Add(this.TeacherDGV);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
