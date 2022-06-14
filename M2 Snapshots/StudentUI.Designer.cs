@@ -298,7 +298,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1505, 342);
+            this.groupBox1.Size = new System.Drawing.Size(1558, 342);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Student";
@@ -408,14 +408,14 @@
             this.studentDGV.Margin = new System.Windows.Forms.Padding(4);
             this.studentDGV.Name = "studentDGV";
             this.studentDGV.RowHeadersWidth = 51;
-            this.studentDGV.Size = new System.Drawing.Size(1505, 185);
+            this.studentDGV.Size = new System.Drawing.Size(1558, 185);
             this.studentDGV.TabIndex = 18;
             // 
             // StudentUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1656, 724);
+            this.ClientSize = new System.Drawing.Size(1682, 724);
             this.Controls.Add(this.studentDGV);
             this.Controls.Add(this.stuUpdateBtn);
             this.Controls.Add(this.stuRemoveBtn);
