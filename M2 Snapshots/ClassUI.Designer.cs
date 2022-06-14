@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TeacherIDTextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.DivisionTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.SearchClassDataGridView = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TeacherIDTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchClassDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,7 @@
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(163, 20);
             this.SearchTextBox.TabIndex = 27;
+            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // groupBox1
             // 
@@ -93,6 +94,22 @@
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Class";
+            // 
+            // TeacherIDTextBox
+            // 
+            this.TeacherIDTextBox.Location = new System.Drawing.Point(118, 93);
+            this.TeacherIDTextBox.Name = "TeacherIDTextBox";
+            this.TeacherIDTextBox.Size = new System.Drawing.Size(171, 20);
+            this.TeacherIDTextBox.TabIndex = 10;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 96);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 14);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Teacher ID:";
             // 
             // label7
             // 
@@ -254,22 +271,6 @@
             this.SearchClassDataGridView.Name = "SearchClassDataGridView";
             this.SearchClassDataGridView.Size = new System.Drawing.Size(316, 322);
             this.SearchClassDataGridView.TabIndex = 36;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 96);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 14);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Teacher ID:";
-            // 
-            // TeacherIDTextBox
-            // 
-            this.TeacherIDTextBox.Location = new System.Drawing.Point(118, 93);
-            this.TeacherIDTextBox.Name = "TeacherIDTextBox";
-            this.TeacherIDTextBox.Size = new System.Drawing.Size(171, 20);
-            this.TeacherIDTextBox.TabIndex = 10;
             // 
             // ClassUI
             // 
