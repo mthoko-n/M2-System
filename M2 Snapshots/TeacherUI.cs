@@ -97,5 +97,10 @@ namespace M2_Snapshots
         {
 
         }
+
+        private void classClearBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

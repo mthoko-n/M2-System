@@ -59,6 +59,7 @@
             this.stuParentNoTB = new System.Windows.Forms.TextBox();
             this.stuParentNoLbl = new System.Windows.Forms.Label();
             this.studentDGV = new System.Windows.Forms.DataGridView();
+            this.ClearBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDGV)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +69,7 @@
             this.stuUpdateBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.stuUpdateBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stuUpdateBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.stuUpdateBtn.Location = new System.Drawing.Point(644, 536);
+            this.stuUpdateBtn.Location = new System.Drawing.Point(969, 536);
             this.stuUpdateBtn.Name = "stuUpdateBtn";
             this.stuUpdateBtn.Size = new System.Drawing.Size(98, 40);
             this.stuUpdateBtn.TabIndex = 17;
@@ -81,7 +82,7 @@
             this.stuRemoveBtn.BackColor = System.Drawing.Color.Red;
             this.stuRemoveBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stuRemoveBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.stuRemoveBtn.Location = new System.Drawing.Point(196, 536);
+            this.stuRemoveBtn.Location = new System.Drawing.Point(644, 536);
             this.stuRemoveBtn.Name = "stuRemoveBtn";
             this.stuRemoveBtn.Size = new System.Drawing.Size(98, 40);
             this.stuRemoveBtn.TabIndex = 15;
@@ -98,7 +99,7 @@
             this.stuViewBtn.Name = "stuViewBtn";
             this.stuViewBtn.Size = new System.Drawing.Size(98, 40);
             this.stuViewBtn.TabIndex = 14;
-            this.stuViewBtn.Text = "View Details";
+            this.stuViewBtn.Text = "Search";
             this.stuViewBtn.UseVisualStyleBackColor = false;
             this.stuViewBtn.Click += new System.EventHandler(this.stuViewBtn_Click);
             // 
@@ -115,7 +116,6 @@
             this.stuIdTB.Name = "stuIdTB";
             this.stuIdTB.Size = new System.Drawing.Size(203, 20);
             this.stuIdTB.TabIndex = 16;
-           
             // 
             // stuAddressTB
             // 
@@ -145,7 +145,7 @@
             this.stuAddBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.stuAddBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stuAddBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.stuAddBtn.Location = new System.Drawing.Point(428, 536);
+            this.stuAddBtn.Location = new System.Drawing.Point(800, 536);
             this.stuAddBtn.Name = "stuAddBtn";
             this.stuAddBtn.Size = new System.Drawing.Size(98, 40);
             this.stuAddBtn.TabIndex = 16;
@@ -278,7 +278,6 @@
             this.groupBox1.Location = new System.Drawing.Point(41, 234);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1558, 342);
             this.groupBox1.Size = new System.Drawing.Size(1129, 278);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
@@ -378,16 +377,24 @@
             this.studentDGV.Location = new System.Drawing.Point(41, 66);
             this.studentDGV.Name = "studentDGV";
             this.studentDGV.RowHeadersWidth = 51;
-            this.studentDGV.Size = new System.Drawing.Size(1558, 185);
             this.studentDGV.Size = new System.Drawing.Size(1129, 150);
             this.studentDGV.TabIndex = 18;
+            // 
+            // ClearBtn
+            // 
+            this.ClearBtn.Location = new System.Drawing.Point(267, 536);
+            this.ClearBtn.Name = "ClearBtn";
+            this.ClearBtn.Size = new System.Drawing.Size(89, 39);
+            this.ClearBtn.TabIndex = 39;
+            this.ClearBtn.Text = "Clear";
+            this.ClearBtn.UseVisualStyleBackColor = true;
             // 
             // StudentUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1682, 724);
-            this.ClientSize = new System.Drawing.Size(1028, 588);
+            this.ClientSize = new System.Drawing.Size(1187, 588);
+            this.Controls.Add(this.ClearBtn);
             this.Controls.Add(this.studentDGV);
             this.Controls.Add(this.stuUpdateBtn);
             this.Controls.Add(this.stuRemoveBtn);
@@ -441,5 +448,6 @@
         private System.Windows.Forms.Label stuClassIdLbl;
         private System.Windows.Forms.TextBox stuEmailTB;
         private System.Windows.Forms.Label stuEmailLbl;
+        private System.Windows.Forms.Button ClearBtn;
     }
 }
