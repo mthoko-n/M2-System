@@ -222,7 +222,7 @@
             this.label2.Size = new System.Drawing.Size(109, 16);
             this.label2.TabIndex = 29;
             this.label2.Text = "Search Class ID";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            
             // 
             // RemoveButton
             // 
