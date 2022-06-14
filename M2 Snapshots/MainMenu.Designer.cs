@@ -37,7 +37,6 @@
             this.AcademicPB = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.AdminPB = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,9 +62,9 @@
             this.StudentPB.BackColor = System.Drawing.Color.WhiteSmoke;
             this.StudentPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.StudentPB.Image = ((System.Drawing.Image)(resources.GetObject("StudentPB.Image")));
-            this.StudentPB.Location = new System.Drawing.Point(28, 168);
+            this.StudentPB.Location = new System.Drawing.Point(21, 33);
             this.StudentPB.Name = "StudentPB";
-            this.StudentPB.Size = new System.Drawing.Size(165, 104);
+            this.StudentPB.Size = new System.Drawing.Size(187, 128);
             this.StudentPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.StudentPB.TabIndex = 1;
             this.StudentPB.TabStop = false;
@@ -75,9 +74,9 @@
             // 
             this.TeacherPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.TeacherPB.Image = ((System.Drawing.Image)(resources.GetObject("TeacherPB.Image")));
-            this.TeacherPB.Location = new System.Drawing.Point(233, 168);
+            this.TeacherPB.Location = new System.Drawing.Point(245, 33);
             this.TeacherPB.Name = "TeacherPB";
-            this.TeacherPB.Size = new System.Drawing.Size(165, 104);
+            this.TeacherPB.Size = new System.Drawing.Size(177, 128);
             this.TeacherPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.TeacherPB.TabIndex = 2;
             this.TeacherPB.TabStop = false;
@@ -87,9 +86,9 @@
             // 
             this.PaymentPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PaymentPB.Image = ((System.Drawing.Image)(resources.GetObject("PaymentPB.Image")));
-            this.PaymentPB.Location = new System.Drawing.Point(633, 168);
+            this.PaymentPB.Location = new System.Drawing.Point(682, 33);
             this.PaymentPB.Name = "PaymentPB";
-            this.PaymentPB.Size = new System.Drawing.Size(165, 104);
+            this.PaymentPB.Size = new System.Drawing.Size(170, 128);
             this.PaymentPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PaymentPB.TabIndex = 4;
             this.PaymentPB.TabStop = false;
@@ -99,9 +98,9 @@
             // 
             this.SubjectPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.SubjectPB.Image = ((System.Drawing.Image)(resources.GetObject("SubjectPB.Image")));
-            this.SubjectPB.Location = new System.Drawing.Point(434, 168);
+            this.SubjectPB.Location = new System.Drawing.Point(455, 33);
             this.SubjectPB.Name = "SubjectPB";
-            this.SubjectPB.Size = new System.Drawing.Size(165, 104);
+            this.SubjectPB.Size = new System.Drawing.Size(178, 128);
             this.SubjectPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SubjectPB.TabIndex = 6;
             this.SubjectPB.TabStop = false;
@@ -111,9 +110,9 @@
             // 
             this.ClassPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClassPB.Image = ((System.Drawing.Image)(resources.GetObject("ClassPB.Image")));
-            this.ClassPB.Location = new System.Drawing.Point(222, 179);
+            this.ClassPB.Location = new System.Drawing.Point(245, 232);
             this.ClassPB.Name = "ClassPB";
-            this.ClassPB.Size = new System.Drawing.Size(165, 104);
+            this.ClassPB.Size = new System.Drawing.Size(177, 128);
             this.ClassPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ClassPB.TabIndex = 7;
             this.ClassPB.TabStop = false;
@@ -123,9 +122,9 @@
             // 
             this.AcademicPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.AcademicPB.Image = ((System.Drawing.Image)(resources.GetObject("AcademicPB.Image")));
-            this.AcademicPB.Location = new System.Drawing.Point(17, 179);
+            this.AcademicPB.Location = new System.Drawing.Point(23, 232);
             this.AcademicPB.Name = "AcademicPB";
-            this.AcademicPB.Size = new System.Drawing.Size(165, 104);
+            this.AcademicPB.Size = new System.Drawing.Size(187, 128);
             this.AcademicPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AcademicPB.TabIndex = 8;
             this.AcademicPB.TabStop = false;
@@ -135,13 +134,16 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox1.Controls.Add(this.AdminPB);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.ClassPB);
+            this.groupBox1.Controls.Add(this.StudentPB);
+            this.groupBox1.Controls.Add(this.TeacherPB);
+            this.groupBox1.Controls.Add(this.SubjectPB);
             this.groupBox1.Controls.Add(this.AcademicPB);
+            this.groupBox1.Controls.Add(this.PaymentPB);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(11, 135);
+            this.groupBox1.Location = new System.Drawing.Point(46, 148);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(799, 324);
+            this.groupBox1.Size = new System.Drawing.Size(889, 406);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "School Management Quick Access";
@@ -151,25 +153,13 @@
             // 
             this.AdminPB.BackColor = System.Drawing.Color.WhiteSmoke;
             this.AdminPB.Image = ((System.Drawing.Image)(resources.GetObject("AdminPB.Image")));
-            this.AdminPB.Location = new System.Drawing.Point(423, 179);
+            this.AdminPB.Location = new System.Drawing.Point(455, 232);
             this.AdminPB.Name = "AdminPB";
-            this.AdminPB.Size = new System.Drawing.Size(165, 104);
+            this.AdminPB.Size = new System.Drawing.Size(178, 128);
             this.AdminPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AdminPB.TabIndex = 16;
             this.AdminPB.TabStop = false;
             this.AdminPB.Click += new System.EventHandler(this.AdminPB_Click_1);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.label3.Font = new System.Drawing.Font("Poppins SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(469, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 42);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "340";
             // 
             // menuStrip1
             // 
@@ -179,7 +169,7 @@
             this.teacherToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(868, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(977, 24);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -199,7 +189,7 @@
             // 
             this.LoginPnl.BackColor = System.Drawing.Color.LimeGreen;
             this.LoginPnl.Controls.Add(this.LoginLbl);
-            this.LoginPnl.Location = new System.Drawing.Point(28, 37);
+            this.LoginPnl.Location = new System.Drawing.Point(46, 37);
             this.LoginPnl.Name = "LoginPnl";
             this.LoginPnl.Size = new System.Drawing.Size(187, 75);
             this.LoginPnl.TabIndex = 20;
@@ -222,7 +212,7 @@
             // 
             this.LogoutPnl.BackColor = System.Drawing.Color.Red;
             this.LogoutPnl.Controls.Add(this.LogoutLbl);
-            this.LogoutPnl.Location = new System.Drawing.Point(601, 37);
+            this.LogoutPnl.Location = new System.Drawing.Point(748, 37);
             this.LogoutPnl.Name = "LogoutPnl";
             this.LogoutPnl.Size = new System.Drawing.Size(187, 75);
             this.LogoutPnl.TabIndex = 21;
@@ -233,7 +223,7 @@
             this.LogoutLbl.AutoSize = true;
             this.LogoutLbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LogoutLbl.Location = new System.Drawing.Point(41, 23);
+            this.LogoutLbl.Location = new System.Drawing.Point(32, 23);
             this.LogoutLbl.Name = "LogoutLbl";
             this.LogoutLbl.Size = new System.Drawing.Size(117, 32);
             this.LogoutLbl.TabIndex = 1;
@@ -244,13 +234,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(868, 537);
+            this.ClientSize = new System.Drawing.Size(977, 601);
             this.Controls.Add(this.LogoutPnl);
             this.Controls.Add(this.LoginPnl);
-            this.Controls.Add(this.StudentPB);
-            this.Controls.Add(this.SubjectPB);
-            this.Controls.Add(this.PaymentPB);
-            this.Controls.Add(this.TeacherPB);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -265,7 +251,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ClassPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AcademicPB)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminPB)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -286,7 +271,6 @@
         private System.Windows.Forms.PictureBox ClassPB;
         private System.Windows.Forms.PictureBox AcademicPB;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem teacherToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
