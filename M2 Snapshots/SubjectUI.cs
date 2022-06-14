@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace M2_Snapshots
 {
@@ -17,14 +18,140 @@ namespace M2_Snapshots
             InitializeComponent();
         }
 
+        SqlConnection con = new SqlConnection("Data Source=146.230.177.46;Initial Catalog=GroupPmb2;Persist Security Info=True;User ID=GroupPmb2;Password=b45dc2");
+
+        void BindData()
+        {
+            SqlCommand command = new SqlCommand("select * from classes", con);
+            SqlDataAdapter sd = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sd.Fill(dt);
+            SubjectDataGridView.DataSource = dt;
+        }
+
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
 
+        //Add subject 
         private void button3_Click(object sender, EventArgs e)
         {
+            if ((SubjectNameTextBox.Text != "") && (SubjectIDTextBox.Text != "") && (SubjectDetailsTextBox.Text != ""))
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand("insert into subjects values ('" + SubjectIDTextBox.Text + "','" + SubjectNameTextBox.Text + "','" + SubjectDetailsTextBox.Text  + "')", con);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Successfully Inserted");
+                con.Close();
+                BindData();
+            }
+            else
+            {
+                MessageBox.Show("Enter All Fields");
+            }
 
+        }
+    
+
+        private void SearchSubjectBtn_Click(object sender, EventArgs e)
+        {
+            if (SearchSubjectTextBox.Text != "")
+            {
+                SqlCommand command = new SqlCommand("select * from subjects where subject_ID = '" + SearchSubjectTextBox.Text + "'", con);
+                SqlDataAdapter sd = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                SubjectDataGridView.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("Enter Subject ID in the Search box");
+            }
+        }
+
+        private void ClearSubjectBtn_Click(object sender, EventArgs e)
+        {
+            BindData();
+            SearchSubjectTextBox.Clear();
+            SubjectNameTextBox.Clear();
+            SubjectIDTextBox.Clear();
+            SubjectDetailsTextBox.Clear();
+        }
+
+        private void RemoveSubjectBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (SearchSubjectTextBox.Text != "")
+                {
+
+                    DialogResult res = MessageBox.Show("Do you want to remove?", "Remove", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (res == DialogResult.Yes)
+                    {
+                        con.Open();
+                        SqlCommand command = new SqlCommand("Delete subjects where subject_ID = '" + SearchSubjectTextBox.Text + "'", con);
+                        command.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Successfully Removed");
+                        BindData();
+                    }
+
+                    else
+                    {
+                        this.Show();
+                    }
+
+
+                }
+
+                else
+                {
+                    MessageBox.Show("Enter Subject ID in the Search box");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Enter VALID Subject ID", "Subject ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void UpdateSubjectBtn_Click(object sender, EventArgs e)
+        {
+            if ((SubjectIDTextBox.Text != "") || (SubjectNameTextBox.Text != "") || (SubjectDetailsTextBox.Text != ""))
+            {
+                con.Open();
+
+                if ((SubjectNameTextBox.Text != "") && (SubjectIDTextBox.Text != ""))
+
+                {
+                    SqlCommand command = new SqlCommand("update subjects set subject_name = '" + SubjectNameTextBox.Text + "' where subject_ID = '" + SubjectIDTextBox.Text + "'", con);
+                    command.ExecuteNonQuery();
+                }
+                if ((SubjectDetailsTextBox.Text != "") && (SubjectNameTextBox.Text != ""))
+                {
+                    SqlCommand command = new SqlCommand("update subjects set subjDetails = '" + SubjectDetailsTextBox.Text + "' where subject_ID = '" + SubjectIDTextBox.Text + "'", con);
+                    command.ExecuteNonQuery();
+                }
+               
+               
+                
+                con.Close();
+                MessageBox.Show("Successfully Updated");
+                BindData();
+            }
+            else
+            {
+                MessageBox.Show("Fill in appropriate fields");
+            }
+
+        }
+
+        private void SubjectUI_Load(object sender, EventArgs e)
+        {
+            BindData();
         }
     }
 }
