@@ -129,6 +129,7 @@
             this.AcademicPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AcademicPB.TabIndex = 8;
             this.AcademicPB.TabStop = false;
+            this.AcademicPB.Click += new System.EventHandler(this.AcademicPB_Click);
             // 
             // groupBox1
             // 

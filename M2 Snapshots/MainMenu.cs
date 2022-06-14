@@ -148,5 +148,12 @@ namespace M2_Snapshots
             LoginUI loginObj = new LoginUI();
             loginObj.Show();
         }
+
+        private void AcademicPB_Click(object sender, EventArgs e)
+        {
+            AcademicReport_UI academicObj = new AcademicReport_UI();
+            academicObj.Show();
+                
+      }
     }
 }
