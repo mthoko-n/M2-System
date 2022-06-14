@@ -49,6 +49,7 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.SearchClassDataGridView = new System.Windows.Forms.DataGridView();
+            this.classClearBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchClassDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -67,8 +68,7 @@
             // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Location = new System.Drawing.Point(241, 108);
-            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SearchTextBox.Location = new System.Drawing.Point(131, 88);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(216, 22);
             this.SearchTextBox.TabIndex = 27;
@@ -90,11 +90,9 @@
             this.groupBox1.Controls.Add(this.ClassIDTextBox);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox1.Location = new System.Drawing.Point(543, 148);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(27, 292);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(456, 396);
+            this.groupBox1.Size = new System.Drawing.Size(779, 198);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Class";
@@ -142,8 +140,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(16, 287);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(392, 102);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 16);
             this.label6.TabIndex = 21;
@@ -151,8 +148,7 @@
             // 
             // GradeTextBox
             // 
-            this.GradeTextBox.Location = new System.Drawing.Point(157, 283);
-            this.GradeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GradeTextBox.Location = new System.Drawing.Point(498, 99);
             this.GradeTextBox.Name = "GradeTextBox";
             this.GradeTextBox.Size = new System.Drawing.Size(227, 23);
             this.GradeTextBox.TabIndex = 22;
@@ -162,8 +158,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(16, 229);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(392, 55);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 16);
             this.label5.TabIndex = 19;
@@ -171,8 +166,7 @@
             // 
             // BuildingNoTextBox
             // 
-            this.BuildingNoTextBox.Location = new System.Drawing.Point(157, 225);
-            this.BuildingNoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BuildingNoTextBox.Location = new System.Drawing.Point(498, 52);
             this.BuildingNoTextBox.Name = "BuildingNoTextBox";
             this.BuildingNoTextBox.Size = new System.Drawing.Size(227, 23);
             this.BuildingNoTextBox.TabIndex = 20;
@@ -234,8 +228,7 @@
             this.RemoveButton.BackColor = System.Drawing.Color.Red;
             this.RemoveButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.RemoveButton.Location = new System.Drawing.Point(328, 588);
-            this.RemoveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RemoveButton.Location = new System.Drawing.Point(422, 496);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(131, 49);
             this.RemoveButton.TabIndex = 33;
@@ -248,12 +241,11 @@
             this.ViewDetalisButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.ViewDetalisButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ViewDetalisButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ViewDetalisButton.Location = new System.Drawing.Point(37, 587);
-            this.ViewDetalisButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ViewDetalisButton.Location = new System.Drawing.Point(27, 496);
             this.ViewDetalisButton.Name = "ViewDetalisButton";
             this.ViewDetalisButton.Size = new System.Drawing.Size(131, 49);
             this.ViewDetalisButton.TabIndex = 32;
-            this.ViewDetalisButton.Text = "View Details";
+            this.ViewDetalisButton.Text = "Search";
             this.ViewDetalisButton.UseVisualStyleBackColor = false;
             this.ViewDetalisButton.Click += new System.EventHandler(this.ViewDetalisButton_Click);
             // 
@@ -262,8 +254,7 @@
             this.AddButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.AddButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.AddButton.Location = new System.Drawing.Point(553, 587);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddButton.Location = new System.Drawing.Point(573, 496);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(131, 49);
             this.AddButton.TabIndex = 34;
@@ -276,8 +267,7 @@
             this.UpdateButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.UpdateButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.UpdateButton.Location = new System.Drawing.Point(841, 587);
-            this.UpdateButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UpdateButton.Location = new System.Drawing.Point(708, 496);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(131, 49);
             this.UpdateButton.TabIndex = 35;
@@ -288,19 +278,28 @@
             // SearchClassDataGridView
             // 
             this.SearchClassDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SearchClassDataGridView.Location = new System.Drawing.Point(37, 148);
-            this.SearchClassDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SearchClassDataGridView.Location = new System.Drawing.Point(100, 124);
             this.SearchClassDataGridView.Name = "SearchClassDataGridView";
-            this.SearchClassDataGridView.RowHeadersWidth = 51;
-            this.SearchClassDataGridView.Size = new System.Drawing.Size(421, 396);
+            this.SearchClassDataGridView.Size = new System.Drawing.Size(643, 150);
             this.SearchClassDataGridView.TabIndex = 36;
             this.SearchClassDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchClassDataGridView_CellContentClick);
+            // 
+            // classClearBtn
+            // 
+            this.classClearBtn.Location = new System.Drawing.Point(157, 496);
+            this.classClearBtn.Name = "classClearBtn";
+            this.classClearBtn.Size = new System.Drawing.Size(89, 39);
+            this.classClearBtn.TabIndex = 37;
+            this.classClearBtn.Text = "Clear";
+            this.classClearBtn.UseVisualStyleBackColor = true;
+            this.classClearBtn.Click += new System.EventHandler(this.classClearBtn_Click);
             // 
             // ClassUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1055, 658);
+            this.ClientSize = new System.Drawing.Size(869, 552);
+            this.Controls.Add(this.classClearBtn);
             this.Controls.Add(this.SearchClassDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchTextBox);
@@ -345,5 +344,6 @@
         private System.Windows.Forms.DataGridView SearchClassDataGridView;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TeacherIDTextBox;
+        private System.Windows.Forms.Button classClearBtn;
     }
 }

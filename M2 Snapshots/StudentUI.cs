@@ -29,19 +29,25 @@ namespace M2_Snapshots
 
         private void button3_Click(object sender, EventArgs e)
         {
-            con.Open();
-            int age = DateTime.Today.Year - stuDateTimePicker.Value.Year;
-            stuAgeTB.Text = age.ToString();
-            SqlCommand command = new SqlCommand("INSERT INTO students values('"+stuIdTB.Text+ "','" +int.Parse(stuClassIdTB.Text)+ "','" + stuNameTB.Text+ "','" + stuLastNameTB.Text + "','" + stuAddressTB.Text + "','" + stuEmailTB.Text + "','" + age.ToString()+ "','" + stuGenderCB.Text+ "','" + stuDateTimePicker.Text + "','" + decimal.Parse(stuFeesTB.Text) + "','" + int.Parse(stuParentNoTB.Text) + "')", con);
+            if ((stuAddressTB.Text != "") && (stuSearchTB.Text != "") && (stuClassIdTB.Text != "") && (stuIdTB.Text != "") && (stuGenderCB.Text != "") && (stuEmailTB.Text != "") && (stuFeesTB.Text != "") && (stuLastNameTB.Text != "") && (stuNameTB.Text != "") && (stuParentNoTB.Text != "") && (stuAgeTB.Text != ""))
+            {
+                con.Open();
+               
+               
+                SqlCommand command = new SqlCommand("INSERT INTO student values('" + int.Parse(stuIdTB.Text) + "','" + int.Parse(stuClassIdTB.Text) + "','" + stuNameTB.Text + "','" + stuLastNameTB.Text + "','" + stuAddressTB.Text + "','" + stuEmailTB.Text + "','" +int.Parse(stuAgeTB.Text) +"','" + stuGenderCB.Text + "','" + decimal.Parse(stuFeesTB.Text) + "','" + stuParentNoTB.Text + "'", con);
 
-            command.ExecuteNonQuery();
-            MessageBox.Show("Successfully added","Success!",MessageBoxButtons.OK);
-            con.Close();
-            BindData();
+                command.ExecuteNonQuery();
+                con.Close();
+                BindData();
+                MessageBox.Show("Successfully added", "Success!", MessageBoxButtons.OK);
+            }
+            else {
+                MessageBox.Show("Enter all fields","Empty fields");
+            }
         }
         void BindData()
         {
-            SqlCommand command = new SqlCommand("SELECT* FROM students", con);
+            SqlCommand command = new SqlCommand("SELECT* FROM student", con);
             SqlDataAdapter sd = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             sd.Fill(dt);
@@ -55,26 +61,168 @@ namespace M2_Snapshots
         private void StudentUI_Load(object sender, EventArgs e)
         {
             BindData();
+            
         }
 
         private void stuRemoveBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (stuSearchTB.Text != "")
+                {
+
+                    DialogResult res = MessageBox.Show("Do you want to remove?", "Remove", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (res == DialogResult.Yes)
+                    {
+                        con.Open();
+                        SqlCommand command = new SqlCommand("Delete student where stu_ID = '" + int.Parse(stuSearchTB.Text) + "'", con);
+                        command.ExecuteNonQuery();
+                        con.Close();
+                        BindData();
+                        MessageBox.Show("Successfully Removed");
+                    }
+
+                    else
+                    {
+                        this.Show();
+                    }
+
+
+                }
+
+                else
+                {
+                    MessageBox.Show("Enter Student ID in the search box");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Enter VALID Student ID", "Student ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
 
         }
 
         private void stuUpdateBtn_Click(object sender, EventArgs e)
         {
+            if ((stuAddressTB.Text != "") || (stuSearchTB.Text != "") || (stuClassIdTB.Text != "") || (stuIdTB.Text != "") || (stuGenderCB.Text != "") || (stuEmailTB.Text != "") || (stuFeesTB.Text != "") || (stuLastNameTB.Text != "") || (stuNameTB.Text != "") || (stuParentNoTB.Text != "") || (stuAgeTB.Text != ""))
+            {
+                con.Open();
+
+                if ((stuClassIdTB.Text != "") && (stuIdTB.Text != ""))
+
+                {
+                    SqlCommand command = new SqlCommand("update student set classID = '" + int.Parse(stuClassIdTB.Text) + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
+                    command.ExecuteNonQuery();
+                }
+
+                if ((stuNameTB.Text != "") && (stuIdTB.Text != ""))
+                {
+                    SqlCommand command = new SqlCommand("update student set stu_name = '" + stuNameTB.Text + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
+                    command.ExecuteNonQuery();
+                }
+
+                if ((stuLastNameTB.Text != "") && (stuIdTB.Text != ""))
+                {
+                    SqlCommand command = new SqlCommand("update student set stu_surname = '"+stuLastNameTB.Text + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
+                    command.ExecuteNonQuery();
+                }
+
+                if ((stuAddressTB.Text != "") && (stuIdTB.Text != ""))
+                {
+                    SqlCommand command = new SqlCommand("update student set stu_address= '" + stuAddressTB.Text + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
+                    command.ExecuteNonQuery();
+                }
+
+                if ((stuEmailTB.Text != "") && (stuIdTB.Text != ""))
+                {
+                    SqlCommand command = new SqlCommand("update student set stu_email = '" + stuEmailTB.Text + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
+                    command.ExecuteNonQuery();
+                }
+
+                if ((stuAgeTB.Text != "") && (stuIdTB.Text != ""))
+                {
+                    SqlCommand command = new SqlCommand("update student set stu_age = '" + int.Parse(stuAgeTB.Text) + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
+                    command.ExecuteNonQuery();
+                }
+
+                if ((stuGenderCB.Text != "") && (stuIdTB.Text != ""))
+                {
+                    SqlCommand command = new SqlCommand("update student set stu_gender = '" + stuGenderCB.Text + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
+                    command.ExecuteNonQuery();
+                }
+
+                
+                if ((stuFeesTB.Text != "") && (stuIdTB.Text != ""))
+                {
+                    SqlCommand command = new SqlCommand("update student set stu_Fees = '" + decimal.Parse(stuFeesTB.Text) + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
+                    command.ExecuteNonQuery();
+                }
+
+                if ((stuParentNoTB.Text != "") && (stuIdTB.Text != ""))
+                {
+                    SqlCommand command = new SqlCommand("update student set parentContact = '" + stuParentNoTB.Text + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
+                    command.ExecuteNonQuery();
+                }
+               
+                con.Close();
+                BindData();
+                MessageBox.Show("Successfully Updated");
+            }
+            else
+            {
+                MessageBox.Show("Fill in appropriate fields");
+            }
 
         }
 
         private void stuViewBtn_Click(object sender, EventArgs e)
         {
-
+            if (stuSearchTB.Text != "")
+            {
+                SqlCommand command = new SqlCommand("select * from student where stu_ID = '" + int.Parse(stuSearchTB.Text) +"'", con);
+                SqlDataAdapter sd = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                studentDGV.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("Enter Student ID in the Search box");
+            }
         }
 
         private void stuIdTB_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void stuFeesTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stuDateCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            BindData();
+            stuAddressTB.Clear();
+            stuAgeTB.Clear();
+            stuClassIdTB.Clear();
+            stuEmailTB.Clear();
+            stuFeesTB.Clear();
+            stuLastNameTB.Clear();
+            stuNameTB.Clear();
+            stuParentNoTB.Clear();
+            stuIdTB.Clear();
+            stuSearchTB.Clear();
+           
+            stuGenderCB.SelectedIndex = -1;
         }
     }
 }

@@ -29,21 +29,23 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SearchSubjectTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.SubjectIDTextBox = new System.Windows.Forms.TextBox();
+            this.SubjectDetailsTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.SubjectNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.RemoveSubjectBtn = new System.Windows.Forms.Button();
+            this.SearchSubjectBtn = new System.Windows.Forms.Button();
+            this.AddSubjectBtn = new System.Windows.Forms.Button();
+            this.UpdateSubjectBtn = new System.Windows.Forms.Button();
+            this.ClearSubjectBtn = new System.Windows.Forms.Button();
+            this.SubjectDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SubjectDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,24 +59,24 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Subject Details";
             // 
-            // textBox1
+            // SearchSubjectTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(183, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 18;
+            this.SearchSubjectTextBox.Location = new System.Drawing.Point(264, 78);
+            this.SearchSubjectTextBox.Name = "SearchSubjectTextBox";
+            this.SearchSubjectTextBox.Size = new System.Drawing.Size(163, 20);
+            this.SearchSubjectTextBox.TabIndex = 18;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.SubjectIDTextBox);
+            this.groupBox1.Controls.Add(this.SubjectDetailsTextBox);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.SubjectNameTextBox);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox1.Location = new System.Drawing.Point(409, 113);
+            this.groupBox1.Location = new System.Drawing.Point(505, 116);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(342, 234);
             this.groupBox1.TabIndex = 22;
@@ -87,33 +89,33 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(19, 81);
+            this.label4.Location = new System.Drawing.Point(19, 43);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 14);
             this.label4.TabIndex = 17;
             this.label4.Text = "Subject ID:";
             // 
-            // textBox4
+            // SubjectIDTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(125, 78);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(171, 20);
-            this.textBox4.TabIndex = 18;
+            this.SubjectIDTextBox.Location = new System.Drawing.Point(125, 40);
+            this.SubjectIDTextBox.Name = "SubjectIDTextBox";
+            this.SubjectIDTextBox.Size = new System.Drawing.Size(171, 20);
+            this.SubjectIDTextBox.TabIndex = 18;
             // 
-            // textBox7
+            // SubjectDetailsTextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(125, 113);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(171, 38);
-            this.textBox7.TabIndex = 16;
+            this.SubjectDetailsTextBox.Location = new System.Drawing.Point(125, 113);
+            this.SubjectDetailsTextBox.Multiline = true;
+            this.SubjectDetailsTextBox.Name = "SubjectDetailsTextBox";
+            this.SubjectDetailsTextBox.Size = new System.Drawing.Size(171, 38);
+            this.SubjectDetailsTextBox.TabIndex = 16;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(19, 40);
+            this.label3.Location = new System.Drawing.Point(19, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 14);
             this.label3.TabIndex = 5;
@@ -122,105 +124,121 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 126);
+            this.label8.Location = new System.Drawing.Point(19, 126);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 14);
             this.label8.TabIndex = 10;
             this.label8.Text = "Subject Details:";
             // 
-            // textBox3
+            // SubjectNameTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(125, 37);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 20);
-            this.textBox3.TabIndex = 5;
+            this.SubjectNameTextBox.Location = new System.Drawing.Point(125, 75);
+            this.SubjectNameTextBox.Name = "SubjectNameTextBox";
+            this.SubjectNameTextBox.Size = new System.Drawing.Size(171, 20);
+            this.SubjectNameTextBox.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(27, 84);
+            this.label2.Location = new System.Drawing.Point(154, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 14);
             this.label2.TabIndex = 20;
             this.label2.Text = "Search Subject";
             // 
-            // button2
+            // RemoveSubjectBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(248, 471);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 40);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Remove";
-            this.button2.UseVisualStyleBackColor = false;
+            this.RemoveSubjectBtn.BackColor = System.Drawing.Color.Red;
+            this.RemoveSubjectBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveSubjectBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.RemoveSubjectBtn.Location = new System.Drawing.Point(490, 469);
+            this.RemoveSubjectBtn.Name = "RemoveSubjectBtn";
+            this.RemoveSubjectBtn.Size = new System.Drawing.Size(98, 40);
+            this.RemoveSubjectBtn.TabIndex = 24;
+            this.RemoveSubjectBtn.Text = "Remove";
+            this.RemoveSubjectBtn.UseVisualStyleBackColor = false;
+            this.RemoveSubjectBtn.Click += new System.EventHandler(this.RemoveSubjectBtn_Click);
             // 
-            // button1
+            // SearchSubjectBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(30, 470);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 40);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "View Details";
-            this.button1.UseVisualStyleBackColor = false;
+            this.SearchSubjectBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.SearchSubjectBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchSubjectBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SearchSubjectBtn.Location = new System.Drawing.Point(30, 470);
+            this.SearchSubjectBtn.Name = "SearchSubjectBtn";
+            this.SearchSubjectBtn.Size = new System.Drawing.Size(98, 40);
+            this.SearchSubjectBtn.TabIndex = 23;
+            this.SearchSubjectBtn.Text = "Search";
+            this.SearchSubjectBtn.UseVisualStyleBackColor = false;
+            this.SearchSubjectBtn.Click += new System.EventHandler(this.SearchSubjectBtn_Click);
             // 
-            // button3
+            // AddSubjectBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(417, 470);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 40);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "Add Subject";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.AddSubjectBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.AddSubjectBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSubjectBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AddSubjectBtn.Location = new System.Drawing.Point(617, 469);
+            this.AddSubjectBtn.Name = "AddSubjectBtn";
+            this.AddSubjectBtn.Size = new System.Drawing.Size(98, 40);
+            this.AddSubjectBtn.TabIndex = 25;
+            this.AddSubjectBtn.Text = "Add Subject";
+            this.AddSubjectBtn.UseVisualStyleBackColor = false;
+            this.AddSubjectBtn.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // UpdateSubjectBtn
             // 
-            this.button4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(633, 470);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 40);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "Update";
-            this.button4.UseVisualStyleBackColor = false;
+            this.UpdateSubjectBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.UpdateSubjectBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateSubjectBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.UpdateSubjectBtn.Location = new System.Drawing.Point(749, 469);
+            this.UpdateSubjectBtn.Name = "UpdateSubjectBtn";
+            this.UpdateSubjectBtn.Size = new System.Drawing.Size(98, 40);
+            this.UpdateSubjectBtn.TabIndex = 26;
+            this.UpdateSubjectBtn.Text = "Update";
+            this.UpdateSubjectBtn.UseVisualStyleBackColor = false;
+            this.UpdateSubjectBtn.Click += new System.EventHandler(this.UpdateSubjectBtn_Click);
             // 
-            // textBox2
+            // ClearSubjectBtn
             // 
-            this.textBox2.Location = new System.Drawing.Point(30, 107);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(316, 317);
-            this.textBox2.TabIndex = 21;
+            this.ClearSubjectBtn.Location = new System.Drawing.Point(183, 470);
+            this.ClearSubjectBtn.Name = "ClearSubjectBtn";
+            this.ClearSubjectBtn.Size = new System.Drawing.Size(89, 39);
+            this.ClearSubjectBtn.TabIndex = 39;
+            this.ClearSubjectBtn.Text = "Clear";
+            this.ClearSubjectBtn.UseVisualStyleBackColor = true;
+            this.ClearSubjectBtn.Click += new System.EventHandler(this.ClearSubjectBtn_Click);
+            // 
+            // SubjectDataGridView
+            // 
+            this.SubjectDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SubjectDataGridView.Location = new System.Drawing.Point(30, 116);
+            this.SubjectDataGridView.Name = "SubjectDataGridView";
+            this.SubjectDataGridView.Size = new System.Drawing.Size(397, 306);
+            this.SubjectDataGridView.TabIndex = 40;
             // 
             // SubjectUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 523);
+            this.ClientSize = new System.Drawing.Size(890, 548);
+            this.Controls.Add(this.SubjectDataGridView);
+            this.Controls.Add(this.ClearSubjectBtn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SearchSubjectTextBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.RemoveSubjectBtn);
+            this.Controls.Add(this.SearchSubjectBtn);
+            this.Controls.Add(this.AddSubjectBtn);
+            this.Controls.Add(this.UpdateSubjectBtn);
             this.Name = "SubjectUI";
             this.Text = "SubjectUI";
+            this.Load += new System.EventHandler(this.SubjectUI_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SubjectDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,19 +247,20 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SearchSubjectTextBox;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox SubjectDetailsTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox SubjectNameTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button RemoveSubjectBtn;
+        private System.Windows.Forms.Button SearchSubjectBtn;
+        private System.Windows.Forms.Button AddSubjectBtn;
+        private System.Windows.Forms.Button UpdateSubjectBtn;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox SubjectIDTextBox;
+        private System.Windows.Forms.Button ClearSubjectBtn;
+        private System.Windows.Forms.DataGridView SubjectDataGridView;
     }
 }

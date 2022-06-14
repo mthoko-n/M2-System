@@ -37,7 +37,6 @@
             this.stuLastNameTB = new System.Windows.Forms.TextBox();
             this.stuFeesLbl = new System.Windows.Forms.Label();
             this.stuAddBtn = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.stuNameLbl = new System.Windows.Forms.Label();
             this.stuLastNameLbl = new System.Windows.Forms.Label();
             this.stuAddrLbl = new System.Windows.Forms.Label();
@@ -50,7 +49,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.stuEmailTB = new System.Windows.Forms.TextBox();
             this.stuEmailLbl = new System.Windows.Forms.Label();
-            this.stuDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.stuAgeTB = new System.Windows.Forms.TextBox();
             this.stuAgeLbl = new System.Windows.Forms.Label();
             this.stuClassIdTB = new System.Windows.Forms.TextBox();
@@ -59,6 +57,7 @@
             this.stuParentNoTB = new System.Windows.Forms.TextBox();
             this.stuParentNoLbl = new System.Windows.Forms.Label();
             this.studentDGV = new System.Windows.Forms.DataGridView();
+            this.stuClearBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDGV)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +67,7 @@
             this.stuUpdateBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.stuUpdateBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stuUpdateBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.stuUpdateBtn.Location = new System.Drawing.Point(644, 536);
+            this.stuUpdateBtn.Location = new System.Drawing.Point(969, 536);
             this.stuUpdateBtn.Name = "stuUpdateBtn";
             this.stuUpdateBtn.Size = new System.Drawing.Size(98, 40);
             this.stuUpdateBtn.TabIndex = 17;
@@ -81,7 +80,7 @@
             this.stuRemoveBtn.BackColor = System.Drawing.Color.Red;
             this.stuRemoveBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stuRemoveBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.stuRemoveBtn.Location = new System.Drawing.Point(196, 536);
+            this.stuRemoveBtn.Location = new System.Drawing.Point(644, 536);
             this.stuRemoveBtn.Name = "stuRemoveBtn";
             this.stuRemoveBtn.Size = new System.Drawing.Size(98, 40);
             this.stuRemoveBtn.TabIndex = 15;
@@ -98,16 +97,17 @@
             this.stuViewBtn.Name = "stuViewBtn";
             this.stuViewBtn.Size = new System.Drawing.Size(98, 40);
             this.stuViewBtn.TabIndex = 14;
-            this.stuViewBtn.Text = "View Details";
+            this.stuViewBtn.Text = "Search";
             this.stuViewBtn.UseVisualStyleBackColor = false;
             this.stuViewBtn.Click += new System.EventHandler(this.stuViewBtn_Click);
             // 
             // stuFeesTB
             // 
-            this.stuFeesTB.Location = new System.Drawing.Point(823, 193);
+            this.stuFeesTB.Location = new System.Drawing.Point(823, 159);
             this.stuFeesTB.Name = "stuFeesTB";
             this.stuFeesTB.Size = new System.Drawing.Size(203, 20);
             this.stuFeesTB.TabIndex = 17;
+            this.stuFeesTB.TextChanged += new System.EventHandler(this.stuFeesTB_TextChanged);
             // 
             // stuIdTB
             // 
@@ -115,7 +115,6 @@
             this.stuIdTB.Name = "stuIdTB";
             this.stuIdTB.Size = new System.Drawing.Size(203, 20);
             this.stuIdTB.TabIndex = 16;
-           
             // 
             // stuAddressTB
             // 
@@ -134,7 +133,7 @@
             // stuFeesLbl
             // 
             this.stuFeesLbl.AutoSize = true;
-            this.stuFeesLbl.Location = new System.Drawing.Point(696, 196);
+            this.stuFeesLbl.Location = new System.Drawing.Point(700, 159);
             this.stuFeesLbl.Name = "stuFeesLbl";
             this.stuFeesLbl.Size = new System.Drawing.Size(82, 14);
             this.stuFeesLbl.TabIndex = 12;
@@ -145,22 +144,13 @@
             this.stuAddBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.stuAddBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stuAddBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.stuAddBtn.Location = new System.Drawing.Point(428, 536);
+            this.stuAddBtn.Location = new System.Drawing.Point(800, 536);
             this.stuAddBtn.Name = "stuAddBtn";
             this.stuAddBtn.Size = new System.Drawing.Size(98, 40);
             this.stuAddBtn.TabIndex = 16;
             this.stuAddBtn.Text = "Add Student";
             this.stuAddBtn.UseVisualStyleBackColor = false;
             this.stuAddBtn.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(700, 120);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 14);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Date Of Birth:";
             // 
             // stuNameLbl
             // 
@@ -198,7 +188,7 @@
             // 
             this.stuGenderLbl.AutoSize = true;
             this.stuGenderLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuGenderLbl.Location = new System.Drawing.Point(727, 72);
+            this.stuGenderLbl.Location = new System.Drawing.Point(730, 45);
             this.stuGenderLbl.Name = "stuGenderLbl";
             this.stuGenderLbl.Size = new System.Drawing.Size(51, 14);
             this.stuGenderLbl.TabIndex = 8;
@@ -253,7 +243,6 @@
             // 
             this.groupBox1.Controls.Add(this.stuEmailTB);
             this.groupBox1.Controls.Add(this.stuEmailLbl);
-            this.groupBox1.Controls.Add(this.stuDateTimePicker);
             this.groupBox1.Controls.Add(this.stuAgeTB);
             this.groupBox1.Controls.Add(this.stuAgeLbl);
             this.groupBox1.Controls.Add(this.stuClassIdTB);
@@ -269,7 +258,6 @@
             this.groupBox1.Controls.Add(this.stuFeesLbl);
             this.groupBox1.Controls.Add(this.stuNameTB);
             this.groupBox1.Controls.Add(this.stuNameLbl);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.stuIdLbl);
             this.groupBox1.Controls.Add(this.stuLastNameLbl);
             this.groupBox1.Controls.Add(this.stuAddrLbl);
@@ -278,8 +266,7 @@
             this.groupBox1.Location = new System.Drawing.Point(41, 234);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1558, 342);
-            this.groupBox1.Size = new System.Drawing.Size(1129, 278);
+            this.groupBox1.Size = new System.Drawing.Size(1073, 278);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Student";
@@ -302,27 +289,17 @@
             this.stuEmailLbl.TabIndex = 29;
             this.stuEmailLbl.Text = "Email:";
             // 
-            // stuDateTimePicker
-            // 
-            this.stuDateTimePicker.CustomFormat = "dd-MM-yyyy";
-            this.stuDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.stuDateTimePicker.Location = new System.Drawing.Point(823, 120);
-            this.stuDateTimePicker.Name = "stuDateTimePicker";
-            this.stuDateTimePicker.Size = new System.Drawing.Size(203, 20);
-            this.stuDateTimePicker.TabIndex = 28;
-            // 
             // stuAgeTB
             // 
-            this.stuAgeTB.Location = new System.Drawing.Point(823, 153);
+            this.stuAgeTB.Location = new System.Drawing.Point(823, 101);
             this.stuAgeTB.Name = "stuAgeTB";
-            this.stuAgeTB.ReadOnly = true;
             this.stuAgeTB.Size = new System.Drawing.Size(203, 20);
             this.stuAgeTB.TabIndex = 27;
             // 
             // stuAgeLbl
             // 
             this.stuAgeLbl.AutoSize = true;
-            this.stuAgeLbl.Location = new System.Drawing.Point(746, 159);
+            this.stuAgeLbl.Location = new System.Drawing.Point(746, 107);
             this.stuAgeLbl.Name = "stuAgeLbl";
             this.stuAgeLbl.Size = new System.Drawing.Size(32, 14);
             this.stuAgeLbl.TabIndex = 26;
@@ -351,14 +328,14 @@
             this.stuGenderCB.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.stuGenderCB.Location = new System.Drawing.Point(823, 63);
+            this.stuGenderCB.Location = new System.Drawing.Point(822, 37);
             this.stuGenderCB.Name = "stuGenderCB";
             this.stuGenderCB.Size = new System.Drawing.Size(204, 22);
             this.stuGenderCB.TabIndex = 23;
             // 
             // stuParentNoTB
             // 
-            this.stuParentNoTB.Location = new System.Drawing.Point(823, 238);
+            this.stuParentNoTB.Location = new System.Drawing.Point(822, 204);
             this.stuParentNoTB.Name = "stuParentNoTB";
             this.stuParentNoTB.Size = new System.Drawing.Size(203, 20);
             this.stuParentNoTB.TabIndex = 22;
@@ -366,7 +343,7 @@
             // stuParentNoLbl
             // 
             this.stuParentNoLbl.AutoSize = true;
-            this.stuParentNoLbl.Location = new System.Drawing.Point(715, 244);
+            this.stuParentNoLbl.Location = new System.Drawing.Point(714, 210);
             this.stuParentNoLbl.Name = "stuParentNoLbl";
             this.stuParentNoLbl.Size = new System.Drawing.Size(63, 14);
             this.stuParentNoLbl.TabIndex = 21;
@@ -378,16 +355,25 @@
             this.studentDGV.Location = new System.Drawing.Point(41, 66);
             this.studentDGV.Name = "studentDGV";
             this.studentDGV.RowHeadersWidth = 51;
-            this.studentDGV.Size = new System.Drawing.Size(1558, 185);
-            this.studentDGV.Size = new System.Drawing.Size(1129, 150);
+            this.studentDGV.Size = new System.Drawing.Size(1073, 150);
             this.studentDGV.TabIndex = 18;
+            // 
+            // stuClearBtn
+            // 
+            this.stuClearBtn.Location = new System.Drawing.Point(267, 536);
+            this.stuClearBtn.Name = "stuClearBtn";
+            this.stuClearBtn.Size = new System.Drawing.Size(89, 39);
+            this.stuClearBtn.TabIndex = 39;
+            this.stuClearBtn.Text = "Clear";
+            this.stuClearBtn.UseVisualStyleBackColor = true;
+            this.stuClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
             // StudentUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1682, 724);
-            this.ClientSize = new System.Drawing.Size(1028, 588);
+            this.ClientSize = new System.Drawing.Size(1157, 588);
+            this.Controls.Add(this.stuClearBtn);
             this.Controls.Add(this.studentDGV);
             this.Controls.Add(this.stuUpdateBtn);
             this.Controls.Add(this.stuRemoveBtn);
@@ -419,7 +405,6 @@
         private System.Windows.Forms.TextBox stuLastNameTB;
         private System.Windows.Forms.Label stuFeesLbl;
         private System.Windows.Forms.Button stuAddBtn;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label stuNameLbl;
         private System.Windows.Forms.Label stuLastNameLbl;
         private System.Windows.Forms.Label stuAddrLbl;
@@ -434,12 +419,12 @@
         private System.Windows.Forms.Label stuParentNoLbl;
         private System.Windows.Forms.DataGridView studentDGV;
         private System.Windows.Forms.ComboBox stuGenderCB;
-        private System.Windows.Forms.DateTimePicker stuDateTimePicker;
         private System.Windows.Forms.TextBox stuAgeTB;
         private System.Windows.Forms.Label stuAgeLbl;
         private System.Windows.Forms.TextBox stuClassIdTB;
         private System.Windows.Forms.Label stuClassIdLbl;
         private System.Windows.Forms.TextBox stuEmailTB;
         private System.Windows.Forms.Label stuEmailLbl;
+        private System.Windows.Forms.Button stuClearBtn;
     }
 }

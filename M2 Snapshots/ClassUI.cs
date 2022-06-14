@@ -47,31 +47,40 @@ namespace M2_Snapshots
 
         private void RemoveButton_Click(object sender, EventArgs e)
         {
-            if (SearchTextBox.Text != "")
+            try
             {
-              
-                DialogResult res = MessageBox.Show("Do you want to remove?", "Remove", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (res == DialogResult.Yes)
+                if (SearchTextBox.Text != "")
                 {
-                    con.Open();
-                    SqlCommand command = new SqlCommand("Delete classes where class_id = '" + int.Parse(SearchTextBox.Text) + "'", con);
-                    command.ExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show("Successfully Removed");
-                    BindData();
+
+                    DialogResult res = MessageBox.Show("Do you want to remove?", "Remove", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (res == DialogResult.Yes)
+                    {
+                        con.Open();
+                        SqlCommand command = new SqlCommand("Delete classes where class_id = '" + int.Parse(SearchTextBox.Text) + "'", con);
+                        command.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Successfully Removed");
+                        BindData();
+                    }
+
+                    else
+                    {
+                        this.Show();
+                    }
+
+
                 }
 
-                else {
-                    this.Show();
+                else
+                {
+                    MessageBox.Show("Enter Class ID in the search box");
                 }
-     
-               
             }
-            else
-            {
-                MessageBox.Show("Enter Valid Class ID in the search box");
+            catch {
+                MessageBox.Show("Enter VALID class ID","Class ID not valid",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+            
 
         }
 
@@ -99,27 +108,28 @@ namespace M2_Snapshots
             {
                 con.Open();
 
-                if (TeacherIDTextBox.Text != "")
+                if ((TeacherIDTextBox.Text != "") && (ClassIDTextBox.Text != ""))
+                        
                 {
                     SqlCommand command = new SqlCommand("update classes set teacher_id = '" + TeacherIDTextBox.Text + "' where class_id = '" + int.Parse(ClassIDTextBox.Text) + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if (ClassRollTextBox.Text != "")
+                if ((ClassRollTextBox.Text != "") && (ClassIDTextBox.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update classes set numStudents = '" + int.Parse(ClassRollTextBox.Text) + "' where class_id = '" + int.Parse(ClassIDTextBox.Text) + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if (BuildingNoTextBox.Text != "")
+                if ((BuildingNoTextBox.Text != "") && (ClassIDTextBox.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update classes set buildingNo = '" + int.Parse(BuildingNoTextBox.Text) + "' where class_id = '" + int.Parse(ClassIDTextBox.Text) + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if (GradeTextBox.Text != "")
+                if ((GradeTextBox.Text != "") && (ClassIDTextBox.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update classes set grade = '" + int.Parse(GradeTextBox.Text) + "' where class_id = '" + int.Parse(ClassIDTextBox.Text) + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if (DivisionTextBox.Text != "")
+                if ((DivisionTextBox.Text != "") && (ClassIDTextBox.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update classes set Division = '" + char.Parse(DivisionTextBox.Text) + "' where class_id = '" + int.Parse(ClassIDTextBox.Text) + "'", con);
                     command.ExecuteNonQuery();
@@ -144,6 +154,18 @@ namespace M2_Snapshots
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void classClearBtn_Click(object sender, EventArgs e)
+        {
+            BindData();
+            SearchTextBox.Clear();
+            ClassIDTextBox.Clear();
+            TeacherIDTextBox.Clear();
+            BuildingNoTextBox.Clear();
+            DivisionTextBox.Clear();
+            GradeTextBox.Clear();
+            ClassRollTextBox.Clear();
         }
 
         private void SearchClassDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

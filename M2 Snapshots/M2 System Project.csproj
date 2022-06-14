@@ -187,6 +187,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcademicReportUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcademicReportUI.Designer.cs">
+      <DependentUpon>AcademicReportUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +248,9 @@
     <Compile Include="TeacherUI.Designer.cs">
       <DependentUpon>TeacherUI.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AcademicReportUI.resx">
+      <DependentUpon>AcademicReportUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminUI.resx">
       <DependentUpon>AdminUI.cs</DependentUpon>
     </EmbeddedResource>
