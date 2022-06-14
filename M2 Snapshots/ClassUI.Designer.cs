@@ -49,6 +49,7 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.SearchClassDataGridView = new System.Windows.Forms.DataGridView();
+            this.classClearBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchClassDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +67,7 @@
             // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Location = new System.Drawing.Point(181, 88);
+            this.SearchTextBox.Location = new System.Drawing.Point(131, 88);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(163, 20);
             this.SearchTextBox.TabIndex = 27;
@@ -88,9 +89,9 @@
             this.groupBox1.Controls.Add(this.ClassIDTextBox);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox1.Location = new System.Drawing.Point(407, 120);
+            this.groupBox1.Location = new System.Drawing.Point(27, 292);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(342, 322);
+            this.groupBox1.Size = new System.Drawing.Size(779, 198);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Class";
@@ -134,7 +135,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(12, 233);
+            this.label6.Location = new System.Drawing.Point(392, 102);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 14);
             this.label6.TabIndex = 21;
@@ -142,7 +143,7 @@
             // 
             // GradeTextBox
             // 
-            this.GradeTextBox.Location = new System.Drawing.Point(118, 230);
+            this.GradeTextBox.Location = new System.Drawing.Point(498, 99);
             this.GradeTextBox.Name = "GradeTextBox";
             this.GradeTextBox.Size = new System.Drawing.Size(171, 20);
             this.GradeTextBox.TabIndex = 22;
@@ -152,7 +153,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(12, 186);
+            this.label5.Location = new System.Drawing.Point(392, 55);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 14);
             this.label5.TabIndex = 19;
@@ -160,7 +161,7 @@
             // 
             // BuildingNoTextBox
             // 
-            this.BuildingNoTextBox.Location = new System.Drawing.Point(118, 183);
+            this.BuildingNoTextBox.Location = new System.Drawing.Point(498, 52);
             this.BuildingNoTextBox.Name = "BuildingNoTextBox";
             this.BuildingNoTextBox.Size = new System.Drawing.Size(171, 20);
             this.BuildingNoTextBox.TabIndex = 20;
@@ -217,7 +218,7 @@
             this.RemoveButton.BackColor = System.Drawing.Color.Red;
             this.RemoveButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.RemoveButton.Location = new System.Drawing.Point(246, 478);
+            this.RemoveButton.Location = new System.Drawing.Point(422, 496);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(98, 40);
             this.RemoveButton.TabIndex = 33;
@@ -230,11 +231,11 @@
             this.ViewDetalisButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.ViewDetalisButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ViewDetalisButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ViewDetalisButton.Location = new System.Drawing.Point(28, 477);
+            this.ViewDetalisButton.Location = new System.Drawing.Point(27, 496);
             this.ViewDetalisButton.Name = "ViewDetalisButton";
             this.ViewDetalisButton.Size = new System.Drawing.Size(98, 40);
             this.ViewDetalisButton.TabIndex = 32;
-            this.ViewDetalisButton.Text = "View Details";
+            this.ViewDetalisButton.Text = "Search";
             this.ViewDetalisButton.UseVisualStyleBackColor = false;
             this.ViewDetalisButton.Click += new System.EventHandler(this.ViewDetalisButton_Click);
             // 
@@ -243,7 +244,7 @@
             this.AddButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.AddButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.AddButton.Location = new System.Drawing.Point(415, 477);
+            this.AddButton.Location = new System.Drawing.Point(573, 496);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(98, 40);
             this.AddButton.TabIndex = 34;
@@ -256,7 +257,7 @@
             this.UpdateButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.UpdateButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.UpdateButton.Location = new System.Drawing.Point(631, 477);
+            this.UpdateButton.Location = new System.Drawing.Point(708, 496);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(98, 40);
             this.UpdateButton.TabIndex = 35;
@@ -267,16 +268,27 @@
             // SearchClassDataGridView
             // 
             this.SearchClassDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SearchClassDataGridView.Location = new System.Drawing.Point(28, 120);
+            this.SearchClassDataGridView.Location = new System.Drawing.Point(100, 124);
             this.SearchClassDataGridView.Name = "SearchClassDataGridView";
-            this.SearchClassDataGridView.Size = new System.Drawing.Size(316, 322);
+            this.SearchClassDataGridView.Size = new System.Drawing.Size(643, 150);
             this.SearchClassDataGridView.TabIndex = 36;
+            // 
+            // classClearBtn
+            // 
+            this.classClearBtn.Location = new System.Drawing.Point(157, 496);
+            this.classClearBtn.Name = "classClearBtn";
+            this.classClearBtn.Size = new System.Drawing.Size(89, 39);
+            this.classClearBtn.TabIndex = 37;
+            this.classClearBtn.Text = "Clear";
+            this.classClearBtn.UseVisualStyleBackColor = true;
+            this.classClearBtn.Click += new System.EventHandler(this.classClearBtn_Click);
             // 
             // ClassUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 535);
+            this.ClientSize = new System.Drawing.Size(869, 552);
+            this.Controls.Add(this.classClearBtn);
             this.Controls.Add(this.SearchClassDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchTextBox);
@@ -320,5 +332,6 @@
         private System.Windows.Forms.DataGridView SearchClassDataGridView;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TeacherIDTextBox;
+        private System.Windows.Forms.Button classClearBtn;
     }
 }
