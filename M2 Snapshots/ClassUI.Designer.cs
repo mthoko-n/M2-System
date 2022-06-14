@@ -58,17 +58,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(23, 27);
+            this.label1.Location = new System.Drawing.Point(31, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 27);
+            this.label1.Size = new System.Drawing.Size(189, 33);
             this.label1.TabIndex = 28;
             this.label1.Text = "Class Details";
             // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Location = new System.Drawing.Point(181, 88);
+            this.SearchTextBox.Location = new System.Drawing.Point(241, 108);
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(163, 20);
+            this.SearchTextBox.Size = new System.Drawing.Size(216, 22);
             this.SearchTextBox.TabIndex = 27;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
@@ -88,26 +90,30 @@
             this.groupBox1.Controls.Add(this.ClassIDTextBox);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox1.Location = new System.Drawing.Point(407, 120);
+            this.groupBox1.Location = new System.Drawing.Point(543, 148);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(342, 322);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(456, 396);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Class";
             // 
             // TeacherIDTextBox
             // 
-            this.TeacherIDTextBox.Location = new System.Drawing.Point(118, 93);
+            this.TeacherIDTextBox.Location = new System.Drawing.Point(157, 114);
+            this.TeacherIDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TeacherIDTextBox.Name = "TeacherIDTextBox";
-            this.TeacherIDTextBox.Size = new System.Drawing.Size(171, 20);
+            this.TeacherIDTextBox.Size = new System.Drawing.Size(227, 23);
             this.TeacherIDTextBox.TabIndex = 10;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 96);
+            this.label8.Location = new System.Drawing.Point(16, 118);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 14);
+            this.label8.Size = new System.Drawing.Size(86, 16);
             this.label8.TabIndex = 25;
             this.label8.Text = "Teacher ID:";
             // 
@@ -116,17 +122,19 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(12, 278);
+            this.label7.Location = new System.Drawing.Point(16, 342);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 14);
+            this.label7.Size = new System.Drawing.Size(65, 16);
             this.label7.TabIndex = 23;
             this.label7.Text = "Division";
             // 
             // DivisionTextBox
             // 
-            this.DivisionTextBox.Location = new System.Drawing.Point(118, 275);
+            this.DivisionTextBox.Location = new System.Drawing.Point(157, 338);
+            this.DivisionTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DivisionTextBox.Name = "DivisionTextBox";
-            this.DivisionTextBox.Size = new System.Drawing.Size(171, 20);
+            this.DivisionTextBox.Size = new System.Drawing.Size(227, 23);
             this.DivisionTextBox.TabIndex = 24;
             // 
             // label6
@@ -134,17 +142,19 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(12, 233);
+            this.label6.Location = new System.Drawing.Point(16, 287);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 14);
+            this.label6.Size = new System.Drawing.Size(55, 16);
             this.label6.TabIndex = 21;
             this.label6.Text = "Grade:";
             // 
             // GradeTextBox
             // 
-            this.GradeTextBox.Location = new System.Drawing.Point(118, 230);
+            this.GradeTextBox.Location = new System.Drawing.Point(157, 283);
+            this.GradeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GradeTextBox.Name = "GradeTextBox";
-            this.GradeTextBox.Size = new System.Drawing.Size(171, 20);
+            this.GradeTextBox.Size = new System.Drawing.Size(227, 23);
             this.GradeTextBox.TabIndex = 22;
             // 
             // label5
@@ -152,17 +162,19 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(12, 186);
+            this.label5.Location = new System.Drawing.Point(16, 229);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 14);
+            this.label5.Size = new System.Drawing.Size(93, 16);
             this.label5.TabIndex = 19;
             this.label5.Text = "Building No:";
             // 
             // BuildingNoTextBox
             // 
-            this.BuildingNoTextBox.Location = new System.Drawing.Point(118, 183);
+            this.BuildingNoTextBox.Location = new System.Drawing.Point(157, 225);
+            this.BuildingNoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BuildingNoTextBox.Name = "BuildingNoTextBox";
-            this.BuildingNoTextBox.Size = new System.Drawing.Size(171, 20);
+            this.BuildingNoTextBox.Size = new System.Drawing.Size(227, 23);
             this.BuildingNoTextBox.TabIndex = 20;
             // 
             // label4
@@ -170,17 +182,19 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(12, 140);
+            this.label4.Location = new System.Drawing.Point(16, 172);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 14);
+            this.label4.Size = new System.Drawing.Size(120, 16);
             this.label4.TabIndex = 17;
             this.label4.Text = "No. of Students:";
             // 
             // ClassRollTextBox
             // 
-            this.ClassRollTextBox.Location = new System.Drawing.Point(118, 137);
+            this.ClassRollTextBox.Location = new System.Drawing.Point(157, 169);
+            this.ClassRollTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ClassRollTextBox.Name = "ClassRollTextBox";
-            this.ClassRollTextBox.Size = new System.Drawing.Size(171, 20);
+            this.ClassRollTextBox.Size = new System.Drawing.Size(227, 23);
             this.ClassRollTextBox.TabIndex = 18;
             // 
             // label3
@@ -188,17 +202,19 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(12, 58);
+            this.label3.Location = new System.Drawing.Point(16, 71);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 14);
+            this.label3.Size = new System.Drawing.Size(68, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Class ID:";
             // 
             // ClassIDTextBox
             // 
-            this.ClassIDTextBox.Location = new System.Drawing.Point(118, 55);
+            this.ClassIDTextBox.Location = new System.Drawing.Point(157, 68);
+            this.ClassIDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ClassIDTextBox.Name = "ClassIDTextBox";
-            this.ClassIDTextBox.Size = new System.Drawing.Size(171, 20);
+            this.ClassIDTextBox.Size = new System.Drawing.Size(227, 23);
             this.ClassIDTextBox.TabIndex = 5;
             // 
             // label2
@@ -206,9 +222,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(25, 91);
+            this.label2.Location = new System.Drawing.Point(33, 112);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 14);
+            this.label2.Size = new System.Drawing.Size(109, 16);
             this.label2.TabIndex = 29;
             this.label2.Text = "Search Class ID";
             // 
@@ -217,9 +234,10 @@
             this.RemoveButton.BackColor = System.Drawing.Color.Red;
             this.RemoveButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.RemoveButton.Location = new System.Drawing.Point(246, 478);
+            this.RemoveButton.Location = new System.Drawing.Point(328, 588);
+            this.RemoveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(98, 40);
+            this.RemoveButton.Size = new System.Drawing.Size(131, 49);
             this.RemoveButton.TabIndex = 33;
             this.RemoveButton.Text = "Remove";
             this.RemoveButton.UseVisualStyleBackColor = false;
@@ -230,9 +248,10 @@
             this.ViewDetalisButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.ViewDetalisButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ViewDetalisButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ViewDetalisButton.Location = new System.Drawing.Point(28, 477);
+            this.ViewDetalisButton.Location = new System.Drawing.Point(37, 587);
+            this.ViewDetalisButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ViewDetalisButton.Name = "ViewDetalisButton";
-            this.ViewDetalisButton.Size = new System.Drawing.Size(98, 40);
+            this.ViewDetalisButton.Size = new System.Drawing.Size(131, 49);
             this.ViewDetalisButton.TabIndex = 32;
             this.ViewDetalisButton.Text = "View Details";
             this.ViewDetalisButton.UseVisualStyleBackColor = false;
@@ -243,9 +262,10 @@
             this.AddButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.AddButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.AddButton.Location = new System.Drawing.Point(415, 477);
+            this.AddButton.Location = new System.Drawing.Point(553, 587);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(98, 40);
+            this.AddButton.Size = new System.Drawing.Size(131, 49);
             this.AddButton.TabIndex = 34;
             this.AddButton.Text = "Add Class";
             this.AddButton.UseVisualStyleBackColor = false;
@@ -256,9 +276,10 @@
             this.UpdateButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.UpdateButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.UpdateButton.Location = new System.Drawing.Point(631, 477);
+            this.UpdateButton.Location = new System.Drawing.Point(841, 587);
+            this.UpdateButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(98, 40);
+            this.UpdateButton.Size = new System.Drawing.Size(131, 49);
             this.UpdateButton.TabIndex = 35;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = false;
@@ -267,16 +288,19 @@
             // SearchClassDataGridView
             // 
             this.SearchClassDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SearchClassDataGridView.Location = new System.Drawing.Point(28, 120);
+            this.SearchClassDataGridView.Location = new System.Drawing.Point(37, 148);
+            this.SearchClassDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SearchClassDataGridView.Name = "SearchClassDataGridView";
-            this.SearchClassDataGridView.Size = new System.Drawing.Size(316, 322);
+            this.SearchClassDataGridView.RowHeadersWidth = 51;
+            this.SearchClassDataGridView.Size = new System.Drawing.Size(421, 396);
             this.SearchClassDataGridView.TabIndex = 36;
+            this.SearchClassDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchClassDataGridView_CellContentClick);
             // 
             // ClassUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 535);
+            this.ClientSize = new System.Drawing.Size(1055, 658);
             this.Controls.Add(this.SearchClassDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchTextBox);
@@ -286,6 +310,7 @@
             this.Controls.Add(this.ViewDetalisButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.UpdateButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ClassUI";
             this.Text = "ClassUI";
             this.Load += new System.EventHandler(this.ClassUI_Load);
