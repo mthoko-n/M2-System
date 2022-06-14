@@ -96,7 +96,7 @@ namespace M2_Snapshots
                 }
                 if ((payDetailsTB.Text != "") && (payReceiptNoTB.Text != ""))
                 {
-                    SqlCommand command = new SqlCommand("update PaymentService set pay_Details = '" + payDetailsTB.Text + "' where receiptNum = '" + int.Parse(payReceiptNoTB) + "'", con);
+                    SqlCommand command = new SqlCommand("update PaymentService set pay_Details = '" + payDetailsTB.Text + "' where receiptNum = '" + int.Parse(payReceiptNoTB.Text) + "'", con);
                     command.ExecuteNonQuery();
                 }
                 con.Close();
