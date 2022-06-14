@@ -109,5 +109,72 @@ namespace M2_Snapshots
             }
 
         }
+
+        private void payClearBtn_Click(object sender, EventArgs e)
+        {
+            BindData();
+            payAdminIdTB.Clear();
+            payAmountTB.Clear();
+            payDateTB.Clear();
+            payDetailsTB.Clear();
+            payReceiptNoTB.Clear();
+            paySearchTB.Clear();
+            payStuIdTB.Clear();
+            payTypeCB.SelectedIndex = -1;
+        }
+
+        private void paySearchBtn_Click(object sender, EventArgs e)
+        {
+            if (paySearchTB.Text != "")
+            {
+                SqlCommand command = new SqlCommand("select * from PaymentService where stu_ID= '" + int.Parse(paySearchTB.Text) + "'", con);
+                SqlDataAdapter sd = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                payDGV.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("Enter Student ID in the Search box");
+            }
+        }
+
+        private void payRemoveBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (paySearchTB.Text != "")
+                {
+
+                    DialogResult res = MessageBox.Show("Do you want to remove?", "Remove", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (res == DialogResult.Yes)
+                    {
+                        con.Open();
+                        SqlCommand command = new SqlCommand("Delete PaymentSerive where stu_ID = '" + int.Parse(paySearchTB.Text) + "'", con);
+                        command.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Successfully Removed");
+                        BindData();
+                    }
+
+                    else
+                    {
+                        this.Show();
+                    }
+
+
+                }
+
+                else
+                {
+                    MessageBox.Show("Enter Student ID in the search box");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Enter VALID student ID", "Student ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

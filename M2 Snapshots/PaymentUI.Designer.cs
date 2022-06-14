@@ -93,6 +93,7 @@
             this.paySearchBtn.TabIndex = 23;
             this.paySearchBtn.Text = "Search";
             this.paySearchBtn.UseVisualStyleBackColor = false;
+            this.paySearchBtn.Click += new System.EventHandler(this.paySearchBtn_Click);
             // 
             // payRemoveBtn
             // 
@@ -105,6 +106,7 @@
             this.payRemoveBtn.TabIndex = 24;
             this.payRemoveBtn.Text = "Remove";
             this.payRemoveBtn.UseVisualStyleBackColor = false;
+            this.payRemoveBtn.Click += new System.EventHandler(this.payRemoveBtn_Click);
             // 
             // label2
             // 
@@ -262,6 +264,7 @@
             this.payClearBtn.TabIndex = 39;
             this.payClearBtn.Text = "Clear";
             this.payClearBtn.UseVisualStyleBackColor = true;
+            this.payClearBtn.Click += new System.EventHandler(this.payClearBtn_Click);
             // 
             // payTypeCB
             // 
