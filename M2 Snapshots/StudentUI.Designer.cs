@@ -277,6 +277,8 @@
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(41, 234);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(1558, 342);
             this.groupBox1.Size = new System.Drawing.Size(1129, 278);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
@@ -376,6 +378,7 @@
             this.studentDGV.Location = new System.Drawing.Point(41, 66);
             this.studentDGV.Name = "studentDGV";
             this.studentDGV.RowHeadersWidth = 51;
+            this.studentDGV.Size = new System.Drawing.Size(1558, 185);
             this.studentDGV.Size = new System.Drawing.Size(1129, 150);
             this.studentDGV.TabIndex = 18;
             // 
@@ -383,6 +386,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1682, 724);
             this.ClientSize = new System.Drawing.Size(1028, 588);
             this.Controls.Add(this.studentDGV);
             this.Controls.Add(this.stuUpdateBtn);
