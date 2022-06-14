@@ -167,5 +167,10 @@ namespace M2_Snapshots
             GradeTextBox.Clear();
             ClassRollTextBox.Clear();
         }
+
+        private void SearchClassDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
