@@ -29,15 +29,21 @@ namespace M2_Snapshots
 
         private void button3_Click(object sender, EventArgs e)
         {
-            con.Open();
-            int age = DateTime.Today.Year - stuDateTimePicker.Value.Year;
-            stuAgeTB.Text = age.ToString();
-            SqlCommand command = new SqlCommand("INSERT INTO student values('"+int.Parse(stuIdTB.Text)+ "','" +int.Parse(stuClassIdTB.Text)+ "','" + stuNameTB.Text+ "','" + stuLastNameTB.Text + "','" + stuAddressTB.Text + "','" + stuEmailTB.Text + "','" + age+ "','" + stuGenderCB.Text+ "','" + stuDateTimePicker.Text + "','" + decimal.Parse(stuFeesTB.Text) + "','" + stuParentNoTB.Text + "')", con);
+            if ((stuAddressTB.Text != "") && (stuSearchTB.Text != "") && (stuClassIdTB.Text != "") && (stuIdTB.Text != "") && (stuGenderCB.Text != "") && (stuEmailTB.Text != "") && (stuFeesTB.Text != "") && (stuLastNameTB.Text != "") && (stuNameTB.Text != "") && (stuParentNoTB.Text != "") && (stuAgeTB.Text != ""))
+            {
+                con.Open();
+               
+               
+                SqlCommand command = new SqlCommand("INSERT INTO student values('" + int.Parse(stuIdTB.Text) + "','" + int.Parse(stuClassIdTB.Text) + "','" + stuNameTB.Text + "','" + stuLastNameTB.Text + "','" + stuAddressTB.Text + "','" + stuEmailTB.Text + "','" +int.Parse(stuAgeTB.Text) +"','" + stuGenderCB.Text + "','" + decimal.Parse(stuFeesTB.Text) + "','" + stuParentNoTB.Text + "'", con);
 
-            command.ExecuteNonQuery();
-            con.Close();
-            BindData();
-            MessageBox.Show("Successfully added", "Success!", MessageBoxButtons.OK);
+                command.ExecuteNonQuery();
+                con.Close();
+                BindData();
+                MessageBox.Show("Successfully added", "Success!", MessageBoxButtons.OK);
+            }
+            else {
+                MessageBox.Show("Enter all fields","Empty fields");
+            }
         }
         void BindData()
         {
@@ -55,11 +61,47 @@ namespace M2_Snapshots
         private void StudentUI_Load(object sender, EventArgs e)
         {
             BindData();
-            stuDateTimePicker.Enabled = false;
+            
         }
 
         private void stuRemoveBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (stuSearchTB.Text != "")
+                {
+
+                    DialogResult res = MessageBox.Show("Do you want to remove?", "Remove", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (res == DialogResult.Yes)
+                    {
+                        con.Open();
+                        SqlCommand command = new SqlCommand("Delete student where stu_ID = '" + int.Parse(stuSearchTB.Text) + "'", con);
+                        command.ExecuteNonQuery();
+                        con.Close();
+                        BindData();
+                        MessageBox.Show("Successfully Removed");
+                    }
+
+                    else
+                    {
+                        this.Show();
+                    }
+
+
+                }
+
+                else
+                {
+                    MessageBox.Show("Enter Student ID in the search box");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Enter VALID Student ID", "Student ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
 
         }
 
@@ -112,11 +154,7 @@ namespace M2_Snapshots
                     command.ExecuteNonQuery();
                 }
 
-                if ((stuDateTimePicker.Text != "") && (stuIdTB.Text != ""))
-                {
-                    SqlCommand command = new SqlCommand("update student set stu_DOB = '" + stuDateTimePicker.Text + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
-                    command.ExecuteNonQuery();
-                }
+                
                 if ((stuFeesTB.Text != "") && (stuIdTB.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update student set stu_Fees = '" + decimal.Parse(stuFeesTB.Text) + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
@@ -142,7 +180,18 @@ namespace M2_Snapshots
 
         private void stuViewBtn_Click(object sender, EventArgs e)
         {
-
+            if (stuSearchTB.Text != "")
+            {
+                SqlCommand command = new SqlCommand("select * from student where stu_ID = '" + int.Parse(stuSearchTB.Text) +"'", con);
+                SqlDataAdapter sd = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                studentDGV.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("Enter Student ID in the Search box");
+            }
         }
 
         private void stuIdTB_TextChanged(object sender, EventArgs e)
@@ -157,15 +206,6 @@ namespace M2_Snapshots
 
         private void stuDateCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (stuDateCheckBox.Checked)
-            {
-                stuDateTimePicker.Enabled = true;
-            }
-
-            else
-            {
-                stuDateTimePicker.Enabled = false;
-            }
         }
 
         private void ClearBtn_Click(object sender, EventArgs e)
@@ -181,8 +221,8 @@ namespace M2_Snapshots
             stuParentNoTB.Clear();
             stuIdTB.Clear();
             stuSearchTB.Clear();
-            stuDateTimePicker.ResetText();
-            stuGenderCB.Items.Clear();
+           
+            stuGenderCB.SelectedIndex = -1;
         }
     }
 }
