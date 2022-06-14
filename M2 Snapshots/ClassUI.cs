@@ -145,5 +145,10 @@ namespace M2_Snapshots
         {
 
         }
+
+        private void SearchClassDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
