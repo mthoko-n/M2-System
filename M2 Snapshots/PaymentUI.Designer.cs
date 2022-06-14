@@ -297,9 +297,9 @@
             // payDGV
             // 
             this.payDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.payDGV.Location = new System.Drawing.Point(62, 63);
+            this.payDGV.Location = new System.Drawing.Point(91, 63);
             this.payDGV.Name = "payDGV";
-            this.payDGV.Size = new System.Drawing.Size(803, 150);
+            this.payDGV.Size = new System.Drawing.Size(747, 150);
             this.payDGV.TabIndex = 40;
             // 
             // PaymentUI
