@@ -59,7 +59,8 @@
             this.stuParentNoTB = new System.Windows.Forms.TextBox();
             this.stuParentNoLbl = new System.Windows.Forms.Label();
             this.studentDGV = new System.Windows.Forms.DataGridView();
-            this.ClearBtn = new System.Windows.Forms.Button();
+            this.stuClearBtn = new System.Windows.Forms.Button();
+            this.stuDateCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDGV)).BeginInit();
             this.SuspendLayout();
@@ -105,10 +106,11 @@
             // 
             // stuFeesTB
             // 
-            this.stuFeesTB.Location = new System.Drawing.Point(823, 193);
+            this.stuFeesTB.Location = new System.Drawing.Point(823, 204);
             this.stuFeesTB.Name = "stuFeesTB";
             this.stuFeesTB.Size = new System.Drawing.Size(203, 20);
             this.stuFeesTB.TabIndex = 17;
+            this.stuFeesTB.TextChanged += new System.EventHandler(this.stuFeesTB_TextChanged);
             // 
             // stuIdTB
             // 
@@ -134,7 +136,7 @@
             // stuFeesLbl
             // 
             this.stuFeesLbl.AutoSize = true;
-            this.stuFeesLbl.Location = new System.Drawing.Point(696, 196);
+            this.stuFeesLbl.Location = new System.Drawing.Point(700, 204);
             this.stuFeesLbl.Name = "stuFeesLbl";
             this.stuFeesLbl.Size = new System.Drawing.Size(82, 14);
             this.stuFeesLbl.TabIndex = 12;
@@ -198,7 +200,7 @@
             // 
             this.stuGenderLbl.AutoSize = true;
             this.stuGenderLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuGenderLbl.Location = new System.Drawing.Point(727, 72);
+            this.stuGenderLbl.Location = new System.Drawing.Point(730, 45);
             this.stuGenderLbl.Name = "stuGenderLbl";
             this.stuGenderLbl.Size = new System.Drawing.Size(51, 14);
             this.stuGenderLbl.TabIndex = 8;
@@ -251,6 +253,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.stuDateCheckBox);
             this.groupBox1.Controls.Add(this.stuEmailTB);
             this.groupBox1.Controls.Add(this.stuEmailLbl);
             this.groupBox1.Controls.Add(this.stuDateTimePicker);
@@ -303,16 +306,18 @@
             // 
             // stuDateTimePicker
             // 
-            this.stuDateTimePicker.CustomFormat = "dd-MM-yyyy";
-            this.stuDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.stuDateTimePicker.Location = new System.Drawing.Point(823, 120);
+            this.stuDateTimePicker.Checked = false;
+            this.stuDateTimePicker.CustomFormat = "";
+            this.stuDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.stuDateTimePicker.Location = new System.Drawing.Point(823, 122);
             this.stuDateTimePicker.Name = "stuDateTimePicker";
             this.stuDateTimePicker.Size = new System.Drawing.Size(203, 20);
             this.stuDateTimePicker.TabIndex = 28;
+            this.stuDateTimePicker.Value = new System.DateTime(2022, 6, 14, 7, 17, 25, 0);
             // 
             // stuAgeTB
             // 
-            this.stuAgeTB.Location = new System.Drawing.Point(823, 153);
+            this.stuAgeTB.Location = new System.Drawing.Point(823, 165);
             this.stuAgeTB.Name = "stuAgeTB";
             this.stuAgeTB.ReadOnly = true;
             this.stuAgeTB.Size = new System.Drawing.Size(203, 20);
@@ -321,7 +326,7 @@
             // stuAgeLbl
             // 
             this.stuAgeLbl.AutoSize = true;
-            this.stuAgeLbl.Location = new System.Drawing.Point(746, 159);
+            this.stuAgeLbl.Location = new System.Drawing.Point(746, 171);
             this.stuAgeLbl.Name = "stuAgeLbl";
             this.stuAgeLbl.Size = new System.Drawing.Size(32, 14);
             this.stuAgeLbl.TabIndex = 26;
@@ -350,7 +355,7 @@
             this.stuGenderCB.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.stuGenderCB.Location = new System.Drawing.Point(823, 63);
+            this.stuGenderCB.Location = new System.Drawing.Point(822, 37);
             this.stuGenderCB.Name = "stuGenderCB";
             this.stuGenderCB.Size = new System.Drawing.Size(204, 22);
             this.stuGenderCB.TabIndex = 23;
@@ -380,21 +385,33 @@
             this.studentDGV.Size = new System.Drawing.Size(1129, 150);
             this.studentDGV.TabIndex = 18;
             // 
-            // ClearBtn
+            // stuClearBtn
             // 
-            this.ClearBtn.Location = new System.Drawing.Point(267, 536);
-            this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Size = new System.Drawing.Size(89, 39);
-            this.ClearBtn.TabIndex = 39;
-            this.ClearBtn.Text = "Clear";
-            this.ClearBtn.UseVisualStyleBackColor = true;
+            this.stuClearBtn.Location = new System.Drawing.Point(267, 536);
+            this.stuClearBtn.Name = "stuClearBtn";
+            this.stuClearBtn.Size = new System.Drawing.Size(89, 39);
+            this.stuClearBtn.TabIndex = 39;
+            this.stuClearBtn.Text = "Clear";
+            this.stuClearBtn.UseVisualStyleBackColor = true;
+            this.stuClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
+            // 
+            // stuDateCheckBox
+            // 
+            this.stuDateCheckBox.AutoSize = true;
+            this.stuDateCheckBox.Location = new System.Drawing.Point(823, 98);
+            this.stuDateCheckBox.Name = "stuDateCheckBox";
+            this.stuDateCheckBox.Size = new System.Drawing.Size(171, 18);
+            this.stuDateCheckBox.TabIndex = 31;
+            this.stuDateCheckBox.Text = "Check to View Date Picker";
+            this.stuDateCheckBox.UseVisualStyleBackColor = true;
+            this.stuDateCheckBox.CheckedChanged += new System.EventHandler(this.stuDateCheckBox_CheckedChanged);
             // 
             // StudentUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1187, 588);
-            this.Controls.Add(this.ClearBtn);
+            this.Controls.Add(this.stuClearBtn);
             this.Controls.Add(this.studentDGV);
             this.Controls.Add(this.stuUpdateBtn);
             this.Controls.Add(this.stuRemoveBtn);
@@ -448,6 +465,7 @@
         private System.Windows.Forms.Label stuClassIdLbl;
         private System.Windows.Forms.TextBox stuEmailTB;
         private System.Windows.Forms.Label stuEmailLbl;
-        private System.Windows.Forms.Button ClearBtn;
+        private System.Windows.Forms.Button stuClearBtn;
+        private System.Windows.Forms.CheckBox stuDateCheckBox;
     }
 }
