@@ -22,7 +22,7 @@ namespace M2_Snapshots
 
         void BindData()
         {
-            SqlCommand command = new SqlCommand("select * from classes", con);
+            SqlCommand command = new SqlCommand("select * from subjects", con);
             SqlDataAdapter sd = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             sd.Fill(dt);

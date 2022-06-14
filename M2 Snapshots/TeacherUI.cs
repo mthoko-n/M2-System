@@ -102,5 +102,10 @@ namespace M2_Snapshots
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

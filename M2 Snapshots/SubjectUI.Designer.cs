@@ -61,7 +61,7 @@
             // 
             // SearchSubjectTextBox
             // 
-            this.SearchSubjectTextBox.Location = new System.Drawing.Point(264, 78);
+            this.SearchSubjectTextBox.Location = new System.Drawing.Point(224, 75);
             this.SearchSubjectTextBox.Name = "SearchSubjectTextBox";
             this.SearchSubjectTextBox.Size = new System.Drawing.Size(163, 20);
             this.SearchSubjectTextBox.TabIndex = 18;
@@ -142,7 +142,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(154, 84);
+            this.label2.Location = new System.Drawing.Point(114, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 14);
             this.label2.TabIndex = 20;
@@ -215,7 +215,7 @@
             this.SubjectDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SubjectDataGridView.Location = new System.Drawing.Point(30, 116);
             this.SubjectDataGridView.Name = "SubjectDataGridView";
-            this.SubjectDataGridView.Size = new System.Drawing.Size(397, 306);
+            this.SubjectDataGridView.Size = new System.Drawing.Size(357, 306);
             this.SubjectDataGridView.TabIndex = 40;
             // 
             // SubjectUI
