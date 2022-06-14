@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.payDGV = new System.Windows.Forms.TextBox();
             this.payUpdateBtn = new System.Windows.Forms.Button();
             this.payAddBtn = new System.Windows.Forms.Button();
             this.paySearchBtn = new System.Windows.Forms.Button();
@@ -52,16 +51,10 @@
             this.payTypeCB = new System.Windows.Forms.ComboBox();
             this.payAdminIdTB = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.payDGV = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.payDGV)).BeginInit();
             this.SuspendLayout();
-            // 
-            // payDGV
-            // 
-            this.payDGV.Location = new System.Drawing.Point(58, 60);
-            this.payDGV.Multiline = true;
-            this.payDGV.Name = "payDGV";
-            this.payDGV.Size = new System.Drawing.Size(807, 159);
-            this.payDGV.TabIndex = 21;
             // 
             // payUpdateBtn
             // 
@@ -74,6 +67,7 @@
             this.payUpdateBtn.TabIndex = 26;
             this.payUpdateBtn.Text = "Update";
             this.payUpdateBtn.UseVisualStyleBackColor = false;
+            this.payUpdateBtn.Click += new System.EventHandler(this.payUpdateBtn_Click);
             // 
             // payAddBtn
             // 
@@ -86,6 +80,7 @@
             this.payAddBtn.TabIndex = 25;
             this.payAddBtn.Text = "Add Payment";
             this.payAddBtn.UseVisualStyleBackColor = false;
+            this.payAddBtn.Click += new System.EventHandler(this.payAddBtn_Click);
             // 
             // paySearchBtn
             // 
@@ -296,11 +291,20 @@
             this.label5.TabIndex = 20;
             this.label5.Text = "Admin ID:";
             // 
+            // payDGV
+            // 
+            this.payDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.payDGV.Location = new System.Drawing.Point(62, 63);
+            this.payDGV.Name = "payDGV";
+            this.payDGV.Size = new System.Drawing.Size(803, 150);
+            this.payDGV.TabIndex = 40;
+            // 
             // PaymentUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 538);
+            this.Controls.Add(this.payDGV);
             this.Controls.Add(this.payClearBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.paySearchTB);
@@ -310,19 +314,18 @@
             this.Controls.Add(this.paySearchBtn);
             this.Controls.Add(this.payAddBtn);
             this.Controls.Add(this.payUpdateBtn);
-            this.Controls.Add(this.payDGV);
             this.Name = "PaymentUI";
             this.Text = "PaymentUI";
+            this.Load += new System.EventHandler(this.PaymentUI_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.payDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox payDGV;
         private System.Windows.Forms.Button payUpdateBtn;
         private System.Windows.Forms.Button payAddBtn;
         private System.Windows.Forms.Button paySearchBtn;
@@ -346,5 +349,6 @@
         private System.Windows.Forms.Button payClearBtn;
         private System.Windows.Forms.TextBox payAdminIdTB;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView payDGV;
     }
 }
