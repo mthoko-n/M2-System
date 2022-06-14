@@ -138,7 +138,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(440, 106);
+            this.label6.Location = new System.Drawing.Point(518, 106);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 14);
@@ -147,7 +147,7 @@
             // 
             // GradeTextBox
             // 
-            this.GradeTextBox.Location = new System.Drawing.Point(520, 103);
+            this.GradeTextBox.Location = new System.Drawing.Point(598, 103);
             this.GradeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GradeTextBox.Name = "GradeTextBox";
             this.GradeTextBox.Size = new System.Drawing.Size(171, 20);
@@ -158,7 +158,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(440, 68);
+            this.label5.Location = new System.Drawing.Point(518, 68);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 14);
@@ -167,7 +167,7 @@
             // 
             // BuildingNoTextBox
             // 
-            this.BuildingNoTextBox.Location = new System.Drawing.Point(520, 65);
+            this.BuildingNoTextBox.Location = new System.Drawing.Point(598, 65);
             this.BuildingNoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BuildingNoTextBox.Name = "BuildingNoTextBox";
             this.BuildingNoTextBox.Size = new System.Drawing.Size(171, 20);
