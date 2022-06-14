@@ -115,7 +115,7 @@
             this.stuIdTB.Name = "stuIdTB";
             this.stuIdTB.Size = new System.Drawing.Size(203, 20);
             this.stuIdTB.TabIndex = 16;
-            this.stuIdTB.TextChanged += new System.EventHandler(this.stuIdTB_TextChanged);
+           
             // 
             // stuAddressTB
             // 

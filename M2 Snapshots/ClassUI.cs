@@ -41,7 +41,7 @@ namespace M2_Snapshots
             }
             else
             {
-                MessageBox.Show("Enter Class ID");
+                MessageBox.Show("Enter Class ID in the Search box");
             }
         }
 
@@ -49,16 +49,28 @@ namespace M2_Snapshots
         {
             if (SearchTextBox.Text != "")
             {
-                con.Open();
-                SqlCommand command = new SqlCommand("Delete classes where class_id = '" + int.Parse(SearchTextBox.Text) + "'", con);
-                command.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Successfully Removed");
-                BindData();
+              
+                DialogResult res = MessageBox.Show("Do you want to remove?", "Remove", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (res == DialogResult.Yes)
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand("Delete classes where class_id = '" + int.Parse(SearchTextBox.Text) + "'", con);
+                    command.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Successfully Removed");
+                    BindData();
+                }
+
+                else {
+                    this.Show();
+                }
+     
+               
             }
             else
             {
-                MessageBox.Show("Enter Valid Class ID");
+                MessageBox.Show("Enter Valid Class ID in the search box");
             }
 
         }
@@ -127,6 +139,11 @@ namespace M2_Snapshots
         private void ClassUI_Load(object sender, EventArgs e)
         {
             BindData();
+        }
+
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -103,6 +103,7 @@ namespace M2_Snapshots
         {
             StudentUI studentObj = new StudentUI();
             studentObj.Show();
+            
         }
 
         private void TeacherPB_Click_1(object sender, EventArgs e)
