@@ -258,7 +258,7 @@
             // 
             // payClearBtn
             // 
-            this.payClearBtn.Location = new System.Drawing.Point(213, 467);
+            this.payClearBtn.Location = new System.Drawing.Point(265, 467);
             this.payClearBtn.Name = "payClearBtn";
             this.payClearBtn.Size = new System.Drawing.Size(89, 39);
             this.payClearBtn.TabIndex = 39;
