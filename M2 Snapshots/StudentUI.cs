@@ -32,7 +32,7 @@ namespace M2_Snapshots
             con.Open();
             int age = DateTime.Today.Year - stuDateTimePicker.Value.Year;
             stuAgeTB.Text = age.ToString();
-            SqlCommand command = new SqlCommand("INSERT INTO students values('"+stuIdTB.Text+ "','" + stuClassIdTB.Text+ "','" + stuNameTB.Text+ "','" + stuLastNameTB.Text + "','" + stuAddressTB.Text + "','" + stuEmailTB.Text + "','" + age.ToString()+ "','" + stuGenderCB.Text+ "','" + stuDateTimePicker.Text + "','" + decimal.Parse(stuFeesTB.Text) + "','" + int.Parse(stuParentNoTB.Text) + "')", con);
+            SqlCommand command = new SqlCommand("INSERT INTO students values('"+stuIdTB.Text+ "','" +stuClassIdTB.Text+ "','" + stuNameTB.Text+ "','" + stuLastNameTB.Text + "','" + stuAddressTB.Text + "','" + stuEmailTB.Text + "','" + age.ToString()+ "','" + stuGenderCB.Text+ "','" + stuDateTimePicker.Text + "','" + decimal.Parse(stuFeesTB.Text) + "','" + int.Parse(stuParentNoTB.Text) + "')", con);
 
             command.ExecuteNonQuery();
             MessageBox.Show("Successfully added","Success!",MessageBoxButtons.OK);
@@ -68,6 +68,11 @@ namespace M2_Snapshots
         }
 
         private void stuViewBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stuIdTB_TextChanged(object sender, EventArgs e)
         {
 
         }

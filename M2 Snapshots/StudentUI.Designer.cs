@@ -18,7 +18,7 @@
                 components.Dispose();
             }
             base.Dispose(disposing);
-        }
+        }//c
 
         #region Windows Form Designer generated code
 
@@ -48,17 +48,17 @@
             this.stuSearchTB = new System.Windows.Forms.TextBox();
             this.stuIdLbl = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.stuEmailTB = new System.Windows.Forms.TextBox();
+            this.stuEmailLbl = new System.Windows.Forms.Label();
+            this.stuDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.stuAgeTB = new System.Windows.Forms.TextBox();
+            this.stuAgeLbl = new System.Windows.Forms.Label();
+            this.stuClassIdTB = new System.Windows.Forms.TextBox();
+            this.stuClassIdLbl = new System.Windows.Forms.Label();
+            this.stuGenderCB = new System.Windows.Forms.ComboBox();
             this.stuParentNoTB = new System.Windows.Forms.TextBox();
             this.stuParentNoLbl = new System.Windows.Forms.Label();
             this.studentDGV = new System.Windows.Forms.DataGridView();
-            this.stuGenderCB = new System.Windows.Forms.ComboBox();
-            this.stuClassIdTB = new System.Windows.Forms.TextBox();
-            this.stuClassIdLbl = new System.Windows.Forms.Label();
-            this.stuAgeTB = new System.Windows.Forms.TextBox();
-            this.stuAgeLbl = new System.Windows.Forms.Label();
-            this.stuDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.stuEmailTB = new System.Windows.Forms.TextBox();
-            this.stuEmailLbl = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDGV)).BeginInit();
             this.SuspendLayout();
@@ -104,7 +104,7 @@
             // 
             // stuFeesTB
             // 
-            this.stuFeesTB.Location = new System.Drawing.Point(525, 159);
+            this.stuFeesTB.Location = new System.Drawing.Point(823, 193);
             this.stuFeesTB.Name = "stuFeesTB";
             this.stuFeesTB.Size = new System.Drawing.Size(203, 20);
             this.stuFeesTB.TabIndex = 17;
@@ -115,6 +115,7 @@
             this.stuIdTB.Name = "stuIdTB";
             this.stuIdTB.Size = new System.Drawing.Size(203, 20);
             this.stuIdTB.TabIndex = 16;
+            this.stuIdTB.TextChanged += new System.EventHandler(this.stuIdTB_TextChanged);
             // 
             // stuAddressTB
             // 
@@ -133,7 +134,7 @@
             // stuFeesLbl
             // 
             this.stuFeesLbl.AutoSize = true;
-            this.stuFeesLbl.Location = new System.Drawing.Point(398, 162);
+            this.stuFeesLbl.Location = new System.Drawing.Point(696, 196);
             this.stuFeesLbl.Name = "stuFeesLbl";
             this.stuFeesLbl.Size = new System.Drawing.Size(82, 14);
             this.stuFeesLbl.TabIndex = 12;
@@ -155,7 +156,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(402, 86);
+            this.label9.Location = new System.Drawing.Point(700, 120);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 14);
             this.label9.TabIndex = 11;
@@ -197,7 +198,7 @@
             // 
             this.stuGenderLbl.AutoSize = true;
             this.stuGenderLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuGenderLbl.Location = new System.Drawing.Point(429, 37);
+            this.stuGenderLbl.Location = new System.Drawing.Point(727, 72);
             this.stuGenderLbl.Name = "stuGenderLbl";
             this.stuGenderLbl.Size = new System.Drawing.Size(51, 14);
             this.stuGenderLbl.TabIndex = 8;
@@ -276,89 +277,11 @@
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(41, 234);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(785, 278);
+            this.groupBox1.Size = new System.Drawing.Size(1129, 278);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Student";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // stuParentNoTB
-            // 
-            this.stuParentNoTB.Location = new System.Drawing.Point(525, 204);
-            this.stuParentNoTB.Name = "stuParentNoTB";
-            this.stuParentNoTB.Size = new System.Drawing.Size(203, 20);
-            this.stuParentNoTB.TabIndex = 22;
-            // 
-            // stuParentNoLbl
-            // 
-            this.stuParentNoLbl.AutoSize = true;
-            this.stuParentNoLbl.Location = new System.Drawing.Point(417, 210);
-            this.stuParentNoLbl.Name = "stuParentNoLbl";
-            this.stuParentNoLbl.Size = new System.Drawing.Size(63, 14);
-            this.stuParentNoLbl.TabIndex = 21;
-            this.stuParentNoLbl.Text = "Parent No:";
-            // 
-            // studentDGV
-            // 
-            this.studentDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.studentDGV.Location = new System.Drawing.Point(41, 66);
-            this.studentDGV.Name = "studentDGV";
-            this.studentDGV.Size = new System.Drawing.Size(1146, 150);
-            this.studentDGV.TabIndex = 18;
-            // 
-            // stuGenderCB
-            // 
-            this.stuGenderCB.FormattingEnabled = true;
-            this.stuGenderCB.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.stuGenderCB.Location = new System.Drawing.Point(525, 29);
-            this.stuGenderCB.Name = "stuGenderCB";
-            this.stuGenderCB.Size = new System.Drawing.Size(204, 22);
-            this.stuGenderCB.TabIndex = 23;
-            // 
-            // stuClassIdTB
-            // 
-            this.stuClassIdTB.Location = new System.Drawing.Point(112, 71);
-            this.stuClassIdTB.Name = "stuClassIdTB";
-            this.stuClassIdTB.Size = new System.Drawing.Size(203, 20);
-            this.stuClassIdTB.TabIndex = 25;
-            // 
-            // stuClassIdLbl
-            // 
-            this.stuClassIdLbl.AutoSize = true;
-            this.stuClassIdLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuClassIdLbl.Location = new System.Drawing.Point(19, 77);
-            this.stuClassIdLbl.Name = "stuClassIdLbl";
-            this.stuClassIdLbl.Size = new System.Drawing.Size(54, 14);
-            this.stuClassIdLbl.TabIndex = 24;
-            this.stuClassIdLbl.Text = "Class ID:";
-            // 
-            // stuAgeTB
-            // 
-            this.stuAgeTB.Location = new System.Drawing.Point(525, 119);
-            this.stuAgeTB.Name = "stuAgeTB";
-            this.stuAgeTB.ReadOnly = true;
-            this.stuAgeTB.Size = new System.Drawing.Size(203, 20);
-            this.stuAgeTB.TabIndex = 27;
-            // 
-            // stuAgeLbl
-            // 
-            this.stuAgeLbl.AutoSize = true;
-            this.stuAgeLbl.Location = new System.Drawing.Point(448, 125);
-            this.stuAgeLbl.Name = "stuAgeLbl";
-            this.stuAgeLbl.Size = new System.Drawing.Size(32, 14);
-            this.stuAgeLbl.TabIndex = 26;
-            this.stuAgeLbl.Text = "Age:";
-            // 
-            // stuDateTimePicker
-            // 
-            this.stuDateTimePicker.CustomFormat = "dd-MM-yyyy";
-            this.stuDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.stuDateTimePicker.Location = new System.Drawing.Point(525, 86);
-            this.stuDateTimePicker.Name = "stuDateTimePicker";
-            this.stuDateTimePicker.Size = new System.Drawing.Size(203, 20);
-            this.stuDateTimePicker.TabIndex = 28;
             // 
             // stuEmailTB
             // 
@@ -377,11 +300,90 @@
             this.stuEmailLbl.TabIndex = 29;
             this.stuEmailLbl.Text = "Email:";
             // 
+            // stuDateTimePicker
+            // 
+            this.stuDateTimePicker.CustomFormat = "dd-MM-yyyy";
+            this.stuDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.stuDateTimePicker.Location = new System.Drawing.Point(823, 120);
+            this.stuDateTimePicker.Name = "stuDateTimePicker";
+            this.stuDateTimePicker.Size = new System.Drawing.Size(203, 20);
+            this.stuDateTimePicker.TabIndex = 28;
+            // 
+            // stuAgeTB
+            // 
+            this.stuAgeTB.Location = new System.Drawing.Point(823, 153);
+            this.stuAgeTB.Name = "stuAgeTB";
+            this.stuAgeTB.ReadOnly = true;
+            this.stuAgeTB.Size = new System.Drawing.Size(203, 20);
+            this.stuAgeTB.TabIndex = 27;
+            // 
+            // stuAgeLbl
+            // 
+            this.stuAgeLbl.AutoSize = true;
+            this.stuAgeLbl.Location = new System.Drawing.Point(746, 159);
+            this.stuAgeLbl.Name = "stuAgeLbl";
+            this.stuAgeLbl.Size = new System.Drawing.Size(32, 14);
+            this.stuAgeLbl.TabIndex = 26;
+            this.stuAgeLbl.Text = "Age:";
+            // 
+            // stuClassIdTB
+            // 
+            this.stuClassIdTB.Location = new System.Drawing.Point(112, 71);
+            this.stuClassIdTB.Name = "stuClassIdTB";
+            this.stuClassIdTB.Size = new System.Drawing.Size(203, 20);
+            this.stuClassIdTB.TabIndex = 25;
+            // 
+            // stuClassIdLbl
+            // 
+            this.stuClassIdLbl.AutoSize = true;
+            this.stuClassIdLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuClassIdLbl.Location = new System.Drawing.Point(19, 77);
+            this.stuClassIdLbl.Name = "stuClassIdLbl";
+            this.stuClassIdLbl.Size = new System.Drawing.Size(54, 14);
+            this.stuClassIdLbl.TabIndex = 24;
+            this.stuClassIdLbl.Text = "Class ID:";
+            // 
+            // stuGenderCB
+            // 
+            this.stuGenderCB.FormattingEnabled = true;
+            this.stuGenderCB.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.stuGenderCB.Location = new System.Drawing.Point(823, 63);
+            this.stuGenderCB.Name = "stuGenderCB";
+            this.stuGenderCB.Size = new System.Drawing.Size(204, 22);
+            this.stuGenderCB.TabIndex = 23;
+            // 
+            // stuParentNoTB
+            // 
+            this.stuParentNoTB.Location = new System.Drawing.Point(823, 238);
+            this.stuParentNoTB.Name = "stuParentNoTB";
+            this.stuParentNoTB.Size = new System.Drawing.Size(203, 20);
+            this.stuParentNoTB.TabIndex = 22;
+            // 
+            // stuParentNoLbl
+            // 
+            this.stuParentNoLbl.AutoSize = true;
+            this.stuParentNoLbl.Location = new System.Drawing.Point(715, 244);
+            this.stuParentNoLbl.Name = "stuParentNoLbl";
+            this.stuParentNoLbl.Size = new System.Drawing.Size(63, 14);
+            this.stuParentNoLbl.TabIndex = 21;
+            this.stuParentNoLbl.Text = "Parent No:";
+            // 
+            // studentDGV
+            // 
+            this.studentDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.studentDGV.Location = new System.Drawing.Point(41, 66);
+            this.studentDGV.Name = "studentDGV";
+            this.studentDGV.RowHeadersWidth = 51;
+            this.studentDGV.Size = new System.Drawing.Size(1129, 150);
+            this.studentDGV.TabIndex = 18;
+            // 
             // StudentUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1242, 588);
+            this.ClientSize = new System.Drawing.Size(1028, 588);
             this.Controls.Add(this.studentDGV);
             this.Controls.Add(this.stuUpdateBtn);
             this.Controls.Add(this.stuRemoveBtn);
