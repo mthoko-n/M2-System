@@ -68,7 +68,7 @@
             // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Location = new System.Drawing.Point(131, 88);
+            this.SearchTextBox.Location = new System.Drawing.Point(623, 33);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(216, 22);
             this.SearchTextBox.TabIndex = 27;
@@ -100,7 +100,7 @@
             // TeacherIDTextBox
             // 
             this.TeacherIDTextBox.Location = new System.Drawing.Point(157, 114);
-            this.TeacherIDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TeacherIDTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.TeacherIDTextBox.Name = "TeacherIDTextBox";
             this.TeacherIDTextBox.Size = new System.Drawing.Size(227, 23);
             this.TeacherIDTextBox.TabIndex = 10;
@@ -130,7 +130,7 @@
             // DivisionTextBox
             // 
             this.DivisionTextBox.Location = new System.Drawing.Point(157, 338);
-            this.DivisionTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DivisionTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.DivisionTextBox.Name = "DivisionTextBox";
             this.DivisionTextBox.Size = new System.Drawing.Size(227, 23);
             this.DivisionTextBox.TabIndex = 24;
@@ -186,7 +186,7 @@
             // ClassRollTextBox
             // 
             this.ClassRollTextBox.Location = new System.Drawing.Point(157, 169);
-            this.ClassRollTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClassRollTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ClassRollTextBox.Name = "ClassRollTextBox";
             this.ClassRollTextBox.Size = new System.Drawing.Size(227, 23);
             this.ClassRollTextBox.TabIndex = 18;
@@ -206,7 +206,7 @@
             // ClassIDTextBox
             // 
             this.ClassIDTextBox.Location = new System.Drawing.Point(157, 68);
-            this.ClassIDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClassIDTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ClassIDTextBox.Name = "ClassIDTextBox";
             this.ClassIDTextBox.Size = new System.Drawing.Size(227, 23);
             this.ClassIDTextBox.TabIndex = 5;
@@ -216,12 +216,13 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(33, 112);
+            this.label2.Location = new System.Drawing.Point(507, 39);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 16);
             this.label2.TabIndex = 29;
             this.label2.Text = "Search Class ID";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // RemoveButton
             // 
@@ -278,8 +279,9 @@
             // SearchClassDataGridView
             // 
             this.SearchClassDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SearchClassDataGridView.Location = new System.Drawing.Point(100, 124);
+            this.SearchClassDataGridView.Location = new System.Drawing.Point(89, 136);
             this.SearchClassDataGridView.Name = "SearchClassDataGridView";
+            this.SearchClassDataGridView.RowHeadersWidth = 51;
             this.SearchClassDataGridView.Size = new System.Drawing.Size(643, 150);
             this.SearchClassDataGridView.TabIndex = 36;
             this.SearchClassDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchClassDataGridView_CellContentClick);
@@ -309,7 +311,7 @@
             this.Controls.Add(this.ViewDetalisButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.UpdateButton);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ClassUI";
             this.Text = "ClassUI";
             this.Load += new System.EventHandler(this.ClassUI_Load);
