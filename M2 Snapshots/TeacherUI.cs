@@ -104,7 +104,55 @@ namespace M2_Snapshots
 
         private void update_Click(object sender, EventArgs e)
         {
+            if ((teacherName.Text != "") || (teachLName.Text != "") || (teachEmail.Text != "") || (teachGender.Text != "") || (teachTitle.Text != "") || (teachcellNum.Text != "")|| (teachAddress.Text!=""))
+            {
+                con.Open();
 
+                if ((teacherName.Text != "") && (teachID.Text != "")) //This is to update/change the teacher's name
+                {
+                    SqlCommand command = new SqlCommand("update Teachers set teach_firstname = '" + teacherName.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    command.ExecuteNonQuery();
+                }
+                if ((teachLName.Text != "") && (teachID.Text != ""))
+                {
+                    SqlCommand command = new SqlCommand("update Teachers set teach_lastname = '" + teachLName.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    command.ExecuteNonQuery();
+                }
+                if ((teachEmail.Text != "") && (teachID.Text != ""))
+                {
+                    SqlCommand command = new SqlCommand("update Teachers set teach_email = '" + teachEmail.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    command.ExecuteNonQuery();
+                }
+                if ((teachGender.Text != "") && (teachID.Text != ""))
+                {
+                    SqlCommand command = new SqlCommand("update Teachers set gender = '" + teachGender.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    command.ExecuteNonQuery();
+                }
+                if ((teachTitle.Text != "") && (teachID.Text != ""))
+                {
+                    SqlCommand command = new SqlCommand("update Teachers set teach_title = '" + teachTitle.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    command.ExecuteNonQuery();
+                }
+                if((teachcellNum.Text != " ") && (teachID.Text!=" "))
+                {
+                    SqlCommand command = new SqlCommand("update Teachers set contactNum = '" + teachcellNum.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    command.ExecuteNonQuery();
+                }
+                if ((teachAddress.Text!= "") && (teachID.Text != " ") )
+                {
+                    SqlCommand command = new SqlCommand("update Teachers set contactNum = '" + teachAddress.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    command.ExecuteNonQuery();
+                }
+                con.Close();
+                MessageBox.Show("Successfully Updated");
+                BindData2();
+            }
+            else
+            {
+                MessageBox.Show("Fill in appropriate fields");
+            }
+
+            
         }
 
         private void classClearBtn_Click(object sender, EventArgs e)
@@ -123,6 +171,11 @@ namespace M2_Snapshots
         }
 
         private void search_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void teachID_TextChanged_1(object sender, EventArgs e)
         {
 
         }

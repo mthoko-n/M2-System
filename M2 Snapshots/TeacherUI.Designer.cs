@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.teachID = new System.Windows.Forms.TextBox();
             this.teachGender = new System.Windows.Forms.ComboBox();
             this.teachTitle = new System.Windows.Forms.TextBox();
             this.teachEmail = new System.Windows.Forms.TextBox();
@@ -54,6 +55,7 @@
             this.update = new System.Windows.Forms.Button();
             this.TeacherDGV = new System.Windows.Forms.DataGridView();
             this.ClearBtn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeacherDGV)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +81,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.teachID);
             this.groupBox1.Controls.Add(this.teachGender);
             this.groupBox1.Controls.Add(this.teachTitle);
             this.groupBox1.Controls.Add(this.teachEmail);
@@ -101,6 +105,14 @@
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Teacher";
+            // 
+            // teachID
+            // 
+            this.teachID.Location = new System.Drawing.Point(557, 181);
+            this.teachID.Name = "teachID";
+            this.teachID.Size = new System.Drawing.Size(185, 23);
+            this.teachID.TabIndex = 24;
+            this.teachID.TextChanged += new System.EventHandler(this.teachID_TextChanged_1);
             // 
             // teachGender
             // 
@@ -322,6 +334,15 @@
             this.ClearBtn.UseVisualStyleBackColor = true;
             this.ClearBtn.Click += new System.EventHandler(this.classClearBtn_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(424, 188);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 16);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "ID";
+            // 
             // TeacherUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -377,5 +398,7 @@
         private System.Windows.Forms.Button update;
         private System.Windows.Forms.ComboBox teachGender;
         private System.Windows.Forms.Button ClearBtn;
+        private System.Windows.Forms.TextBox teachID;
+        private System.Windows.Forms.Label label5;
     }
 }
