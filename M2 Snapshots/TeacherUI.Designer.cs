@@ -32,12 +32,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.teachGender = new System.Windows.Forms.ComboBox();
+            this.teachTitle = new System.Windows.Forms.TextBox();
+            this.teachEmail = new System.Windows.Forms.TextBox();
+            this.teachcellNum = new System.Windows.Forms.TextBox();
+            this.teachAddress = new System.Windows.Forms.TextBox();
+            this.teachLName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,12 +45,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.teacherName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.addTeach = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.TeacherDGV = new System.Windows.Forms.DataGridView();
             this.ClearBtn = new System.Windows.Forms.Button();
@@ -79,12 +79,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.teachGender);
+            this.groupBox1.Controls.Add(this.teachTitle);
+            this.groupBox1.Controls.Add(this.teachEmail);
+            this.groupBox1.Controls.Add(this.teachcellNum);
+            this.groupBox1.Controls.Add(this.teachAddress);
+            this.groupBox1.Controls.Add(this.teachLName);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label3);
@@ -92,7 +92,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.teacherName);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(26, 248);
@@ -102,57 +102,57 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Teacher";
             // 
-            // comboBox1
+            // teachGender
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.teachGender.FormattingEnabled = true;
+            this.teachGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(158, 136);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(185, 24);
-            this.comboBox1.TabIndex = 23;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.teachGender.Location = new System.Drawing.Point(158, 136);
+            this.teachGender.Name = "teachGender";
+            this.teachGender.Size = new System.Drawing.Size(185, 24);
+            this.teachGender.TabIndex = 23;
+            this.teachGender.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // textBox9
+            // teachTitle
             // 
-            this.textBox9.Location = new System.Drawing.Point(557, 37);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(185, 23);
-            this.textBox9.TabIndex = 18;
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            this.teachTitle.Location = new System.Drawing.Point(557, 37);
+            this.teachTitle.Name = "teachTitle";
+            this.teachTitle.Size = new System.Drawing.Size(185, 23);
+            this.teachTitle.TabIndex = 18;
+            this.teachTitle.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
-            // textBox8
+            // teachEmail
             // 
-            this.textBox8.Location = new System.Drawing.Point(557, 132);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(185, 23);
-            this.textBox8.TabIndex = 17;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.teachEmail.Location = new System.Drawing.Point(557, 132);
+            this.teachEmail.Name = "teachEmail";
+            this.teachEmail.Size = new System.Drawing.Size(185, 23);
+            this.teachEmail.TabIndex = 17;
+            this.teachEmail.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
-            // textBox7
+            // teachcellNum
             // 
-            this.textBox7.Location = new System.Drawing.Point(158, 177);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(185, 23);
-            this.textBox7.TabIndex = 16;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.teachcellNum.Location = new System.Drawing.Point(158, 177);
+            this.teachcellNum.Name = "teachcellNum";
+            this.teachcellNum.Size = new System.Drawing.Size(185, 23);
+            this.teachcellNum.TabIndex = 16;
+            this.teachcellNum.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
-            // textBox6
+            // teachAddress
             // 
-            this.textBox6.Location = new System.Drawing.Point(557, 87);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(185, 23);
-            this.textBox6.TabIndex = 15;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.teachAddress.Location = new System.Drawing.Point(557, 87);
+            this.teachAddress.Name = "teachAddress";
+            this.teachAddress.Size = new System.Drawing.Size(185, 23);
+            this.teachAddress.TabIndex = 15;
+            this.teachAddress.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
-            // textBox4
+            // teachLName
             // 
-            this.textBox4.Location = new System.Drawing.Point(158, 79);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(185, 23);
-            this.textBox4.TabIndex = 13;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.teachLName.Location = new System.Drawing.Point(158, 79);
+            this.teachLName.Name = "teachLName";
+            this.teachLName.Size = new System.Drawing.Size(185, 23);
+            this.teachLName.TabIndex = 13;
+            this.teachLName.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label10
             // 
@@ -222,13 +222,13 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Gender:";
             // 
-            // textBox3
+            // teacherName
             // 
-            this.textBox3.Location = new System.Drawing.Point(158, 36);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(185, 23);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.teacherName.Location = new System.Drawing.Point(158, 36);
+            this.teacherName.Name = "teacherName";
+            this.teacherName.Size = new System.Drawing.Size(185, 23);
+            this.teacherName.TabIndex = 5;
+            this.teacherName.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label2
             // 
@@ -275,18 +275,18 @@
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // addTeach
             // 
-            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(643, 505);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 40);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "Add Teacher";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.addTeach.BackColor = System.Drawing.Color.RoyalBlue;
+            this.addTeach.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addTeach.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.addTeach.Location = new System.Drawing.Point(643, 505);
+            this.addTeach.Name = "addTeach";
+            this.addTeach.Size = new System.Drawing.Size(98, 40);
+            this.addTeach.TabIndex = 25;
+            this.addTeach.Text = "Add Teacher";
+            this.addTeach.UseVisualStyleBackColor = false;
+            this.addTeach.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -336,7 +336,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.addTeach);
             this.Controls.Add(this.button4);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "TeacherUI";
@@ -354,11 +354,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox teachTitle;
+        private System.Windows.Forms.TextBox teachEmail;
+        private System.Windows.Forms.TextBox teachcellNum;
+        private System.Windows.Forms.TextBox teachAddress;
+        private System.Windows.Forms.TextBox teachLName;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
@@ -366,15 +366,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox teacherName;
         private System.Windows.Forms.DataGridView TeacherDGV;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button addTeach;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox teachGender;
         private System.Windows.Forms.Button ClearBtn;
     }
 }

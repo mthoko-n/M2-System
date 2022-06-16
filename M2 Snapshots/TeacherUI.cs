@@ -31,13 +31,13 @@ namespace M2_Snapshots
 
             var rand = new Random();
             int number = rand.Next(1, 10000);
-            string teachID = textBox3.Text+textBox4.Text+number;
+            string teachID = teacherName.Text+teachLName.Text+number;
         
 
 
             con.Open();
             SqlCommand comm = new SqlCommand("INSERT INTO UserLogin values('"+teachID+"','"+ teachID + "')", con);
-            SqlCommand command = new SqlCommand("INSERT INTO Teachers values('"+ teachID + "','"+ textBox3.Text + "','" + textBox4.Text +"','" + textBox8.Text+ "','" + textBox9.Text+ "','" + comboBox1.Text+ "','" + textBox7.Text + "','" + textBox6.Text+ "')", con);
+            SqlCommand command = new SqlCommand("INSERT INTO Teachers values('"+ teachID + "','"+ teacherName.Text + "','" + teachLName.Text +"','" + teachEmail.Text+ "','" + teachTitle.Text+ "','" + teachGender.Text+ "','" + teachcellNum.Text + "','" + teachAddress.Text+ "')", con);
 
             comm.ExecuteNonQuery();
             command.ExecuteNonQuery();
