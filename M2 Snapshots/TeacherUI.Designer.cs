@@ -124,7 +124,7 @@
             this.teachGender.Name = "teachGender";
             this.teachGender.Size = new System.Drawing.Size(185, 24);
             this.teachGender.TabIndex = 23;
-            this.teachGender.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.teachGender.SelectedIndexChanged += new System.EventHandler(this.teachGender_SelectedIndexChanged);
             // 
             // teachTitle
             // 

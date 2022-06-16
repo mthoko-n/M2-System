@@ -86,10 +86,10 @@ namespace M2_Snapshots
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            if ((ClassIDTextBox.Text!="") && (TeacherIDTextBox.Text!="") && (ClassRollTextBox.Text!="") && (GradeTextBox.Text!="") && (DivisionTextBox.Text!=""))
+            if ((ClassIDTextBox.Text!="") && (teachID.Text!="") && (ClassRollTextBox.Text!="") && (GradeTextBox.Text!="") && (DivisionTextBox.Text!=""))
             {
                 con.Open();
-                SqlCommand command = new SqlCommand("insert into classes values ('" + int.Parse(ClassIDTextBox.Text) + "','" + TeacherIDTextBox.Text + "','" + int.Parse(ClassRollTextBox.Text) + "', '" + int.Parse(BuildingNoTextBox.Text) + "', '" + int.Parse(GradeTextBox.Text) + "', '" + char.Parse(DivisionTextBox.Text) + "')", con);
+                SqlCommand command = new SqlCommand("insert into classes values ('" + int.Parse(ClassIDTextBox.Text) + "','" + teachID.Text + "','" + int.Parse(ClassRollTextBox.Text) + "', '" + int.Parse(BuildingNoTextBox.Text) + "', '" + int.Parse(GradeTextBox.Text) + "', '" + char.Parse(DivisionTextBox.Text) + "')", con);
                 command.ExecuteNonQuery();
                 MessageBox.Show("Successfully Inserted");
                 con.Close();
@@ -104,14 +104,14 @@ namespace M2_Snapshots
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            if ((ClassIDTextBox.Text != "") || (TeacherIDTextBox.Text != "") || (ClassRollTextBox.Text != "") || (BuildingNoTextBox.Text != "") || (GradeTextBox.Text != "") || (DivisionTextBox.Text != ""))
+            if ((ClassIDTextBox.Text != "") || (teachID.Text != "") || (ClassRollTextBox.Text != "") || (BuildingNoTextBox.Text != "") || (GradeTextBox.Text != "") || (DivisionTextBox.Text != ""))
             {
                 con.Open();
 
-                if ((TeacherIDTextBox.Text != "") && (ClassIDTextBox.Text != ""))
+                if ((teachID.Text != "") && (ClassIDTextBox.Text != ""))
                         
                 {
-                    SqlCommand command = new SqlCommand("update classes set teacher_id = '" + TeacherIDTextBox.Text + "' where class_id = '" + int.Parse(ClassIDTextBox.Text) + "'", con);
+                    SqlCommand command = new SqlCommand("update classes set teacher_id = '" + teachID.Text + "' where class_id = '" + int.Parse(ClassIDTextBox.Text) + "'", con);
                     command.ExecuteNonQuery();
                 }
                 if ((ClassRollTextBox.Text != "") && (ClassIDTextBox.Text != ""))
@@ -161,7 +161,7 @@ namespace M2_Snapshots
             BindData();
             SearchTextBox.Clear();
             ClassIDTextBox.Clear();
-            TeacherIDTextBox.Clear();
+            //teachID.Clear();
             BuildingNoTextBox.Clear();
             DivisionTextBox.Clear();
             GradeTextBox.Clear();
@@ -169,6 +169,11 @@ namespace M2_Snapshots
         }
 
         private void SearchClassDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void teacherID_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
