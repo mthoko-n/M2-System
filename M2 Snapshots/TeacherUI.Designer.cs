@@ -48,10 +48,10 @@
             this.teacherName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.remove = new System.Windows.Forms.Button();
+            this.search = new System.Windows.Forms.Button();
             this.addTeach = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.update = new System.Windows.Forms.Button();
             this.TeacherDGV = new System.Windows.Forms.DataGridView();
             this.ClearBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -250,30 +250,30 @@
             this.textBox2.TabIndex = 21;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // button2
+            // remove
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(510, 505);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 40);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Remove";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.remove.BackColor = System.Drawing.Color.Red;
+            this.remove.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.remove.Location = new System.Drawing.Point(510, 505);
+            this.remove.Name = "remove";
+            this.remove.Size = new System.Drawing.Size(98, 40);
+            this.remove.TabIndex = 24;
+            this.remove.Text = "Remove";
+            this.remove.UseVisualStyleBackColor = false;
+            this.remove.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // search
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(71, 505);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 40);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
+            this.search.BackColor = System.Drawing.Color.RoyalBlue;
+            this.search.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.search.Location = new System.Drawing.Point(71, 505);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(98, 40);
+            this.search.TabIndex = 23;
+            this.search.Text = "Search";
+            this.search.UseVisualStyleBackColor = false;
             // 
             // addTeach
             // 
@@ -288,18 +288,18 @@
             this.addTeach.UseVisualStyleBackColor = false;
             this.addTeach.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // update
             // 
-            this.button4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(782, 505);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 40);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "Update";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.update.BackColor = System.Drawing.Color.RoyalBlue;
+            this.update.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.update.Location = new System.Drawing.Point(782, 505);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(98, 40);
+            this.update.TabIndex = 26;
+            this.update.Text = "Update";
+            this.update.UseVisualStyleBackColor = false;
+            this.update.Click += new System.EventHandler(this.button4_Click);
             // 
             // TeacherDGV
             // 
@@ -334,10 +334,10 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.remove);
+            this.Controls.Add(this.search);
             this.Controls.Add(this.addTeach);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.update);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "TeacherUI";
             this.Text = "s";
@@ -370,10 +370,10 @@
         private System.Windows.Forms.DataGridView TeacherDGV;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button remove;
+        private System.Windows.Forms.Button search;
         private System.Windows.Forms.Button addTeach;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button update;
         private System.Windows.Forms.ComboBox teachGender;
         private System.Windows.Forms.Button ClearBtn;
     }
