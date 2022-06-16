@@ -28,9 +28,18 @@ namespace M2_Snapshots
 
         private void button3_Click(object sender, EventArgs e)
         {
-            con.Open();
-            SqlCommand command = new SqlCommand("INSERT INTO Teachers values('"+ textBox5.Text + "','"+ textBox3.Text + "','" + textBox4.Text +"','" + textBox8.Text+ "','" + textBox9.Text+ "','" + comboBox1.Text+ "','" + textBox7.Text + "','" + textBox6.Text+ "')", con);
 
+            var rand = new Random();
+            int number = rand.Next(1, 10000);
+            string teachID = textBox3.Text+textBox4.Text+number;
+        
+
+
+            con.Open();
+            SqlCommand comm = new SqlCommand("INSERT INTO UserLogin values('"+teachID+"','"+ teachID + "')", con);
+            SqlCommand command = new SqlCommand("INSERT INTO Teachers values('"+ teachID + "','"+ textBox3.Text + "','" + textBox4.Text +"','" + textBox8.Text+ "','" + textBox9.Text+ "','" + comboBox1.Text+ "','" + textBox7.Text + "','" + textBox6.Text+ "')", con);
+
+            comm.ExecuteNonQuery();
             command.ExecuteNonQuery();
             MessageBox.Show("Successfully added", "Success!", MessageBoxButtons.OK);
             con.Close();
@@ -104,6 +113,11 @@ namespace M2_Snapshots
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
