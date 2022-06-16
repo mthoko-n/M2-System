@@ -261,7 +261,7 @@
             this.remove.TabIndex = 24;
             this.remove.Text = "Remove";
             this.remove.UseVisualStyleBackColor = false;
-            this.remove.Click += new System.EventHandler(this.button2_Click);
+            this.remove.Click += new System.EventHandler(this.remove_Click);
             // 
             // search
             // 
@@ -274,6 +274,7 @@
             this.search.TabIndex = 23;
             this.search.Text = "Search";
             this.search.UseVisualStyleBackColor = false;
+            this.search.Click += new System.EventHandler(this.search_Click);
             // 
             // addTeach
             // 
@@ -286,7 +287,7 @@
             this.addTeach.TabIndex = 25;
             this.addTeach.Text = "Add Teacher";
             this.addTeach.UseVisualStyleBackColor = false;
-            this.addTeach.Click += new System.EventHandler(this.button3_Click);
+            this.addTeach.Click += new System.EventHandler(this.addteach_Click);
             // 
             // update
             // 
@@ -299,7 +300,7 @@
             this.update.TabIndex = 26;
             this.update.Text = "Update";
             this.update.UseVisualStyleBackColor = false;
-            this.update.Click += new System.EventHandler(this.button4_Click);
+            this.update.Click += new System.EventHandler(this.update_Click);
             // 
             // TeacherDGV
             // 

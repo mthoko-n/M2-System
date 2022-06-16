@@ -26,7 +26,7 @@ namespace M2_Snapshots
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void addteach_Click(object sender, EventArgs e)
         {
 
             var rand = new Random();
@@ -102,7 +102,7 @@ namespace M2_Snapshots
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void update_Click(object sender, EventArgs e)
         {
 
         }
@@ -112,12 +112,17 @@ namespace M2_Snapshots
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void remove_Click(object sender, EventArgs e)
         {
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void search_Click(object sender, EventArgs e)
         {
 
         }
