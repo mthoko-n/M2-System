@@ -108,39 +108,39 @@ namespace M2_Snapshots
             {
                 con.Open();
 
-                if ((teacherName.Text != "") && (teachID.Text != "")) //This is to update/change the teacher's name
+                if ((teacherName.Text != "") && (search.Text != "")) //This is to update/change the teacher's name
                 {
-                    SqlCommand command = new SqlCommand("update Teachers set teach_firstname = '" + teacherName.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    SqlCommand command = new SqlCommand("update Teachers set teach_firstname = '" + teacherName.Text + "' where teach_ID = '" + searchTID.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if ((teachLName.Text != "") && (teachID.Text != ""))
+                if ((teachLName.Text != "") && (search.Text != ""))//This is to update/change the teacher's  last name
                 {
-                    SqlCommand command = new SqlCommand("update Teachers set teach_lastname = '" + teachLName.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    SqlCommand command = new SqlCommand("update Teachers set teach_lastname = '" + teachLName.Text + "' where teach_ID = '" + searchTID.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if ((teachEmail.Text != "") && (teachID.Text != ""))
+                if ((teachEmail.Text != "") && (search.Text != ""))//This is to update/change the teacher's email
                 {
-                    SqlCommand command = new SqlCommand("update Teachers set teach_email = '" + teachEmail.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    SqlCommand command = new SqlCommand("update Teachers set teach_email = '" + teachEmail.Text + "' where teach_ID = '" + searchTID.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if ((teachGender.Text != "") && (teachID.Text != ""))
+                if ((teachGender.Text != "") && (search.Text != "")) //This is to update/change the teacher's Gender
                 {
-                    SqlCommand command = new SqlCommand("update Teachers set gender = '" + teachGender.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    SqlCommand command = new SqlCommand("update Teachers set gender = '" + teachGender.Text + "' where teach_ID = '" + searchTID.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if ((teachTitle.Text != "") && (teachID.Text != ""))
+                if ((teachTitle.Text != "") && (search.Text != "")) //This is to update/change the teacher's title
                 {
-                    SqlCommand command = new SqlCommand("update Teachers set teach_title = '" + teachTitle.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    SqlCommand command = new SqlCommand("update Teachers set teach_title = '" + teachTitle.Text + "' where teach_ID = '" + searchTID.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if((teachcellNum.Text != " ") && (teachID.Text!=" "))
+                if((teachcellNum.Text != " ") && (search.Text != " "))//This is to update/change the teacher's contact number
                 {
-                    SqlCommand command = new SqlCommand("update Teachers set contactNum = '" + teachcellNum.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    SqlCommand command = new SqlCommand("update Teachers set contactNum = '" + teachcellNum.Text + "' where teach_ID = '" + searchTID.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if ((teachAddress.Text!= "") && (teachID.Text != " ") )
+                if ((teachAddress.Text!= "") && (search.Text != " "))//This is to update/change the teacher's address
                 {
-                    SqlCommand command = new SqlCommand("update Teachers set contactNum = '" + teachAddress.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    SqlCommand command = new SqlCommand("update Teachers set Address = '" + teachAddress.Text + "' where teach_ID = '" + searchTID.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
                 con.Close();
@@ -149,7 +149,13 @@ namespace M2_Snapshots
             }
             else
             {
-                MessageBox.Show("Fill in appropriate fields");
+                if (search.Text == "")
+                {
+                    MessageBox.Show("Enter Teacher ID in search");
+                }
+                else { 
+                    MessageBox.Show("Fill in appropriate fields"); 
+                }
             }
 
             
@@ -165,7 +171,7 @@ namespace M2_Snapshots
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void search_TextChanged(object sender, EventArgs e)
         {
 
         }
