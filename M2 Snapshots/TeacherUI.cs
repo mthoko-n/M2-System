@@ -192,12 +192,12 @@ namespace M2_Snapshots
                     SqlCommand command = new SqlCommand("update Teachers set teach_title = '" + teachTitle.Text + "' where teach_ID = '" + teachID.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if ((teachcellNum.Text != " ") && (teachID.Text != " "))
+                if((teachcellNum.Text != " ") && (teachID.Text!=" "))
                 {
                     SqlCommand command = new SqlCommand("update Teachers set contactNum = '" + teachcellNum.Text + "' where teach_ID = '" + teachID.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if ((teachAddress.Text != "") && (teachID.Text != " "))
+                if ((teachAddress.Text!= "") && (teachID.Text != " ") )
                 {
                     SqlCommand command = new SqlCommand("update Teachers set contactNum = '" + teachAddress.Text + "' where teach_ID = '" + teachID.Text + "'", con);
                     command.ExecuteNonQuery();

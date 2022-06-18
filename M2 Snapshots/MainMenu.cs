@@ -13,21 +13,27 @@ namespace M2_Snapshots
     public partial class MainMenu : Form
     {
 
-        public static MainMenu main;
-        public Label loginLabel;
-        public Panel loginPanel;
+        
       
 
         public MainMenu()
         {
             InitializeComponent();
-            main = this;
-            loginPanel = LoginPnl;
-            loginLabel = LoginLbl;
            
-          
+           
+         }
 
-    }
+        public void FormSetup(Form myForm)
+        {
+            foreach (Form c in this.MdiChildren)
+            {
+                c.Close();
+            }
+
+            myForm.MdiParent = this;
+            myForm.WindowState = FormWindowState.Maximized;
+            myForm.Show();
+        }
 
 
     private void button1_Click(object sender, EventArgs e)
@@ -82,7 +88,16 @@ namespace M2_Snapshots
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            foreach (Control ctrl in this.Controls) {
+
+                if (ctrl is MdiClient) {
+                    ctrl.BackColor = Color.WhiteSmoke;
+                }
+
+
+            }
+                
+
 
         }
                               
@@ -99,61 +114,97 @@ namespace M2_Snapshots
         }
 
        
-         private void StudentPB_Click_1(object sender, EventArgs e)
+      
+    
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            StudentUI studentObj = new StudentUI();
-            studentObj.Show();
+
+        }
+
+        private void teacherToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TeacherUI teachersObj = new TeacherUI();
+            FormSetup(teachersObj);
+        }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            LoginUI loginObj = new LoginUI();
+            FormSetup(loginObj);
             
         }
 
-        private void TeacherPB_Click_1(object sender, EventArgs e)
+        private void studentsBtn_Click(object sender, EventArgs e)
+        {
+            StudentUI studentObj = new StudentUI();
+            FormSetup(studentObj);
+        }
+
+        private void teacherBtn_Click(object sender, EventArgs e)
         {
             TeacherUI teachersObj = new TeacherUI();
-            teachersObj.Show();
-
+            FormSetup(teachersObj);
         }
 
-        private void SubjectPB_Click_1(object sender, EventArgs e)
+        private void subjectsBtn_Click(object sender, EventArgs e)
         {
             SubjectUI subjectObj = new SubjectUI();
-            subjectObj.Show();
+            FormSetup(subjectObj);
         }
 
-        private void PaymentPB_Click_1(object sender, EventArgs e)
-        {
-            PaymentUI paymentObj = new PaymentUI();
-            paymentObj.Show();
-        }
-
-        private void AdminPB_Click_1(object sender, EventArgs e)
+        private void adminBtn_Click(object sender, EventArgs e)
         {
             AdminUI adminObj = new AdminUI();
-            adminObj.Show();
+            FormSetup(adminObj);
         }
 
-        private void ClassPB_Click_1(object sender, EventArgs e)
+        private void classBtn_Click(object sender, EventArgs e)
         {
             ClassUI classObj = new ClassUI();
-            classObj.Show();
+            FormSetup(classObj);
         }
 
-        private void LoginPnl_Click_1(object sender, EventArgs e)
-        {
-            LoginUI loginObj = new LoginUI();
-            loginObj.Show();
-        }
-
-        private void LoginLbl_Click(object sender, EventArgs e)
-        {
-            LoginUI loginObj = new LoginUI();
-            loginObj.Show();
-        }
-
-        private void AcademicPB_Click(object sender, EventArgs e)
+        private void academicReportBtn_Click(object sender, EventArgs e)
         {
             AcademicReport_UI academicObj = new AcademicReport_UI();
-            academicObj.Show();
-                
-      }
+            FormSetup(academicObj); 
+
+        }
+
+        private void paymentBtn_Click(object sender, EventArgs e)
+        {
+            PaymentUI paymentObj = new PaymentUI();
+            FormSetup(paymentObj);
+        }
+
+        private void studentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SubjectUI subjectObj = new SubjectUI();
+            FormSetup(subjectObj);
+        }
+
+        private void paymentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdminUI adminObj = new AdminUI();
+            FormSetup(adminObj);
+        }
+
+        private void classToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClassUI classObj = new ClassUI();
+            FormSetup(classObj);
+        }
+
+        private void academicReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AcademicReport_UI academicObj = new AcademicReport_UI();
+            FormSetup(academicObj);
+        }
+
+        private void adminToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PaymentUI paymentObj = new PaymentUI();
+            FormSetup(paymentObj);
+        }
     }
 }
