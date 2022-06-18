@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.TeacherIDTextBox = new System.Windows.Forms.TextBox();
+            this.teachID = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.DivisionTextBox = new System.Windows.Forms.TextBox();
@@ -50,8 +51,14 @@
             this.UpdateButton = new System.Windows.Forms.Button();
             this.SearchClassDataGridView = new System.Windows.Forms.DataGridView();
             this.classClearBtn = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.DivisionTextBox1 = new System.Windows.Forms.TextBox();
+            this.binaryMakersDS = new M2_Snapshots.BinaryMakersDS();
+            this.binaryMakersDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchClassDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,7 +83,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.TeacherIDTextBox);
+            this.groupBox1.Controls.Add(this.DivisionTextBox1);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.teachID);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.DivisionTextBox);
@@ -99,12 +108,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Class";
             // 
-            // TeacherIDTextBox
+            // teachID
             // 
-            this.TeacherIDTextBox.Location = new System.Drawing.Point(143, 106);
-            this.TeacherIDTextBox.Name = "TeacherIDTextBox";
-            this.TeacherIDTextBox.Size = new System.Drawing.Size(171, 20);
-            this.TeacherIDTextBox.TabIndex = 10;
+            this.teachID.FormattingEnabled = true;
+            this.teachID.Location = new System.Drawing.Point(143, 106);
+            this.teachID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.teachID.Name = "teachID";
+            this.teachID.Size = new System.Drawing.Size(171, 22);
+            this.teachID.TabIndex = 26;
+            this.teachID.SelectedIndexChanged += new System.EventHandler(this.teacherID_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -214,11 +226,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(519, 32);
+            this.label2.Location = new System.Drawing.Point(529, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 14);
+            this.label2.Size = new System.Drawing.Size(72, 14);
             this.label2.TabIndex = 29;
-            this.label2.Text = "Search Class ID";
+            this.label2.Text = "Search Class";
             // 
             // RemoveButton
             // 
@@ -298,6 +310,32 @@
             this.classClearBtn.UseVisualStyleBackColor = true;
             this.classClearBtn.Click += new System.EventHandler(this.classClearBtn_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(518, 153);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 14);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Division";
+            // 
+            // DivisionTextBox1
+            // 
+            this.DivisionTextBox1.Location = new System.Drawing.Point(598, 150);
+            this.DivisionTextBox1.Name = "DivisionTextBox1";
+            this.DivisionTextBox1.Size = new System.Drawing.Size(171, 20);
+            this.DivisionTextBox1.TabIndex = 28;
+            // 
+            // binaryMakersDS
+            // 
+            this.binaryMakersDS.DataSetName = "BinaryMakersDS";
+            this.binaryMakersDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // binaryMakersDSBindingSource
+            // 
+            this.binaryMakersDSBindingSource.DataSource = this.binaryMakersDS;
+            this.binaryMakersDSBindingSource.Position = 0;
+            // 
             // ClassUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,6 +357,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchClassDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDSBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,7 +386,11 @@
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.DataGridView SearchClassDataGridView;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox TeacherIDTextBox;
         private System.Windows.Forms.Button classClearBtn;
+        private System.Windows.Forms.ComboBox teachID;
+        private System.Windows.Forms.TextBox DivisionTextBox1;
+        private System.Windows.Forms.Label label9;
+        private BinaryMakersDS binaryMakersDS;
+        private System.Windows.Forms.BindingSource binaryMakersDSBindingSource;
     }
 }
