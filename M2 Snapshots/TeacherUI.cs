@@ -28,26 +28,26 @@ namespace M2_Snapshots
 
         private void addteach_Click(object sender, EventArgs e)
         {
-            if ((teacherName.Text!="") && (teachLName.Text!="") && (teachGender.Text!="") && (teachcellNum.Text!="")
-                && (teachTitle.Text!="") && (teachAddress.Text != "") && (teachEmail.Text != "") && (teachID.Text == "")) 
+            if ((teacherName.Text != "") && (teachLName.Text != "") && (teachGender.Text != "") && (teachcellNum.Text != "")
+                && (teachTitle.Text != "") && (teachAddress.Text != "") && (teachEmail.Text != "") && (teachID.Text == ""))
             {
                 var rand = new Random();
                 int number = rand.Next(1, 10000);
-                
 
-                if(teacherName.Text.Length > 1)
+
+                if (teacherName.Text.Length > 1)
                 {
-                    if(teachLName.Text.Length > 1)
+                    if (teachLName.Text.Length > 1)
                     {
-                        if ((teachGender.Text!="Male") || (teachGender.Text != "Female"))
+                        if ((teachGender.Text != "Male") || (teachGender.Text != "Female"))
                         {
-                            if (teachcellNum.Text.All(char.IsDigit) && teachcellNum.Text.Length==10)
+                            if (teachcellNum.Text.All(char.IsDigit) && teachcellNum.Text.Length == 10)
                             {
                                 if (teachTitle.Text.Length > 1)
                                 {
                                     if (teachAddress.Text.Length > 10)
                                     {
-                                        if(teachEmail.Text.Length > 9)
+                                        if (teachEmail.Text.Length > 9)
                                         {
                                             string teachID = teacherName.Text + teachLName.Text + number;
                                             con.Open();
@@ -95,7 +95,7 @@ namespace M2_Snapshots
                     MessageBox.Show("Enter complete Firstname(s)");
                 }
 
-               
+
             }
             else
             {
@@ -103,7 +103,7 @@ namespace M2_Snapshots
             }
         }
 
-        
+
         void BindData2()
         {
             SqlCommand command = new SqlCommand("SELECT* FROM Teachers", con);
@@ -163,7 +163,7 @@ namespace M2_Snapshots
 
         private void update_Click(object sender, EventArgs e)
         {
-            if ((teachID.Text !="") && ((teacherName.Text != "") || (teachLName.Text != "") || (teachEmail.Text != "") || (teachGender.Text != "") || (teachTitle.Text != "") || (teachcellNum.Text != "")|| (teachAddress.Text!="")))
+            if ((teachID.Text != "") && ((teacherName.Text != "") || (teachLName.Text != "") || (teachEmail.Text != "") || (teachGender.Text != "") || (teachTitle.Text != "") || (teachcellNum.Text != "") || (teachAddress.Text != "")))
             {
                 con.Open();
 
@@ -211,7 +211,7 @@ namespace M2_Snapshots
                 MessageBox.Show("Fill in appropriate fields");
             }
 
-            
+
         }
 
         private void classClearBtn_Click(object sender, EventArgs e)
