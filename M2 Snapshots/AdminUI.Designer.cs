@@ -103,11 +103,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(543, 19);
+            this.label2.Location = new System.Drawing.Point(564, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 14);
+            this.label2.Size = new System.Drawing.Size(77, 14);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Search Admin ID";
+            this.label2.Text = "Search Admin ";
             // 
             // label3
             // 
