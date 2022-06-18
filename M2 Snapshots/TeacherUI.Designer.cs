@@ -31,6 +31,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.teachTitle = new System.Windows.Forms.TextBox();
             this.teachGender = new System.Windows.Forms.ComboBox();
             this.teachEmail = new System.Windows.Forms.TextBox();
             this.teachcellNum = new System.Windows.Forms.TextBox();
@@ -45,7 +46,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.teacherName = new System.Windows.Forms.TextBox();
             this.teachID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.teacherSearchLbl = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.remove = new System.Windows.Forms.Button();
             this.search = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@
             this.TeacherDGV = new System.Windows.Forms.DataGridView();
             this.ClearBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.teachTitle = new System.Windows.Forms.TextBox();
             this.SearchTeacherTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeacherDGV)).BeginInit();
@@ -95,6 +95,14 @@
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Teacher";
+            // 
+            // teachTitle
+            // 
+            this.teachTitle.Location = new System.Drawing.Point(557, 37);
+            this.teachTitle.Name = "teachTitle";
+            this.teachTitle.Size = new System.Drawing.Size(185, 20);
+            this.teachTitle.TabIndex = 13;
+            this.teachTitle.TextChanged += new System.EventHandler(this.teachTitle_TextChanged);
             // 
             // teachGender
             // 
@@ -224,16 +232,16 @@
             this.teachID.TabIndex = 24;
             this.teachID.TextChanged += new System.EventHandler(this.teachID_TextChanged_1);
             // 
-            // label2
+            // teacherSearchLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(608, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 14);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Search Teacher";
+            this.teacherSearchLbl.AutoSize = true;
+            this.teacherSearchLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teacherSearchLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.teacherSearchLbl.Location = new System.Drawing.Point(608, 14);
+            this.teacherSearchLbl.Name = "teacherSearchLbl";
+            this.teacherSearchLbl.Size = new System.Drawing.Size(84, 14);
+            this.teacherSearchLbl.TabIndex = 20;
+            this.teacherSearchLbl.Text = "Search Teacher";
             // 
             // textBox2
             // 
@@ -325,14 +333,6 @@
             this.label5.TabIndex = 25;
             this.label5.Text = "ID";
             // 
-            // teachTitle
-            // 
-            this.teachTitle.Location = new System.Drawing.Point(557, 37);
-            this.teachTitle.Name = "teachTitle";
-            this.teachTitle.Size = new System.Drawing.Size(185, 20);
-            this.teachTitle.TabIndex = 13;
-            this.teachTitle.TextChanged += new System.EventHandler(this.teachTitle_TextChanged);
-            // 
             // SearchTeacherTextBox
             // 
             this.SearchTeacherTextBox.Location = new System.Drawing.Point(709, 11);
@@ -352,7 +352,7 @@
             this.Controls.Add(this.TeacherDGV);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.teacherSearchLbl);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.remove);
             this.Controls.Add(this.search);
@@ -386,7 +386,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox teacherName;
         private System.Windows.Forms.DataGridView TeacherDGV;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label teacherSearchLbl;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button remove;
         private System.Windows.Forms.Button search;
