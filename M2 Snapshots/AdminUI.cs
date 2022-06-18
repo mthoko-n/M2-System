@@ -57,7 +57,12 @@ namespace M2_Snapshots
         {
             if (SearchAdminIDTextBox.Text != "")
             {
-                SqlCommand command = new SqlCommand("select * from admins where admin_id = '" + SearchAdminIDTextBox.Text + "'", con);
+                SqlCommand command = new SqlCommand("select * from admins where " +
+                     "admin_id LIKE '%" + SearchAdminIDTextBox.Text + "%' OR " +
+                     "admin_name LIKE '%" + SearchAdminIDTextBox.Text + "%' OR " +
+                     "admin_details LIKE '%" + SearchAdminIDTextBox.Text + "%' OR " +
+                     "admin_email LIKE '%" + SearchAdminIDTextBox.Text + "%'"
+                     , con);
                 SqlDataAdapter sd = new SqlDataAdapter(command);
                 DataTable dt = new DataTable();
                 sd.Fill(dt);
@@ -92,9 +97,12 @@ namespace M2_Snapshots
                     {
                         con.Open();
                         SqlCommand command = new SqlCommand("Delete admins where admin_id = '" + SearchAdminIDTextBox.Text + "'", con);
-                        command.ExecuteNonQuery();
+                        //command.ExecuteNonQuery();
+                        if (command.ExecuteNonQuery() > 0)
+                            MessageBox.Show("Successfully Removed");
+                        else
+                            MessageBox.Show("Invalid data, please provide Admin ID to remove a field");
                         con.Close();
-                        MessageBox.Show("Successfully Removed");
                         BindData();
                     }
 
@@ -147,7 +155,7 @@ namespace M2_Snapshots
             }
             else
             {
-                MessageBox.Show("Fill in appropriate fields");
+                MessageBox.Show("Fill in Admin ID and at least one other field");
             }
         }
     }

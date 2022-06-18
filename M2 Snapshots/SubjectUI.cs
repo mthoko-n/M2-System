@@ -58,7 +58,11 @@ namespace M2_Snapshots
         {
             if (SearchSubjectTextBox.Text != "")
             {
-                SqlCommand command = new SqlCommand("select * from subjects where subject_ID = '" + SearchSubjectTextBox.Text + "'", con);
+                SqlCommand command = new SqlCommand("select * from subjects where " +
+                    "subject_ID LIKE '%" + SearchSubjectTextBox.Text + "%' OR " +
+                    "subject_name LIKE '%" + SearchSubjectTextBox.Text + "%' OR " +
+                    "subjdetails LIKE '%" + SearchSubjectTextBox.Text + "%'"
+                    , con);
                 SqlDataAdapter sd = new SqlDataAdapter(command);
                 DataTable dt = new DataTable();
                 sd.Fill(dt);
@@ -92,9 +96,13 @@ namespace M2_Snapshots
                     {
                         con.Open();
                         SqlCommand command = new SqlCommand("Delete subjects where subject_ID = '" + SearchSubjectTextBox.Text + "'", con);
-                        command.ExecuteNonQuery();
+                        //command.ExecuteNonQuery();
+                        if (command.ExecuteNonQuery() > 0)
+                            MessageBox.Show("Successfully Removed");
+                        else
+                            MessageBox.Show("Invalid data, please provide Subject ID to remove a field");
                         con.Close();
-                        MessageBox.Show("Successfully Removed");
+                        //MessageBox.Show("Successfully Removed");
                         BindData();
                     }
 
@@ -144,7 +152,7 @@ namespace M2_Snapshots
             }
             else
             {
-                MessageBox.Show("Fill in appropriate fields");
+                MessageBox.Show("Fill in Subject ID and at least one other field");
             }
 
         }
