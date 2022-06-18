@@ -240,7 +240,7 @@ namespace M2_Snapshots
 
                     if (res == DialogResult.Yes)
                     {
-                        if (SearchTeacherTextBox.Text !="")
+                        if (SearchTeacherTextBox.Text != "")
                         {
                             con.Open();
 
@@ -265,6 +265,16 @@ namespace M2_Snapshots
 
 
                 }
+            }
+
+            catch
+            {
+
+                MessageBox.Show("Invalid");
+            }
+        }
+
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -303,6 +313,16 @@ namespace M2_Snapshots
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void teachTitle_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchTeacherTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
