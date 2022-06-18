@@ -29,256 +29,284 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
-            this.StudentPB = new System.Windows.Forms.PictureBox();
-            this.TeacherPB = new System.Windows.Forms.PictureBox();
-            this.PaymentPB = new System.Windows.Forms.PictureBox();
-            this.SubjectPB = new System.Windows.Forms.PictureBox();
-            this.ClassPB = new System.Windows.Forms.PictureBox();
-            this.AcademicPB = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.AdminPB = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LoginPnl = new System.Windows.Forms.Panel();
-            this.LoginLbl = new System.Windows.Forms.Label();
-            this.LogoutPnl = new System.Windows.Forms.Panel();
-            this.LogoutLbl = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TeacherPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PaymentPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SubjectPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ClassPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AcademicPB)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AdminPB)).BeginInit();
+            this.studentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.classToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.academicReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.loginBtn = new System.Windows.Forms.ToolStripButton();
+            this.studentsBtn = new System.Windows.Forms.ToolStripButton();
+            this.teacherBtn = new System.Windows.Forms.ToolStripButton();
+            this.subjectsBtn = new System.Windows.Forms.ToolStripButton();
+            this.adminBtn = new System.Windows.Forms.ToolStripButton();
+            this.classBtn = new System.Windows.Forms.ToolStripButton();
+            this.academicReportBtn = new System.Windows.Forms.ToolStripButton();
+            this.paymentBtn = new System.Windows.Forms.ToolStripButton();
+            this.logoutBtn = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
-            this.LoginPnl.SuspendLayout();
-            this.LogoutPnl.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // StudentPB
-            // 
-            this.StudentPB.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.StudentPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.StudentPB.Image = ((System.Drawing.Image)(resources.GetObject("StudentPB.Image")));
-            this.StudentPB.Location = new System.Drawing.Point(21, 33);
-            this.StudentPB.Name = "StudentPB";
-            this.StudentPB.Size = new System.Drawing.Size(187, 128);
-            this.StudentPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.StudentPB.TabIndex = 1;
-            this.StudentPB.TabStop = false;
-            this.StudentPB.Click += new System.EventHandler(this.StudentPB_Click_1);
-            // 
-            // TeacherPB
-            // 
-            this.TeacherPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.TeacherPB.Image = ((System.Drawing.Image)(resources.GetObject("TeacherPB.Image")));
-            this.TeacherPB.Location = new System.Drawing.Point(245, 33);
-            this.TeacherPB.Name = "TeacherPB";
-            this.TeacherPB.Size = new System.Drawing.Size(177, 128);
-            this.TeacherPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.TeacherPB.TabIndex = 2;
-            this.TeacherPB.TabStop = false;
-            this.TeacherPB.Click += new System.EventHandler(this.TeacherPB_Click_1);
-            // 
-            // PaymentPB
-            // 
-            this.PaymentPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.PaymentPB.Image = ((System.Drawing.Image)(resources.GetObject("PaymentPB.Image")));
-            this.PaymentPB.Location = new System.Drawing.Point(682, 33);
-            this.PaymentPB.Name = "PaymentPB";
-            this.PaymentPB.Size = new System.Drawing.Size(170, 128);
-            this.PaymentPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PaymentPB.TabIndex = 4;
-            this.PaymentPB.TabStop = false;
-            this.PaymentPB.Click += new System.EventHandler(this.PaymentPB_Click_1);
-            // 
-            // SubjectPB
-            // 
-            this.SubjectPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.SubjectPB.Image = ((System.Drawing.Image)(resources.GetObject("SubjectPB.Image")));
-            this.SubjectPB.Location = new System.Drawing.Point(455, 33);
-            this.SubjectPB.Name = "SubjectPB";
-            this.SubjectPB.Size = new System.Drawing.Size(178, 128);
-            this.SubjectPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.SubjectPB.TabIndex = 6;
-            this.SubjectPB.TabStop = false;
-            this.SubjectPB.Click += new System.EventHandler(this.SubjectPB_Click_1);
-            // 
-            // ClassPB
-            // 
-            this.ClassPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClassPB.Image = ((System.Drawing.Image)(resources.GetObject("ClassPB.Image")));
-            this.ClassPB.Location = new System.Drawing.Point(245, 232);
-            this.ClassPB.Name = "ClassPB";
-            this.ClassPB.Size = new System.Drawing.Size(177, 128);
-            this.ClassPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ClassPB.TabIndex = 7;
-            this.ClassPB.TabStop = false;
-            this.ClassPB.Click += new System.EventHandler(this.ClassPB_Click_1);
-            // 
-            // AcademicPB
-            // 
-            this.AcademicPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AcademicPB.Image = ((System.Drawing.Image)(resources.GetObject("AcademicPB.Image")));
-            this.AcademicPB.Location = new System.Drawing.Point(23, 232);
-            this.AcademicPB.Name = "AcademicPB";
-            this.AcademicPB.Size = new System.Drawing.Size(187, 128);
-            this.AcademicPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.AcademicPB.TabIndex = 8;
-            this.AcademicPB.TabStop = false;
-            this.AcademicPB.Click += new System.EventHandler(this.AcademicPB_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox1.Controls.Add(this.AdminPB);
-            this.groupBox1.Controls.Add(this.ClassPB);
-            this.groupBox1.Controls.Add(this.StudentPB);
-            this.groupBox1.Controls.Add(this.TeacherPB);
-            this.groupBox1.Controls.Add(this.SubjectPB);
-            this.groupBox1.Controls.Add(this.AcademicPB);
-            this.groupBox1.Controls.Add(this.PaymentPB);
-            this.groupBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(46, 148);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(889, 406);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "School Management Quick Access";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // AdminPB
-            // 
-            this.AdminPB.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.AdminPB.Image = ((System.Drawing.Image)(resources.GetObject("AdminPB.Image")));
-            this.AdminPB.Location = new System.Drawing.Point(455, 232);
-            this.AdminPB.Name = "AdminPB";
-            this.AdminPB.Size = new System.Drawing.Size(178, 128);
-            this.AdminPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.AdminPB.TabIndex = 16;
-            this.AdminPB.TabStop = false;
-            this.AdminPB.Click += new System.EventHandler(this.AdminPB_Click_1);
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adminToolStripMenuItem,
-            this.teacherToolStripMenuItem});
+            this.teacherToolStripMenuItem,
+            this.studentsToolStripMenuItem,
+            this.paymentToolStripMenuItem,
+            this.classToolStripMenuItem,
+            this.academicReportToolStripMenuItem,
+            this.adminToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(977, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // adminToolStripMenuItem
             // 
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.adminToolStripMenuItem.Text = "Admin";
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.adminToolStripMenuItem.Text = "Student";
             // 
             // teacherToolStripMenuItem
             // 
             this.teacherToolStripMenuItem.Name = "teacherToolStripMenuItem";
             this.teacherToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.teacherToolStripMenuItem.Text = "Teacher";
+            this.teacherToolStripMenuItem.Click += new System.EventHandler(this.teacherToolStripMenuItem_Click);
             // 
-            // LoginPnl
+            // studentsToolStripMenuItem
             // 
-            this.LoginPnl.BackColor = System.Drawing.Color.LimeGreen;
-            this.LoginPnl.Controls.Add(this.LoginLbl);
-            this.LoginPnl.Location = new System.Drawing.Point(46, 37);
-            this.LoginPnl.Name = "LoginPnl";
-            this.LoginPnl.Size = new System.Drawing.Size(187, 75);
-            this.LoginPnl.TabIndex = 20;
-            this.LoginPnl.Click += new System.EventHandler(this.LoginPnl_Click_1);
-            this.LoginPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
+            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.studentsToolStripMenuItem.Text = "Subject";
+            this.studentsToolStripMenuItem.Click += new System.EventHandler(this.studentsToolStripMenuItem_Click);
             // 
-            // LoginLbl
+            // paymentToolStripMenuItem
             // 
-            this.LoginLbl.AutoSize = true;
-            this.LoginLbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LoginLbl.Location = new System.Drawing.Point(45, 23);
-            this.LoginLbl.Name = "LoginLbl";
-            this.LoginLbl.Size = new System.Drawing.Size(91, 32);
-            this.LoginLbl.TabIndex = 0;
-            this.LoginLbl.Text = "Login";
-            this.LoginLbl.Click += new System.EventHandler(this.LoginLbl_Click);
+            this.paymentToolStripMenuItem.Name = "paymentToolStripMenuItem";
+            this.paymentToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.paymentToolStripMenuItem.Text = "Admin";
+            this.paymentToolStripMenuItem.Click += new System.EventHandler(this.paymentToolStripMenuItem_Click);
             // 
-            // LogoutPnl
+            // classToolStripMenuItem
             // 
-            this.LogoutPnl.BackColor = System.Drawing.Color.Red;
-            this.LogoutPnl.Controls.Add(this.LogoutLbl);
-            this.LogoutPnl.Location = new System.Drawing.Point(748, 37);
-            this.LogoutPnl.Name = "LogoutPnl";
-            this.LogoutPnl.Size = new System.Drawing.Size(187, 75);
-            this.LogoutPnl.TabIndex = 21;
-            this.LogoutPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.classToolStripMenuItem.Name = "classToolStripMenuItem";
+            this.classToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.classToolStripMenuItem.Text = "Class";
+            this.classToolStripMenuItem.Click += new System.EventHandler(this.classToolStripMenuItem_Click);
             // 
-            // LogoutLbl
+            // academicReportToolStripMenuItem
             // 
-            this.LogoutLbl.AutoSize = true;
-            this.LogoutLbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogoutLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LogoutLbl.Location = new System.Drawing.Point(32, 23);
-            this.LogoutLbl.Name = "LogoutLbl";
-            this.LogoutLbl.Size = new System.Drawing.Size(117, 32);
-            this.LogoutLbl.TabIndex = 1;
-            this.LogoutLbl.Text = "Log out";
+            this.academicReportToolStripMenuItem.Name = "academicReportToolStripMenuItem";
+            this.academicReportToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
+            this.academicReportToolStripMenuItem.Text = "Academic Report";
+            this.academicReportToolStripMenuItem.Click += new System.EventHandler(this.academicReportToolStripMenuItem_Click);
+            // 
+            // adminToolStripMenuItem1
+            // 
+            this.adminToolStripMenuItem1.Name = "adminToolStripMenuItem1";
+            this.adminToolStripMenuItem1.Size = new System.Drawing.Size(66, 20);
+            this.adminToolStripMenuItem1.Text = "Payment";
+            this.adminToolStripMenuItem1.Click += new System.EventHandler(this.adminToolStripMenuItem1_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loginBtn,
+            this.studentsBtn,
+            this.teacherBtn,
+            this.subjectsBtn,
+            this.adminBtn,
+            this.classBtn,
+            this.academicReportBtn,
+            this.paymentBtn,
+            this.logoutBtn});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 646);
+            this.toolStrip1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(5, 5, 0, 5);
+            this.toolStrip1.Size = new System.Drawing.Size(1370, 103);
+            this.toolStrip1.TabIndex = 23;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // loginBtn
+            // 
+            this.loginBtn.AutoSize = false;
+            this.loginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.loginBtn.Image = ((System.Drawing.Image)(resources.GetObject("loginBtn.Image")));
+            this.loginBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.loginBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(100, 90);
+            this.loginBtn.Text = "Log in";
+            this.loginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            // 
+            // studentsBtn
+            // 
+            this.studentsBtn.AutoSize = false;
+            this.studentsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.studentsBtn.Image = ((System.Drawing.Image)(resources.GetObject("studentsBtn.Image")));
+            this.studentsBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.studentsBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.studentsBtn.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.studentsBtn.Name = "studentsBtn";
+            this.studentsBtn.Size = new System.Drawing.Size(100, 90);
+            this.studentsBtn.Text = "Students";
+            this.studentsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.studentsBtn.ToolTipText = "Subjects";
+            this.studentsBtn.Click += new System.EventHandler(this.studentsBtn_Click);
+            // 
+            // teacherBtn
+            // 
+            this.teacherBtn.AutoSize = false;
+            this.teacherBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.teacherBtn.Image = ((System.Drawing.Image)(resources.GetObject("teacherBtn.Image")));
+            this.teacherBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.teacherBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.teacherBtn.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.teacherBtn.Name = "teacherBtn";
+            this.teacherBtn.Size = new System.Drawing.Size(100, 90);
+            this.teacherBtn.Text = "Teacher";
+            this.teacherBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.teacherBtn.Click += new System.EventHandler(this.teacherBtn_Click);
+            // 
+            // subjectsBtn
+            // 
+            this.subjectsBtn.AutoSize = false;
+            this.subjectsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.subjectsBtn.Image = ((System.Drawing.Image)(resources.GetObject("subjectsBtn.Image")));
+            this.subjectsBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.subjectsBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.subjectsBtn.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.subjectsBtn.Name = "subjectsBtn";
+            this.subjectsBtn.Size = new System.Drawing.Size(100, 90);
+            this.subjectsBtn.Text = "Subjects";
+            this.subjectsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.subjectsBtn.Click += new System.EventHandler(this.subjectsBtn_Click);
+            // 
+            // adminBtn
+            // 
+            this.adminBtn.AutoSize = false;
+            this.adminBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.adminBtn.Image = ((System.Drawing.Image)(resources.GetObject("adminBtn.Image")));
+            this.adminBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.adminBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.adminBtn.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.adminBtn.Name = "adminBtn";
+            this.adminBtn.Size = new System.Drawing.Size(100, 90);
+            this.adminBtn.Text = "Admin";
+            this.adminBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.adminBtn.Click += new System.EventHandler(this.adminBtn_Click);
+            // 
+            // classBtn
+            // 
+            this.classBtn.AutoSize = false;
+            this.classBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.classBtn.Image = ((System.Drawing.Image)(resources.GetObject("classBtn.Image")));
+            this.classBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.classBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.classBtn.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.classBtn.Name = "classBtn";
+            this.classBtn.Size = new System.Drawing.Size(100, 90);
+            this.classBtn.Text = "Class";
+            this.classBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.classBtn.Click += new System.EventHandler(this.classBtn_Click);
+            // 
+            // academicReportBtn
+            // 
+            this.academicReportBtn.AutoSize = false;
+            this.academicReportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.academicReportBtn.Image = ((System.Drawing.Image)(resources.GetObject("academicReportBtn.Image")));
+            this.academicReportBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.academicReportBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.academicReportBtn.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.academicReportBtn.Name = "academicReportBtn";
+            this.academicReportBtn.Size = new System.Drawing.Size(100, 90);
+            this.academicReportBtn.Text = "Academic Report";
+            this.academicReportBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.academicReportBtn.Click += new System.EventHandler(this.academicReportBtn_Click);
+            // 
+            // paymentBtn
+            // 
+            this.paymentBtn.AutoSize = false;
+            this.paymentBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.paymentBtn.Image = ((System.Drawing.Image)(resources.GetObject("paymentBtn.Image")));
+            this.paymentBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.paymentBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.paymentBtn.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.paymentBtn.Name = "paymentBtn";
+            this.paymentBtn.Size = new System.Drawing.Size(100, 90);
+            this.paymentBtn.Text = "Payment";
+            this.paymentBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.paymentBtn.Click += new System.EventHandler(this.paymentBtn_Click);
+            // 
+            // logoutBtn
+            // 
+            this.logoutBtn.AutoSize = false;
+            this.logoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutBtn.Image")));
+            this.logoutBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.logoutBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(100, 90);
+            this.logoutBtn.Text = "Log Out";
+            this.logoutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(977, 601);
-            this.Controls.Add(this.LogoutPnl);
-            this.Controls.Add(this.LoginPnl);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainMenu";
             this.Text = "Kharina Secondary School";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.StudentPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TeacherPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PaymentPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SubjectPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ClassPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AcademicPB)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.AdminPB)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.LoginPnl.ResumeLayout(false);
-            this.LoginPnl.PerformLayout();
-            this.LogoutPnl.ResumeLayout(false);
-            this.LogoutPnl.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox StudentPB;
-        private System.Windows.Forms.PictureBox TeacherPB;
-        private System.Windows.Forms.PictureBox PaymentPB;
-        private System.Windows.Forms.PictureBox SubjectPB;
-        private System.Windows.Forms.PictureBox ClassPB;
-        private System.Windows.Forms.PictureBox AcademicPB;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem teacherToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
-        private System.Windows.Forms.Panel LoginPnl;
-        private System.Windows.Forms.Label LoginLbl;
-        private System.Windows.Forms.Panel LogoutPnl;
-        private System.Windows.Forms.Label LogoutLbl;
-        private System.Windows.Forms.PictureBox AdminPB;
+        private System.Windows.Forms.ToolStripMenuItem studentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem paymentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem classToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem academicReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton loginBtn;
+        private System.Windows.Forms.ToolStripButton studentsBtn;
+        private System.Windows.Forms.ToolStripButton teacherBtn;
+        private System.Windows.Forms.ToolStripButton subjectsBtn;
+        private System.Windows.Forms.ToolStripButton adminBtn;
+        private System.Windows.Forms.ToolStripButton classBtn;
+        private System.Windows.Forms.ToolStripButton academicReportBtn;
+        private System.Windows.Forms.ToolStripButton paymentBtn;
+        private System.Windows.Forms.ToolStripButton logoutBtn;
     }
 }
 
