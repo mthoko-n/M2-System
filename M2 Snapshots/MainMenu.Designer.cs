@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +48,7 @@
             this.academicReportBtn = new System.Windows.Forms.ToolStripButton();
             this.paymentBtn = new System.Windows.Forms.ToolStripButton();
             this.logoutBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +56,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.White;
+            this.menuStrip1.Enabled = false;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adminToolStripMenuItem,
             this.teacherToolStripMenuItem,
@@ -150,12 +153,14 @@
             this.loginBtn.Size = new System.Drawing.Size(100, 90);
             this.loginBtn.Text = "Log in";
             this.loginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.loginBtn.ToolTipText = "LOG IN to Enable Controls";
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // studentsBtn
             // 
             this.studentsBtn.AutoSize = false;
             this.studentsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.studentsBtn.Enabled = false;
             this.studentsBtn.Image = ((System.Drawing.Image)(resources.GetObject("studentsBtn.Image")));
             this.studentsBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.studentsBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -171,6 +176,7 @@
             // 
             this.teacherBtn.AutoSize = false;
             this.teacherBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.teacherBtn.Enabled = false;
             this.teacherBtn.Image = ((System.Drawing.Image)(resources.GetObject("teacherBtn.Image")));
             this.teacherBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.teacherBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -185,6 +191,7 @@
             // 
             this.subjectsBtn.AutoSize = false;
             this.subjectsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.subjectsBtn.Enabled = false;
             this.subjectsBtn.Image = ((System.Drawing.Image)(resources.GetObject("subjectsBtn.Image")));
             this.subjectsBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.subjectsBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -199,6 +206,7 @@
             // 
             this.adminBtn.AutoSize = false;
             this.adminBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.adminBtn.Enabled = false;
             this.adminBtn.Image = ((System.Drawing.Image)(resources.GetObject("adminBtn.Image")));
             this.adminBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.adminBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -213,6 +221,7 @@
             // 
             this.classBtn.AutoSize = false;
             this.classBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.classBtn.Enabled = false;
             this.classBtn.Image = ((System.Drawing.Image)(resources.GetObject("classBtn.Image")));
             this.classBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.classBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -227,6 +236,7 @@
             // 
             this.academicReportBtn.AutoSize = false;
             this.academicReportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.academicReportBtn.Enabled = false;
             this.academicReportBtn.Image = ((System.Drawing.Image)(resources.GetObject("academicReportBtn.Image")));
             this.academicReportBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.academicReportBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -241,6 +251,7 @@
             // 
             this.paymentBtn.AutoSize = false;
             this.paymentBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.paymentBtn.Enabled = false;
             this.paymentBtn.Image = ((System.Drawing.Image)(resources.GetObject("paymentBtn.Image")));
             this.paymentBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.paymentBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -255,6 +266,7 @@
             // 
             this.logoutBtn.AutoSize = false;
             this.logoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logoutBtn.Enabled = false;
             this.logoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutBtn.Image")));
             this.logoutBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.logoutBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -263,12 +275,21 @@
             this.logoutBtn.Size = new System.Drawing.Size(100, 90);
             this.logoutBtn.Text = "Log Out";
             this.logoutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ShowAlways = true;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -277,6 +298,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainMenu";
             this.Text = "Kharina Secondary School";
+            this.toolTip1.SetToolTip(this, "Press the LOG IN button to enable controls");
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -307,6 +329,7 @@
         private System.Windows.Forms.ToolStripButton academicReportBtn;
         private System.Windows.Forms.ToolStripButton paymentBtn;
         private System.Windows.Forms.ToolStripButton logoutBtn;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

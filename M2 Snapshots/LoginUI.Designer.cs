@@ -44,6 +44,7 @@
             this.userLoginTableAdapter1 = new M2_Snapshots.BinaryMakersDSTableAdapters.UserLoginTableAdapter();
             this.tableAdapterManager1 = new M2_Snapshots.BinaryMakersDSTableAdapters.TableAdapterManager();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.LoginPagePnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -52,6 +53,7 @@
             // LoginPagePnl
             // 
             this.LoginPagePnl.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LoginPagePnl.Controls.Add(this.checkBox1);
             this.LoginPagePnl.Controls.Add(this.enterAsLbl);
             this.LoginPagePnl.Controls.Add(this.teacherRB);
             this.LoginPagePnl.Controls.Add(this.adminRB);
@@ -92,6 +94,7 @@
             this.teacherRB.TabStop = true;
             this.teacherRB.Text = "Teacher";
             this.teacherRB.UseVisualStyleBackColor = true;
+            this.teacherRB.CheckedChanged += new System.EventHandler(this.teacherRB_CheckedChanged);
             // 
             // adminRB
             // 
@@ -105,6 +108,7 @@
             this.adminRB.TabStop = true;
             this.adminRB.Text = "Admin";
             this.adminRB.UseVisualStyleBackColor = false;
+            this.adminRB.CheckedChanged += new System.EventHandler(this.adminRB_CheckedChanged);
             // 
             // loginBtn
             // 
@@ -218,6 +222,19 @@
             this.tableAdapterManager1.UpdateOrder = M2_Snapshots.BinaryMakersDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager1.UserLoginTableAdapter = this.userLoginTableAdapter1;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.checkBox1.Location = new System.Drawing.Point(368, 233);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(63, 20);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "Show";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // LoginUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -255,5 +272,6 @@
         private BinaryMakersDSTableAdapters.UserLoginTableAdapter userLoginTableAdapter1;
         private BinaryMakersDSTableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
