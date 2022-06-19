@@ -235,5 +235,46 @@ namespace M2_Snapshots
            
             stuGenderCB.SelectedIndex = -1;
         }
+
+        private void studentDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (studentDGV.SelectedRows.Count == 1) {
+                string id = studentDGV.SelectedRows[0].Cells[0].Value + string.Empty;
+                stuIdTB.Text = id;
+
+                string classID = studentDGV.SelectedRows[0].Cells[1].Value + string.Empty;
+                stuClassIdTB.Text = classID;
+
+                string name = studentDGV.SelectedRows[0].Cells[2].Value + string.Empty;
+                stuNameTB.Text = name;
+
+                string surname = studentDGV.SelectedRows[0].Cells[3].Value + string.Empty;
+                stuLastNameTB.Text = surname;
+
+                string address = studentDGV.SelectedRows[0].Cells[4].Value + string.Empty;
+                stuAddressTB.Text = address;
+
+                string email = studentDGV.SelectedRows[0].Cells[5].Value + string.Empty;
+                stuEmailTB.Text = email;
+
+                string age= studentDGV.SelectedRows[0].Cells[6].Value + string.Empty;
+                stuAgeTB.Text = age;
+
+                string gender = studentDGV.SelectedRows[0].Cells[7].Value + string.Empty;
+                stuGenderCB.Text = gender;
+
+                string fees = studentDGV.SelectedRows[0].Cells[8].Value + string.Empty;
+                stuFeesTB.Text = fees;
+
+                string pContact = studentDGV.SelectedRows[0].Cells[9].Value + string.Empty;
+                stuParentNoTB.Text = pContact;
+
+            }
+        }
+
+        private void studentDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

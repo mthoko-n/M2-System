@@ -358,6 +358,8 @@
             this.studentDGV.RowHeadersWidth = 51;
             this.studentDGV.Size = new System.Drawing.Size(1073, 150);
             this.studentDGV.TabIndex = 18;
+            this.studentDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDGV_CellClick);
+            this.studentDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDGV_CellContentClick);
             // 
             // stuClearBtn
             // 
