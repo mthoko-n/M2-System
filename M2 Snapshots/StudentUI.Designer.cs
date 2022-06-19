@@ -267,7 +267,7 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Student";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
+            /* 
             // stuEmailTB
             // 
             this.stuEmailTB.Location = new System.Drawing.Point(112, 242);
@@ -285,7 +285,7 @@
             this.stuEmailLbl.Size = new System.Drawing.Size(39, 14);
             this.stuEmailLbl.TabIndex = 29;
             this.stuEmailLbl.Text = "Email:";
-            // 
+            */ 
             // stuAgeTB
             // 
             this.stuAgeTB.Location = new System.Drawing.Point(823, 75);
