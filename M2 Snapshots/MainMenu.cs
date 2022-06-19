@@ -12,15 +12,39 @@ namespace M2_Snapshots
 {
     public partial class MainMenu : Form
     {
-
-        
+        public static MainMenu m;
       
+        public ToolStripButton stu;
+        public ToolStripButton login;
+        public ToolStripButton tea;
+        public ToolStripButton sub;
+        public ToolStripButton adm;
+        public ToolStripButton cla;
+        public ToolStripButton aca;
+        public ToolStripButton logout;
+        public ToolStripButton pay;
+        public MenuStrip mstrip;
+
+
 
         public MainMenu()
         {
             InitializeComponent();
+            m = this;
+          
+            stu = studentsBtn;
+            login = loginBtn;
+            tea = teacherBtn;
+            sub = subjectsBtn;
+            adm = adminBtn;
+            cla = classBtn;
+            aca = academicReportBtn;
+            pay = paymentBtn;
+            logout = logoutBtn;
+            mstrip = menuStrip1;
+
            
-           
+
          }
 
         public void FormSetup(Form myForm)
@@ -96,6 +120,14 @@ namespace M2_Snapshots
 
 
             }
+
+
+
+
+           
+           
+           
+                        
                 
 
 
@@ -206,6 +238,13 @@ namespace M2_Snapshots
         {
             PaymentUI paymentObj = new PaymentUI();
             FormSetup(paymentObj);
+        }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+           
+           
         }
     }
 }
