@@ -33,11 +33,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.teachTitle = new System.Windows.Forms.TextBox();
             this.teachGender = new System.Windows.Forms.ComboBox();
-            this.teachEmail = new System.Windows.Forms.TextBox();
             this.teachcellNum = new System.Windows.Forms.TextBox();
             this.teachAddress = new System.Windows.Forms.TextBox();
             this.teachLName = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -67,7 +65,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(21, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 27);
+            this.label1.Size = new System.Drawing.Size(223, 33);
             this.label1.TabIndex = 19;
             this.label1.Text = "Teacher Details";
             // 
@@ -75,11 +73,9 @@
             // 
             this.groupBox1.Controls.Add(this.teachTitle);
             this.groupBox1.Controls.Add(this.teachGender);
-            this.groupBox1.Controls.Add(this.teachEmail);
             this.groupBox1.Controls.Add(this.teachcellNum);
             this.groupBox1.Controls.Add(this.teachAddress);
             this.groupBox1.Controls.Add(this.teachLName);
-            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label8);
@@ -100,7 +96,7 @@
             // 
             this.teachTitle.Location = new System.Drawing.Point(557, 37);
             this.teachTitle.Name = "teachTitle";
-            this.teachTitle.Size = new System.Drawing.Size(185, 20);
+            this.teachTitle.Size = new System.Drawing.Size(185, 23);
             this.teachTitle.TabIndex = 13;
             this.teachTitle.TextChanged += new System.EventHandler(this.teachTitle_TextChanged);
             // 
@@ -112,23 +108,15 @@
             "Female"});
             this.teachGender.Location = new System.Drawing.Point(158, 136);
             this.teachGender.Name = "teachGender";
-            this.teachGender.Size = new System.Drawing.Size(185, 22);
+            this.teachGender.Size = new System.Drawing.Size(185, 24);
             this.teachGender.TabIndex = 6;
             this.teachGender.SelectedIndexChanged += new System.EventHandler(this.teachGender_SelectedIndexChanged);
-            // 
-            // teachEmail
-            // 
-            this.teachEmail.Location = new System.Drawing.Point(557, 132);
-            this.teachEmail.Name = "teachEmail";
-            this.teachEmail.Size = new System.Drawing.Size(185, 20);
-            this.teachEmail.TabIndex = 10;
-            this.teachEmail.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // teachcellNum
             // 
             this.teachcellNum.Location = new System.Drawing.Point(158, 177);
             this.teachcellNum.Name = "teachcellNum";
-            this.teachcellNum.Size = new System.Drawing.Size(185, 20);
+            this.teachcellNum.Size = new System.Drawing.Size(185, 23);
             this.teachcellNum.TabIndex = 7;
             this.teachcellNum.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
@@ -136,7 +124,7 @@
             // 
             this.teachAddress.Location = new System.Drawing.Point(557, 87);
             this.teachAddress.Name = "teachAddress";
-            this.teachAddress.Size = new System.Drawing.Size(185, 20);
+            this.teachAddress.Size = new System.Drawing.Size(185, 23);
             this.teachAddress.TabIndex = 9;
             this.teachAddress.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
@@ -144,25 +132,16 @@
             // 
             this.teachLName.Location = new System.Drawing.Point(158, 79);
             this.teachLName.Name = "teachLName";
-            this.teachLName.Size = new System.Drawing.Size(185, 20);
+            this.teachLName.Size = new System.Drawing.Size(185, 23);
             this.teachLName.TabIndex = 5;
             this.teachLName.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(424, 134);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 14);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Email:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(424, 43);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 14);
+            this.label9.Size = new System.Drawing.Size(112, 16);
             this.label9.TabIndex = 11;
             this.label9.Text = "Teacher\'s Title:";
             // 
@@ -173,7 +152,7 @@
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(42, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 14);
+            this.label3.Size = new System.Drawing.Size(50, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Name:";
             // 
@@ -182,7 +161,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(42, 184);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 14);
+            this.label8.Size = new System.Drawing.Size(97, 16);
             this.label8.TabIndex = 10;
             this.label8.Text = "Cell Number:";
             // 
@@ -192,7 +171,7 @@
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(42, 86);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 14);
+            this.label4.Size = new System.Drawing.Size(83, 16);
             this.label4.TabIndex = 6;
             this.label4.Text = "Last Name:";
             // 
@@ -202,7 +181,7 @@
             this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(424, 93);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 14);
+            this.label7.Size = new System.Drawing.Size(69, 16);
             this.label7.TabIndex = 9;
             this.label7.Text = "Address:";
             // 
@@ -212,7 +191,7 @@
             this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(42, 144);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 14);
+            this.label6.Size = new System.Drawing.Size(64, 16);
             this.label6.TabIndex = 8;
             this.label6.Text = "Gender:";
             // 
@@ -220,7 +199,7 @@
             // 
             this.teacherName.Location = new System.Drawing.Point(158, 36);
             this.teacherName.Name = "teacherName";
-            this.teacherName.Size = new System.Drawing.Size(185, 20);
+            this.teacherName.Size = new System.Drawing.Size(185, 23);
             this.teacherName.TabIndex = 4;
             this.teacherName.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -228,7 +207,7 @@
             // 
             this.teachID.Location = new System.Drawing.Point(557, 181);
             this.teachID.Name = "teachID";
-            this.teachID.Size = new System.Drawing.Size(185, 20);
+            this.teachID.Size = new System.Drawing.Size(185, 22);
             this.teachID.TabIndex = 24;
             this.teachID.TextChanged += new System.EventHandler(this.teachID_TextChanged_1);
             // 
@@ -239,7 +218,7 @@
             this.teacherSearchLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.teacherSearchLbl.Location = new System.Drawing.Point(594, 15);
             this.teacherSearchLbl.Name = "teacherSearchLbl";
-            this.teacherSearchLbl.Size = new System.Drawing.Size(84, 14);
+            this.teacherSearchLbl.Size = new System.Drawing.Size(107, 16);
             this.teacherSearchLbl.TabIndex = 20;
             this.teacherSearchLbl.Text = "Search Teacher";
             // 
@@ -337,13 +316,13 @@
             // 
             this.SearchTeacherTextBox.Location = new System.Drawing.Point(695, 12);
             this.SearchTeacherTextBox.Name = "SearchTeacherTextBox";
-            this.SearchTeacherTextBox.Size = new System.Drawing.Size(185, 20);
+            this.SearchTeacherTextBox.Size = new System.Drawing.Size(185, 23);
             this.SearchTeacherTextBox.TabIndex = 14;
             this.SearchTeacherTextBox.TextChanged += new System.EventHandler(this.SearchTeacherTextBox_TextChanged);
             // 
             // TeacherUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(938, 566);
@@ -373,11 +352,9 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox teachEmail;
         private System.Windows.Forms.TextBox teachcellNum;
         private System.Windows.Forms.TextBox teachAddress;
         private System.Windows.Forms.TextBox teachLName;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;

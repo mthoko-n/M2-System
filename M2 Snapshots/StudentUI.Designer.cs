@@ -47,8 +47,6 @@
             this.stuSearchTB = new System.Windows.Forms.TextBox();
             this.stuIdLbl = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.stuEmailTB = new System.Windows.Forms.TextBox();
-            this.stuEmailLbl = new System.Windows.Forms.Label();
             this.stuAgeTB = new System.Windows.Forms.TextBox();
             this.stuAgeLbl = new System.Windows.Forms.Label();
             this.stuClassIdTB = new System.Windows.Forms.TextBox();
@@ -241,8 +239,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.stuEmailTB);
-            this.groupBox1.Controls.Add(this.stuEmailLbl);
             this.groupBox1.Controls.Add(this.stuAgeTB);
             this.groupBox1.Controls.Add(this.stuAgeLbl);
             this.groupBox1.Controls.Add(this.stuClassIdTB);
@@ -271,7 +267,7 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Student";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
+            /* 
             // stuEmailTB
             // 
             this.stuEmailTB.Location = new System.Drawing.Point(112, 242);
@@ -289,7 +285,7 @@
             this.stuEmailLbl.Size = new System.Drawing.Size(39, 14);
             this.stuEmailLbl.TabIndex = 29;
             this.stuEmailLbl.Text = "Email:";
-            // 
+            */ 
             // stuAgeTB
             // 
             this.stuAgeTB.Location = new System.Drawing.Point(823, 75);
@@ -426,8 +422,6 @@
         private System.Windows.Forms.Label stuAgeLbl;
         private System.Windows.Forms.TextBox stuClassIdTB;
         private System.Windows.Forms.Label stuClassIdLbl;
-        private System.Windows.Forms.TextBox stuEmailTB;
-        private System.Windows.Forms.Label stuEmailLbl;
         private System.Windows.Forms.Button stuClearBtn;
     }
 }
