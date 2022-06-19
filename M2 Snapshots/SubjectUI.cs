@@ -161,5 +161,10 @@ namespace M2_Snapshots
         {
             BindData();
         }
+
+        private void SearchSubjectTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
