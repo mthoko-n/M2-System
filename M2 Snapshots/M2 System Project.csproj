@@ -264,6 +264,12 @@
     <Compile Include="StudentUI.Designer.cs">
       <DependentUpon>StudentUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubjectResults UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectResults UI.Designer.cs">
+      <DependentUpon>SubjectResults UI.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubjectUI.cs">
       <SubType>Form</SubType>
     </Compile>
