@@ -130,7 +130,8 @@ namespace M2_Snapshots
         private void loginBtn_Click(object sender, EventArgs e)
         {
             LoginUI loginObj = new LoginUI();
-            FormSetup(loginObj);
+            loginObj.MdiParent = this;
+            loginObj.Show();
             
         }
 
