@@ -56,6 +56,8 @@
             this.stuParentNoLbl = new System.Windows.Forms.Label();
             this.studentDGV = new System.Windows.Forms.DataGridView();
             this.stuClearBtn = new System.Windows.Forms.Button();
+            this.stuEmailTB = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDGV)).BeginInit();
             this.SuspendLayout();
@@ -101,7 +103,7 @@
             // 
             // stuFeesTB
             // 
-            this.stuFeesTB.Location = new System.Drawing.Point(824, 116);
+            this.stuFeesTB.Location = new System.Drawing.Point(825, 162);
             this.stuFeesTB.Name = "stuFeesTB";
             this.stuFeesTB.Size = new System.Drawing.Size(203, 20);
             this.stuFeesTB.TabIndex = 17;
@@ -131,7 +133,7 @@
             // stuFeesLbl
             // 
             this.stuFeesLbl.AutoSize = true;
-            this.stuFeesLbl.Location = new System.Drawing.Point(730, 122);
+            this.stuFeesLbl.Location = new System.Drawing.Point(731, 168);
             this.stuFeesLbl.Name = "stuFeesLbl";
             this.stuFeesLbl.Size = new System.Drawing.Size(82, 14);
             this.stuFeesLbl.TabIndex = 12;
@@ -239,6 +241,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.stuEmailTB);
             this.groupBox1.Controls.Add(this.stuAgeTB);
             this.groupBox1.Controls.Add(this.stuAgeLbl);
             this.groupBox1.Controls.Add(this.stuClassIdTB);
@@ -267,25 +271,7 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Student";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            /* 
-            // stuEmailTB
             // 
-            this.stuEmailTB.Location = new System.Drawing.Point(112, 242);
-            this.stuEmailTB.Name = "stuEmailTB";
-            this.stuEmailTB.ReadOnly = true;
-            this.stuEmailTB.Size = new System.Drawing.Size(203, 20);
-            this.stuEmailTB.TabIndex = 30;
-            // 
-            // stuEmailLbl
-            // 
-            this.stuEmailLbl.AutoSize = true;
-            this.stuEmailLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuEmailLbl.Location = new System.Drawing.Point(19, 248);
-            this.stuEmailLbl.Name = "stuEmailLbl";
-            this.stuEmailLbl.Size = new System.Drawing.Size(39, 14);
-            this.stuEmailLbl.TabIndex = 29;
-            this.stuEmailLbl.Text = "Email:";
-            */ 
             // stuAgeTB
             // 
             this.stuAgeTB.Location = new System.Drawing.Point(823, 75);
@@ -332,7 +318,7 @@
             // 
             // stuParentNoTB
             // 
-            this.stuParentNoTB.Location = new System.Drawing.Point(823, 159);
+            this.stuParentNoTB.Location = new System.Drawing.Point(824, 205);
             this.stuParentNoTB.Name = "stuParentNoTB";
             this.stuParentNoTB.Size = new System.Drawing.Size(204, 20);
             this.stuParentNoTB.TabIndex = 22;
@@ -340,7 +326,7 @@
             // stuParentNoLbl
             // 
             this.stuParentNoLbl.AutoSize = true;
-            this.stuParentNoLbl.Location = new System.Drawing.Point(730, 165);
+            this.stuParentNoLbl.Location = new System.Drawing.Point(731, 211);
             this.stuParentNoLbl.Name = "stuParentNoLbl";
             this.stuParentNoLbl.Size = new System.Drawing.Size(63, 14);
             this.stuParentNoLbl.TabIndex = 21;
@@ -367,11 +353,29 @@
             this.stuClearBtn.UseVisualStyleBackColor = true;
             this.stuClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
+            // stuEmailTB
+            // 
+            this.stuEmailTB.Location = new System.Drawing.Point(824, 119);
+            this.stuEmailTB.Name = "stuEmailTB";
+            this.stuEmailTB.ReadOnly = true;
+            this.stuEmailTB.Size = new System.Drawing.Size(203, 20);
+            this.stuEmailTB.TabIndex = 41;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(731, 125);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 14);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Email:";
+            // 
             // StudentUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 588);
+            this.ClientSize = new System.Drawing.Size(1111, 588);
             this.Controls.Add(this.stuClearBtn);
             this.Controls.Add(this.studentDGV);
             this.Controls.Add(this.stuUpdateBtn);
@@ -423,5 +427,7 @@
         private System.Windows.Forms.TextBox stuClassIdTB;
         private System.Windows.Forms.Label stuClassIdLbl;
         private System.Windows.Forms.Button stuClearBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox stuEmailTB;
     }
 }
