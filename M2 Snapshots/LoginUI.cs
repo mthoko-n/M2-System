@@ -45,7 +45,7 @@ namespace M2_Snapshots
             String username, password;
 
             try {
-                String querry = "SELECT * FROM userLogin WHERE userID = '"+userTB.Text+"' AND Password = '"+passwordTB.Text+"'";
+                String querry = "SELECT * FROM UserLogin WHERE userID = '" + userTB.Text+ "' AND Password = '" + passwordTB.Text+"'";
                 SqlDataAdapter sda = new SqlDataAdapter(querry,con);
 
                 DataTable dTable = new DataTable();

@@ -107,7 +107,7 @@ namespace M2_Snapshots
 
         private void stuUpdateBtn_Click(object sender, EventArgs e)
         {
-            if ((stuAddressTB.Text != "") || (stuSearchTB.Text != "") || (stuClassIdTB.Text != "") || (stuIdTB.Text != "") || (stuGenderCB.Text != "") || (stuEmailTB.Text != "") || (stuFeesTB.Text != "") || (stuLastNameTB.Text != "") || (stuNameTB.Text != "") || (stuParentNoTB.Text != "") || (stuAgeTB.Text != ""))
+            if ((stuAddressTB.Text != "") || (stuSearchTB.Text != "") || (stuClassIdTB.Text != "") || (stuIdTB.Text != "") || (stuGenderCB.Text != "") /*|| (stuEmailTB.Text != "")*/ || (stuFeesTB.Text != "") || (stuLastNameTB.Text != "") || (stuNameTB.Text != "") || (stuParentNoTB.Text != "") || (stuAgeTB.Text != ""))
             {
                 con.Open();
 
@@ -136,11 +136,11 @@ namespace M2_Snapshots
                     command.ExecuteNonQuery();
                 }
 
-                if ((stuEmailTB.Text != "") && (stuIdTB.Text != ""))
+                /*if ((stuEmailTB.Text != "") && (stuIdTB.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update student set stu_email = '" + stuEmailTB.Text + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
                     command.ExecuteNonQuery();
-                }
+                }*/
 
                 if ((stuAgeTB.Text != "") && (stuIdTB.Text != ""))
                 {
@@ -214,7 +214,7 @@ namespace M2_Snapshots
             stuAddressTB.Clear();
             stuAgeTB.Clear();
             stuClassIdTB.Clear();
-            stuEmailTB.Clear();
+            //stuEmailTB.Clear();
             stuFeesTB.Clear();
             stuLastNameTB.Clear();
             stuNameTB.Clear();

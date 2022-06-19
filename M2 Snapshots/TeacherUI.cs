@@ -29,11 +29,11 @@ namespace M2_Snapshots
         private void addteach_Click(object sender, EventArgs e)
         {
             if ((teacherName.Text != "") && (teachLName.Text != "") && (teachGender.Text != "") && (teachcellNum.Text != "")
-                && (teachTitle.Text != "") && (teachAddress.Text != "") && (teachEmail.Text != "") && (teachID.Text == ""))
+                && (teachTitle.Text != "") && (teachAddress.Text != "") /*&& (teachEmail.Text != "")*/ && (teachID.Text == ""))
             {
                 var rand = new Random();
                 int number = rand.Next(1, 10000);
-
+                string email = teacherName.Text+ teachLName.Text+"@kharina.ac.za";
 
                 if (teacherName.Text.Length > 1)
                 {
@@ -47,12 +47,13 @@ namespace M2_Snapshots
                                 {
                                     if (teachAddress.Text.Length > 10)
                                     {
-                                        if (teachEmail.Text.Length > 9)
+                                        if (email.Length > 0)
                                         {
                                             string teachID = teacherName.Text + teachLName.Text + number;
+
                                             con.Open();
                                             SqlCommand comm = new SqlCommand("INSERT INTO UserLogin values('" + teachID + "','" + teachID + "')", con);
-                                            SqlCommand command = new SqlCommand("INSERT INTO Teachers values('" + teachID + "','" + teacherName.Text + "','" + teachLName.Text + "','" + teachEmail.Text + "','" + teachTitle.Text + "','" + teachGender.Text + "','" + teachcellNum.Text + "','" + teachAddress.Text + "')", con);
+                                            SqlCommand command = new SqlCommand("INSERT INTO Teachers values('" + teachID + "','" + teacherName.Text + "','" + teachLName.Text + "','" + email + "','" + teachTitle.Text + "','" + teachGender.Text + "','" + teachcellNum.Text + "','" + teachAddress.Text + "')", con);
 
                                             comm.ExecuteNonQuery();
                                             command.ExecuteNonQuery();
@@ -163,7 +164,7 @@ namespace M2_Snapshots
 
         private void update_Click(object sender, EventArgs e)
         {
-            if ((teachID.Text != "") && ((teacherName.Text != "") || (teachLName.Text != "") || (teachEmail.Text != "") || (teachGender.Text != "") || (teachTitle.Text != "") || (teachcellNum.Text != "") || (teachAddress.Text != "")))
+            if ((teachID.Text != "") && ((teacherName.Text != "") || (teachLName.Text != "") /*|| (teachEmail.Text != "")*/ || (teachGender.Text != "") || (teachTitle.Text != "") || (teachcellNum.Text != "") || (teachAddress.Text != "")))
             {
                 con.Open();
 
@@ -177,11 +178,11 @@ namespace M2_Snapshots
                     SqlCommand command = new SqlCommand("update Teachers set teach_lastname = '" + teachLName.Text + "' where teach_ID = '" + teachID.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if ((teachEmail.Text != "") && (teachID.Text != ""))
+                /*if ((teachEmail.Text != "") && (teachID.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update Teachers set teach_email = '" + teachEmail.Text + "' where teach_ID = '" + teachID.Text + "'", con);
                     command.ExecuteNonQuery();
-                }
+                }*/
                 if ((teachGender.Text != "") && (teachID.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update Teachers set gender = '" + teachGender.Text + "' where teach_ID = '" + teachID.Text + "'", con);
@@ -224,7 +225,7 @@ namespace M2_Snapshots
             teachcellNum.Clear();
             teachTitle.Clear();
             teachAddress.Clear();
-            teachEmail.Clear();
+            //teachEmail.Clear();
             teachID.Clear();
         }
 
