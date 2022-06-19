@@ -120,7 +120,6 @@
             // 
             this.teachEmail.Location = new System.Drawing.Point(557, 132);
             this.teachEmail.Name = "teachEmail";
-            this.teachEmail.ReadOnly = true;
             this.teachEmail.Size = new System.Drawing.Size(185, 20);
             this.teachEmail.TabIndex = 10;
             this.teachEmail.TextChanged += new System.EventHandler(this.textBox8_TextChanged);

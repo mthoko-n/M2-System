@@ -61,7 +61,6 @@
             // 
             this.AdminEmailTextBox.Location = new System.Drawing.Point(483, 84);
             this.AdminEmailTextBox.Name = "AdminEmailTextBox";
-            this.AdminEmailTextBox.ReadOnly = true;
             this.AdminEmailTextBox.Size = new System.Drawing.Size(185, 20);
             this.AdminEmailTextBox.TabIndex = 18;
             // 
