@@ -47,6 +47,8 @@
             this.stuSearchTB = new System.Windows.Forms.TextBox();
             this.stuIdLbl = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.stuEmailTB = new System.Windows.Forms.TextBox();
             this.stuAgeTB = new System.Windows.Forms.TextBox();
             this.stuAgeLbl = new System.Windows.Forms.Label();
             this.stuClassIdTB = new System.Windows.Forms.TextBox();
@@ -56,8 +58,6 @@
             this.stuParentNoLbl = new System.Windows.Forms.Label();
             this.studentDGV = new System.Windows.Forms.DataGridView();
             this.stuClearBtn = new System.Windows.Forms.Button();
-            this.stuEmailTB = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDGV)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +70,7 @@
             this.stuUpdateBtn.Location = new System.Drawing.Point(969, 536);
             this.stuUpdateBtn.Name = "stuUpdateBtn";
             this.stuUpdateBtn.Size = new System.Drawing.Size(98, 40);
-            this.stuUpdateBtn.TabIndex = 17;
+            this.stuUpdateBtn.TabIndex = 5;
             this.stuUpdateBtn.Text = "Update";
             this.stuUpdateBtn.UseVisualStyleBackColor = false;
             this.stuUpdateBtn.Click += new System.EventHandler(this.stuUpdateBtn_Click);
@@ -83,7 +83,7 @@
             this.stuRemoveBtn.Location = new System.Drawing.Point(644, 536);
             this.stuRemoveBtn.Name = "stuRemoveBtn";
             this.stuRemoveBtn.Size = new System.Drawing.Size(98, 40);
-            this.stuRemoveBtn.TabIndex = 15;
+            this.stuRemoveBtn.TabIndex = 3;
             this.stuRemoveBtn.Text = "Remove";
             this.stuRemoveBtn.UseVisualStyleBackColor = false;
             this.stuRemoveBtn.Click += new System.EventHandler(this.stuRemoveBtn_Click);
@@ -96,7 +96,7 @@
             this.stuViewBtn.Location = new System.Drawing.Point(41, 536);
             this.stuViewBtn.Name = "stuViewBtn";
             this.stuViewBtn.Size = new System.Drawing.Size(98, 40);
-            this.stuViewBtn.TabIndex = 14;
+            this.stuViewBtn.TabIndex = 2;
             this.stuViewBtn.Text = "Search";
             this.stuViewBtn.UseVisualStyleBackColor = false;
             this.stuViewBtn.Click += new System.EventHandler(this.stuViewBtn_Click);
@@ -106,7 +106,7 @@
             this.stuFeesTB.Location = new System.Drawing.Point(825, 162);
             this.stuFeesTB.Name = "stuFeesTB";
             this.stuFeesTB.Size = new System.Drawing.Size(203, 20);
-            this.stuFeesTB.TabIndex = 17;
+            this.stuFeesTB.TabIndex = 15;
             this.stuFeesTB.TextChanged += new System.EventHandler(this.stuFeesTB_TextChanged);
             // 
             // stuIdTB
@@ -114,21 +114,21 @@
             this.stuIdTB.Location = new System.Drawing.Point(112, 31);
             this.stuIdTB.Name = "stuIdTB";
             this.stuIdTB.Size = new System.Drawing.Size(203, 20);
-            this.stuIdTB.TabIndex = 16;
+            this.stuIdTB.TabIndex = 7;
             // 
             // stuAddressTB
             // 
             this.stuAddressTB.Location = new System.Drawing.Point(112, 204);
             this.stuAddressTB.Name = "stuAddressTB";
             this.stuAddressTB.Size = new System.Drawing.Size(203, 20);
-            this.stuAddressTB.TabIndex = 15;
+            this.stuAddressTB.TabIndex = 11;
             // 
             // stuLastNameTB
             // 
             this.stuLastNameTB.Location = new System.Drawing.Point(112, 159);
             this.stuLastNameTB.Name = "stuLastNameTB";
             this.stuLastNameTB.Size = new System.Drawing.Size(203, 20);
-            this.stuLastNameTB.TabIndex = 13;
+            this.stuLastNameTB.TabIndex = 10;
             // 
             // stuFeesLbl
             // 
@@ -147,7 +147,7 @@
             this.stuAddBtn.Location = new System.Drawing.Point(800, 536);
             this.stuAddBtn.Name = "stuAddBtn";
             this.stuAddBtn.Size = new System.Drawing.Size(98, 40);
-            this.stuAddBtn.TabIndex = 16;
+            this.stuAddBtn.TabIndex = 4;
             this.stuAddBtn.Text = "Add Student";
             this.stuAddBtn.UseVisualStyleBackColor = false;
             this.stuAddBtn.Click += new System.EventHandler(this.button3_Click);
@@ -199,7 +199,7 @@
             this.stuNameTB.Location = new System.Drawing.Point(112, 113);
             this.stuNameTB.Name = "stuNameTB";
             this.stuNameTB.Size = new System.Drawing.Size(203, 20);
-            this.stuNameTB.TabIndex = 5;
+            this.stuNameTB.TabIndex = 9;
             // 
             // stuSearchLbl
             // 
@@ -228,7 +228,7 @@
             this.stuSearchTB.Location = new System.Drawing.Point(865, 19);
             this.stuSearchTB.Name = "stuSearchTB";
             this.stuSearchTB.Size = new System.Drawing.Size(163, 20);
-            this.stuSearchTB.TabIndex = 9;
+            this.stuSearchTB.TabIndex = 1;
             // 
             // stuIdLbl
             // 
@@ -272,12 +272,30 @@
             this.groupBox1.Text = "Add/Update Student";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(731, 125);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 14);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Email:";
+            // 
+            // stuEmailTB
+            // 
+            this.stuEmailTB.Location = new System.Drawing.Point(824, 119);
+            this.stuEmailTB.Name = "stuEmailTB";
+            this.stuEmailTB.ReadOnly = true;
+            this.stuEmailTB.Size = new System.Drawing.Size(203, 20);
+            this.stuEmailTB.TabIndex = 14;
+            // 
             // stuAgeTB
             // 
             this.stuAgeTB.Location = new System.Drawing.Point(823, 75);
             this.stuAgeTB.Name = "stuAgeTB";
             this.stuAgeTB.Size = new System.Drawing.Size(205, 20);
-            this.stuAgeTB.TabIndex = 27;
+            this.stuAgeTB.TabIndex = 13;
             // 
             // stuAgeLbl
             // 
@@ -293,7 +311,7 @@
             this.stuClassIdTB.Location = new System.Drawing.Point(112, 71);
             this.stuClassIdTB.Name = "stuClassIdTB";
             this.stuClassIdTB.Size = new System.Drawing.Size(203, 20);
-            this.stuClassIdTB.TabIndex = 25;
+            this.stuClassIdTB.TabIndex = 8;
             // 
             // stuClassIdLbl
             // 
@@ -308,20 +326,21 @@
             // stuGenderCB
             // 
             this.stuGenderCB.FormattingEnabled = true;
+            this.stuGenderCB.ItemHeight = 14;
             this.stuGenderCB.Items.AddRange(new object[] {
             "Male",
             "Female"});
             this.stuGenderCB.Location = new System.Drawing.Point(823, 35);
             this.stuGenderCB.Name = "stuGenderCB";
             this.stuGenderCB.Size = new System.Drawing.Size(204, 22);
-            this.stuGenderCB.TabIndex = 23;
+            this.stuGenderCB.TabIndex = 12;
             // 
             // stuParentNoTB
             // 
             this.stuParentNoTB.Location = new System.Drawing.Point(824, 205);
             this.stuParentNoTB.Name = "stuParentNoTB";
             this.stuParentNoTB.Size = new System.Drawing.Size(204, 20);
-            this.stuParentNoTB.TabIndex = 22;
+            this.stuParentNoTB.TabIndex = 16;
             // 
             // stuParentNoLbl
             // 
@@ -348,28 +367,10 @@
             this.stuClearBtn.Location = new System.Drawing.Point(267, 536);
             this.stuClearBtn.Name = "stuClearBtn";
             this.stuClearBtn.Size = new System.Drawing.Size(89, 39);
-            this.stuClearBtn.TabIndex = 39;
+            this.stuClearBtn.TabIndex = 6;
             this.stuClearBtn.Text = "Clear";
             this.stuClearBtn.UseVisualStyleBackColor = true;
             this.stuClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
-            // 
-            // stuEmailTB
-            // 
-            this.stuEmailTB.Location = new System.Drawing.Point(824, 119);
-            this.stuEmailTB.Name = "stuEmailTB";
-            this.stuEmailTB.ReadOnly = true;
-            this.stuEmailTB.Size = new System.Drawing.Size(203, 20);
-            this.stuEmailTB.TabIndex = 41;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(731, 125);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 14);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "Email:";
             // 
             // StudentUI
             // 
