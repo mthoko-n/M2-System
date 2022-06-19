@@ -30,6 +30,8 @@ namespace M2_Snapshots
         public MainMenu()
         {
             InitializeComponent();
+
+            
             m = this;
           
             stu = studentsBtn;

@@ -16,6 +16,8 @@ namespace M2_Snapshots
         public StudentUI()
         {
             InitializeComponent();
+
+           
         }
 
         SqlConnection con = new SqlConnection("Data Source=146.230.177.46;Initial Catalog=GroupPmb2;Persist Security Info=True;User ID=GroupPmb2;Password=b45dc2");
