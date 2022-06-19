@@ -184,11 +184,20 @@ namespace M2_Snapshots
         {
             if (stuSearchTB.Text != "")
             {
-                SqlCommand command = new SqlCommand("select * from student where stu_ID = '" + int.Parse(stuSearchTB.Text) +"'", con);
+                SqlCommand command = new SqlCommand("select * from student where " +
+                   "stu_ID LIKE '%" + stuSearchTB.Text + "%' OR " +
+                   "stu_name LIKE '%" + stuSearchTB.Text + "%' OR " +
+                   "stu_surname LIKE '%" + stuSearchTB.Text + "%' OR " +
+                   "parentContact LIKE '%" + stuSearchTB.Text + "%' OR " +
+                   "stu_gender LIKE '%" + stuSearchTB.Text + "%' OR " +
+                   "stu_address LIKE '%" + stuSearchTB.Text + "%' OR " +
+                   "stu_email LIKE '%" + stuSearchTB.Text + "%'"
+                   , con);
                 SqlDataAdapter sd = new SqlDataAdapter(command);
                 DataTable dt = new DataTable();
                 sd.Fill(dt);
                 studentDGV.DataSource = dt;
+               
             }
             else
             {

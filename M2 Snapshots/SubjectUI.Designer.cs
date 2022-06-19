@@ -65,6 +65,7 @@
             this.SearchSubjectTextBox.Name = "SearchSubjectTextBox";
             this.SearchSubjectTextBox.Size = new System.Drawing.Size(163, 20);
             this.SearchSubjectTextBox.TabIndex = 18;
+            this.SearchSubjectTextBox.TextChanged += new System.EventHandler(this.SearchSubjectTextBox_TextChanged);
             // 
             // groupBox1
             // 
