@@ -248,6 +248,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GroupPmb2DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GroupPmb2DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GroupPmb2DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GroupPmb2DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GroupPmb2DataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -377,6 +387,28 @@
     </None>
     <None Include="GroupPmb2DataSet1.xss">
       <DependentUpon>GroupPmb2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GroupPmb2DataSet2.xsc">
+      <DependentUpon>GroupPmb2DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GroupPmb2DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GroupPmb2DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GroupPmb2DataSet2.xss">
+      <DependentUpon>GroupPmb2DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GroupPmb2DataSet3.xsc">
+      <DependentUpon>GroupPmb2DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="GroupPmb2DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GroupPmb2DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GroupPmb2DataSet3.xss">
+      <DependentUpon>GroupPmb2DataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
