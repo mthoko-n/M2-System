@@ -605,7 +605,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Copyright ©  Kharina Secondary school 2019</Value>
+                  <Value>Copyright ©  Kharina Secondary school 2022</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -614,9 +614,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
           <Top>1.64253cm</Top>
-          <Left>5.1162cm</Left>
+          <Left>4.31716cm</Left>
           <Height>0.6cm</Height>
-          <Width>7.07531cm</Width>
+          <Width>8.07975cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
