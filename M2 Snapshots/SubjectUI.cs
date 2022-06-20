@@ -70,7 +70,7 @@ namespace M2_Snapshots
             }
             else
             {
-                MessageBox.Show("Enter Subject ID in the Search box");
+                MessageBox.Show("Enter Subject ID in the Search box", "Search Subject", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -98,9 +98,9 @@ namespace M2_Snapshots
                         SqlCommand command = new SqlCommand("Delete subjects where subject_ID = '" + SearchSubjectTextBox.Text + "'", con);
                         //command.ExecuteNonQuery();
                         if (command.ExecuteNonQuery() > 0)
-                            MessageBox.Show("Successfully Removed");
+                            MessageBox.Show("Successfully Removed", "Subject Removed", MessageBoxButtons.OK);
                         else
-                            MessageBox.Show("Invalid data, please provide Subject ID to remove a field");
+                            MessageBox.Show("Invalid data, please provide Subject ID to remove a field", "Subject ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         con.Close();
                         //MessageBox.Show("Successfully Removed");
                         BindData();
@@ -116,7 +116,7 @@ namespace M2_Snapshots
 
                 else
                 {
-                    MessageBox.Show("Enter Subject ID in the Search box");
+                    MessageBox.Show("Enter Subject ID in the Search box","Subjetc ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch
@@ -128,7 +128,7 @@ namespace M2_Snapshots
 
         private void UpdateSubjectBtn_Click(object sender, EventArgs e)
         {
-            if ((SubjectIDTextBox.Text != "") || (SubjectNameTextBox.Text != "") || (SubjectDetailsTextBox.Text != ""))
+            if ((SubjectIDTextBox.Text != "") && ((SubjectNameTextBox.Text != "") || (SubjectDetailsTextBox.Text != "")))
             {
                 con.Open();
 
@@ -147,12 +147,12 @@ namespace M2_Snapshots
                
                 
                 con.Close();
-                MessageBox.Show("Successfully Updated");
+                MessageBox.Show("Subject Successfully Updated", "Subject Added", MessageBoxButtons.OK);
                 BindData();
             }
             else
             {
-                MessageBox.Show("Fill in Subject ID and at least one other field");
+                MessageBox.Show("Enter a Subject ID and at least one other field", "Subject ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

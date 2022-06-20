@@ -48,7 +48,7 @@ namespace M2_Snapshots
             }
             else
             {
-                MessageBox.Show("Enter Class ID in the Search box");
+                MessageBox.Show("Enter Class ID in the Search box", "Search Class", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -72,14 +72,14 @@ namespace M2_Snapshots
                             //command.ExecuteNonQuery();
                             //con.Close();
                             if (command.ExecuteNonQuery() > 0)
-                                MessageBox.Show("Successfully Removed");
+                                MessageBox.Show("Class Successfully Removed ", "Class Removed", MessageBoxButtons.OK);
                             else
-                                MessageBox.Show("Invalid data, data does not exist");
+                                MessageBox.Show("Invalid data, data does not exist", "Class ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             con.Close();
                             BindData();
                         }
                         else
-                            MessageBox.Show("Enter a valid Class ID, only numbers allowed");
+                            MessageBox.Show("Enter a valid Class ID", "Class ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                     else
@@ -92,7 +92,7 @@ namespace M2_Snapshots
 
                 else
                 {
-                    MessageBox.Show("Enter Class ID in the search box");
+                    MessageBox.Show("Enter Class ID in the search box", "Class ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch
@@ -122,7 +122,7 @@ namespace M2_Snapshots
                                         con.Open();
                                         SqlCommand command = new SqlCommand("insert into classes values ('" + int.Parse(ClassIDTextBox.Text) + "','" + teachID.Text + "','" + int.Parse(ClassRollTextBox.Text) + "', '" + -1 + "', '" + int.Parse(GradeTextBox.Text) + "', '" + char.Parse(DivisionTextBox1.Text.ToUpper()) + "')", con);
                                         command.ExecuteNonQuery();
-                                        MessageBox.Show("Successfully Inserted");
+                                        MessageBox.Show("Class Successfully Added", "Class Added", MessageBoxButtons.OK);
                                         con.Close();
                                         BindData();
                                     }
@@ -131,7 +131,7 @@ namespace M2_Snapshots
                                         con.Open();
                                         SqlCommand command = new SqlCommand("insert into classes values ('" + int.Parse(ClassIDTextBox.Text) + "','" + teachID.Text + "','" + int.Parse(ClassRollTextBox.Text) + "', '" + int.Parse(BuildingNoTextBox.Text) + "', '" + int.Parse(GradeTextBox.Text) + "', '" + char.Parse(DivisionTextBox1.Text.ToUpper()) + "')", con);
                                         command.ExecuteNonQuery();
-                                        MessageBox.Show("Successfully Inserted");
+                                        MessageBox.Show("Class Successfully Added", "Class Added", MessageBoxButtons.OK);
                                         con.Close();
                                         BindData();
                                     }
@@ -156,7 +156,7 @@ namespace M2_Snapshots
             }
             else
             {
-                MessageBox.Show("Enter All Fields");
+                MessageBox.Show("Enter All Fields", "Add Class", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -233,17 +233,17 @@ namespace M2_Snapshots
 
                     con.Close();
                     if (error == 0)
-                        MessageBox.Show("Successfully Updated");
+                        MessageBox.Show("Class Successfully Updated", "Class Updated", MessageBoxButtons.OK);
                     BindData();
                 }
                 else
                 {
-                    MessageBox.Show("Fill in appropriate fields");
+                    MessageBox.Show("Enter a valid Class ID", "Update Class", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             else
-                MessageBox.Show("Fill in a Class ID and at least one more field to update information");
+                MessageBox.Show("Enter a Class ID and at least one more field to update information", "Update Class", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -286,7 +286,7 @@ namespace M2_Snapshots
             ClassIDTextBox.Clear();
             teachID.ResetText();
             BuildingNoTextBox.Clear();
-            DivisionTextBox.Clear();
+            //DivisionTextBox.Clear();
             GradeTextBox.Clear();
             ClassRollTextBox.Clear();
             DivisionTextBox1.Clear();

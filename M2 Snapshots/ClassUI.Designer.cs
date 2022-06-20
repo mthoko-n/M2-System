@@ -126,6 +126,7 @@
             // 
             // teachID
             // 
+            this.teachID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.teachID.FormattingEnabled = true;
             this.teachID.Location = new System.Drawing.Point(143, 106);
             this.teachID.Margin = new System.Windows.Forms.Padding(2);

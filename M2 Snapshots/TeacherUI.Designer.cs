@@ -31,6 +31,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TeacherIDTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.teachTitle = new System.Windows.Forms.TextBox();
             this.teachGender = new System.Windows.Forms.ComboBox();
             this.teachcellNum = new System.Windows.Forms.TextBox();
@@ -71,6 +73,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.TeacherIDTextBox);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.teachTitle);
             this.groupBox1.Controls.Add(this.teachGender);
             this.groupBox1.Controls.Add(this.teachcellNum);
@@ -92,6 +96,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Teacher";
             // 
+            // TeacherIDTextBox
+            // 
+            this.TeacherIDTextBox.Location = new System.Drawing.Point(557, 141);
+            this.TeacherIDTextBox.Name = "TeacherIDTextBox";
+            this.TeacherIDTextBox.Size = new System.Drawing.Size(185, 20);
+            this.TeacherIDTextBox.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(427, 144);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 14);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Teacher ID";
+            // 
             // teachTitle
             // 
             this.teachTitle.Location = new System.Drawing.Point(557, 37);
@@ -102,8 +122,10 @@
             // 
             // teachGender
             // 
+            this.teachGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.teachGender.FormattingEnabled = true;
             this.teachGender.Items.AddRange(new object[] {
+            "",
             "Male",
             "Female"});
             this.teachGender.Location = new System.Drawing.Point(158, 136);
@@ -375,5 +397,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox teachTitle;
         private System.Windows.Forms.TextBox SearchTeacherTextBox;
+        private System.Windows.Forms.TextBox TeacherIDTextBox;
+        private System.Windows.Forms.Label label2;
     }
 }
