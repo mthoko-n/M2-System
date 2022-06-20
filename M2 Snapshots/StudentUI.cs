@@ -31,6 +31,8 @@ namespace M2_Snapshots
 
         private void button3_Click(object sender, EventArgs e)
         {
+          
+
             if ((stuAddressTB.Text != "")&& (stuClassIdTB.Text != "") && (stuIdTB.Text != "") && (stuGenderCB.Text != "") /*&& (stuEmailTB.Text != "") */&& (stuFeesTB.Text != "") && (stuLastNameTB.Text != "") && (stuNameTB.Text != "") && (stuParentNoTB.Text != "") && (stuAgeTB.Text != ""))
             {
                 con.Open();

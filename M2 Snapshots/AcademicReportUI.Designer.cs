@@ -31,24 +31,39 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.subjectResultsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.binaryMakersDS = new M2_Snapshots.BinaryMakersDS();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SeartchText = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Label();
             this.searchbutton = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.binaryMakersDS = new M2_Snapshots.BinaryMakersDS();
-            this.subjectResultsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.subjectResultsTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.subjectResultsTableAdapter();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.studentTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectResultsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // subjectResultsBindingSource
+            // 
+            this.subjectResultsBindingSource.DataMember = "subjectResults";
+            this.subjectResultsBindingSource.DataSource = this.binaryMakersDS;
+            // 
+            // binaryMakersDS
+            // 
+            this.binaryMakersDS.DataSetName = "BinaryMakersDS";
+            this.binaryMakersDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "student";
+            this.studentBindingSource.DataSource = this.binaryMakersDS;
             // 
             // SeartchText
             // 
             this.SeartchText.Location = new System.Drawing.Point(66, 10);
-            this.SeartchText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SeartchText.Margin = new System.Windows.Forms.Padding(2);
             this.SeartchText.Name = "SeartchText";
             this.SeartchText.Size = new System.Drawing.Size(144, 20);
             this.SeartchText.TabIndex = 1;
@@ -66,8 +81,8 @@
             // 
             // searchbutton
             // 
-            this.searchbutton.Location = new System.Drawing.Point(66, 545);
-            this.searchbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchbutton.Location = new System.Drawing.Point(11, 535);
+            this.searchbutton.Margin = new System.Windows.Forms.Padding(2);
             this.searchbutton.Name = "searchbutton";
             this.searchbutton.Size = new System.Drawing.Size(104, 41);
             this.searchbutton.TabIndex = 2;
@@ -85,31 +100,16 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "M2_Snapshots.subjResults.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(9, 46);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(735, 383);
+            this.reportViewer1.Size = new System.Drawing.Size(735, 473);
             this.reportViewer1.TabIndex = 30;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
-            // 
-            // binaryMakersDS
-            // 
-            this.binaryMakersDS.DataSetName = "BinaryMakersDS";
-            this.binaryMakersDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // subjectResultsBindingSource
-            // 
-            this.subjectResultsBindingSource.DataMember = "subjectResults";
-            this.subjectResultsBindingSource.DataSource = this.binaryMakersDS;
             // 
             // subjectResultsTableAdapter
             // 
             this.subjectResultsTableAdapter.ClearBeforeFill = true;
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "student";
-            this.studentBindingSource.DataSource = this.binaryMakersDS;
             // 
             // studentTableAdapter
             // 
@@ -126,9 +126,10 @@
             this.Controls.Add(this.SeartchText);
             this.Name = "AcademicReport_UI";
             this.Text = "AcademicReport_UI";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AcademicReport_UI_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectResultsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
