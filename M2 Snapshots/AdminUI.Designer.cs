@@ -234,6 +234,7 @@
             this.AdminDataGridView.Name = "AdminDataGridView";
             this.AdminDataGridView.Size = new System.Drawing.Size(758, 159);
             this.AdminDataGridView.TabIndex = 30;
+            this.AdminDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminDataGridView_CellClick);
             // 
             // AdminUI
             // 

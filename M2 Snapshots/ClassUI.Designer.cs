@@ -126,6 +126,7 @@
             // 
             // teachID
             // 
+            this.teachID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.teachID.FormattingEnabled = true;
             this.teachID.Location = new System.Drawing.Point(143, 106);
             this.teachID.Margin = new System.Windows.Forms.Padding(2);
@@ -313,7 +314,7 @@
             this.SearchClassDataGridView.RowHeadersWidth = 51;
             this.SearchClassDataGridView.Size = new System.Drawing.Size(659, 175);
             this.SearchClassDataGridView.TabIndex = 40;
-            this.SearchClassDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchClassDataGridView_CellContentClick);
+            this.SearchClassDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchClassDataGridView_CellClick);
             // 
             // classClearBtn
             // 
