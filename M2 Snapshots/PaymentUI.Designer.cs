@@ -47,10 +47,10 @@
             this.payDetailsTB = new System.Windows.Forms.TextBox();
             this.payDateTB = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.payClearBtn = new System.Windows.Forms.Button();
-            this.payTypeCB = new System.Windows.Forms.ComboBox();
             this.payAdminIdTB = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.payTypeCB = new System.Windows.Forms.ComboBox();
+            this.payClearBtn = new System.Windows.Forms.Button();
             this.payDGV = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.payDGV)).BeginInit();
@@ -64,7 +64,7 @@
             this.payUpdateBtn.Location = new System.Drawing.Point(767, 466);
             this.payUpdateBtn.Name = "payUpdateBtn";
             this.payUpdateBtn.Size = new System.Drawing.Size(98, 40);
-            this.payUpdateBtn.TabIndex = 26;
+            this.payUpdateBtn.TabIndex = 5;
             this.payUpdateBtn.Text = "Update";
             this.payUpdateBtn.UseVisualStyleBackColor = false;
             this.payUpdateBtn.Click += new System.EventHandler(this.payUpdateBtn_Click);
@@ -77,7 +77,7 @@
             this.payAddBtn.Location = new System.Drawing.Point(629, 466);
             this.payAddBtn.Name = "payAddBtn";
             this.payAddBtn.Size = new System.Drawing.Size(98, 40);
-            this.payAddBtn.TabIndex = 25;
+            this.payAddBtn.TabIndex = 4;
             this.payAddBtn.Text = "Add Payment";
             this.payAddBtn.UseVisualStyleBackColor = false;
             this.payAddBtn.Click += new System.EventHandler(this.payAddBtn_Click);
@@ -90,7 +90,7 @@
             this.paySearchBtn.Location = new System.Drawing.Point(58, 467);
             this.paySearchBtn.Name = "paySearchBtn";
             this.paySearchBtn.Size = new System.Drawing.Size(98, 40);
-            this.paySearchBtn.TabIndex = 23;
+            this.paySearchBtn.TabIndex = 2;
             this.paySearchBtn.Text = "Search";
             this.paySearchBtn.UseVisualStyleBackColor = false;
             this.paySearchBtn.Click += new System.EventHandler(this.paySearchBtn_Click);
@@ -103,7 +103,7 @@
             this.payRemoveBtn.Location = new System.Drawing.Point(491, 466);
             this.payRemoveBtn.Name = "payRemoveBtn";
             this.payRemoveBtn.Size = new System.Drawing.Size(98, 40);
-            this.payRemoveBtn.TabIndex = 24;
+            this.payRemoveBtn.TabIndex = 3;
             this.payRemoveBtn.Text = "Remove";
             this.payRemoveBtn.UseVisualStyleBackColor = false;
             this.payRemoveBtn.Click += new System.EventHandler(this.payRemoveBtn_Click);
@@ -124,7 +124,7 @@
             this.paySearchTB.Location = new System.Drawing.Point(702, 22);
             this.paySearchTB.Name = "paySearchTB";
             this.paySearchTB.Size = new System.Drawing.Size(163, 20);
-            this.paySearchTB.TabIndex = 18;
+            this.paySearchTB.TabIndex = 1;
             // 
             // label1
             // 
@@ -142,7 +142,7 @@
             this.payReceiptNoTB.Location = new System.Drawing.Point(111, 37);
             this.payReceiptNoTB.Name = "payReceiptNoTB";
             this.payReceiptNoTB.Size = new System.Drawing.Size(185, 20);
-            this.payReceiptNoTB.TabIndex = 5;
+            this.payReceiptNoTB.TabIndex = 6;
             // 
             // label6
             // 
@@ -207,21 +207,21 @@
             this.payStuIdTB.Location = new System.Drawing.Point(111, 80);
             this.payStuIdTB.Name = "payStuIdTB";
             this.payStuIdTB.Size = new System.Drawing.Size(185, 20);
-            this.payStuIdTB.TabIndex = 13;
+            this.payStuIdTB.TabIndex = 7;
             // 
             // payAmountTB
             // 
             this.payAmountTB.Location = new System.Drawing.Point(482, 37);
             this.payAmountTB.Name = "payAmountTB";
             this.payAmountTB.Size = new System.Drawing.Size(185, 20);
-            this.payAmountTB.TabIndex = 16;
+            this.payAmountTB.TabIndex = 10;
             // 
             // payDetailsTB
             // 
             this.payDetailsTB.Location = new System.Drawing.Point(482, 130);
             this.payDetailsTB.Name = "payDetailsTB";
             this.payDetailsTB.Size = new System.Drawing.Size(185, 20);
-            this.payDetailsTB.TabIndex = 17;
+            this.payDetailsTB.TabIndex = 12;
             this.payDetailsTB.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // payDateTB
@@ -229,7 +229,7 @@
             this.payDateTB.Location = new System.Drawing.Point(482, 80);
             this.payDateTB.Name = "payDateTB";
             this.payDateTB.Size = new System.Drawing.Size(185, 20);
-            this.payDateTB.TabIndex = 18;
+            this.payDateTB.TabIndex = 11;
             // 
             // groupBox1
             // 
@@ -256,33 +256,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Payment";
             // 
-            // payClearBtn
-            // 
-            this.payClearBtn.Location = new System.Drawing.Point(265, 467);
-            this.payClearBtn.Name = "payClearBtn";
-            this.payClearBtn.Size = new System.Drawing.Size(89, 39);
-            this.payClearBtn.TabIndex = 39;
-            this.payClearBtn.Text = "Clear";
-            this.payClearBtn.UseVisualStyleBackColor = true;
-            this.payClearBtn.Click += new System.EventHandler(this.payClearBtn_Click);
-            // 
-            // payTypeCB
-            // 
-            this.payTypeCB.FormattingEnabled = true;
-            this.payTypeCB.Items.AddRange(new object[] {
-            "EFT",
-            "Cash"});
-            this.payTypeCB.Location = new System.Drawing.Point(111, 169);
-            this.payTypeCB.Name = "payTypeCB";
-            this.payTypeCB.Size = new System.Drawing.Size(185, 22);
-            this.payTypeCB.TabIndex = 19;
-            // 
             // payAdminIdTB
             // 
             this.payAdminIdTB.Location = new System.Drawing.Point(111, 130);
             this.payAdminIdTB.Name = "payAdminIdTB";
             this.payAdminIdTB.Size = new System.Drawing.Size(185, 20);
-            this.payAdminIdTB.TabIndex = 21;
+            this.payAdminIdTB.TabIndex = 8;
             // 
             // label5
             // 
@@ -293,6 +272,27 @@
             this.label5.Size = new System.Drawing.Size(59, 14);
             this.label5.TabIndex = 20;
             this.label5.Text = "Admin ID:";
+            // 
+            // payTypeCB
+            // 
+            this.payTypeCB.FormattingEnabled = true;
+            this.payTypeCB.Items.AddRange(new object[] {
+            "EFT",
+            "Cash"});
+            this.payTypeCB.Location = new System.Drawing.Point(111, 169);
+            this.payTypeCB.Name = "payTypeCB";
+            this.payTypeCB.Size = new System.Drawing.Size(185, 22);
+            this.payTypeCB.TabIndex = 9;
+            // 
+            // payClearBtn
+            // 
+            this.payClearBtn.Location = new System.Drawing.Point(265, 467);
+            this.payClearBtn.Name = "payClearBtn";
+            this.payClearBtn.Size = new System.Drawing.Size(89, 39);
+            this.payClearBtn.TabIndex = 6;
+            this.payClearBtn.Text = "Clear";
+            this.payClearBtn.UseVisualStyleBackColor = true;
+            this.payClearBtn.Click += new System.EventHandler(this.payClearBtn_Click);
             // 
             // payDGV
             // 

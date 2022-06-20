@@ -55,28 +55,28 @@
             this.SearchAdminIDTextBox.Location = new System.Drawing.Point(648, 19);
             this.SearchAdminIDTextBox.Name = "SearchAdminIDTextBox";
             this.SearchAdminIDTextBox.Size = new System.Drawing.Size(163, 20);
-            this.SearchAdminIDTextBox.TabIndex = 18;
+            this.SearchAdminIDTextBox.TabIndex = 1;
             // 
             // AdminEmailTextBox
             // 
             this.AdminEmailTextBox.Location = new System.Drawing.Point(483, 84);
             this.AdminEmailTextBox.Name = "AdminEmailTextBox";
             this.AdminEmailTextBox.Size = new System.Drawing.Size(185, 20);
-            this.AdminEmailTextBox.TabIndex = 18;
+            this.AdminEmailTextBox.TabIndex = 8;
             // 
             // AdminIDTextBox
             // 
             this.AdminIDTextBox.Location = new System.Drawing.Point(483, 41);
             this.AdminIDTextBox.Name = "AdminIDTextBox";
             this.AdminIDTextBox.Size = new System.Drawing.Size(185, 20);
-            this.AdminIDTextBox.TabIndex = 16;
+            this.AdminIDTextBox.TabIndex = 6;
             // 
             // AdminDetailsTextBox
             // 
             this.AdminDetailsTextBox.Location = new System.Drawing.Point(112, 84);
             this.AdminDetailsTextBox.Name = "AdminDetailsTextBox";
             this.AdminDetailsTextBox.Size = new System.Drawing.Size(185, 20);
-            this.AdminDetailsTextBox.TabIndex = 13;
+            this.AdminDetailsTextBox.TabIndex = 7;
             // 
             // label1
             // 
@@ -145,7 +145,7 @@
             this.AdminSearchButton.Location = new System.Drawing.Point(53, 463);
             this.AdminSearchButton.Name = "AdminSearchButton";
             this.AdminSearchButton.Size = new System.Drawing.Size(98, 40);
-            this.AdminSearchButton.TabIndex = 23;
+            this.AdminSearchButton.TabIndex = 2;
             this.AdminSearchButton.Text = "Search";
             this.AdminSearchButton.UseVisualStyleBackColor = false;
             this.AdminSearchButton.Click += new System.EventHandler(this.AdminSearchButton_Click);
@@ -158,7 +158,7 @@
             this.AddAdminButton.Location = new System.Drawing.Point(567, 463);
             this.AddAdminButton.Name = "AddAdminButton";
             this.AddAdminButton.Size = new System.Drawing.Size(98, 40);
-            this.AddAdminButton.TabIndex = 25;
+            this.AddAdminButton.TabIndex = 9;
             this.AddAdminButton.Text = "Add Admin";
             this.AddAdminButton.UseVisualStyleBackColor = false;
             this.AddAdminButton.Click += new System.EventHandler(this.button3_Click);
@@ -180,7 +180,7 @@
             this.UpdateAdminButton.Location = new System.Drawing.Point(713, 463);
             this.UpdateAdminButton.Name = "UpdateAdminButton";
             this.UpdateAdminButton.Size = new System.Drawing.Size(98, 40);
-            this.UpdateAdminButton.TabIndex = 26;
+            this.UpdateAdminButton.TabIndex = 10;
             this.UpdateAdminButton.Text = "Update";
             this.UpdateAdminButton.UseVisualStyleBackColor = false;
             this.UpdateAdminButton.Click += new System.EventHandler(this.UpdateAdminButton_Click);
@@ -193,7 +193,7 @@
             this.AdminRemoveButton.Location = new System.Drawing.Point(441, 463);
             this.AdminRemoveButton.Name = "AdminRemoveButton";
             this.AdminRemoveButton.Size = new System.Drawing.Size(98, 40);
-            this.AdminRemoveButton.TabIndex = 24;
+            this.AdminRemoveButton.TabIndex = 3;
             this.AdminRemoveButton.Text = "Remove";
             this.AdminRemoveButton.UseVisualStyleBackColor = false;
             this.AdminRemoveButton.Click += new System.EventHandler(this.AdminRemoveButton_Click);
@@ -222,7 +222,7 @@
             this.AdminClearBtn.Location = new System.Drawing.Point(198, 464);
             this.AdminClearBtn.Name = "AdminClearBtn";
             this.AdminClearBtn.Size = new System.Drawing.Size(89, 39);
-            this.AdminClearBtn.TabIndex = 39;
+            this.AdminClearBtn.TabIndex = 11;
             this.AdminClearBtn.Text = "Clear";
             this.AdminClearBtn.UseVisualStyleBackColor = true;
             this.AdminClearBtn.Click += new System.EventHandler(this.AdminClearBtn_Click);
@@ -233,7 +233,7 @@
             this.AdminDataGridView.Location = new System.Drawing.Point(53, 54);
             this.AdminDataGridView.Name = "AdminDataGridView";
             this.AdminDataGridView.Size = new System.Drawing.Size(758, 159);
-            this.AdminDataGridView.TabIndex = 40;
+            this.AdminDataGridView.TabIndex = 30;
             // 
             // AdminUI
             // 
