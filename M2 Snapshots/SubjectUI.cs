@@ -166,5 +166,17 @@ namespace M2_Snapshots
         {
 
         }
+
+        private void SubjectDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id = SubjectDataGridView.SelectedRows[0].Cells[0].Value + string.Empty;
+            SubjectIDTextBox.Text = id;
+
+            string name = SubjectDataGridView.SelectedRows[0].Cells[1].Value + string.Empty;
+            SubjectNameTextBox.Text = name;
+
+            string details = SubjectDataGridView.SelectedRows[0].Cells[2].Value + string.Empty;
+            SubjectDetailsTextBox.Text = details;
+        }
     }
 }

@@ -314,6 +314,7 @@
             this.TeacherDGV.RowHeadersWidth = 51;
             this.TeacherDGV.Size = new System.Drawing.Size(853, 171);
             this.TeacherDGV.TabIndex = 30;
+            this.TeacherDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TeacherDGV_CellClick);
             // 
             // ClearBtn
             // 

@@ -158,5 +158,21 @@ namespace M2_Snapshots
                 MessageBox.Show("Enter Admin ID and at least one other field","Update Admin", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void AdminDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id = AdminDataGridView.SelectedRows[0].Cells[0].Value + string.Empty;
+            AdminIDTextBox.Text = id;
+
+            string name = AdminDataGridView.SelectedRows[0].Cells[1].Value + string.Empty;
+            AdminNameTextBox.Text = name;
+
+            string details = AdminDataGridView.SelectedRows[0].Cells[2].Value + string.Empty;
+            AdminDetailsTextBox.Text = details;
+
+            string email = AdminDataGridView.SelectedRows[0].Cells[3].Value + string.Empty;
+            AdminEmailTextBox.Text = email;
+
+        }
     }
 }

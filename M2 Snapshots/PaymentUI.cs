@@ -196,5 +196,29 @@ namespace M2_Snapshots
         {
 
         }
+
+        private void payDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string receiptno = payDGV.SelectedRows[0].Cells[0].Value + string.Empty;
+            payReceiptNoTB.Text = receiptno;
+
+            string adminID = payDGV.SelectedRows[0].Cells[1].Value + string.Empty;
+            payAdminIdTB.Text = adminID;
+
+            string stuID = payDGV.SelectedRows[0].Cells[2].Value + string.Empty;
+            payStuIdTB.Text = stuID;
+
+            string payDate = payDGV.SelectedRows[0].Cells[3].Value + string.Empty;
+            payDateTB.Text = payDate;
+
+            string payAmt = payDGV.SelectedRows[0].Cells[4].Value + string.Empty;
+            payAmountTB.Text = payAmt;
+
+            string payType = payDGV.SelectedRows[0].Cells[5].Value + string.Empty;
+            payTypeCB.Text = payType;
+
+            string payDetails = payDGV.SelectedRows[0].Cells[6].Value + string.Empty;
+            payDetailsTB.Text = payDetails;
+        }
     }
 }

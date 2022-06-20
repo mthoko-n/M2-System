@@ -294,33 +294,33 @@ namespace M2_Snapshots
 
         private void SearchClassDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+         
         }
 
         private void teacherID_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*con.Open();
-            SqlCommand command = new SqlCommand("select teach_firstname from Teachers", con);
-            SqlDataReader reader;
-            reader = command.ExecuteReader();
+           
+        }
 
-            //SqlDataAdapter sd = new SqlDataAdapter(command);
-            //DataTable dt = new DataTable();
-            //sd.Fill(dt);
-            //command.ExecuteNonQuery();
+        private void SearchClassDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id = SearchClassDataGridView.SelectedRows[0].Cells[0].Value + string.Empty;
+            ClassIDTextBox.Text = id;
 
-            DataTable dt = new DataTable();
-            dt.Columns.Add("teach_firstname", typeof(string));
-            dt.Load(reader);
-            teachID.ValueMember = "teach_firstname";
-            teachID.DataSource = dt;
-            con.Close();
-            */
-            //teach_firstname
-            //teachID.DataSource = dt.TableName[0];
-            //teachID.DisplayMember = "teach_ID";
-            //teachID.ValueMember = "teach_ID";
+            string teacherID = SearchClassDataGridView.SelectedRows[0].Cells[1].Value + string.Empty;
+            teachID.Text = teacherID;
 
+            string students = SearchClassDataGridView.SelectedRows[0].Cells[2].Value + string.Empty;
+            ClassRollTextBox.Text = students;
+
+            string buidling = SearchClassDataGridView.SelectedRows[0].Cells[3].Value + string.Empty;
+            BuildingNoTextBox.Text = buidling;
+
+            string grade = SearchClassDataGridView.SelectedRows[0].Cells[4].Value + string.Empty;
+            GradeTextBox.Text = grade;
+
+            string division = SearchClassDataGridView.SelectedRows[0].Cells[5].Value + string.Empty;
+            DivisionTextBox1.Text = division;
         }
     }
 }

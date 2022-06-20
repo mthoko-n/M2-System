@@ -339,5 +339,30 @@ namespace M2_Snapshots
         {
 
         }
+
+        private void TeacherDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id = TeacherDGV.SelectedRows[0].Cells[0].Value + string.Empty;
+            TeacherIDTextBox.Text = id;
+
+            string name = TeacherDGV.SelectedRows[0].Cells[1].Value + string.Empty;
+            teacherName.Text = name;
+
+            string surname = TeacherDGV.SelectedRows[0].Cells[2].Value + string.Empty;
+            teachLName.Text = surname;
+
+            string title = TeacherDGV.SelectedRows[0].Cells[4].Value + string.Empty;
+            teachTitle.Text = title;
+
+            string gender = TeacherDGV.SelectedRows[0].Cells[5].Value + string.Empty;
+            teachGender.Text = gender;
+
+            string num = TeacherDGV.SelectedRows[0].Cells[6].Value + string.Empty;
+            teachcellNum.Text = num;
+
+            string address = TeacherDGV.SelectedRows[0].Cells[7].Value + string.Empty;
+            teachAddress.Text = address;
+
+        }
     }
 }
