@@ -21,5 +21,15 @@ namespace M2_Snapshots
         {
 
         }
+
+        private void nosBtn_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = ClassUI.classForm.total; 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

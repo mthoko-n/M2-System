@@ -12,10 +12,17 @@ using System.Data.SqlClient;
 namespace M2_Snapshots
 {
     public partial class ClassUI : Form
+    
+
     {
+
+        public static ClassUI classForm;
+        public string total;
         public ClassUI()
         {
             InitializeComponent();
+            classForm = this;
+            total = getNumStudents().ToString();
         }
 
         SqlConnection con = new SqlConnection("Data Source=146.230.177.46;Initial Catalog=GroupPmb2;Persist Security Info=True;User ID=GroupPmb2;Password=b45dc2");
@@ -27,6 +34,18 @@ namespace M2_Snapshots
             DataTable dt = new DataTable();
             sd.Fill(dt);
             SearchClassDataGridView.DataSource = dt;
+        }
+
+        private int getNumStudents()
+        {
+            int sum = 0;
+            foreach (DataRow row in SearchClassDataGridView.Rows)
+            {
+                sum = sum + int.Parse(row.ItemArray[2].ToString());
+
+            }
+
+            return sum;
         }
 
         private void ViewDetalisButton_Click(object sender, EventArgs e)

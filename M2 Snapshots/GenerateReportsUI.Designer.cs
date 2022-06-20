@@ -83,6 +83,7 @@
             this.nosBtn.TabIndex = 2;
             this.nosBtn.Text = "Generate";
             this.nosBtn.UseVisualStyleBackColor = true;
+            this.nosBtn.Click += new System.EventHandler(this.nosBtn_Click);
             // 
             // clearBtn1
             // 
@@ -127,6 +128,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(236, 20);
             this.textBox2.TabIndex = 4;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // panel1
             // 
