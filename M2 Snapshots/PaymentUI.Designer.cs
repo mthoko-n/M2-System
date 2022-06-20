@@ -47,10 +47,12 @@
             this.payDetailsTB = new System.Windows.Forms.TextBox();
             this.payDateTB = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.payClearBtn = new System.Windows.Forms.Button();
-            this.payTypeCB = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.payAdminIdTB = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.payTypeCB = new System.Windows.Forms.ComboBox();
+            this.payClearBtn = new System.Windows.Forms.Button();
             this.payDGV = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.payDGV)).BeginInit();
@@ -233,6 +235,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.payAdminIdTB);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.payTypeCB);
@@ -256,26 +260,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Payment";
             // 
-            // payClearBtn
+            // label7
             // 
-            this.payClearBtn.Location = new System.Drawing.Point(265, 467);
-            this.payClearBtn.Name = "payClearBtn";
-            this.payClearBtn.Size = new System.Drawing.Size(89, 39);
-            this.payClearBtn.TabIndex = 39;
-            this.payClearBtn.Text = "Clear";
-            this.payClearBtn.UseVisualStyleBackColor = true;
-            this.payClearBtn.Click += new System.EventHandler(this.payClearBtn_Click);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(349, 172);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 14);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Total amount:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // payTypeCB
+            // textBox1
             // 
-            this.payTypeCB.FormattingEnabled = true;
-            this.payTypeCB.Items.AddRange(new object[] {
-            "EFT",
-            "Cash"});
-            this.payTypeCB.Location = new System.Drawing.Point(111, 169);
-            this.payTypeCB.Name = "payTypeCB";
-            this.payTypeCB.Size = new System.Drawing.Size(185, 22);
-            this.payTypeCB.TabIndex = 19;
+            this.textBox1.Location = new System.Drawing.Point(482, 165);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(187, 20);
+            this.textBox1.TabIndex = 22;
             // 
             // payAdminIdTB
             // 
@@ -293,6 +293,27 @@
             this.label5.Size = new System.Drawing.Size(59, 14);
             this.label5.TabIndex = 20;
             this.label5.Text = "Admin ID:";
+            // 
+            // payTypeCB
+            // 
+            this.payTypeCB.FormattingEnabled = true;
+            this.payTypeCB.Items.AddRange(new object[] {
+            "EFT",
+            "Cash"});
+            this.payTypeCB.Location = new System.Drawing.Point(111, 169);
+            this.payTypeCB.Name = "payTypeCB";
+            this.payTypeCB.Size = new System.Drawing.Size(185, 22);
+            this.payTypeCB.TabIndex = 19;
+            // 
+            // payClearBtn
+            // 
+            this.payClearBtn.Location = new System.Drawing.Point(265, 467);
+            this.payClearBtn.Name = "payClearBtn";
+            this.payClearBtn.Size = new System.Drawing.Size(89, 39);
+            this.payClearBtn.TabIndex = 39;
+            this.payClearBtn.Text = "Clear";
+            this.payClearBtn.UseVisualStyleBackColor = true;
+            this.payClearBtn.Click += new System.EventHandler(this.payClearBtn_Click);
             // 
             // payDGV
             // 
@@ -353,5 +374,7 @@
         private System.Windows.Forms.TextBox payAdminIdTB;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView payDGV;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

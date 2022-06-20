@@ -59,7 +59,22 @@ namespace M2_Snapshots
         private void PaymentUI_Load(object sender, EventArgs e)
         {
             BindData();
+
+
         }
+
+        private int getTotal() {
+            int sum = 0;
+            foreach (DataRow row in payDGV.Rows) {
+                sum = sum + int.Parse(row.ItemArray[4].ToString());
+
+            }
+
+            return sum;
+
+        }
+
+       
 
         private void payUpdateBtn_Click(object sender, EventArgs e)
         {
@@ -175,6 +190,11 @@ namespace M2_Snapshots
             {
                 MessageBox.Show("Enter VALID student ID", "Student ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
