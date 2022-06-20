@@ -49,6 +49,8 @@
             this.paymentBtn = new System.Windows.Forms.ToolStripButton();
             this.logoutBtn = new System.Windows.Forms.ToolStripButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.generateRbtn = new System.Windows.Forms.ToolStripButton();
+            this.generateReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +66,8 @@
             this.paymentToolStripMenuItem,
             this.classToolStripMenuItem,
             this.academicReportToolStripMenuItem,
-            this.adminToolStripMenuItem1});
+            this.adminToolStripMenuItem1,
+            this.generateReportsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
@@ -132,6 +135,7 @@
             this.classBtn,
             this.academicReportBtn,
             this.paymentBtn,
+            this.generateRbtn,
             this.logoutBtn});
             this.toolStrip1.Location = new System.Drawing.Point(0, 646);
             this.toolStrip1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
@@ -283,6 +287,28 @@
             this.toolTip1.ShowAlways = true;
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // generateRbtn
+            // 
+            this.generateRbtn.AutoSize = false;
+            this.generateRbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.generateRbtn.Enabled = false;
+            this.generateRbtn.Image = ((System.Drawing.Image)(resources.GetObject("generateRbtn.Image")));
+            this.generateRbtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.generateRbtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.generateRbtn.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.generateRbtn.Name = "generateRbtn";
+            this.generateRbtn.Size = new System.Drawing.Size(100, 90);
+            this.generateRbtn.Text = "Generate Reports";
+            this.generateRbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.generateRbtn.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // generateReportsToolStripMenuItem
+            // 
+            this.generateReportsToolStripMenuItem.Name = "generateReportsToolStripMenuItem";
+            this.generateReportsToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
+            this.generateReportsToolStripMenuItem.Text = "Generate Reports";
+            this.generateReportsToolStripMenuItem.Click += new System.EventHandler(this.generateReportsToolStripMenuItem_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,6 +356,8 @@
         private System.Windows.Forms.ToolStripButton paymentBtn;
         private System.Windows.Forms.ToolStripButton logoutBtn;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolStripButton generateRbtn;
+        private System.Windows.Forms.ToolStripMenuItem generateReportsToolStripMenuItem;
     }
 }
 

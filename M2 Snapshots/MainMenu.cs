@@ -23,6 +23,7 @@ namespace M2_Snapshots
         public ToolStripButton aca;
         public ToolStripButton logout;
         public ToolStripButton pay;
+        public ToolStripButton gen;
         public MenuStrip mstrip;
 
 
@@ -44,6 +45,7 @@ namespace M2_Snapshots
             pay = paymentBtn;
             logout = logoutBtn;
             mstrip = menuStrip1;
+            gen = generateRbtn;
 
            
 
@@ -247,6 +249,18 @@ namespace M2_Snapshots
             this.Close();
            
            
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            GenerateReportsUI geneObj = new GenerateReportsUI();
+            FormSetup(geneObj);
+        }
+
+        private void generateReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenerateReportsUI geneObj = new GenerateReportsUI();
+            FormSetup(geneObj);
         }
     }
 }

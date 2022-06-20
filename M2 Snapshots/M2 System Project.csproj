@@ -232,6 +232,12 @@
     <Compile Include="ClassUI.Designer.cs">
       <DependentUpon>ClassUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenerateReportsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateReportsUI.Designer.cs">
+      <DependentUpon>GenerateReportsUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GroupPmb2DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -303,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClassUI.resx">
       <DependentUpon>ClassUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateReportsUI.resx">
+      <DependentUpon>GenerateReportsUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>

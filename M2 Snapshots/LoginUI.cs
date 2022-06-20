@@ -76,6 +76,7 @@ namespace M2_Snapshots
                     m.pay.Enabled = true;
                     m.aca.Enabled = true;
                     m.mstrip.Enabled = true;
+                    m.gen.Enabled = true;
                     m.logout.Enabled = true;
                     }
 
