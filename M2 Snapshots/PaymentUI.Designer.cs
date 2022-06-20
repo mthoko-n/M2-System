@@ -275,8 +275,10 @@
             // 
             // payTypeCB
             // 
+            this.payTypeCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.payTypeCB.FormattingEnabled = true;
             this.payTypeCB.Items.AddRange(new object[] {
+            "",
             "EFT",
             "Cash"});
             this.payTypeCB.Location = new System.Drawing.Point(111, 169);
@@ -301,6 +303,7 @@
             this.payDGV.Name = "payDGV";
             this.payDGV.Size = new System.Drawing.Size(747, 150);
             this.payDGV.TabIndex = 40;
+            this.payDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.payDGV_CellClick);
             // 
             // PaymentUI
             // 

@@ -232,7 +232,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!subjectTeachID.Value</Value>
+                              <Value />
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -318,9 +318,13 @@
       </Tablix>
     </ReportItems>
     <Height>2in</Height>
-    <Style />
+    <Style>
+      <Border>
+        <Style>Dotted</Style>
+      </Border>
+    </Style>
   </Body>
-  <Width>7.23925in</Width>
+  <Width>6.81425in</Width>
   <Page>
     <PageHeader>
       <Height>7.55537cm</Height>
@@ -335,16 +339,20 @@
               <TextRuns>
                 <TextRun>
                   <Value>Kharina Secondary School</Value>
-                  <Style />
+                  <Style>
+                    <FontFamily>Arial Rounded MT Bold</FontFamily>
+                    <FontSize>15pt</FontSize>
+                    <Calendar>Gregorian</Calendar>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>0.60537cm</Top>
-          <Left>7.91209cm</Left>
+          <Top>0.64771cm</Top>
+          <Left>6.20112cm</Left>
           <Height>1.5cm</Height>
-          <Width>2.5cm</Width>
+          <Width>5.929cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -372,8 +380,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>2.9337cm</Top>
-          <Left>0.5207cm</Left>
+          <Top>2.97604cm</Top>
+          <Left>1.0534cm</Left>
           <Height>0.62117cm</Height>
           <Width>2.47883cm</Width>
           <ZIndex>1</ZIndex>
@@ -406,8 +414,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
-          <Top>2.9337cm</Top>
-          <Left>3.17592cm</Left>
+          <Top>2.97604cm</Top>
+          <Left>3.70862cm</Left>
           <Height>0.62117cm</Height>
           <Width>4.405cm</Width>
           <ZIndex>2</ZIndex>
@@ -425,8 +433,8 @@
           <Source>Embedded</Source>
           <Value>logo1</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.60537cm</Top>
-          <Left>6.73665cm</Left>
+          <Top>0.64771cm</Top>
+          <Left>4.84929cm</Left>
           <Height>1.5cm</Height>
           <Width>1.17544cm</Width>
           <ZIndex>3</ZIndex>
@@ -451,8 +459,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>4.04876cm</Top>
-          <Left>0.5207cm</Left>
+          <Top>4.0911cm</Top>
+          <Left>1.0534cm</Left>
           <Height>0.62117cm</Height>
           <Width>1.9285cm</Width>
           <ZIndex>4</ZIndex>
@@ -481,8 +489,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>4.06993cm</Top>
-          <Left>10.34203cm</Left>
+          <Top>4.11227cm</Top>
+          <Left>10.87473cm</Left>
           <Height>0.6cm</Height>
           <Width>3.09267cm</Width>
           <ZIndex>5</ZIndex>
@@ -511,8 +519,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Top>5.16918cm</Top>
-          <Left>10.34203cm</Left>
+          <Top>5.21152cm</Top>
+          <Left>10.87473cm</Left>
           <Height>0.6cm</Height>
           <Width>3.09267cm</Width>
           <ZIndex>6</ZIndex>
@@ -541,8 +549,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>5.16918cm</Top>
-          <Left>0.5207cm</Left>
+          <Top>5.21152cm</Top>
+          <Left>1.0534cm</Left>
           <Height>0.6cm</Height>
           <Width>1.9285cm</Width>
           <ZIndex>7</ZIndex>
@@ -571,8 +579,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Top>4.06993cm</Top>
-          <Left>2.70087cm</Left>
+          <Top>4.11227cm</Top>
+          <Left>3.23357cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>8</ZIndex>
@@ -586,10 +594,40 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Textbox Name="Textbox11">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value />
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox11</rd:DefaultName>
+          <Top>4.1402cm</Top>
+          <Left>13.9674cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <ZIndex>9</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
       </ReportItems>
       <Style>
         <Border>
-          <Style>None</Style>
+          <Style>Dotted</Style>
         </Border>
       </Style>
     </PageHeader>
@@ -605,7 +643,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Copyright ©  Kharina Secondary school 2019</Value>
+                  <Value>Copyright ©  Kharina Secondary school 2022</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -614,9 +652,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
           <Top>1.64253cm</Top>
-          <Left>5.1162cm</Left>
+          <Left>4.31716cm</Left>
           <Height>0.6cm</Height>
-          <Width>7.07531cm</Width>
+          <Width>8.07975cm</Width>
           <Style>
             <Border>
               <Style>None</Style>

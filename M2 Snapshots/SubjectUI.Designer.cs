@@ -77,9 +77,9 @@
             this.groupBox1.Controls.Add(this.SubjectNameTextBox);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox1.Location = new System.Drawing.Point(505, 116);
+            this.groupBox1.Location = new System.Drawing.Point(490, 116);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(342, 234);
+            this.groupBox1.Size = new System.Drawing.Size(357, 234);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Subject";
@@ -100,7 +100,7 @@
             // 
             this.SubjectIDTextBox.Location = new System.Drawing.Point(125, 40);
             this.SubjectIDTextBox.Name = "SubjectIDTextBox";
-            this.SubjectIDTextBox.Size = new System.Drawing.Size(171, 20);
+            this.SubjectIDTextBox.Size = new System.Drawing.Size(194, 20);
             this.SubjectIDTextBox.TabIndex = 7;
             // 
             // SubjectDetailsTextBox
@@ -108,7 +108,7 @@
             this.SubjectDetailsTextBox.Location = new System.Drawing.Point(125, 113);
             this.SubjectDetailsTextBox.Multiline = true;
             this.SubjectDetailsTextBox.Name = "SubjectDetailsTextBox";
-            this.SubjectDetailsTextBox.Size = new System.Drawing.Size(171, 38);
+            this.SubjectDetailsTextBox.Size = new System.Drawing.Size(194, 76);
             this.SubjectDetailsTextBox.TabIndex = 9;
             // 
             // label3
@@ -135,7 +135,7 @@
             // 
             this.SubjectNameTextBox.Location = new System.Drawing.Point(125, 75);
             this.SubjectNameTextBox.Name = "SubjectNameTextBox";
-            this.SubjectNameTextBox.Size = new System.Drawing.Size(171, 20);
+            this.SubjectNameTextBox.Size = new System.Drawing.Size(194, 20);
             this.SubjectNameTextBox.TabIndex = 8;
             // 
             // label2
@@ -218,6 +218,7 @@
             this.SubjectDataGridView.Name = "SubjectDataGridView";
             this.SubjectDataGridView.Size = new System.Drawing.Size(357, 306);
             this.SubjectDataGridView.TabIndex = 30;
+            this.SubjectDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SubjectDataGridView_CellClick);
             // 
             // SubjectUI
             // 

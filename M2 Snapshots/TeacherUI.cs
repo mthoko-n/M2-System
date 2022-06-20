@@ -29,7 +29,7 @@ namespace M2_Snapshots
         private void addteach_Click(object sender, EventArgs e)
         {
             if ((teacherName.Text != "") && (teachLName.Text != "") && (teachGender.Text != "") && (teachcellNum.Text != "")
-                && (teachTitle.Text != "") && (teachAddress.Text != "") /*&& (teachEmail.Text != "")*/ && (teachID.Text == ""))
+                && (teachTitle.Text != "") && (teachAddress.Text != "") /*&& (teachEmail.Text != "")*/ && (TeacherIDTextBox.Text == ""))
             {
                 var rand = new Random();
                 int number = rand.Next(1, 10000);
@@ -100,7 +100,7 @@ namespace M2_Snapshots
             }
             else
             {
-                MessageBox.Show("Enter All Fields except Teacher ID");
+                MessageBox.Show("Enter All Fields except Teacher ID","Add Teacher", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -164,52 +164,60 @@ namespace M2_Snapshots
 
         private void update_Click(object sender, EventArgs e)
         {
-            if ((teachID.Text != "") && ((teacherName.Text != "") || (teachLName.Text != "") /*|| (teachEmail.Text != "")*/ || (teachGender.Text != "") || (teachTitle.Text != "") || (teachcellNum.Text != "") || (teachAddress.Text != "")))
+            if ((TeacherIDTextBox.Text != "") && ((teacherName.Text != "") || (teachLName.Text != "") /*|| (teachEmail.Text != "")*/ || (teachGender.Text != "") || (teachTitle.Text != "") || (teachcellNum.Text != "") || (teachAddress.Text != "")))
             {
+                int error = 0;
                 con.Open();
 
                 if ((teacherName.Text != "") && (search.Text != "")) //This is to update/change the teacher's name
                 {
-                    SqlCommand command = new SqlCommand("update Teachers set teach_firstname = '" + teacherName.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    SqlCommand command = new SqlCommand("update Teachers set teach_firstname = '" + teacherName.Text + "' where teach_ID = '" + TeacherIDTextBox.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if ((teachLName.Text != "") && (teachID.Text != ""))
+                
+                if ((teachLName.Text != "") && (TeacherIDTextBox.Text != ""))
                 {
-                    SqlCommand command = new SqlCommand("update Teachers set teach_lastname = '" + teachLName.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    SqlCommand command = new SqlCommand("update Teachers set teach_lastname = '" + teachLName.Text + "' where teach_ID = '" + TeacherIDTextBox.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
-                /*if ((teachEmail.Text != "") && (teachID.Text != ""))
+                /*if ((teachEmail.Text != "") && (TeacherIDTextBox.Text != ""))
                 {
-                    SqlCommand command = new SqlCommand("update Teachers set teach_email = '" + teachEmail.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    SqlCommand command = new SqlCommand("update Teachers set teach_email = '" + teachEmail.Text + "' where teach_ID = '" + TeacherIDTextBox.Text + "'", con);
                     command.ExecuteNonQuery();
                 }*/
-                if ((teachGender.Text != "") && (teachID.Text != ""))
+                if ((teachGender.Text != "") && (TeacherIDTextBox.Text != ""))
                 {
-                    SqlCommand command = new SqlCommand("update Teachers set gender = '" + teachGender.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    SqlCommand command = new SqlCommand("update Teachers set gender = '" + teachGender.Text + "' where teach_ID = '" + TeacherIDTextBox.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if ((teachTitle.Text != "") && (search.Text != "")) //This is to update/change the teacher's title
+                if ((teachTitle.Text != "") && (TeacherIDTextBox.Text != "")) //This is to update/change the teacher's title
                 {
-                    SqlCommand command = new SqlCommand("update Teachers set teach_title = '" + teachTitle.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    SqlCommand command = new SqlCommand("update Teachers set teach_title = '" + teachTitle.Text + "' where teach_ID = '" + TeacherIDTextBox.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if((teachcellNum.Text != " ") && (teachID.Text!=" "))
+                if ((teachcellNum.Text != " " && teachcellNum.Text.All(char.IsDigit) && teachcellNum.Text.Length == 10) && (TeacherIDTextBox.Text != " "))
                 {
-                    SqlCommand command = new SqlCommand("update Teachers set contactNum = '" + teachcellNum.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    SqlCommand command = new SqlCommand("update Teachers set contactNum = '" + teachcellNum.Text + "' where teach_ID = '" + TeacherIDTextBox.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
-                if ((teachAddress.Text!= "") && (teachID.Text != " ") )
+                else
                 {
-                    SqlCommand command = new SqlCommand("update Teachers set contactNum = '" + teachAddress.Text + "' where teach_ID = '" + teachID.Text + "'", con);
+                    MessageBox.Show("Cell number must be 10 digits long and must only contain digits");
+                    error++;
+                }
+                if ((teachAddress.Text!= "" && teachAddress.Text.Length > 10) && (TeacherIDTextBox.Text != " ") )
+                {
+                    SqlCommand command = new SqlCommand("update Teachers set Address = '" + teachAddress.Text + "' where teach_ID = '" + TeacherIDTextBox.Text + "'", con);
                     command.ExecuteNonQuery();
                 }
                 con.Close();
-                MessageBox.Show("Successfully Updated");
+                if(error==0)
+                    MessageBox.Show("Successfully Updated");
                 BindData2();
             }
             else
             {
-                MessageBox.Show("Fill in appropriate fields");
+                MessageBox.Show("Enter Teacher ID and at least one other field", "Update Teacher", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -226,7 +234,7 @@ namespace M2_Snapshots
             teachTitle.Clear();
             teachAddress.Clear();
             //teachEmail.Clear();
-            teachID.Clear();
+            TeacherIDTextBox.Clear();
         }
 
         private void remove_Click(object sender, EventArgs e)
@@ -249,14 +257,14 @@ namespace M2_Snapshots
                             //command.ExecuteNonQuery();
                             //con.Close();
                             if (command.ExecuteNonQuery() > 0)
-                                MessageBox.Show("Successfully Removed");
+                                MessageBox.Show("Teacher Successfully Removed", "Teacher Removed", MessageBoxButtons.OK);
                             else
-                                MessageBox.Show("Invalid data, data does not exist");
+                                MessageBox.Show("Invalid data, Teacher ID does not exist", "Teacher ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             con.Close();
                             BindData2();
                         }
                         else
-                            MessageBox.Show("Enter a valid Class ID, only numbers allowed");
+                            MessageBox.Show("Enter a valid Teacher ID", "Teacher ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                     else
@@ -266,12 +274,16 @@ namespace M2_Snapshots
 
 
                 }
+                else
+                {
+                    MessageBox.Show("Enter Teacher ID in the search box", "Teacher ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             catch
             {
 
-                MessageBox.Show("Invalid");
+                MessageBox.Show("Enter Teacher ID in the search box","Teacher ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -304,7 +316,7 @@ namespace M2_Snapshots
             }
             else
             {
-                MessageBox.Show("Enter Teacher ID in the Search box");
+                MessageBox.Show("Enter Teacher ID in the Search box", "Teacher ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -325,6 +337,31 @@ namespace M2_Snapshots
 
         private void SearchTeacherTextBox_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void TeacherDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id = TeacherDGV.SelectedRows[0].Cells[0].Value + string.Empty;
+            TeacherIDTextBox.Text = id;
+
+            string name = TeacherDGV.SelectedRows[0].Cells[1].Value + string.Empty;
+            teacherName.Text = name;
+
+            string surname = TeacherDGV.SelectedRows[0].Cells[2].Value + string.Empty;
+            teachLName.Text = surname;
+
+            string title = TeacherDGV.SelectedRows[0].Cells[4].Value + string.Empty;
+            teachTitle.Text = title;
+
+            string gender = TeacherDGV.SelectedRows[0].Cells[5].Value + string.Empty;
+            teachGender.Text = gender;
+
+            string num = TeacherDGV.SelectedRows[0].Cells[6].Value + string.Empty;
+            teachcellNum.Text = num;
+
+            string address = TeacherDGV.SelectedRows[0].Cells[7].Value + string.Empty;
+            teachAddress.Text = address;
 
         }
     }

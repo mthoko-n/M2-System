@@ -29,13 +29,13 @@ namespace M2_Snapshots
                 con.Open();
                 SqlCommand command = new SqlCommand("insert into admins values ('" + AdminIDTextBox.Text + "','" + AdminNameTextBox.Text + "','" + AdminDetailsTextBox.Text + "','" + AdminEmailTextBox.Text +  "')", con);
                 command.ExecuteNonQuery();
-                MessageBox.Show("Successfully Inserted");
+                MessageBox.Show("Admin Successfully Inserted","Add Admin", MessageBoxButtons.OK);
                 con.Close();
                 BindData();
             }
             else
             {
-                MessageBox.Show("Enter All Fields");
+                MessageBox.Show("Enter All Fields","Add Admin", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -70,7 +70,7 @@ namespace M2_Snapshots
             }
             else
             {
-                MessageBox.Show("Enter Admin ID in the Search box");
+                MessageBox.Show("Enter Admin ID in the Search box","Search Admin", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -101,7 +101,7 @@ namespace M2_Snapshots
                         if (command.ExecuteNonQuery() > 0)
                             MessageBox.Show("Successfully Removed");
                         else
-                            MessageBox.Show("Invalid data, please provide Admin ID to remove a field");
+                            MessageBox.Show("Invalid data, please provide Admin ID to remove a field", "Admin ID not valid",MessageBoxButtons.OK, MessageBoxIcon.Error);
                         con.Close();
                         BindData();
                     }
@@ -116,7 +116,7 @@ namespace M2_Snapshots
 
                 else
                 {
-                    MessageBox.Show("Enter Admin ID in the Search box");
+                    MessageBox.Show("Enter Admin ID in the Search box", "Admin ID not valid", MessageBoxButtons.OK);
                 }
             }
             catch
@@ -127,7 +127,7 @@ namespace M2_Snapshots
 
         private void UpdateAdminButton_Click(object sender, EventArgs e)
         {
-            if ((AdminNameTextBox.Text != "") || (AdminIDTextBox.Text != "") || (AdminDetailsTextBox.Text != "") || (AdminEmailTextBox.Text != ""))
+            if ((AdminNameTextBox.Text != "") && ((AdminNameTextBox.Text != "") || (AdminDetailsTextBox.Text != "") || (AdminEmailTextBox.Text != "")))
             {
                 con.Open();
 
@@ -150,13 +150,29 @@ namespace M2_Snapshots
 
 
                 con.Close();
-                MessageBox.Show("Successfully Updated");
+                MessageBox.Show("Admin Successfully Updated","Update Admin", MessageBoxButtons.OK);
                 BindData();
             }
             else
             {
-                MessageBox.Show("Fill in Admin ID and at least one other field");
+                MessageBox.Show("Enter Admin ID and at least one other field","Update Admin", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void AdminDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id = AdminDataGridView.SelectedRows[0].Cells[0].Value + string.Empty;
+            AdminIDTextBox.Text = id;
+
+            string name = AdminDataGridView.SelectedRows[0].Cells[1].Value + string.Empty;
+            AdminNameTextBox.Text = name;
+
+            string details = AdminDataGridView.SelectedRows[0].Cells[2].Value + string.Empty;
+            AdminDetailsTextBox.Text = details;
+
+            string email = AdminDataGridView.SelectedRows[0].Cells[3].Value + string.Empty;
+            AdminEmailTextBox.Text = email;
+
         }
     }
 }
