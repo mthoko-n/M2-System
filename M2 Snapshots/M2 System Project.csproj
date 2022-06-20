@@ -237,6 +237,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GroupPmb2DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GroupPmb2DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GroupPmb2DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,6 +280,9 @@
     </Compile>
     <Compile Include="SubjectUI.Designer.cs">
       <DependentUpon>SubjectUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="subjResults.cs">
+      <DependentUpon>subjResults.xsd</DependentUpon>
     </Compile>
     <Compile Include="subjResults.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -318,6 +326,9 @@
     <EmbeddedResource Include="StudentUI.resx">
       <DependentUpon>StudentUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubjectResults UI.resx">
+      <DependentUpon>SubjectResults UI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubjectUI.resx">
       <DependentUpon>SubjectUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,6 +357,17 @@
     </None>
     <None Include="GroupPmb2DataSet.xss">
       <DependentUpon>GroupPmb2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GroupPmb2DataSet1.xsc">
+      <DependentUpon>GroupPmb2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GroupPmb2DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GroupPmb2DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GroupPmb2DataSet1.xss">
+      <DependentUpon>GroupPmb2DataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

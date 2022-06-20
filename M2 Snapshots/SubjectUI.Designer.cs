@@ -64,7 +64,7 @@
             this.SearchSubjectTextBox.Location = new System.Drawing.Point(224, 75);
             this.SearchSubjectTextBox.Name = "SearchSubjectTextBox";
             this.SearchSubjectTextBox.Size = new System.Drawing.Size(163, 20);
-            this.SearchSubjectTextBox.TabIndex = 18;
+            this.SearchSubjectTextBox.TabIndex = 1;
             this.SearchSubjectTextBox.TextChanged += new System.EventHandler(this.SearchSubjectTextBox_TextChanged);
             // 
             // groupBox1
@@ -101,7 +101,7 @@
             this.SubjectIDTextBox.Location = new System.Drawing.Point(125, 40);
             this.SubjectIDTextBox.Name = "SubjectIDTextBox";
             this.SubjectIDTextBox.Size = new System.Drawing.Size(171, 20);
-            this.SubjectIDTextBox.TabIndex = 18;
+            this.SubjectIDTextBox.TabIndex = 7;
             // 
             // SubjectDetailsTextBox
             // 
@@ -109,7 +109,7 @@
             this.SubjectDetailsTextBox.Multiline = true;
             this.SubjectDetailsTextBox.Name = "SubjectDetailsTextBox";
             this.SubjectDetailsTextBox.Size = new System.Drawing.Size(171, 38);
-            this.SubjectDetailsTextBox.TabIndex = 16;
+            this.SubjectDetailsTextBox.TabIndex = 9;
             // 
             // label3
             // 
@@ -136,7 +136,7 @@
             this.SubjectNameTextBox.Location = new System.Drawing.Point(125, 75);
             this.SubjectNameTextBox.Name = "SubjectNameTextBox";
             this.SubjectNameTextBox.Size = new System.Drawing.Size(171, 20);
-            this.SubjectNameTextBox.TabIndex = 5;
+            this.SubjectNameTextBox.TabIndex = 8;
             // 
             // label2
             // 
@@ -157,7 +157,7 @@
             this.RemoveSubjectBtn.Location = new System.Drawing.Point(490, 469);
             this.RemoveSubjectBtn.Name = "RemoveSubjectBtn";
             this.RemoveSubjectBtn.Size = new System.Drawing.Size(98, 40);
-            this.RemoveSubjectBtn.TabIndex = 24;
+            this.RemoveSubjectBtn.TabIndex = 3;
             this.RemoveSubjectBtn.Text = "Remove";
             this.RemoveSubjectBtn.UseVisualStyleBackColor = false;
             this.RemoveSubjectBtn.Click += new System.EventHandler(this.RemoveSubjectBtn_Click);
@@ -170,7 +170,7 @@
             this.SearchSubjectBtn.Location = new System.Drawing.Point(30, 470);
             this.SearchSubjectBtn.Name = "SearchSubjectBtn";
             this.SearchSubjectBtn.Size = new System.Drawing.Size(98, 40);
-            this.SearchSubjectBtn.TabIndex = 23;
+            this.SearchSubjectBtn.TabIndex = 2;
             this.SearchSubjectBtn.Text = "Search";
             this.SearchSubjectBtn.UseVisualStyleBackColor = false;
             this.SearchSubjectBtn.Click += new System.EventHandler(this.SearchSubjectBtn_Click);
@@ -183,7 +183,7 @@
             this.AddSubjectBtn.Location = new System.Drawing.Point(617, 469);
             this.AddSubjectBtn.Name = "AddSubjectBtn";
             this.AddSubjectBtn.Size = new System.Drawing.Size(98, 40);
-            this.AddSubjectBtn.TabIndex = 25;
+            this.AddSubjectBtn.TabIndex = 4;
             this.AddSubjectBtn.Text = "Add Subject";
             this.AddSubjectBtn.UseVisualStyleBackColor = false;
             this.AddSubjectBtn.Click += new System.EventHandler(this.button3_Click);
@@ -196,7 +196,7 @@
             this.UpdateSubjectBtn.Location = new System.Drawing.Point(749, 469);
             this.UpdateSubjectBtn.Name = "UpdateSubjectBtn";
             this.UpdateSubjectBtn.Size = new System.Drawing.Size(98, 40);
-            this.UpdateSubjectBtn.TabIndex = 26;
+            this.UpdateSubjectBtn.TabIndex = 5;
             this.UpdateSubjectBtn.Text = "Update";
             this.UpdateSubjectBtn.UseVisualStyleBackColor = false;
             this.UpdateSubjectBtn.Click += new System.EventHandler(this.UpdateSubjectBtn_Click);
@@ -206,7 +206,7 @@
             this.ClearSubjectBtn.Location = new System.Drawing.Point(183, 470);
             this.ClearSubjectBtn.Name = "ClearSubjectBtn";
             this.ClearSubjectBtn.Size = new System.Drawing.Size(89, 39);
-            this.ClearSubjectBtn.TabIndex = 39;
+            this.ClearSubjectBtn.TabIndex = 6;
             this.ClearSubjectBtn.Text = "Clear";
             this.ClearSubjectBtn.UseVisualStyleBackColor = true;
             this.ClearSubjectBtn.Click += new System.EventHandler(this.ClearSubjectBtn_Click);
@@ -217,7 +217,7 @@
             this.SubjectDataGridView.Location = new System.Drawing.Point(30, 116);
             this.SubjectDataGridView.Name = "SubjectDataGridView";
             this.SubjectDataGridView.Size = new System.Drawing.Size(357, 306);
-            this.SubjectDataGridView.TabIndex = 40;
+            this.SubjectDataGridView.TabIndex = 30;
             // 
             // SubjectUI
             // 

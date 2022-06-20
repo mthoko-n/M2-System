@@ -34,6 +34,10 @@ namespace M2_Snapshots
 
         private void AcademicReport_UI_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'binaryMakersDS.student' table. You can move, or remove it, as needed.
+            //this.studentTableAdapter.Fill(this.binaryMakersDS.student);
+            // TODO: This line of code loads data into the 'binaryMakersDS.subjectResults' table. You can move, or remove it, as needed.
+            this.subjectResultsTableAdapter.Fill(this.binaryMakersDS.subjectResults);
             /*this.subjResult.Fill();*/
             this.reportViewer1.RefreshReport();
             this.Show();

@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.DivisionTextBox1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.teachID = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,8 +53,6 @@
             this.UpdateButton = new System.Windows.Forms.Button();
             this.SearchClassDataGridView = new System.Windows.Forms.DataGridView();
             this.classClearBtn = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.DivisionTextBox1 = new System.Windows.Forms.TextBox();
             this.binaryMakersDS = new M2_Snapshots.BinaryMakersDS();
             this.binaryMakersDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
@@ -75,10 +75,10 @@
             // SearchTextBox
             // 
             this.SearchTextBox.Location = new System.Drawing.Point(606, 27);
-            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(163, 20);
-            this.SearchTextBox.TabIndex = 27;
+            this.SearchTextBox.TabIndex = 1;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // groupBox1
@@ -100,22 +100,38 @@
             this.groupBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(38, 265);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(820, 197);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Class";
             // 
+            // DivisionTextBox1
+            // 
+            this.DivisionTextBox1.Location = new System.Drawing.Point(598, 150);
+            this.DivisionTextBox1.Name = "DivisionTextBox1";
+            this.DivisionTextBox1.Size = new System.Drawing.Size(171, 20);
+            this.DivisionTextBox1.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(518, 153);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 14);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Division";
+            // 
             // teachID
             // 
             this.teachID.FormattingEnabled = true;
             this.teachID.Location = new System.Drawing.Point(143, 106);
-            this.teachID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.teachID.Margin = new System.Windows.Forms.Padding(2);
             this.teachID.Name = "teachID";
             this.teachID.Size = new System.Drawing.Size(171, 22);
-            this.teachID.TabIndex = 26;
+            this.teachID.TabIndex = 6;
             this.teachID.SelectedIndexChanged += new System.EventHandler(this.teacherID_SelectedIndexChanged);
             // 
             // label8
@@ -160,10 +176,10 @@
             // GradeTextBox
             // 
             this.GradeTextBox.Location = new System.Drawing.Point(598, 103);
-            this.GradeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GradeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.GradeTextBox.Name = "GradeTextBox";
             this.GradeTextBox.Size = new System.Drawing.Size(171, 20);
-            this.GradeTextBox.TabIndex = 22;
+            this.GradeTextBox.TabIndex = 9;
             // 
             // label5
             // 
@@ -180,10 +196,10 @@
             // BuildingNoTextBox
             // 
             this.BuildingNoTextBox.Location = new System.Drawing.Point(598, 65);
-            this.BuildingNoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BuildingNoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.BuildingNoTextBox.Name = "BuildingNoTextBox";
             this.BuildingNoTextBox.Size = new System.Drawing.Size(171, 20);
-            this.BuildingNoTextBox.TabIndex = 20;
+            this.BuildingNoTextBox.TabIndex = 8;
             // 
             // label4
             // 
@@ -201,7 +217,7 @@
             this.ClassRollTextBox.Location = new System.Drawing.Point(143, 150);
             this.ClassRollTextBox.Name = "ClassRollTextBox";
             this.ClassRollTextBox.Size = new System.Drawing.Size(171, 20);
-            this.ClassRollTextBox.TabIndex = 18;
+            this.ClassRollTextBox.TabIndex = 7;
             // 
             // label3
             // 
@@ -238,10 +254,10 @@
             this.RemoveButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.RemoveButton.Location = new System.Drawing.Point(471, 490);
-            this.RemoveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RemoveButton.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(98, 40);
-            this.RemoveButton.TabIndex = 33;
+            this.RemoveButton.TabIndex = 3;
             this.RemoveButton.Text = "Remove";
             this.RemoveButton.UseVisualStyleBackColor = false;
             this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
@@ -252,10 +268,10 @@
             this.ViewDetalisButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ViewDetalisButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ViewDetalisButton.Location = new System.Drawing.Point(38, 491);
-            this.ViewDetalisButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ViewDetalisButton.Margin = new System.Windows.Forms.Padding(2);
             this.ViewDetalisButton.Name = "ViewDetalisButton";
             this.ViewDetalisButton.Size = new System.Drawing.Size(98, 40);
-            this.ViewDetalisButton.TabIndex = 32;
+            this.ViewDetalisButton.TabIndex = 2;
             this.ViewDetalisButton.Text = "Search";
             this.ViewDetalisButton.UseVisualStyleBackColor = false;
             this.ViewDetalisButton.Click += new System.EventHandler(this.ViewDetalisButton_Click);
@@ -266,10 +282,10 @@
             this.AddButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.AddButton.Location = new System.Drawing.Point(613, 491);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(98, 40);
-            this.AddButton.TabIndex = 34;
+            this.AddButton.TabIndex = 11;
             this.AddButton.Text = "Add Class";
             this.AddButton.UseVisualStyleBackColor = false;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
@@ -280,10 +296,10 @@
             this.UpdateButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.UpdateButton.Location = new System.Drawing.Point(760, 491);
-            this.UpdateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UpdateButton.Margin = new System.Windows.Forms.Padding(2);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(98, 40);
-            this.UpdateButton.TabIndex = 35;
+            this.UpdateButton.TabIndex = 12;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = false;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
@@ -292,39 +308,23 @@
             // 
             this.SearchClassDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SearchClassDataGridView.Location = new System.Drawing.Point(110, 74);
-            this.SearchClassDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchClassDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.SearchClassDataGridView.Name = "SearchClassDataGridView";
             this.SearchClassDataGridView.RowHeadersWidth = 51;
             this.SearchClassDataGridView.Size = new System.Drawing.Size(659, 175);
-            this.SearchClassDataGridView.TabIndex = 36;
+            this.SearchClassDataGridView.TabIndex = 40;
             this.SearchClassDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchClassDataGridView_CellContentClick);
             // 
             // classClearBtn
             // 
             this.classClearBtn.Location = new System.Drawing.Point(195, 490);
-            this.classClearBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.classClearBtn.Margin = new System.Windows.Forms.Padding(2);
             this.classClearBtn.Name = "classClearBtn";
             this.classClearBtn.Size = new System.Drawing.Size(100, 40);
-            this.classClearBtn.TabIndex = 37;
+            this.classClearBtn.TabIndex = 13;
             this.classClearBtn.Text = "Clear";
             this.classClearBtn.UseVisualStyleBackColor = true;
             this.classClearBtn.Click += new System.EventHandler(this.classClearBtn_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(518, 153);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 14);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Division";
-            // 
-            // DivisionTextBox1
-            // 
-            this.DivisionTextBox1.Location = new System.Drawing.Point(598, 150);
-            this.DivisionTextBox1.Name = "DivisionTextBox1";
-            this.DivisionTextBox1.Size = new System.Drawing.Size(171, 20);
-            this.DivisionTextBox1.TabIndex = 28;
             // 
             // binaryMakersDS
             // 

@@ -16,5 +16,13 @@ namespace M2_Snapshots
         {
             InitializeComponent();
         }
+
+        private void SubjectResults_UI_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'groupPmb2DataSet.subjectResults' table. You can move, or remove it, as needed.
+            this.subjectResultsTableAdapter.Fill(this.groupPmb2DataSet.subjectResults);
+            //this.subjResultsTableAdapters;
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
