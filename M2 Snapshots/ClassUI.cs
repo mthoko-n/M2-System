@@ -16,13 +16,11 @@ namespace M2_Snapshots
 
     {
 
-        public static ClassUI classForm;
-        public string total;
+        
         public ClassUI()
         {
             InitializeComponent();
-            classForm = this;
-            total = getNumStudents().ToString();
+           
         }
 
         SqlConnection con = new SqlConnection("Data Source=146.230.177.46;Initial Catalog=GroupPmb2;Persist Security Info=True;User ID=GroupPmb2;Password=b45dc2");
@@ -36,10 +34,10 @@ namespace M2_Snapshots
             SearchClassDataGridView.DataSource = dt;
         }
 
-        private int getNumStudents()
+        public int getNumStudents()
         {
             int sum = 0;
-            foreach (DataRow row in SearchClassDataGridView.Rows)
+            foreach (DataRow row in binaryMakersDS.classes.Rows)
             {
                 sum = sum + int.Parse(row.ItemArray[2].ToString());
 
@@ -268,6 +266,12 @@ namespace M2_Snapshots
 
         private void ClassUI_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'binaryMakersDS.classes' table. You can move, or remove it, as needed.
+            this.classesTableAdapter.Fill(this.binaryMakersDS.classes);
+            // TODO: This line of code loads data into the 'binaryMakersDS.PaymentService' table. You can move, or remove it, as needed.
+          
+
+            textBox1.Text = getNumStudents().ToString();
             BindData();
             con.Open();
             SqlCommand command = new SqlCommand("select teach_ID from Teachers", con);

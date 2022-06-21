@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.nosBtn = new System.Windows.Forms.Button();
@@ -37,7 +38,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.clearBtn3 = new System.Windows.Forms.Button();
+            this.nsfBtn = new System.Windows.Forms.Button();
+            this.nfsLbl = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.clearBtn6 = new System.Windows.Forms.Button();
+            this.nmsBtn = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.clearBtn5 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -46,16 +55,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.clearBtn4 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.clearBtn3 = new System.Windows.Forms.Button();
-            this.nsfBtn = new System.Windows.Forms.Button();
-            this.nfsLbl = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.clearBtn6 = new System.Windows.Forms.Button();
-            this.nmsBtn = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.binaryMakersDS1 = new M2_Snapshots.BinaryMakersDS();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.classesTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.classesTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -128,7 +134,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(236, 20);
             this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // panel1
             // 
@@ -150,6 +155,41 @@
             this.panel1.Size = new System.Drawing.Size(356, 523);
             this.panel1.TabIndex = 8;
             // 
+            // clearBtn3
+            // 
+            this.clearBtn3.Location = new System.Drawing.Point(192, 462);
+            this.clearBtn3.Name = "clearBtn3";
+            this.clearBtn3.Size = new System.Drawing.Size(75, 23);
+            this.clearBtn3.TabIndex = 11;
+            this.clearBtn3.Text = "Clear";
+            this.clearBtn3.UseVisualStyleBackColor = true;
+            // 
+            // nsfBtn
+            // 
+            this.nsfBtn.Location = new System.Drawing.Point(30, 462);
+            this.nsfBtn.Name = "nsfBtn";
+            this.nsfBtn.Size = new System.Drawing.Size(75, 23);
+            this.nsfBtn.TabIndex = 10;
+            this.nsfBtn.Text = "Generate";
+            this.nsfBtn.UseVisualStyleBackColor = true;
+            // 
+            // nfsLbl
+            // 
+            this.nfsLbl.AutoSize = true;
+            this.nfsLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nfsLbl.Location = new System.Drawing.Point(27, 379);
+            this.nfsLbl.Name = "nfsLbl";
+            this.nfsLbl.Size = new System.Drawing.Size(266, 22);
+            this.nfsLbl.TabIndex = 9;
+            this.nfsLbl.Text = "Number of Female Students";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(31, 418);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(236, 20);
+            this.textBox5.TabIndex = 8;
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -169,6 +209,41 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(356, 523);
             this.panel2.TabIndex = 9;
+            // 
+            // clearBtn6
+            // 
+            this.clearBtn6.Location = new System.Drawing.Point(205, 462);
+            this.clearBtn6.Name = "clearBtn6";
+            this.clearBtn6.Size = new System.Drawing.Size(75, 23);
+            this.clearBtn6.TabIndex = 11;
+            this.clearBtn6.Text = "Clear";
+            this.clearBtn6.UseVisualStyleBackColor = true;
+            // 
+            // nmsBtn
+            // 
+            this.nmsBtn.Location = new System.Drawing.Point(43, 462);
+            this.nmsBtn.Name = "nmsBtn";
+            this.nmsBtn.Size = new System.Drawing.Size(75, 23);
+            this.nmsBtn.TabIndex = 10;
+            this.nmsBtn.Text = "Generate";
+            this.nmsBtn.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(40, 379);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(243, 22);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Number of Male Students";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(44, 418);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(236, 20);
+            this.textBox6.TabIndex = 8;
             // 
             // label3
             // 
@@ -241,75 +316,19 @@
             this.textBox4.Size = new System.Drawing.Size(236, 20);
             this.textBox4.TabIndex = 4;
             // 
-            // clearBtn3
+            // binaryMakersDS1
             // 
-            this.clearBtn3.Location = new System.Drawing.Point(192, 462);
-            this.clearBtn3.Name = "clearBtn3";
-            this.clearBtn3.Size = new System.Drawing.Size(75, 23);
-            this.clearBtn3.TabIndex = 11;
-            this.clearBtn3.Text = "Clear";
-            this.clearBtn3.UseVisualStyleBackColor = true;
+            this.binaryMakersDS1.DataSetName = "BinaryMakersDS";
+            this.binaryMakersDS1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // nsfBtn
+            // bindingSource1
             // 
-            this.nsfBtn.Location = new System.Drawing.Point(30, 462);
-            this.nsfBtn.Name = "nsfBtn";
-            this.nsfBtn.Size = new System.Drawing.Size(75, 23);
-            this.nsfBtn.TabIndex = 10;
-            this.nsfBtn.Text = "Generate";
-            this.nsfBtn.UseVisualStyleBackColor = true;
+            this.bindingSource1.DataMember = "classes";
+            this.bindingSource1.DataSource = this.binaryMakersDS1;
             // 
-            // nfsLbl
+            // classesTableAdapter
             // 
-            this.nfsLbl.AutoSize = true;
-            this.nfsLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nfsLbl.Location = new System.Drawing.Point(27, 379);
-            this.nfsLbl.Name = "nfsLbl";
-            this.nfsLbl.Size = new System.Drawing.Size(266, 22);
-            this.nfsLbl.TabIndex = 9;
-            this.nfsLbl.Text = "Number of Female Students";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(31, 418);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(236, 20);
-            this.textBox5.TabIndex = 8;
-            // 
-            // clearBtn6
-            // 
-            this.clearBtn6.Location = new System.Drawing.Point(205, 462);
-            this.clearBtn6.Name = "clearBtn6";
-            this.clearBtn6.Size = new System.Drawing.Size(75, 23);
-            this.clearBtn6.TabIndex = 11;
-            this.clearBtn6.Text = "Clear";
-            this.clearBtn6.UseVisualStyleBackColor = true;
-            // 
-            // nmsBtn
-            // 
-            this.nmsBtn.Location = new System.Drawing.Point(43, 462);
-            this.nmsBtn.Name = "nmsBtn";
-            this.nmsBtn.Size = new System.Drawing.Size(75, 23);
-            this.nmsBtn.TabIndex = 10;
-            this.nmsBtn.Text = "Generate";
-            this.nmsBtn.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(40, 379);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(243, 22);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Number of Male Students";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(44, 418);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(236, 20);
-            this.textBox6.TabIndex = 8;
+            this.classesTableAdapter.ClearBeforeFill = true;
             // 
             // GenerateReportsUI
             // 
@@ -321,10 +340,13 @@
             this.Controls.Add(this.panel1);
             this.Name = "GenerateReportsUI";
             this.Text = "GenerateReportsUI";
+            this.Load += new System.EventHandler(this.GenerateReportsUI_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -357,5 +379,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button clearBtn4;
         private System.Windows.Forms.TextBox textBox4;
+        private BinaryMakersDS binaryMakersDS1;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private BinaryMakersDSTableAdapters.classesTableAdapter classesTableAdapter;
     }
 }
