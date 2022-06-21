@@ -51,6 +51,7 @@ namespace M2_Snapshots
         private void AdminUI_Load(object sender, EventArgs e)
         {
             BindData();
+
         }
 
         private void AdminSearchButton_Click(object sender, EventArgs e)
@@ -182,18 +183,21 @@ namespace M2_Snapshots
 
         private void AdminDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string id = AdminDataGridView.SelectedRows[0].Cells[0].Value + string.Empty;
-            AdminIDTextBox.Text = id;
+            if (AdminDataGridView.SelectedRows.Count == 1)
+            {
 
-            string name = AdminDataGridView.SelectedRows[0].Cells[1].Value + string.Empty;
-            AdminNameTextBox.Text = name;
+                string id = AdminDataGridView.SelectedRows[0].Cells[0].Value + string.Empty;
+                AdminIDTextBox.Text = id;
 
-            string details = AdminDataGridView.SelectedRows[0].Cells[2].Value + string.Empty;
-            AdminDetailsTextBox.Text = details;
+                string name = AdminDataGridView.SelectedRows[0].Cells[1].Value + string.Empty;
+                AdminNameTextBox.Text = name;
 
-            string email = AdminDataGridView.SelectedRows[0].Cells[3].Value + string.Empty;
-            AdminEmailTextBox.Text = email;
+                string details = AdminDataGridView.SelectedRows[0].Cells[2].Value + string.Empty;
+                AdminDetailsTextBox.Text = details;
 
+                string email = AdminDataGridView.SelectedRows[0].Cells[3].Value + string.Empty;
+                AdminEmailTextBox.Text = email;
+            }
         }
     }
 }

@@ -48,22 +48,13 @@
             this.stuSearchTB = new System.Windows.Forms.TextBox();
             this.stuIdLbl = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.stuAgeTB = new System.Windows.Forms.TextBox();
+            this.StuClassIDCB = new System.Windows.Forms.ComboBox();
             this.stuAgeLbl = new System.Windows.Forms.Label();
-            this.stuClassIdTB = new System.Windows.Forms.TextBox();
             this.stuClassIdLbl = new System.Windows.Forms.Label();
             this.stuGenderCB = new System.Windows.Forms.ComboBox();
             this.stuParentNoTB = new System.Windows.Forms.TextBox();
             this.stuParentNoLbl = new System.Windows.Forms.Label();
             this.studentDGV = new System.Windows.Forms.DataGridView();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.binaryMakersDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.binaryMakersDS = new M2_Snapshots.BinaryMakersDS();
-            this.stuClearBtn = new System.Windows.Forms.Button();
-            this.studentTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.studentTableAdapter();
-            this.groupPmb2DataSet = new M2_Snapshots.GroupPmb2DataSet();
-            this.studentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTableAdapter1 = new M2_Snapshots.GroupPmb2DataSetTableAdapters.studentTableAdapter();
             this.stuIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.classIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stunameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,13 +65,22 @@
             this.stugenderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stuFeesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parentContactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.groupPmb2DataSet = new M2_Snapshots.GroupPmb2DataSet();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.binaryMakersDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.binaryMakersDS = new M2_Snapshots.BinaryMakersDS();
+            this.stuClearBtn = new System.Windows.Forms.Button();
+            this.studentTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.studentTableAdapter();
+            this.studentTableAdapter1 = new M2_Snapshots.GroupPmb2DataSetTableAdapters.studentTableAdapter();
+            this.stuAgeCB = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // stuUpdateBtn
@@ -227,11 +227,11 @@
             this.stuSearchLbl.AutoSize = true;
             this.stuSearchLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stuSearchLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.stuSearchLbl.Location = new System.Drawing.Point(756, 22);
+            this.stuSearchLbl.Location = new System.Drawing.Point(735, 22);
             this.stuSearchLbl.Name = "stuSearchLbl";
-            this.stuSearchLbl.Size = new System.Drawing.Size(82, 14);
+            this.stuSearchLbl.Size = new System.Drawing.Size(124, 14);
             this.stuSearchLbl.TabIndex = 11;
-            this.stuSearchLbl.Text = "Search Student";
+            this.stuSearchLbl.Text = "Search/Remove Student";
             // 
             // stuHeadingLbl
             // 
@@ -262,9 +262,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.stuAgeTB);
+            this.groupBox1.Controls.Add(this.stuAgeCB);
+            this.groupBox1.Controls.Add(this.StuClassIDCB);
             this.groupBox1.Controls.Add(this.stuAgeLbl);
-            this.groupBox1.Controls.Add(this.stuClassIdTB);
             this.groupBox1.Controls.Add(this.stuClassIdLbl);
             this.groupBox1.Controls.Add(this.stuGenderCB);
             this.groupBox1.Controls.Add(this.stuParentNoTB);
@@ -291,12 +291,15 @@
             this.groupBox1.Text = "Add/Update Student";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // stuAgeTB
+            // StuClassIDCB
             // 
-            this.stuAgeTB.Location = new System.Drawing.Point(823, 75);
-            this.stuAgeTB.Name = "stuAgeTB";
-            this.stuAgeTB.Size = new System.Drawing.Size(205, 20);
-            this.stuAgeTB.TabIndex = 13;
+            this.StuClassIDCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.StuClassIDCB.FormattingEnabled = true;
+            this.StuClassIDCB.ItemHeight = 14;
+            this.StuClassIDCB.Location = new System.Drawing.Point(112, 69);
+            this.StuClassIDCB.Name = "StuClassIDCB";
+            this.StuClassIDCB.Size = new System.Drawing.Size(203, 22);
+            this.StuClassIDCB.TabIndex = 8;
             // 
             // stuAgeLbl
             // 
@@ -306,13 +309,6 @@
             this.stuAgeLbl.Size = new System.Drawing.Size(32, 14);
             this.stuAgeLbl.TabIndex = 26;
             this.stuAgeLbl.Text = "Age:";
-            // 
-            // stuClassIdTB
-            // 
-            this.stuClassIdTB.Location = new System.Drawing.Point(112, 71);
-            this.stuClassIdTB.Name = "stuClassIdTB";
-            this.stuClassIdTB.Size = new System.Drawing.Size(203, 20);
-            this.stuClassIdTB.TabIndex = 8;
             // 
             // stuClassIdLbl
             // 
@@ -378,49 +374,6 @@
             this.studentDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDGV_CellClick);
             this.studentDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDGV_CellContentClick);
             // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "student";
-            this.studentBindingSource.DataSource = this.binaryMakersDSBindingSource;
-            // 
-            // binaryMakersDSBindingSource
-            // 
-            this.binaryMakersDSBindingSource.DataSource = this.binaryMakersDS;
-            this.binaryMakersDSBindingSource.Position = 0;
-            // 
-            // binaryMakersDS
-            // 
-            this.binaryMakersDS.DataSetName = "BinaryMakersDS";
-            this.binaryMakersDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // stuClearBtn
-            // 
-            this.stuClearBtn.Location = new System.Drawing.Point(267, 536);
-            this.stuClearBtn.Name = "stuClearBtn";
-            this.stuClearBtn.Size = new System.Drawing.Size(89, 39);
-            this.stuClearBtn.TabIndex = 6;
-            this.stuClearBtn.Text = "Clear";
-            this.stuClearBtn.UseVisualStyleBackColor = true;
-            this.stuClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
-            // 
-            // studentTableAdapter
-            // 
-            this.studentTableAdapter.ClearBeforeFill = true;
-            // 
-            // groupPmb2DataSet
-            // 
-            this.groupPmb2DataSet.DataSetName = "GroupPmb2DataSet";
-            this.groupPmb2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentBindingSource1
-            // 
-            this.studentBindingSource1.DataMember = "student";
-            this.studentBindingSource1.DataSource = this.groupPmb2DataSet;
-            // 
-            // studentTableAdapter1
-            // 
-            this.studentTableAdapter1.ClearBeforeFill = true;
-            // 
             // stuIDDataGridViewTextBoxColumn
             // 
             this.stuIDDataGridViewTextBoxColumn.DataPropertyName = "stu_ID";
@@ -481,6 +434,70 @@
             this.parentContactDataGridViewTextBoxColumn.HeaderText = "parentContact";
             this.parentContactDataGridViewTextBoxColumn.Name = "parentContactDataGridViewTextBoxColumn";
             // 
+            // studentBindingSource1
+            // 
+            this.studentBindingSource1.DataMember = "student";
+            this.studentBindingSource1.DataSource = this.groupPmb2DataSet;
+            // 
+            // groupPmb2DataSet
+            // 
+            this.groupPmb2DataSet.DataSetName = "GroupPmb2DataSet";
+            this.groupPmb2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "student";
+            this.studentBindingSource.DataSource = this.binaryMakersDSBindingSource;
+            // 
+            // binaryMakersDSBindingSource
+            // 
+            this.binaryMakersDSBindingSource.DataSource = this.binaryMakersDS;
+            this.binaryMakersDSBindingSource.Position = 0;
+            // 
+            // binaryMakersDS
+            // 
+            this.binaryMakersDS.DataSetName = "BinaryMakersDS";
+            this.binaryMakersDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // stuClearBtn
+            // 
+            this.stuClearBtn.Location = new System.Drawing.Point(267, 536);
+            this.stuClearBtn.Name = "stuClearBtn";
+            this.stuClearBtn.Size = new System.Drawing.Size(89, 39);
+            this.stuClearBtn.TabIndex = 6;
+            this.stuClearBtn.Text = "Clear";
+            this.stuClearBtn.UseVisualStyleBackColor = true;
+            this.stuClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
+            // 
+            // studentTableAdapter
+            // 
+            this.studentTableAdapter.ClearBeforeFill = true;
+            // 
+            // studentTableAdapter1
+            // 
+            this.studentTableAdapter1.ClearBeforeFill = true;
+            // 
+            // stuAgeCB
+            // 
+            this.stuAgeCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.stuAgeCB.FormattingEnabled = true;
+            this.stuAgeCB.Items.AddRange(new object[] {
+            "",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22"});
+            this.stuAgeCB.Location = new System.Drawing.Point(823, 72);
+            this.stuAgeCB.Name = "stuAgeCB";
+            this.stuAgeCB.Size = new System.Drawing.Size(205, 22);
+            this.stuAgeCB.TabIndex = 27;
+            // 
             // StudentUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -502,11 +519,11 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,9 +554,7 @@
         private System.Windows.Forms.Label stuParentNoLbl;
         private System.Windows.Forms.DataGridView studentDGV;
         private System.Windows.Forms.ComboBox stuGenderCB;
-        private System.Windows.Forms.TextBox stuAgeTB;
         private System.Windows.Forms.Label stuAgeLbl;
-        private System.Windows.Forms.TextBox stuClassIdTB;
         private System.Windows.Forms.Label stuClassIdLbl;
         private System.Windows.Forms.Button stuClearBtn;
         private System.Windows.Forms.BindingSource binaryMakersDSBindingSource;
@@ -559,5 +574,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stugenderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stuFeesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn parentContactDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox StuClassIDCB;
+        private System.Windows.Forms.ComboBox stuAgeCB;
     }
 }

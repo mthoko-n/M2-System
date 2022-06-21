@@ -50,6 +50,7 @@
             this.payTypeCB = new System.Windows.Forms.ComboBox();
             this.payClearBtn = new System.Windows.Forms.Button();
             this.payDGV = new System.Windows.Forms.DataGridView();
+            this.PaymentAdminIDCB = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.payDGV)).BeginInit();
             this.SuspendLayout();
@@ -205,6 +206,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.PaymentAdminIDCB);
             this.groupBox1.Controls.Add(this.payAdminIdTB);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.payTypeCB);
@@ -230,7 +232,7 @@
             // 
             // payAdminIdTB
             // 
-            this.payAdminIdTB.Location = new System.Drawing.Point(111, 130);
+            this.payAdminIdTB.Location = new System.Drawing.Point(644, 156);
             this.payAdminIdTB.Name = "payAdminIdTB";
             this.payAdminIdTB.Size = new System.Drawing.Size(185, 20);
             this.payAdminIdTB.TabIndex = 8;
@@ -276,6 +278,15 @@
             this.payDGV.Size = new System.Drawing.Size(747, 150);
             this.payDGV.TabIndex = 40;
             this.payDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.payDGV_CellClick);
+            // 
+            // PaymentAdminIDCB
+            // 
+            this.PaymentAdminIDCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PaymentAdminIDCB.FormattingEnabled = true;
+            this.PaymentAdminIDCB.Location = new System.Drawing.Point(111, 133);
+            this.PaymentAdminIDCB.Name = "PaymentAdminIDCB";
+            this.PaymentAdminIDCB.Size = new System.Drawing.Size(185, 22);
+            this.PaymentAdminIDCB.TabIndex = 21;
             // 
             // PaymentUI
             // 
@@ -324,5 +335,6 @@
         private System.Windows.Forms.TextBox payAdminIdTB;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView payDGV;
+        private System.Windows.Forms.ComboBox PaymentAdminIDCB;
     }
 }

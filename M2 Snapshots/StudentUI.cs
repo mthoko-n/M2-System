@@ -33,14 +33,15 @@ namespace M2_Snapshots
         {
           
 
-            if ((stuAddressTB.Text != "")&& (stuClassIdTB.Text != "") && (stuIdTB.Text != "") && (stuGenderCB.Text != "")  && (stuFeesTB.Text != "") && (stuLastNameTB.Text != "") && (stuNameTB.Text != "") && (stuParentNoTB.Text != "") && (stuAgeTB.Text != ""))
+            if ((stuAddressTB.Text != "")&& /*(stuClassIdTB.Text != "")*/ (StuClassIDCB.Text!="") && (stuIdTB.Text != "") && (stuGenderCB.Text != "")  && (stuFeesTB.Text != "") && (stuLastNameTB.Text != "") && (stuNameTB.Text != "") && (stuParentNoTB.Text != "") && (stuAgeCB.Text != ""))
             {
                 con.Open();
                 string stuEmail = stuIdTB.Text+"@stu.kharina.ac.za";
                
                if(stuIdTB.Text.All(char.IsDigit) && stuIdTB.Text != "")
                 {
-                    if (stuClassIdTB.Text != "" && stuClassIdTB.Text.All(char.IsDigit))
+                    /*if (stuClassIdTB.Text != "" && stuClassIdTB.Text.All(char.IsDigit))*/
+                    if (StuClassIDCB.Text != "" && StuClassIDCB.Text.All(char.IsDigit))
                     {
                         if (stuNameTB.Text!="")
                         {
@@ -50,19 +51,22 @@ namespace M2_Snapshots
                                 {
                                     if (stuGenderCB.Text != "")
                                     {
-                                        if(stuAgeTB.Text.All(char.IsDigit) && (int.Parse(stuAgeTB.Text)>12) && (int.Parse(stuAgeTB.Text) < 23))
+                                        if(stuAgeCB.Text.All(char.IsDigit) && (int.Parse(stuAgeCB.Text)>12) && (int.Parse(stuAgeCB.Text) < 23))
                                         {
                                            
                                                 if (stuFeesTB.Text!="" && stuFeesTB.Text.All(char.IsDigit))
                                                 {
                                                     if (stuParentNoTB.Text!="" && (stuParentNoTB.Text.All(char.IsDigit) && stuParentNoTB.Text.Length == 10))
                                                     {
-                                                        SqlCommand command = new SqlCommand("INSERT INTO student values('" + int.Parse(stuIdTB.Text) + "','" + int.Parse(stuClassIdTB.Text) + "','" + stuNameTB.Text + "','" + stuLastNameTB.Text + "','" + stuAddressTB.Text + "','" + stuEmail + "','" + int.Parse(stuAgeTB.Text) + "','" + stuGenderCB.Text + "','" + decimal.Parse(stuFeesTB.Text) + "','" + stuParentNoTB.Text + "')", con);
+                                                        SqlCommand command = new SqlCommand("INSERT INTO student values('" + int.Parse(stuIdTB.Text) + "','" + int.Parse(StuClassIDCB.Text) + "','" + stuNameTB.Text + "','" + stuLastNameTB.Text + "','" + stuAddressTB.Text + "','" + stuEmail + "','" + int.Parse(stuAgeCB.Text) + "','" + stuGenderCB.Text + "','" + decimal.Parse(stuFeesTB.Text) + "','" + stuParentNoTB.Text + "')", con);
 
-                                                        command.ExecuteNonQuery();
+                                                        if(command.ExecuteNonQuery()>0)
+                                                             MessageBox.Show("Successfully added", "Success!", MessageBoxButtons.OK);
+                                                        else
+                                                            MessageBox.Show("Enter a valid Student number", "Add Student Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                                         con.Close();
                                                         BindData();
-                                                        MessageBox.Show("Successfully added", "Success!", MessageBoxButtons.OK);
+                                                       
                                                     }
                                                     else
                                                     {
@@ -71,7 +75,7 @@ namespace M2_Snapshots
                                                 }
                                                 else
                                                 {
-                                                    MessageBox.Show("Enter a fee amount for the Student");
+                                                    MessageBox.Show("Enter a fee amount for the Student, Fee amount must not contain decimals");
                                                 }
                                         }
                                         else
@@ -131,9 +135,19 @@ namespace M2_Snapshots
 
             BindData();
 
-            
+            con.Open();
+            SqlCommand command = new SqlCommand("select class_id from classes", con);
+            SqlDataReader reader;
+            reader = command.ExecuteReader();
 
-           
+            DataTable dt = new DataTable(); 
+            dt.Columns.Add("class_id", typeof(string));
+            dt.Load(reader);
+            StuClassIDCB.ValueMember = "class_id";
+            StuClassIDCB.DataSource = dt;
+            StuClassIDCB.ResetText();
+            con.Close();
+
         }
 
         private void stuRemoveBtn_Click(object sender, EventArgs e)
@@ -151,9 +165,10 @@ namespace M2_Snapshots
                         SqlCommand command = new SqlCommand("Delete student where stu_ID = '" + int.Parse(stuSearchTB.Text) + "'", con);
                         if(command.ExecuteNonQuery()>0)
                             MessageBox.Show("Successfully Removed Student","Remove Student", MessageBoxButtons.OK);
+                        else
+                            MessageBox.Show("Invalid student data, Student does not exist", "Remove Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         con.Close();
                         BindData();
-                        MessageBox.Show("Invalid student data, Student does not exist", "Remove Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                     else
@@ -180,15 +195,15 @@ namespace M2_Snapshots
 
         private void stuUpdateBtn_Click(object sender, EventArgs e)
         {
-            if ((stuIdTB.Text != "" && stuIdTB.Text.All(char.IsDigit)) && ((stuAddressTB.Text != "") || (stuSearchTB.Text != "") || (stuClassIdTB.Text != "") || (stuGenderCB.Text != "") /*|| (stuEmailTB.Text != "")*/ || (stuFeesTB.Text != "") || (stuLastNameTB.Text != "") || (stuNameTB.Text != "") || (stuParentNoTB.Text != "") || (stuAgeTB.Text != "")))
+            if ((stuIdTB.Text != "" && stuIdTB.Text.All(char.IsDigit)) && ((stuAddressTB.Text != "") || (stuSearchTB.Text != "") || /*(stuClassIdTB.Text != "")*/ (StuClassIDCB.Text!="") || (stuGenderCB.Text != "") /*|| (stuEmailTB.Text != "")*/ || (stuFeesTB.Text != "") || (stuLastNameTB.Text != "") || (stuNameTB.Text != "") || (stuParentNoTB.Text != "") || (stuAgeCB.Text != "")))
             {
                 int error = 0;
                 con.Open();
 
-                if ((stuClassIdTB.Text != "" && stuClassIdTB.Text.All(char.IsDigit)) && (stuIdTB.Text != ""))
+                if ((StuClassIDCB.Text != "" && StuClassIDCB.Text.All(char.IsDigit)) && (stuIdTB.Text != ""))
 
                 {
-                    SqlCommand command = new SqlCommand("update student set classID = '" + int.Parse(stuClassIdTB.Text) + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
+                    SqlCommand command = new SqlCommand("update student set classID = '" + int.Parse(StuClassIDCB.Text) + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
                     if (command.ExecuteNonQuery() > 0)
                         error += 0;
                     else
@@ -240,9 +255,9 @@ namespace M2_Snapshots
                     command.ExecuteNonQuery();
                 }*/
 
-                if ((stuAgeTB.Text.All(char.IsDigit) && (int.Parse(stuAgeTB.Text) > 12) && (int.Parse(stuAgeTB.Text) < 23)) && (stuIdTB.Text != ""))
+                if ((stuAgeCB.Text.All(char.IsDigit) && (int.Parse(stuAgeCB.Text) > 12) && (int.Parse(stuAgeCB.Text) < 23)) && (stuIdTB.Text != ""))
                 {
-                    SqlCommand command = new SqlCommand("update student set stu_age = '" + int.Parse(stuAgeTB.Text) + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
+                    SqlCommand command = new SqlCommand("update student set stu_age = '" + int.Parse(stuAgeCB.Text) + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
                     if (command.ExecuteNonQuery() > 0)
                         error += 0;
                     else
@@ -272,7 +287,7 @@ namespace M2_Snapshots
                         error += 0;
                     else
                     {
-                        MessageBox.Show("Enter a valid fee amount for the student \nEnter a valid Student ID");
+                        MessageBox.Show("Enter a valid fee amount for the student (Number must be a whole number and must not contain decimals) \nEnter a valid Student ID");
                         error++;
                     }
                 }
@@ -344,16 +359,16 @@ namespace M2_Snapshots
         {
             BindData();
             stuAddressTB.Clear();
-            stuAgeTB.Clear();
-            stuClassIdTB.Clear();
-            //stuEmailTB.Clear();
+            
+            stuAgeCB.ResetText();
+            
             stuFeesTB.Clear();
             stuLastNameTB.Clear();
             stuNameTB.Clear();
             stuParentNoTB.Clear();
             stuIdTB.Clear();
             stuSearchTB.Clear();
-           
+            StuClassIDCB.ResetText();
             stuGenderCB.ResetText();
         }
 
@@ -364,7 +379,8 @@ namespace M2_Snapshots
                 stuIdTB.Text = id;
 
                 string classID = studentDGV.SelectedRows[0].Cells[1].Value + string.Empty;
-                stuClassIdTB.Text = classID;
+                StuClassIDCB.Text = classID;
+                //stuClassIdTB.Text = classID;
 
                 string name = studentDGV.SelectedRows[0].Cells[2].Value + string.Empty;
                 stuNameTB.Text = name;
@@ -381,7 +397,7 @@ namespace M2_Snapshots
                 */
 
                 string age= studentDGV.SelectedRows[0].Cells[6].Value + string.Empty;
-                stuAgeTB.Text = age;
+                stuAgeCB.Text = age;
 
                 string gender = studentDGV.SelectedRows[0].Cells[7].Value + string.Empty;
                 stuGenderCB.Text = gender;

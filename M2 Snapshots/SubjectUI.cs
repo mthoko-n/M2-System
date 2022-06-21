@@ -40,7 +40,7 @@ namespace M2_Snapshots
             if ((SubjectNameTextBox.Text != "") && (SubjectIDTextBox.Text != "") && (SubjectDetailsTextBox.Text != ""))
             {
                 con.Open();
-                SqlCommand command = new SqlCommand("insert into subjects values ('" + SubjectIDTextBox.Text + "','" + SubjectNameTextBox.Text + "','" + SubjectDetailsTextBox.Text  + "')", con);
+                SqlCommand command = new SqlCommand("insert into subjects values ('" + SubjectIDTextBox.Text.ToUpper() + "','" + SubjectNameTextBox.Text + "','" + SubjectDetailsTextBox.Text  + "')", con);
                 command.ExecuteNonQuery();
                 MessageBox.Show("Successfully Inserted");
                 con.Close();
@@ -142,6 +142,7 @@ namespace M2_Snapshots
                     else
                     {
                         MessageBox.Show("Enter a valid subject ID", "Update Subject", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        error++;
                     }
                 }
                 if ((SubjectDetailsTextBox.Text != "") && (SubjectNameTextBox.Text != ""))
@@ -152,6 +153,7 @@ namespace M2_Snapshots
                     else
                     {
                         MessageBox.Show("Enter a valid subject ID", "Update Subject", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        error++;
                     }
                 }
                
