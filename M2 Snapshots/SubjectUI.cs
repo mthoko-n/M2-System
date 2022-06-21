@@ -195,5 +195,10 @@ namespace M2_Snapshots
                 SubjectDetailsTextBox.Text = details;
             }
         }
+
+        private void SubjectDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

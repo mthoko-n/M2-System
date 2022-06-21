@@ -50,7 +50,7 @@
             this.payTypeCB = new System.Windows.Forms.ComboBox();
             this.payClearBtn = new System.Windows.Forms.Button();
             this.payDGV = new System.Windows.Forms.DataGridView();
-            this.PaymentAdminIDCB = new System.Windows.Forms.ComboBox();
+            this.printBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.payDGV)).BeginInit();
             this.SuspendLayout();
@@ -206,7 +206,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.PaymentAdminIDCB);
             this.groupBox1.Controls.Add(this.payAdminIdTB);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.payTypeCB);
@@ -232,7 +231,7 @@
             // 
             // payAdminIdTB
             // 
-            this.payAdminIdTB.Location = new System.Drawing.Point(644, 156);
+            this.payAdminIdTB.Location = new System.Drawing.Point(111, 130);
             this.payAdminIdTB.Name = "payAdminIdTB";
             this.payAdminIdTB.Size = new System.Drawing.Size(185, 20);
             this.payAdminIdTB.TabIndex = 8;
@@ -279,20 +278,25 @@
             this.payDGV.TabIndex = 40;
             this.payDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.payDGV_CellClick);
             // 
-            // PaymentAdminIDCB
+            // printBtn
             // 
-            this.PaymentAdminIDCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.PaymentAdminIDCB.FormattingEnabled = true;
-            this.PaymentAdminIDCB.Location = new System.Drawing.Point(111, 133);
-            this.PaymentAdminIDCB.Name = "PaymentAdminIDCB";
-            this.PaymentAdminIDCB.Size = new System.Drawing.Size(185, 22);
-            this.PaymentAdminIDCB.TabIndex = 21;
+            this.printBtn.BackColor = System.Drawing.Color.LimeGreen;
+            this.printBtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.printBtn.Location = new System.Drawing.Point(349, 547);
+            this.printBtn.Name = "printBtn";
+            this.printBtn.Size = new System.Drawing.Size(226, 30);
+            this.printBtn.TabIndex = 41;
+            this.printBtn.Text = "Print Receipt";
+            this.printBtn.UseVisualStyleBackColor = false;
+            this.printBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // PaymentUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 538);
+            this.ClientSize = new System.Drawing.Size(910, 700);
+            this.Controls.Add(this.printBtn);
             this.Controls.Add(this.payDGV);
             this.Controls.Add(this.payClearBtn);
             this.Controls.Add(this.label1);
@@ -335,6 +339,6 @@
         private System.Windows.Forms.TextBox payAdminIdTB;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView payDGV;
-        private System.Windows.Forms.ComboBox PaymentAdminIDCB;
+        private System.Windows.Forms.Button printBtn;
     }
 }

@@ -107,6 +107,7 @@
             this.clearBtn1.TabIndex = 3;
             this.clearBtn1.Text = "Clear";
             this.clearBtn1.UseVisualStyleBackColor = true;
+            this.clearBtn1.Click += new System.EventHandler(this.clearBtn1_Click);
             // 
             // clearBtn2
             // 
@@ -116,6 +117,7 @@
             this.clearBtn2.TabIndex = 7;
             this.clearBtn2.Text = "Clear";
             this.clearBtn2.UseVisualStyleBackColor = true;
+            this.clearBtn2.Click += new System.EventHandler(this.clearBtn2_Click);
             // 
             // tpsBtn
             // 
@@ -127,6 +129,7 @@
             this.tpsBtn.TabIndex = 6;
             this.tpsBtn.Text = "Generate";
             this.tpsBtn.UseVisualStyleBackColor = false;
+            this.tpsBtn.Click += new System.EventHandler(this.tpsBtn_Click);
             // 
             // label2
             // 
@@ -174,6 +177,7 @@
             this.clearBtn3.TabIndex = 11;
             this.clearBtn3.Text = "Clear";
             this.clearBtn3.UseVisualStyleBackColor = true;
+            this.clearBtn3.Click += new System.EventHandler(this.clearBtn3_Click);
             // 
             // nsfBtn
             // 
@@ -233,6 +237,7 @@
             this.clearBtn6.TabIndex = 11;
             this.clearBtn6.Text = "Clear";
             this.clearBtn6.UseVisualStyleBackColor = true;
+            this.clearBtn6.Click += new System.EventHandler(this.clearBtn6_Click);
             // 
             // nmsBtn
             // 
@@ -282,6 +287,7 @@
             this.clearBtn5.TabIndex = 7;
             this.clearBtn5.Text = "Clear";
             this.clearBtn5.UseVisualStyleBackColor = true;
+            this.clearBtn5.Click += new System.EventHandler(this.clearBtn5_Click);
             // 
             // textBox3
             // 
@@ -330,6 +336,7 @@
             this.clearBtn4.TabIndex = 3;
             this.clearBtn4.Text = "Clear";
             this.clearBtn4.UseVisualStyleBackColor = true;
+            this.clearBtn4.Click += new System.EventHandler(this.clearBtn4_Click);
             // 
             // textBox4
             // 
