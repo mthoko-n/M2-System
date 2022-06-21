@@ -52,12 +52,6 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.SearchClassDataGridView = new System.Windows.Forms.DataGridView();
-            this.classidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teacheridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numStudentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buildingNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.divisionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.classesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.binaryMakersDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.binaryMakersDS = new M2_Snapshots.BinaryMakersDS();
@@ -65,6 +59,12 @@
             this.paymentServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.paymentServiceTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.PaymentServiceTableAdapter();
             this.classesTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.classesTableAdapter();
+            this.divisionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buildingNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numStudentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacheridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchClassDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).BeginInit();
@@ -337,42 +337,6 @@
             this.SearchClassDataGridView.TabIndex = 40;
             this.SearchClassDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchClassDataGridView_CellClick);
             // 
-            // classidDataGridViewTextBoxColumn
-            // 
-            this.classidDataGridViewTextBoxColumn.DataPropertyName = "class_id";
-            this.classidDataGridViewTextBoxColumn.HeaderText = "class_id";
-            this.classidDataGridViewTextBoxColumn.Name = "classidDataGridViewTextBoxColumn";
-            // 
-            // teacheridDataGridViewTextBoxColumn
-            // 
-            this.teacheridDataGridViewTextBoxColumn.DataPropertyName = "teacher_id";
-            this.teacheridDataGridViewTextBoxColumn.HeaderText = "teacher_id";
-            this.teacheridDataGridViewTextBoxColumn.Name = "teacheridDataGridViewTextBoxColumn";
-            // 
-            // numStudentsDataGridViewTextBoxColumn
-            // 
-            this.numStudentsDataGridViewTextBoxColumn.DataPropertyName = "numStudents";
-            this.numStudentsDataGridViewTextBoxColumn.HeaderText = "numStudents";
-            this.numStudentsDataGridViewTextBoxColumn.Name = "numStudentsDataGridViewTextBoxColumn";
-            // 
-            // buildingNoDataGridViewTextBoxColumn
-            // 
-            this.buildingNoDataGridViewTextBoxColumn.DataPropertyName = "buildingNo";
-            this.buildingNoDataGridViewTextBoxColumn.HeaderText = "buildingNo";
-            this.buildingNoDataGridViewTextBoxColumn.Name = "buildingNoDataGridViewTextBoxColumn";
-            // 
-            // gradeDataGridViewTextBoxColumn
-            // 
-            this.gradeDataGridViewTextBoxColumn.DataPropertyName = "grade";
-            this.gradeDataGridViewTextBoxColumn.HeaderText = "grade";
-            this.gradeDataGridViewTextBoxColumn.Name = "gradeDataGridViewTextBoxColumn";
-            // 
-            // divisionDataGridViewTextBoxColumn
-            // 
-            this.divisionDataGridViewTextBoxColumn.DataPropertyName = "Division";
-            this.divisionDataGridViewTextBoxColumn.HeaderText = "Division";
-            this.divisionDataGridViewTextBoxColumn.Name = "divisionDataGridViewTextBoxColumn";
-            // 
             // classesBindingSource
             // 
             this.classesBindingSource.DataMember = "classes";
@@ -411,6 +375,42 @@
             // classesTableAdapter
             // 
             this.classesTableAdapter.ClearBeforeFill = true;
+            // 
+            // divisionDataGridViewTextBoxColumn
+            // 
+            this.divisionDataGridViewTextBoxColumn.DataPropertyName = "Division";
+            this.divisionDataGridViewTextBoxColumn.HeaderText = "Division";
+            this.divisionDataGridViewTextBoxColumn.Name = "divisionDataGridViewTextBoxColumn";
+            // 
+            // gradeDataGridViewTextBoxColumn
+            // 
+            this.gradeDataGridViewTextBoxColumn.DataPropertyName = "grade";
+            this.gradeDataGridViewTextBoxColumn.HeaderText = "grade";
+            this.gradeDataGridViewTextBoxColumn.Name = "gradeDataGridViewTextBoxColumn";
+            // 
+            // buildingNoDataGridViewTextBoxColumn
+            // 
+            this.buildingNoDataGridViewTextBoxColumn.DataPropertyName = "buildingNo";
+            this.buildingNoDataGridViewTextBoxColumn.HeaderText = "buildingNo";
+            this.buildingNoDataGridViewTextBoxColumn.Name = "buildingNoDataGridViewTextBoxColumn";
+            // 
+            // numStudentsDataGridViewTextBoxColumn
+            // 
+            this.numStudentsDataGridViewTextBoxColumn.DataPropertyName = "numStudents";
+            this.numStudentsDataGridViewTextBoxColumn.HeaderText = "numStudents";
+            this.numStudentsDataGridViewTextBoxColumn.Name = "numStudentsDataGridViewTextBoxColumn";
+            // 
+            // teacheridDataGridViewTextBoxColumn
+            // 
+            this.teacheridDataGridViewTextBoxColumn.DataPropertyName = "teacher_id";
+            this.teacheridDataGridViewTextBoxColumn.HeaderText = "teacher_id";
+            this.teacheridDataGridViewTextBoxColumn.Name = "teacheridDataGridViewTextBoxColumn";
+            // 
+            // classidDataGridViewTextBoxColumn
+            // 
+            this.classidDataGridViewTextBoxColumn.DataPropertyName = "class_id";
+            this.classidDataGridViewTextBoxColumn.HeaderText = "class_id";
+            this.classidDataGridViewTextBoxColumn.Name = "classidDataGridViewTextBoxColumn";
             // 
             // ClassUI
             // 
