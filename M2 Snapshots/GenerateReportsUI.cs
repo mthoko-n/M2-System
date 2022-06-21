@@ -26,15 +26,9 @@ namespace M2_Snapshots
         private int getTotalStudents() {
 
 
-            int sum = 0;
+            int sum = groupPmb2DataSet1.student.Rows.Count;
 
-            foreach (DataRow row in groupPmb2DataSet1.classes.Rows)
-            {
-                sum = sum + int.Parse(row.ItemArray[2].ToString());
-
-
-            }
-
+           
             return sum;
         }
         private void nosBtn_Click(object sender, EventArgs e)
@@ -114,6 +108,37 @@ namespace M2_Snapshots
         private void tpsBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void clearBtn1_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+
+        }
+
+        private void clearBtn2_Click(object sender, EventArgs e)
+        {
+            textBox2.Clear();
+        }
+
+        private void clearBtn3_Click(object sender, EventArgs e)
+        {
+            textBox5.Clear();
+        }
+
+        private void clearBtn4_Click(object sender, EventArgs e)
+        {
+            textBox3.Clear();
+        }
+
+        private void clearBtn5_Click(object sender, EventArgs e)
+        {
+            textBox4.Clear();
+        }
+
+        private void clearBtn6_Click(object sender, EventArgs e)
+        {
+            textBox6.Clear();
         }
     }
     }
