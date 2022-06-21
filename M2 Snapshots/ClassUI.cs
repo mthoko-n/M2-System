@@ -121,7 +121,7 @@ namespace M2_Snapshots
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            if ((ClassIDTextBox.Text != "") && (teachID.Text != "") && (ClassRollTextBox.Text != "") && (GradeTextBox.Text != "") && (DivisionTextBox1.Text != ""))
+            if ((ClassIDTextBox.Text != "") && (teachID.Text != "") && (ClassRollTextBox.Text != "") && (GradeCB.Text != "") && (DivisionCB.Text != ""))
             {
                 if (ClassIDTextBox.Text.All(char.IsDigit))
                 {
@@ -129,15 +129,15 @@ namespace M2_Snapshots
                     {
                         if (ClassRollTextBox.Text.All(char.IsDigit) && (int.Parse(ClassRollTextBox.Text) != 0))
                         {
-                            if (GradeTextBox.Text.All(char.IsDigit) && (int.Parse(GradeTextBox.Text) >= 8) && (int.Parse(GradeTextBox.Text) <= 12))
+                            if (GradeCB.Text.All(char.IsDigit) && (int.Parse(GradeCB.Text) >= 8) && (int.Parse(GradeCB.Text) <= 12))
                             {
-                                if (DivisionTextBox1.Text.Length == 1 && DivisionTextBox1.Text.All(char.IsLetter))
+                                if (DivisionCB.Text.Length == 1 && DivisionCB.Text.All(char.IsLetter))
                                 {
 
                                     if (BuildingNoTextBox.Text == "")
                                     {
                                         con.Open();
-                                        SqlCommand command = new SqlCommand("insert into classes values ('" + int.Parse(ClassIDTextBox.Text) + "','" + teachID.Text + "','" + int.Parse(ClassRollTextBox.Text) + "', '" + -1 + "', '" + int.Parse(GradeTextBox.Text) + "', '" + char.Parse(DivisionTextBox1.Text.ToUpper()) + "')", con);
+                                        SqlCommand command = new SqlCommand("insert into classes values ('" + int.Parse(ClassIDTextBox.Text) + "','" + teachID.Text + "','" + int.Parse(ClassRollTextBox.Text) + "', '" + -1 + "', '" + int.Parse(GradeCB.Text) + "', '" + char.Parse(DivisionCB.Text.ToUpper()) + "')", con);
                                         command.ExecuteNonQuery();
                                         MessageBox.Show("Class Successfully Added", "Class Added", MessageBoxButtons.OK);
                                         con.Close();
@@ -146,7 +146,7 @@ namespace M2_Snapshots
                                     else if (BuildingNoTextBox.Text.All(char.IsDigit) && (int.Parse(BuildingNoTextBox.Text) > 0))
                                     {
                                         con.Open();
-                                        SqlCommand command = new SqlCommand("insert into classes values ('" + int.Parse(ClassIDTextBox.Text) + "','" + teachID.Text + "','" + int.Parse(ClassRollTextBox.Text) + "', '" + int.Parse(BuildingNoTextBox.Text) + "', '" + int.Parse(GradeTextBox.Text) + "', '" + char.Parse(DivisionTextBox1.Text.ToUpper()) + "')", con);
+                                        SqlCommand command = new SqlCommand("insert into classes values ('" + int.Parse(ClassIDTextBox.Text) + "','" + teachID.Text + "','" + int.Parse(ClassRollTextBox.Text) + "', '" + int.Parse(BuildingNoTextBox.Text) + "', '" + int.Parse(GradeCB.Text) + "', '" + char.Parse(DivisionCB.Text.ToUpper()) + "')", con);
                                         command.ExecuteNonQuery();
                                         MessageBox.Show("Class Successfully Added", "Class Added", MessageBoxButtons.OK);
                                         con.Close();
@@ -183,7 +183,7 @@ namespace M2_Snapshots
         {
 
             int error = 0;
-            if ((ClassIDTextBox.Text != "") && ((teachID.Text != "") || (ClassRollTextBox.Text != "") || (BuildingNoTextBox.Text != "") || (GradeTextBox.Text != "") || (DivisionTextBox1.Text != "")))
+            if ((ClassIDTextBox.Text != "") && ((teachID.Text != "") || (ClassRollTextBox.Text != "") || (BuildingNoTextBox.Text != "") || (GradeCB.Text != "") || (DivisionCB.Text != "")))
             {
                 if (ClassIDTextBox.Text.All(char.IsDigit) && (ClassIDTextBox.Text != ""))
                 {
@@ -226,11 +226,11 @@ namespace M2_Snapshots
                             error++;
                         }
                     }
-                    if ((GradeTextBox.Text != ""))
+                    if ((GradeCB.Text != ""))
                     {
-                        if ((GradeTextBox.Text.All(char.IsDigit)) && (int.Parse(GradeTextBox.Text) >= 8) && (int.Parse(GradeTextBox.Text) <= 12))
+                        if ((GradeCB.Text.All(char.IsDigit)) && (int.Parse(GradeCB.Text) >= 8) && (int.Parse(GradeCB.Text) <= 12))
                         {
-                            SqlCommand command = new SqlCommand("update classes set grade = '" + int.Parse(GradeTextBox.Text) + "' where class_id = '" + int.Parse(ClassIDTextBox.Text) + "'", con);
+                            SqlCommand command = new SqlCommand("update classes set grade = '" + int.Parse(GradeCB.Text) + "' where class_id = '" + int.Parse(ClassIDTextBox.Text) + "'", con);
                             command.ExecuteNonQuery();
                         }
                         else
@@ -240,11 +240,11 @@ namespace M2_Snapshots
                         }
 
                     }
-                    if ((DivisionTextBox1.Text != ""))
+                    if ((DivisionCB.Text != ""))
                     {
-                        if (DivisionTextBox1.Text.Length == 1 && DivisionTextBox1.Text.All(char.IsLetter))
+                        if (DivisionCB.Text.Length == 1 && DivisionCB.Text.All(char.IsLetter))
                         {
-                            SqlCommand command = new SqlCommand("update classes set Division = '" + char.Parse(DivisionTextBox1.Text.ToUpper()) + "' where class_id = '" + int.Parse(ClassIDTextBox.Text) + "'", con);
+                            SqlCommand command = new SqlCommand("update classes set Division = '" + char.Parse(DivisionCB.Text.ToUpper()) + "' where class_id = '" + int.Parse(ClassIDTextBox.Text) + "'", con);
                             command.ExecuteNonQuery();
                         }
                         else
@@ -317,9 +317,9 @@ namespace M2_Snapshots
             
             BuildingNoTextBox.Clear();
             //DivisionTextBox.Clear();
-            GradeTextBox.Clear();
+            GradeCB.ResetText();
             ClassRollTextBox.Clear();
-            DivisionTextBox1.Clear();
+            DivisionCB.ResetText();
         }
 
         private void SearchClassDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -349,10 +349,10 @@ namespace M2_Snapshots
                 BuildingNoTextBox.Text = buidling;
 
                 string grade = SearchClassDataGridView.SelectedRows[0].Cells[4].Value + string.Empty;
-                GradeTextBox.Text = grade;
+                GradeCB.Text = grade;
 
                 string division = SearchClassDataGridView.SelectedRows[0].Cells[5].Value + string.Empty;
-                DivisionTextBox1.Text = division;
+                DivisionCB.Text = division;
             }
         }
 

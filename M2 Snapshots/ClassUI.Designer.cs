@@ -32,14 +32,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.DivisionTextBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.teachID = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.DivisionTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.GradeTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.BuildingNoTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -65,6 +63,8 @@
             this.paymentServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.paymentServiceTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.PaymentServiceTableAdapter();
             this.classesTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.classesTableAdapter();
+            this.GradeCB = new System.Windows.Forms.ComboBox();
+            this.DivisionCB = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchClassDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).BeginInit();
@@ -95,14 +95,14 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.DivisionTextBox1);
+            this.groupBox1.Controls.Add(this.DivisionCB);
+            this.groupBox1.Controls.Add(this.GradeCB);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.teachID);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.DivisionTextBox);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.GradeTextBox);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.BuildingNoTextBox);
             this.groupBox1.Controls.Add(this.label4);
@@ -119,13 +119,6 @@
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Class";
-            // 
-            // DivisionTextBox1
-            // 
-            this.DivisionTextBox1.Location = new System.Drawing.Point(598, 150);
-            this.DivisionTextBox1.Name = "DivisionTextBox1";
-            this.DivisionTextBox1.Size = new System.Drawing.Size(171, 20);
-            this.DivisionTextBox1.TabIndex = 10;
             // 
             // label9
             // 
@@ -187,14 +180,6 @@
             this.label6.Size = new System.Drawing.Size(43, 14);
             this.label6.TabIndex = 21;
             this.label6.Text = "Grade:";
-            // 
-            // GradeTextBox
-            // 
-            this.GradeTextBox.Location = new System.Drawing.Point(598, 103);
-            this.GradeTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.GradeTextBox.Name = "GradeTextBox";
-            this.GradeTextBox.Size = new System.Drawing.Size(171, 20);
-            this.GradeTextBox.TabIndex = 9;
             // 
             // label5
             // 
@@ -338,7 +323,6 @@
             this.SearchClassDataGridView.Size = new System.Drawing.Size(659, 175);
             this.SearchClassDataGridView.TabIndex = 40;
             this.SearchClassDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchClassDataGridView_CellClick);
-           
             // 
             // classidDataGridViewTextBoxColumn
             // 
@@ -415,6 +399,37 @@
             // 
             this.classesTableAdapter.ClearBeforeFill = true;
             // 
+            // GradeCB
+            // 
+            this.GradeCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GradeCB.FormattingEnabled = true;
+            this.GradeCB.Items.AddRange(new object[] {
+            "",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.GradeCB.Location = new System.Drawing.Point(598, 106);
+            this.GradeCB.Name = "GradeCB";
+            this.GradeCB.Size = new System.Drawing.Size(171, 22);
+            this.GradeCB.TabIndex = 28;
+            // 
+            // DivisionCB
+            // 
+            this.DivisionCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DivisionCB.FormattingEnabled = true;
+            this.DivisionCB.Items.AddRange(new object[] {
+            "",
+            "A",
+            "B",
+            "C",
+            "D"});
+            this.DivisionCB.Location = new System.Drawing.Point(598, 150);
+            this.DivisionCB.Name = "DivisionCB";
+            this.DivisionCB.Size = new System.Drawing.Size(171, 22);
+            this.DivisionCB.TabIndex = 29;
+            // 
             // ClassUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,7 +468,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox DivisionTextBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox GradeTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox BuildingNoTextBox;
         private System.Windows.Forms.Label label4;
@@ -469,7 +483,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button classClearBtn;
         private System.Windows.Forms.ComboBox teachID;
-        private System.Windows.Forms.TextBox DivisionTextBox1;
         private System.Windows.Forms.Label label9;
         private BinaryMakersDS binaryMakersDS;
         private System.Windows.Forms.BindingSource binaryMakersDSBindingSource;
@@ -483,5 +496,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn buildingNoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gradeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn divisionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox DivisionCB;
+        private System.Windows.Forms.ComboBox GradeCB;
     }
 }

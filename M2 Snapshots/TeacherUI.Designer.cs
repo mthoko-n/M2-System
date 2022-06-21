@@ -238,11 +238,11 @@
             this.teacherSearchLbl.AutoSize = true;
             this.teacherSearchLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teacherSearchLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.teacherSearchLbl.Location = new System.Drawing.Point(594, 15);
+            this.teacherSearchLbl.Location = new System.Drawing.Point(563, 15);
             this.teacherSearchLbl.Name = "teacherSearchLbl";
-            this.teacherSearchLbl.Size = new System.Drawing.Size(84, 14);
+            this.teacherSearchLbl.Size = new System.Drawing.Size(126, 14);
             this.teacherSearchLbl.TabIndex = 20;
-            this.teacherSearchLbl.Text = "Search Teacher";
+            this.teacherSearchLbl.Text = "Search/Remove Teacher";
             // 
             // textBox2
             // 
