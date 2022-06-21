@@ -52,13 +52,25 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.SearchClassDataGridView = new System.Windows.Forms.DataGridView();
-            this.classClearBtn = new System.Windows.Forms.Button();
-            this.binaryMakersDS = new M2_Snapshots.BinaryMakersDS();
+            this.classidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacheridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numStudentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buildingNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.divisionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.binaryMakersDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.binaryMakersDS = new M2_Snapshots.BinaryMakersDS();
+            this.classClearBtn = new System.Windows.Forms.Button();
+            this.paymentServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.paymentServiceTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.PaymentServiceTableAdapter();
+            this.classesTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.classesTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchClassDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentServiceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -307,7 +319,16 @@
             // 
             // SearchClassDataGridView
             // 
+            this.SearchClassDataGridView.AutoGenerateColumns = false;
             this.SearchClassDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SearchClassDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.classidDataGridViewTextBoxColumn,
+            this.teacheridDataGridViewTextBoxColumn,
+            this.numStudentsDataGridViewTextBoxColumn,
+            this.buildingNoDataGridViewTextBoxColumn,
+            this.gradeDataGridViewTextBoxColumn,
+            this.divisionDataGridViewTextBoxColumn});
+            this.SearchClassDataGridView.DataSource = this.classesBindingSource;
             this.SearchClassDataGridView.Location = new System.Drawing.Point(110, 74);
             this.SearchClassDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.SearchClassDataGridView.Name = "SearchClassDataGridView";
@@ -315,6 +336,57 @@
             this.SearchClassDataGridView.Size = new System.Drawing.Size(659, 175);
             this.SearchClassDataGridView.TabIndex = 40;
             this.SearchClassDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchClassDataGridView_CellClick);
+            // 
+            // classidDataGridViewTextBoxColumn
+            // 
+            this.classidDataGridViewTextBoxColumn.DataPropertyName = "class_id";
+            this.classidDataGridViewTextBoxColumn.HeaderText = "class_id";
+            this.classidDataGridViewTextBoxColumn.Name = "classidDataGridViewTextBoxColumn";
+            // 
+            // teacheridDataGridViewTextBoxColumn
+            // 
+            this.teacheridDataGridViewTextBoxColumn.DataPropertyName = "teacher_id";
+            this.teacheridDataGridViewTextBoxColumn.HeaderText = "teacher_id";
+            this.teacheridDataGridViewTextBoxColumn.Name = "teacheridDataGridViewTextBoxColumn";
+            // 
+            // numStudentsDataGridViewTextBoxColumn
+            // 
+            this.numStudentsDataGridViewTextBoxColumn.DataPropertyName = "numStudents";
+            this.numStudentsDataGridViewTextBoxColumn.HeaderText = "numStudents";
+            this.numStudentsDataGridViewTextBoxColumn.Name = "numStudentsDataGridViewTextBoxColumn";
+            // 
+            // buildingNoDataGridViewTextBoxColumn
+            // 
+            this.buildingNoDataGridViewTextBoxColumn.DataPropertyName = "buildingNo";
+            this.buildingNoDataGridViewTextBoxColumn.HeaderText = "buildingNo";
+            this.buildingNoDataGridViewTextBoxColumn.Name = "buildingNoDataGridViewTextBoxColumn";
+            // 
+            // gradeDataGridViewTextBoxColumn
+            // 
+            this.gradeDataGridViewTextBoxColumn.DataPropertyName = "grade";
+            this.gradeDataGridViewTextBoxColumn.HeaderText = "grade";
+            this.gradeDataGridViewTextBoxColumn.Name = "gradeDataGridViewTextBoxColumn";
+            // 
+            // divisionDataGridViewTextBoxColumn
+            // 
+            this.divisionDataGridViewTextBoxColumn.DataPropertyName = "Division";
+            this.divisionDataGridViewTextBoxColumn.HeaderText = "Division";
+            this.divisionDataGridViewTextBoxColumn.Name = "divisionDataGridViewTextBoxColumn";
+            // 
+            // classesBindingSource
+            // 
+            this.classesBindingSource.DataMember = "classes";
+            this.classesBindingSource.DataSource = this.binaryMakersDSBindingSource;
+            // 
+            // binaryMakersDSBindingSource
+            // 
+            this.binaryMakersDSBindingSource.DataSource = this.binaryMakersDS;
+            this.binaryMakersDSBindingSource.Position = 0;
+            // 
+            // binaryMakersDS
+            // 
+            this.binaryMakersDS.DataSetName = "BinaryMakersDS";
+            this.binaryMakersDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // classClearBtn
             // 
@@ -327,15 +399,18 @@
             this.classClearBtn.UseVisualStyleBackColor = true;
             this.classClearBtn.Click += new System.EventHandler(this.classClearBtn_Click);
             // 
-            // binaryMakersDS
+            // paymentServiceBindingSource
             // 
-            this.binaryMakersDS.DataSetName = "BinaryMakersDS";
-            this.binaryMakersDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.paymentServiceBindingSource.DataMember = "PaymentService";
+            this.paymentServiceBindingSource.DataSource = this.binaryMakersDSBindingSource;
             // 
-            // binaryMakersDSBindingSource
+            // paymentServiceTableAdapter
             // 
-            this.binaryMakersDSBindingSource.DataSource = this.binaryMakersDS;
-            this.binaryMakersDSBindingSource.Position = 0;
+            this.paymentServiceTableAdapter.ClearBeforeFill = true;
+            // 
+            // classesTableAdapter
+            // 
+            this.classesTableAdapter.ClearBeforeFill = true;
             // 
             // ClassUI
             // 
@@ -358,8 +433,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchClassDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentServiceBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,5 +470,15 @@
         private System.Windows.Forms.Label label9;
         private BinaryMakersDS binaryMakersDS;
         private System.Windows.Forms.BindingSource binaryMakersDSBindingSource;
+        private System.Windows.Forms.BindingSource paymentServiceBindingSource;
+        private BinaryMakersDSTableAdapters.PaymentServiceTableAdapter paymentServiceTableAdapter;
+        private System.Windows.Forms.BindingSource classesBindingSource;
+        private BinaryMakersDSTableAdapters.classesTableAdapter classesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn classidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teacheridDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numStudentsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn buildingNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gradeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn divisionDataGridViewTextBoxColumn;
     }
 }

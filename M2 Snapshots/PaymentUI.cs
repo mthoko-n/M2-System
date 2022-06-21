@@ -34,19 +34,74 @@ namespace M2_Snapshots
         {
             if ((payAdminIdTB.Text != "") && (payAmountTB.Text != "") && (payDateTB.Text != "") && (payDetailsTB.Text != "") && (payReceiptNoTB.Text != "") && (payStuIdTB.Text != "")) 
             {
-                con.Open();
-                SqlCommand command = new SqlCommand("insert into PaymentService values ('" + int.Parse(payReceiptNoTB.Text) + "','" + payAdminIdTB.Text + "','" + int.Parse(payStuIdTB.Text) + "', '" + payDateTB.Text + "', '" + int.Parse(payAmountTB.Text)+ "', '" + payTypeCB.Text + "','"+payDetailsTB.Text+"')", con);
-                command.ExecuteNonQuery();
-                con.Close();
-                BindData();
-                MessageBox.Show("Successfully Inserted");
+                if (payReceiptNoTB.Text.All(char.IsDigit))
+                {
+                    if (payStuIdTB.Text.All(char.IsDigit))
+                    {
+                        if (payAmountTB.Text.All(char.IsDigit))
+                        {
+                            con.Open();
+                            SqlCommand command = new SqlCommand("insert into PaymentService values ('" + int.Parse(payReceiptNoTB.Text) + "','" + payAdminIdTB.Text + "','" + int.Parse(payStuIdTB.Text) + "', '" + payDateTB.Text + "', '" + int.Parse(payAmountTB.Text) + "', '" + payTypeCB.Text + "','" + payDetailsTB.Text + "')", con);
+                            command.ExecuteNonQuery();
+                           
+                            string num = "";
+                            double num2 = 0;
+                            
+                            SqlCommand a = new SqlCommand("select stu_Fees from student where stu_ID = " + int.Parse(payStuIdTB.Text), con);
+                            SqlDataReader read = a.ExecuteReader();
+                            while (read.Read())
+                            {
+                                num = num + read.GetValue(0).ToString();
+                                num2 = double.Parse(num);
+                            }
+                            read.Close();
+
+                            int fee = 0;
+                            int val = Convert.ToInt32(num2);
+                            int val2 = int.Parse(payAmountTB.Text);
+                            fee = val - val2;
+
+                            SqlCommand c = new SqlCommand("update student set stu_Fees = " + fee + " where stu_ID = " + int.Parse(payStuIdTB.Text), con);
+                            if (c.ExecuteNonQuery() > 0)
+                            {
+                                SqlCommand command2 = new SqlCommand("insert into PaymentService values ('" + int.Parse(payReceiptNoTB.Text) + "','" + payAdminIdTB.Text + "','" + int.Parse(payStuIdTB.Text) + "', '" + payDateTB.Text + "', '" + int.Parse(payAmountTB.Text) + "', '" + payTypeCB.Text + "','" + payDetailsTB.Text + "')", con);
+                                if(command2.ExecuteNonQuery()>0)
+                                MessageBox.Show("Payment Successfully Inserted", "Payment Success", MessageBoxButtons.OK);
+                                else
+                                {
+                                    MessageBox.Show("Enter Details correctly", "Payment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Enter valid Student ID","Payment",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            con.Close();
+                            BindData();
+                            
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Payment amount can only contain digits");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Student ID can only contain digits");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Receipt number can only contain digits");
+                }
             }
             else
             {
-                MessageBox.Show("Enter All Fields");
+                MessageBox.Show("Enter all fields to add a payment", "Payment",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
-
+        
         void BindData()
         {
             SqlCommand command = new SqlCommand("select * from PaymentService", con);
@@ -78,49 +133,86 @@ namespace M2_Snapshots
 
         private void payUpdateBtn_Click(object sender, EventArgs e)
         {
-            if ((payAdminIdTB.Text != "") ||(payAmountTB.Text != "") || (payDateTB.Text != "") ||(payDetailsTB.Text != "") ||(payReceiptNoTB.Text != "") ||(payStuIdTB.Text != ""))
+            if ((payReceiptNoTB.Text != "" && payReceiptNoTB.Text.All(char.IsDigit)) && ((payAdminIdTB.Text != "") ||(payAmountTB.Text != "") || (payDateTB.Text != "") ||(payDetailsTB.Text != "") ||(payStuIdTB.Text != "")))
             {
-
+                int error = 0;
                 con.Open();
 
                 if ((payAdminIdTB.Text != "") && (payReceiptNoTB.Text != ""))
 
                 {
                     SqlCommand command = new SqlCommand("update PaymentService set AdminID = '" + payAdminIdTB.Text + "' where receiptNum = '" + int.Parse(payReceiptNoTB.Text) + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error +=0;
+                    else
+                    {
+                        MessageBox.Show("Enter a valid Admin ID");
+                        error++;
+                    }
                 }
-                if ((payStuIdTB.Text != "") && (payReceiptNoTB.Text != ""))
+                
+                if ((payStuIdTB.Text != "" && payStuIdTB.Text.All(char.IsDigit)) && (payReceiptNoTB.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update PaymentService set stu_ID = '" + int.Parse(payStuIdTB.Text) + "' where receiptNum = '" + int.Parse(payReceiptNoTB.Text) + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter a valid Student ID");
+                        error++;
+                    }
                 }
                 if ((payDateTB.Text != "") && (payReceiptNoTB.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update PaymnetService set pay_Date = '" + payDateTB.Text + "' where receiptNum = '" + int.Parse(payReceiptNoTB.Text) + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter a valid Date");
+                        error++;
+                    }
                 }
-                if ((payAmountTB.Text != "") && (payReceiptNoTB.Text != ""))
+                if ((payAmountTB.Text != "" && payAmountTB.Text.All(char.IsDigit)) && (payReceiptNoTB.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update PaymentService set pay_Amount = '" + int.Parse(payAmountTB.Text) + "' where receiptNum = '" + int.Parse(payReceiptNoTB.Text) + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter a valid payment amount");
+                        error++;
+                    }
                 }
                 if ((payTypeCB.Text != "") && (payReceiptNoTB.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update PaymentService set pay_Type = '" + payTypeCB.Text + "' where receiptNum= '" + int.Parse(payReceiptNoTB.Text) + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Select a valid payment type");
+                        error++;
+                    }
                 }
                 if ((payDetailsTB.Text != "") && (payReceiptNoTB.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update PaymentService set pay_Details = '" + payDetailsTB.Text + "' where receiptNum = '" + int.Parse(payReceiptNoTB.Text) + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter a valid payment description");
+                        error++;
+                    }
                 }
                 con.Close();
-                MessageBox.Show("Successfully Updated");
+                MessageBox.Show("Payment Details Successfully Updated", "Payment Updated", MessageBoxButtons.OK);
                 BindData();
             }
             else
             {
-                MessageBox.Show("Fill in appropriate fields");
+                MessageBox.Show("Enter a valid receipt number and at least one other field", "Payment", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -135,12 +227,14 @@ namespace M2_Snapshots
             payReceiptNoTB.Clear();
             paySearchTB.Clear();
             payStuIdTB.Clear();
-            payTypeCB.SelectedIndex = -1;
+            payTypeCB.ResetText();
+
+            
         }
 
         private void paySearchBtn_Click(object sender, EventArgs e)
         {
-            if (paySearchTB.Text != "")
+            if (paySearchTB.Text != "" && paySearchTB.Text.All(char.IsDigit))
             {
                 SqlCommand command = new SqlCommand("select * from PaymentService where stu_ID= '" + int.Parse(paySearchTB.Text) + "'", con);
                 SqlDataAdapter sd = new SqlDataAdapter(command);
@@ -150,7 +244,7 @@ namespace M2_Snapshots
             }
             else
             {
-                MessageBox.Show("Enter Student ID in the Search box");
+                MessageBox.Show("Enter a valid Student ID in the Search box","Payment", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -158,7 +252,7 @@ namespace M2_Snapshots
         {
             try
             {
-                if (paySearchTB.Text != "")
+                if (paySearchTB.Text != "" && paySearchTB.Text.All(char.IsDigit))
                 {
 
                     DialogResult res = MessageBox.Show("Do you want to remove?", "Remove", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -166,10 +260,12 @@ namespace M2_Snapshots
                     if (res == DialogResult.Yes)
                     {
                         con.Open();
-                        SqlCommand command = new SqlCommand("Delete PaymentSerive where stu_ID = '" + int.Parse(paySearchTB.Text) + "'", con);
-                        command.ExecuteNonQuery();
-                        con.Close();
-                        MessageBox.Show("Successfully Removed");
+                        SqlCommand command = new SqlCommand("Delete PaymentService where stu_ID = '" + int.Parse(paySearchTB.Text) + "'", con);
+                        if(command.ExecuteNonQuery()>0)
+                            MessageBox.Show("Successfully Removed Payment", "Payment", MessageBoxButtons.OK);
+                        else
+                            MessageBox.Show("Invalid data, Student ID does not exist", "Payment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        con.Close(); 
                         BindData();
                     }
 
@@ -183,7 +279,7 @@ namespace M2_Snapshots
 
                 else
                 {
-                    MessageBox.Show("Enter Student ID in the search box");
+                    MessageBox.Show("Enter Student ID in the search box","Payment",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
             catch

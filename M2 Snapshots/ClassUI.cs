@@ -12,10 +12,15 @@ using System.Data.SqlClient;
 namespace M2_Snapshots
 {
     public partial class ClassUI : Form
+    
+
     {
+
+        
         public ClassUI()
         {
             InitializeComponent();
+           
         }
 
         SqlConnection con = new SqlConnection("Data Source=146.230.177.46;Initial Catalog=GroupPmb2;Persist Security Info=True;User ID=GroupPmb2;Password=b45dc2");
@@ -27,6 +32,18 @@ namespace M2_Snapshots
             DataTable dt = new DataTable();
             sd.Fill(dt);
             SearchClassDataGridView.DataSource = dt;
+        }
+
+        public int getNumStudents()
+        {
+            int sum = 0;
+            foreach (DataRow row in binaryMakersDS.classes.Rows)
+            {
+                sum = sum + int.Parse(row.ItemArray[2].ToString());
+
+            }
+
+            return sum;
         }
 
         private void ViewDetalisButton_Click(object sender, EventArgs e)
@@ -249,6 +266,12 @@ namespace M2_Snapshots
 
         private void ClassUI_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'binaryMakersDS.classes' table. You can move, or remove it, as needed.
+            this.classesTableAdapter.Fill(this.binaryMakersDS.classes);
+            // TODO: This line of code loads data into the 'binaryMakersDS.PaymentService' table. You can move, or remove it, as needed.
+          
+
+            textBox1.Text = getNumStudents().ToString();
             BindData();
             con.Open();
             SqlCommand command = new SqlCommand("select teach_ID from Teachers", con);
