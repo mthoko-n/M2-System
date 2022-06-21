@@ -6,18 +6,18 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>7.80578cm</Width>
+              <Width>5.24308cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>7.80578cm</Width>
+              <Width>5.20407cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>7.80578cm</Width>
+              <Width>4.96685cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.63717cm</Height>
+              <Height>1.29437cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -36,7 +36,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox31</rd:DefaultName>
@@ -45,6 +47,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Yellow</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -70,7 +73,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox33</rd:DefaultName>
@@ -79,6 +84,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Yellow</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -96,7 +102,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Term No</Value>
+                              <Value>Term No.</Value>
                               <Style>
                                 <FontFamily>Cambria</FontFamily>
                                 <FontSize>18pt</FontSize>
@@ -104,7 +110,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox35</rd:DefaultName>
@@ -113,6 +121,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Yellow</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -124,7 +133,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>1.63717cm</Height>
+              <Height>1cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -138,12 +147,14 @@
                               <Value>=Fields!subject_ID.Value</Value>
                               <Style>
                                 <FontFamily>Cambria</FontFamily>
-                                <FontSize>18pt</FontSize>
+                                <FontSize>16pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>subject_ID</rd:DefaultName>
@@ -172,12 +183,14 @@
                               <Value>=Fields!termResult.Value</Value>
                               <Style>
                                 <FontFamily>Cambria</FontFamily>
-                                <FontSize>18pt</FontSize>
+                                <FontSize>16pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>termResult</rd:DefaultName>
@@ -203,15 +216,25 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
+                              <Value> Term </Value>
+                              <Style>
+                                <FontFamily>Cambria</FontFamily>
+                                <FontSize>16pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
                               <Value>=Fields!TermNo.Value</Value>
                               <Style>
                                 <FontFamily>Cambria</FontFamily>
-                                <FontSize>18pt</FontSize>
+                                <FontSize>16pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>TermNo</rd:DefaultName>
@@ -246,14 +269,17 @@
             </TablixMember>
             <TablixMember>
               <Group Name="Details" />
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.37867cm</Top>
-        <Left>5.51603cm</Left>
-        <Height>3.27434cm</Height>
-        <Width>23.41734cm</Width>
+        <Top>0.17639cm</Top>
+        <Left>1.96451cm</Left>
+        <Height>2.29437cm</Height>
+        <Width>15.414cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -261,10 +287,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>8.19295in</Height>
+    <Height>9.525in</Height>
     <Style />
   </Body>
-  <Width>12.8407in</Width>
+  <Width>7.7in</Width>
   <Page>
     <PageHeader>
       <Height>8.33976cm</Height>
@@ -278,7 +304,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Print Date: </Value>
+                  <Value>Issue Date:</Value>
                   <Style>
                     <FontSize>14pt</FontSize>
                   </Style>
@@ -288,10 +314,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>4.39496cm</Top>
-          <Left>6.86502cm</Left>
+          <Top>3.97163cm</Top>
+          <Left>1.96451cm</Left>
           <Height>0.62117cm</Height>
-          <Width>2.47883cm</Width>
+          <Width>2.79633cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -311,20 +337,22 @@
                 <TextRun>
                   <Value>=Globals!ExecutionTime</Value>
                   <Style>
+                    <FontSize>14pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
                     <Format>yyyy/MM/dd HH:mm</Format>
                   </Style>
                 </TextRun>
               </TextRuns>
               <Style>
-                <TextAlign>Center</TextAlign>
+                <TextAlign>Left</TextAlign>
               </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
-          <Top>4.39496cm</Top>
-          <Left>9.52024cm</Left>
+          <Top>3.97163cm</Top>
+          <Left>4.76084cm</Left>
           <Height>0.62117cm</Height>
-          <Width>4.405cm</Width>
+          <Width>4.26389cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -351,8 +379,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>5.51002cm</Top>
-          <Left>6.86502cm</Left>
+          <Top>5.08669cm</Top>
+          <Left>1.96451cm</Left>
           <Height>0.62117cm</Height>
           <Width>1.9285cm</Width>
           <ZIndex>2</ZIndex>
@@ -381,10 +409,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>5.53119cm</Top>
-          <Left>16.68635cm</Left>
+          <Top>5.10786cm</Top>
+          <Left>11.78584cm</Left>
           <Height>0.6cm</Height>
-          <Width>3.09267cm</Width>
+          <Width>2.47884cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -411,8 +439,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Top>6.63044cm</Top>
-          <Left>16.68635cm</Left>
+          <Top>6.20711cm</Top>
+          <Left>11.78584cm</Left>
           <Height>0.6cm</Height>
           <Width>3.09267cm</Width>
           <ZIndex>4</ZIndex>
@@ -441,10 +469,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>6.63044cm</Top>
-          <Left>6.86502cm</Left>
+          <Top>6.20711cm</Top>
+          <Left>1.96451cm</Left>
           <Height>0.6cm</Height>
-          <Width>1.9285cm</Width>
+          <Width>1.44167cm</Width>
           <ZIndex>5</ZIndex>
           <Style>
             <Border>
@@ -464,17 +492,19 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Fields!stu_ID.Value</Value>
-                  <Style />
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Top>5.53119cm</Top>
-          <Left>8.79352cm</Left>
+          <Top>5.10786cm</Top>
+          <Left>3.89301cm</Left>
           <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Width>2.01317cm</Width>
           <ZIndex>6</ZIndex>
           <Style>
             <Border>
@@ -494,15 +524,17 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Fields!stu_name.Value</Value>
-                  <Style />
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
-          <Top>5.53119cm</Top>
-          <Left>19.77902cm</Left>
+          <Top>5.10786cm</Top>
+          <Left>14.26468cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>7</ZIndex>
@@ -534,8 +566,8 @@
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>1.40905cm</Top>
-          <Left>13.4982cm</Left>
+          <Top>0.98572cm</Top>
+          <Left>8.59769cm</Left>
           <Height>1.5cm</Height>
           <Width>5.929cm</Width>
           <ZIndex>8</ZIndex>
@@ -553,8 +585,8 @@
           <Source>Embedded</Source>
           <Value>logo1</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>1.40905cm</Top>
-          <Left>12.14637cm</Left>
+          <Top>0.98572cm</Top>
+          <Left>7.24586cm</Left>
           <Height>1.5cm</Height>
           <Width>1.17544cm</Width>
           <ZIndex>9</ZIndex>
@@ -572,15 +604,17 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Fields!stu_gender.Value</Value>
-                  <Style />
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>stu_gender</rd:DefaultName>
-          <Top>6.63044cm</Top>
-          <Left>8.79352cm</Left>
+          <Top>6.20711cm</Top>
+          <Left>3.40618cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>10</ZIndex>
@@ -602,17 +636,19 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Fields!stu_surname.Value</Value>
-                  <Style />
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>stu_surname</rd:DefaultName>
-          <Top>6.63044cm</Top>
-          <Left>19.77902cm</Left>
+          <Top>6.20711cm</Top>
+          <Left>14.77268cm</Left>
           <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Width>2.60583cm</Width>
           <ZIndex>11</ZIndex>
           <Style>
             <Border>
@@ -631,12 +667,55 @@
         </Border>
       </Style>
     </PageHeader>
+    <PageFooter>
+      <Height>2.54cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox17">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Copyright ©  Kharina Secondary school 2022</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox17</rd:DefaultName>
+          <Top>0.97cm</Top>
+          <Left>4.33191cm</Left>
+          <Height>0.6cm</Height>
+          <Width>8.07975cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
+    <InteractiveHeight>297mm</InteractiveHeight>
+    <InteractiveWidth>210mm</InteractiveWidth>
+    <LeftMargin>4cm</LeftMargin>
+    <RightMargin>4cm</RightMargin>
+    <TopMargin>4cm</TopMargin>
+    <BottomMargin>4cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>
