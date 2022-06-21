@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing.Printing;
+using System.IO;
 
 namespace M2_Snapshots
 {
@@ -315,6 +317,31 @@ namespace M2_Snapshots
                 string payDetails = payDGV.SelectedRows[0].Cells[6].Value + string.Empty;
                 payDetailsTB.Text = payDetails;
             }
+        }
+        PrintDocument pd = new PrintDocument();
+        PrintPreviewDialog pdDialog = new PrintPreviewDialog();
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+
+            pd.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(pd_PrintPage);
+
+
+            bmp = new Bitmap(this.Height, this.Width);
+
+            this.DrawToBitmap(bmp, ClientRectangle);
+            pdDialog.Document = pd;
+
+            var results = pdDialog.ShowDialog();
+            if (results == DialogResult.OK) {
+
+                pd.Print();
+            }
+        }
+        Bitmap bmp;
+
+        private void pd_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e) {
+            e.Graphics.DrawImage(bmp,0,0);
         }
     }
 }
