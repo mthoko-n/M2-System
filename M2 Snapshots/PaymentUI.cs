@@ -118,7 +118,7 @@ namespace M2_Snapshots
         private void PaymentUI_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'binaryMakersDS.PaymentService' table. You can move, or remove it, as needed.
-            this.paymentServiceTableAdapter.Fill(this.binaryMakersDS.PaymentService);
+           
             BindData();
 
 

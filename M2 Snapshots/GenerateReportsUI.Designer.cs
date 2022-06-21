@@ -62,16 +62,12 @@
             this.classesTableAdapter1 = new M2_Snapshots.GroupPmb2DataSetTableAdapters.classesTableAdapter();
             this.binaryMakersDS1 = new M2_Snapshots.BinaryMakersDS();
             this.tableAdapterManager1 = new M2_Snapshots.GroupPmb2DataSet2TableAdapters.TableAdapterManager();
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.groupPmb2DataSet11 = new M2_Snapshots.GroupPmb2DataSet1();
             this.studentTableAdapter = new M2_Snapshots.GroupPmb2DataSetTableAdapters.studentTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet11)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -93,12 +89,14 @@
             // 
             // nosBtn
             // 
+            this.nosBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.nosBtn.ForeColor = System.Drawing.Color.White;
             this.nosBtn.Location = new System.Drawing.Point(30, 123);
             this.nosBtn.Name = "nosBtn";
             this.nosBtn.Size = new System.Drawing.Size(75, 23);
             this.nosBtn.TabIndex = 2;
             this.nosBtn.Text = "Generate";
-            this.nosBtn.UseVisualStyleBackColor = true;
+            this.nosBtn.UseVisualStyleBackColor = false;
             this.nosBtn.Click += new System.EventHandler(this.nosBtn_Click);
             // 
             // clearBtn1
@@ -121,12 +119,14 @@
             // 
             // tpsBtn
             // 
+            this.tpsBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.tpsBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tpsBtn.Location = new System.Drawing.Point(30, 276);
             this.tpsBtn.Name = "tpsBtn";
             this.tpsBtn.Size = new System.Drawing.Size(75, 23);
             this.tpsBtn.TabIndex = 6;
             this.tpsBtn.Text = "Generate";
-            this.tpsBtn.UseVisualStyleBackColor = true;
+            this.tpsBtn.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -177,12 +177,14 @@
             // 
             // nsfBtn
             // 
+            this.nsfBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.nsfBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.nsfBtn.Location = new System.Drawing.Point(30, 462);
             this.nsfBtn.Name = "nsfBtn";
             this.nsfBtn.Size = new System.Drawing.Size(75, 23);
             this.nsfBtn.TabIndex = 10;
             this.nsfBtn.Text = "Generate";
-            this.nsfBtn.UseVisualStyleBackColor = true;
+            this.nsfBtn.UseVisualStyleBackColor = false;
             this.nsfBtn.Click += new System.EventHandler(this.nsfBtn_Click);
             // 
             // nfsLbl
@@ -234,12 +236,14 @@
             // 
             // nmsBtn
             // 
+            this.nmsBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.nmsBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.nmsBtn.Location = new System.Drawing.Point(43, 462);
             this.nmsBtn.Name = "nmsBtn";
             this.nmsBtn.Size = new System.Drawing.Size(75, 23);
             this.nmsBtn.TabIndex = 10;
             this.nmsBtn.Text = "Generate";
-            this.nmsBtn.UseVisualStyleBackColor = true;
+            this.nmsBtn.UseVisualStyleBackColor = false;
             this.nmsBtn.Click += new System.EventHandler(this.nmsBtn_Click);
             // 
             // label6
@@ -288,21 +292,25 @@
             // 
             // nspBtn
             // 
+            this.nspBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.nspBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.nspBtn.Location = new System.Drawing.Point(30, 276);
             this.nspBtn.Name = "nspBtn";
             this.nspBtn.Size = new System.Drawing.Size(75, 23);
             this.nspBtn.TabIndex = 6;
             this.nspBtn.Text = "Generate";
-            this.nspBtn.UseVisualStyleBackColor = true;
+            this.nspBtn.UseVisualStyleBackColor = false;
             // 
             // sdBtn
             // 
+            this.sdBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.sdBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.sdBtn.Location = new System.Drawing.Point(30, 123);
             this.sdBtn.Name = "sdBtn";
             this.sdBtn.Size = new System.Drawing.Size(75, 23);
             this.sdBtn.TabIndex = 2;
             this.sdBtn.Text = "Generate";
-            this.sdBtn.UseVisualStyleBackColor = true;
+            this.sdBtn.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -364,16 +372,6 @@
             this.tableAdapterManager1.studentTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = M2_Snapshots.GroupPmb2DataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // bindingSource2
-            // 
-            this.bindingSource2.DataMember = "student";
-            this.bindingSource2.DataSource = this.groupPmb2DataSet1;
-            // 
-            // groupPmb2DataSet11
-            // 
-            this.groupPmb2DataSet11.DataSetName = "GroupPmb2DataSet1";
-            this.groupPmb2DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // studentTableAdapter
             // 
             this.studentTableAdapter.ClearBeforeFill = true;
@@ -396,8 +394,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -437,8 +433,6 @@
         private GroupPmb2DataSetTableAdapters.classesTableAdapter classesTableAdapter1;
         private BinaryMakersDS binaryMakersDS1;
         private GroupPmb2DataSet2TableAdapters.TableAdapterManager tableAdapterManager1;
-        private System.Windows.Forms.BindingSource bindingSource2;
-        private GroupPmb2DataSet1 groupPmb2DataSet11;
         private GroupPmb2DataSetTableAdapters.studentTableAdapter studentTableAdapter;
     }
 }

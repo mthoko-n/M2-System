@@ -98,6 +98,12 @@ namespace M2_Snapshots
 
             textBox6.Text = counter.ToString();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            
+                
+        }
     }
     }
 
