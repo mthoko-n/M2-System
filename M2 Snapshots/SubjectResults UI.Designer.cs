@@ -101,7 +101,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(41, 295);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(778, 249);
+            this.groupBox1.Size = new System.Drawing.Size(778, 215);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Subject Results";
@@ -139,7 +139,7 @@
             // termNO
             // 
             this.termNO.Location = new System.Drawing.Point(532, 148);
-            this.termNO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.termNO.Margin = new System.Windows.Forms.Padding(2);
             this.termNO.Name = "termNO";
             this.termNO.Size = new System.Drawing.Size(194, 20);
             this.termNO.TabIndex = 21;
@@ -148,7 +148,7 @@
             // termResult
             // 
             this.termResult.Location = new System.Drawing.Point(532, 95);
-            this.termResult.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.termResult.Margin = new System.Windows.Forms.Padding(2);
             this.termResult.Name = "termResult";
             this.termResult.Size = new System.Drawing.Size(194, 20);
             this.termResult.TabIndex = 20;
@@ -157,7 +157,7 @@
             // subjTeachID
             // 
             this.subjTeachID.Location = new System.Drawing.Point(532, 37);
-            this.subjTeachID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.subjTeachID.Margin = new System.Windows.Forms.Padding(2);
             this.subjTeachID.Name = "subjTeachID";
             this.subjTeachID.Size = new System.Drawing.Size(194, 20);
             this.subjTeachID.TabIndex = 19;
@@ -166,7 +166,7 @@
             // subjID
             // 
             this.subjID.Location = new System.Drawing.Point(125, 151);
-            this.subjID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.subjID.Margin = new System.Windows.Forms.Padding(2);
             this.subjID.Name = "subjID";
             this.subjID.Size = new System.Drawing.Size(194, 20);
             this.subjID.TabIndex = 18;
@@ -221,7 +221,7 @@
             // 
             // ClearSubjectBtn
             // 
-            this.ClearSubjectBtn.Location = new System.Drawing.Point(166, 550);
+            this.ClearSubjectBtn.Location = new System.Drawing.Point(166, 531);
             this.ClearSubjectBtn.Name = "ClearSubjectBtn";
             this.ClearSubjectBtn.Size = new System.Drawing.Size(89, 39);
             this.ClearSubjectBtn.TabIndex = 43;
@@ -233,7 +233,7 @@
             this.RemoveSubjectBtn.BackColor = System.Drawing.Color.Red;
             this.RemoveSubjectBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveSubjectBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.RemoveSubjectBtn.Location = new System.Drawing.Point(393, 551);
+            this.RemoveSubjectBtn.Location = new System.Drawing.Point(393, 531);
             this.RemoveSubjectBtn.Name = "RemoveSubjectBtn";
             this.RemoveSubjectBtn.Size = new System.Drawing.Size(98, 40);
             this.RemoveSubjectBtn.TabIndex = 40;
@@ -245,7 +245,7 @@
             this.SearchSubjectBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.SearchSubjectBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchSubjectBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SearchSubjectBtn.Location = new System.Drawing.Point(39, 551);
+            this.SearchSubjectBtn.Location = new System.Drawing.Point(41, 530);
             this.SearchSubjectBtn.Name = "SearchSubjectBtn";
             this.SearchSubjectBtn.Size = new System.Drawing.Size(98, 40);
             this.SearchSubjectBtn.TabIndex = 39;
@@ -258,7 +258,7 @@
             this.AddResultBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.AddResultBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddResultBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.AddResultBtn.Location = new System.Drawing.Point(548, 552);
+            this.AddResultBtn.Location = new System.Drawing.Point(544, 531);
             this.AddResultBtn.Name = "AddResultBtn";
             this.AddResultBtn.Size = new System.Drawing.Size(98, 40);
             this.AddResultBtn.TabIndex = 41;
@@ -271,7 +271,7 @@
             this.UpdateSubjectBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.UpdateSubjectBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateSubjectBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.UpdateSubjectBtn.Location = new System.Drawing.Point(721, 552);
+            this.UpdateSubjectBtn.Location = new System.Drawing.Point(721, 531);
             this.UpdateSubjectBtn.Name = "UpdateSubjectBtn";
             this.UpdateSubjectBtn.Size = new System.Drawing.Size(98, 40);
             this.UpdateSubjectBtn.TabIndex = 42;
@@ -291,7 +291,7 @@
             // searchRes
             // 
             this.searchRes.Location = new System.Drawing.Point(75, 23);
-            this.searchRes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchRes.Margin = new System.Windows.Forms.Padding(2);
             this.searchRes.Name = "searchRes";
             this.searchRes.Size = new System.Drawing.Size(163, 20);
             this.searchRes.TabIndex = 45;
@@ -311,7 +311,7 @@
             this.Controls.Add(this.UpdateSubjectBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.SubjectResultsGridView);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SubjectResults_UI";
             this.Text = "SubjectResults_UI";
             this.Load += new System.EventHandler(this.SubjectResults_UI_Load);

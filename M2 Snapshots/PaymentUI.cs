@@ -33,7 +33,7 @@ namespace M2_Snapshots
         private void payAddBtn_Click(object sender, EventArgs e)
         {   con.Open();
 
-            if (/*(PaymentAdminIDCB.Text != "") &&*/ (payAmountTB.Text != "") && (payDateTB.Text != "") && (payDetailsTB.Text != "") && (payReceiptNoTB.Text != "") && (payStuIdTB.Text != "")) 
+            if ((PaymentAdminIDCB.Text != "") && (payAmountTB.Text != "") && (payDateTB.Text != "") && (payDetailsTB.Text != "") && (payReceiptNoTB.Text != "") && (payStuIdTB.Text != "") && (payTypeCB.Text != "")) 
             {
                 if (payReceiptNoTB.Text.All(char.IsDigit))
                 {
@@ -66,7 +66,7 @@ namespace M2_Snapshots
                                 SqlCommand c = new SqlCommand("update student set stu_Fees = " + fee + " where stu_ID = " + int.Parse(payStuIdTB.Text), con);
                                     if (c.ExecuteNonQuery() > 0)
                                     {
-                                        SqlCommand command2 = new SqlCommand("insert into PaymentService values ('" + int.Parse(payReceiptNoTB.Text) + "','" + /*PaymentAdminIDCB.Text + "','"*/ + int.Parse(payStuIdTB.Text) + "', '" + payDateTB.Text + "', '" + int.Parse(payAmountTB.Text) + "', '" + payTypeCB.Text + "','" + payDetailsTB.Text + "')", con);
+                                        SqlCommand command2 = new SqlCommand("insert into PaymentService values ('" + int.Parse(payReceiptNoTB.Text) + "','" + PaymentAdminIDCB.Text + "','" + int.Parse(payStuIdTB.Text) + "', '" + payDateTB.Text + "', '" + int.Parse(payAmountTB.Text) + "', '" + payTypeCB.Text + "','" + payDetailsTB.Text + "')", con);
                                         if (command2.ExecuteNonQuery() > 0)
                                             MessageBox.Show("Payment Successfully Inserted", "Payment Success", MessageBoxButtons.OK);
                                         else
@@ -134,9 +134,9 @@ namespace M2_Snapshots
             DataTable dt = new DataTable();
             dt.Columns.Add("admin_id", typeof(string));
             dt.Load(reader);
-            //PaymentAdminIDCB.ValueMember = "admin_id";
-            //PaymentAdminIDCB.DataSource = dt;
-            //PaymentAdminIDCB.ResetText();
+            PaymentAdminIDCB.ValueMember = "admin_id";
+            PaymentAdminIDCB.DataSource = dt;
+            PaymentAdminIDCB.ResetText();
             con.Close();
 
 
@@ -333,6 +333,11 @@ namespace M2_Snapshots
                 string payDetails = payDGV.SelectedRows[0].Cells[6].Value + string.Empty;
                 payDetailsTB.Text = payDetails;
             }
+        }
+
+        private void printBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
