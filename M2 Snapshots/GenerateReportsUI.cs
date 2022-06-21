@@ -22,21 +22,27 @@ namespace M2_Snapshots
 
         }
 
-       
 
-        private void nosBtn_Click(object sender, EventArgs e)
-        {
+        private int getTotalStudents() {
+
 
             int sum = 0;
-           
+
             foreach (DataRow row in groupPmb2DataSet1.classes.Rows)
             {
                 sum = sum + int.Parse(row.ItemArray[2].ToString());
 
-               
+
             }
 
-            textBox1.Text = sum.ToString();
+            return sum;
+        }
+        private void nosBtn_Click(object sender, EventArgs e)
+        {
+
+           
+                        
+            textBox1.Text = getTotalStudents().ToString();
            
         }
 
@@ -103,6 +109,11 @@ namespace M2_Snapshots
         {
             
                 
+        }
+
+        private void tpsBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

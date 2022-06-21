@@ -127,6 +127,7 @@
             this.tpsBtn.TabIndex = 6;
             this.tpsBtn.Text = "Generate";
             this.tpsBtn.UseVisualStyleBackColor = false;
+            this.tpsBtn.Click += new System.EventHandler(this.tpsBtn_Click);
             // 
             // label2
             // 
