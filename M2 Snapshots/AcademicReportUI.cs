@@ -42,7 +42,7 @@ namespace M2_Snapshots
             this.subjectResultsTableAdapter.Fill(this.binaryMakersDS.subjectResults);
             /*this.subjResult.Fill();*/
             this.reportViewer1.RefreshReport();
-            this.Show();
+            this.Show(); 
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)
