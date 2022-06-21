@@ -192,7 +192,13 @@ namespace M2_Snapshots
                     if ((teachID.Text != ""))
                     {
                         SqlCommand command = new SqlCommand("update classes set teacher_id = '" + teachID.Text + "' where class_id = '" + int.Parse(ClassIDTextBox.Text) + "'", con);
-                        command.ExecuteNonQuery();
+                        if (command.ExecuteNonQuery() > 0)
+                            error += 0;
+                        else
+                        {
+                            MessageBox.Show("Enter an appropriate Class ID");
+                            error++;
+                        }
                     }
                     if ((ClassRollTextBox.Text != ""))
                     {
@@ -308,6 +314,7 @@ namespace M2_Snapshots
             SearchTextBox.Clear();
             ClassIDTextBox.Clear();
             teachID.ResetText();
+            
             BuildingNoTextBox.Clear();
             //DivisionTextBox.Clear();
             GradeTextBox.Clear();
@@ -327,23 +334,31 @@ namespace M2_Snapshots
 
         private void SearchClassDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string id = SearchClassDataGridView.SelectedRows[0].Cells[0].Value + string.Empty;
-            ClassIDTextBox.Text = id;
+            if (SearchClassDataGridView.SelectedRows.Count == 1)
+            {
+                string id = SearchClassDataGridView.SelectedRows[0].Cells[0].Value + string.Empty;
+                ClassIDTextBox.Text = id;
 
-            string teacherID = SearchClassDataGridView.SelectedRows[0].Cells[1].Value + string.Empty;
-            teachID.Text = teacherID;
+                string teacherID = SearchClassDataGridView.SelectedRows[0].Cells[1].Value + string.Empty;
+                teachID.Text = teacherID;
 
-            string students = SearchClassDataGridView.SelectedRows[0].Cells[2].Value + string.Empty;
-            ClassRollTextBox.Text = students;
+                string students = SearchClassDataGridView.SelectedRows[0].Cells[2].Value + string.Empty;
+                ClassRollTextBox.Text = students;
 
-            string buidling = SearchClassDataGridView.SelectedRows[0].Cells[3].Value + string.Empty;
-            BuildingNoTextBox.Text = buidling;
+                string buidling = SearchClassDataGridView.SelectedRows[0].Cells[3].Value + string.Empty;
+                BuildingNoTextBox.Text = buidling;
 
-            string grade = SearchClassDataGridView.SelectedRows[0].Cells[4].Value + string.Empty;
-            GradeTextBox.Text = grade;
+                string grade = SearchClassDataGridView.SelectedRows[0].Cells[4].Value + string.Empty;
+                GradeTextBox.Text = grade;
 
-            string division = SearchClassDataGridView.SelectedRows[0].Cells[5].Value + string.Empty;
-            DivisionTextBox1.Text = division;
+                string division = SearchClassDataGridView.SelectedRows[0].Cells[5].Value + string.Empty;
+                DivisionTextBox1.Text = division;
+            }
+        }
+
+        private void SearchClassDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

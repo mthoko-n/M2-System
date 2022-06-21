@@ -169,16 +169,28 @@ namespace M2_Snapshots
                 int error = 0;
                 con.Open();
 
-                if ((teacherName.Text != "") && (search.Text != "")) //This is to update/change the teacher's name
+                if ((teacherName.Text != "") && (TeacherIDTextBox.Text != "")) //This is to update/change the teacher's name
                 {
                     SqlCommand command = new SqlCommand("update Teachers set teach_firstname = '" + teacherName.Text + "' where teach_ID = '" + TeacherIDTextBox.Text + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter valid Teacher ID");
+                        error++;
+                    }
                 }
                 
                 if ((teachLName.Text != "") && (TeacherIDTextBox.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update Teachers set teach_lastname = '" + teachLName.Text + "' where teach_ID = '" + TeacherIDTextBox.Text + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter valid Teacher ID");
+                        error++;
+                    }
                 }
                 /*if ((teachEmail.Text != "") && (TeacherIDTextBox.Text != ""))
                 {
@@ -188,31 +200,51 @@ namespace M2_Snapshots
                 if ((teachGender.Text != "") && (TeacherIDTextBox.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update Teachers set gender = '" + teachGender.Text + "' where teach_ID = '" + TeacherIDTextBox.Text + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter valid Teacher ID");
+                        error++;
+                    }
                 }
                 if ((teachTitle.Text != "") && (TeacherIDTextBox.Text != "")) //This is to update/change the teacher's title
                 {
                     SqlCommand command = new SqlCommand("update Teachers set teach_title = '" + teachTitle.Text + "' where teach_ID = '" + TeacherIDTextBox.Text + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter valid Teacher ID");
+                        error++;
+                    }
                 }
                 if ((teachcellNum.Text != " " && teachcellNum.Text.All(char.IsDigit) && teachcellNum.Text.Length == 10) && (TeacherIDTextBox.Text != " "))
                 {
                     SqlCommand command = new SqlCommand("update Teachers set contactNum = '" + teachcellNum.Text + "' where teach_ID = '" + TeacherIDTextBox.Text + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Cell number must be 10 digits long and must only contain digits \nEnter valid Teacher ID ");
+                        error++;
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Cell number must be 10 digits long and must only contain digits");
-                    error++;
-                }
+               
                 if ((teachAddress.Text!= "" && teachAddress.Text.Length > 10) && (TeacherIDTextBox.Text != " ") )
                 {
                     SqlCommand command = new SqlCommand("update Teachers set Address = '" + teachAddress.Text + "' where teach_ID = '" + TeacherIDTextBox.Text + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Address must be at least 10 characters long \nEnter valid Teacher ID");
+                        error++;
+                    }
                 }
                 con.Close();
                 if(error==0)
-                    MessageBox.Show("Successfully Updated");
+                    MessageBox.Show("Teacher Successfully Updated", "Teacher Updated", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 BindData2();
             }
             else
@@ -342,26 +374,29 @@ namespace M2_Snapshots
 
         private void TeacherDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string id = TeacherDGV.SelectedRows[0].Cells[0].Value + string.Empty;
-            TeacherIDTextBox.Text = id;
+            if (TeacherDGV.SelectedRows.Count == 1)
+            {
+                string id = TeacherDGV.SelectedRows[0].Cells[0].Value + string.Empty;
+                TeacherIDTextBox.Text = id;
 
-            string name = TeacherDGV.SelectedRows[0].Cells[1].Value + string.Empty;
-            teacherName.Text = name;
+                string name = TeacherDGV.SelectedRows[0].Cells[1].Value + string.Empty;
+                teacherName.Text = name;
 
-            string surname = TeacherDGV.SelectedRows[0].Cells[2].Value + string.Empty;
-            teachLName.Text = surname;
+                string surname = TeacherDGV.SelectedRows[0].Cells[2].Value + string.Empty;
+                teachLName.Text = surname;
 
-            string title = TeacherDGV.SelectedRows[0].Cells[4].Value + string.Empty;
-            teachTitle.Text = title;
+                string title = TeacherDGV.SelectedRows[0].Cells[4].Value + string.Empty;
+                teachTitle.Text = title;
 
-            string gender = TeacherDGV.SelectedRows[0].Cells[5].Value + string.Empty;
-            teachGender.Text = gender;
+                string gender = TeacherDGV.SelectedRows[0].Cells[5].Value + string.Empty;
+                teachGender.Text = gender;
 
-            string num = TeacherDGV.SelectedRows[0].Cells[6].Value + string.Empty;
-            teachcellNum.Text = num;
+                string num = TeacherDGV.SelectedRows[0].Cells[6].Value + string.Empty;
+                teachcellNum.Text = num;
 
-            string address = TeacherDGV.SelectedRows[0].Cells[7].Value + string.Empty;
-            teachAddress.Text = address;
+                string address = TeacherDGV.SelectedRows[0].Cells[7].Value + string.Empty;
+                teachAddress.Text = address;
+            }
 
         }
     }

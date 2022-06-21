@@ -137,7 +137,7 @@ namespace M2_Snapshots
 
         private void payUpdateBtn_Click(object sender, EventArgs e)
         {
-            if ((payReceiptNoTB.Text != "" && payReceiptNoTB.Text.All(char.IsDigit)) && ((payAdminIdTB.Text != "") ||(payAmountTB.Text != "") || (payDateTB.Text != "") ||(payDetailsTB.Text != "") ||(payStuIdTB.Text != "")))
+            /*if ((payReceiptNoTB.Text != "" && payReceiptNoTB.Text.All(char.IsDigit)) && ((payAdminIdTB.Text != "") ||(payAmountTB.Text != "") || (payDateTB.Text != "") ||(payDetailsTB.Text != "") ||(payStuIdTB.Text != "")))
             {
                 int error = 0;
                 con.Open();
@@ -218,6 +218,7 @@ namespace M2_Snapshots
             {
                 MessageBox.Show("Enter a valid receipt number and at least one other field", "Payment", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            */
 
         }
 
@@ -254,7 +255,7 @@ namespace M2_Snapshots
 
         private void payRemoveBtn_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 if (paySearchTB.Text != "" && paySearchTB.Text.All(char.IsDigit))
                 {
@@ -289,7 +290,7 @@ namespace M2_Snapshots
             catch
             {
                 MessageBox.Show("Enter VALID student ID", "Student ID not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -299,26 +300,29 @@ namespace M2_Snapshots
 
         private void payDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string receiptno = payDGV.SelectedRows[0].Cells[0].Value + string.Empty;
-            payReceiptNoTB.Text = receiptno;
+            if (payDGV.SelectedRows.Count == 1)
+            {
+                string receiptno = payDGV.SelectedRows[0].Cells[0].Value + string.Empty;
+                payReceiptNoTB.Text = receiptno;
 
-            string adminID = payDGV.SelectedRows[0].Cells[1].Value + string.Empty;
-            payAdminIdTB.Text = adminID;
+                string adminID = payDGV.SelectedRows[0].Cells[1].Value + string.Empty;
+                payAdminIdTB.Text = adminID;
 
-            string stuID = payDGV.SelectedRows[0].Cells[2].Value + string.Empty;
-            payStuIdTB.Text = stuID;
+                string stuID = payDGV.SelectedRows[0].Cells[2].Value + string.Empty;
+                payStuIdTB.Text = stuID;
 
-            string payDate = payDGV.SelectedRows[0].Cells[3].Value + string.Empty;
-            payDateTB.Text = payDate;
+                string payDate = payDGV.SelectedRows[0].Cells[3].Value + string.Empty;
+                payDateTB.Text = payDate;
 
-            string payAmt = payDGV.SelectedRows[0].Cells[4].Value + string.Empty;
-            payAmountTB.Text = payAmt;
+                string payAmt = payDGV.SelectedRows[0].Cells[4].Value + string.Empty;
+                payAmountTB.Text = payAmt;
 
-            string payType = payDGV.SelectedRows[0].Cells[5].Value + string.Empty;
-            payTypeCB.Text = payType;
+                string payType = payDGV.SelectedRows[0].Cells[5].Value + string.Empty;
+                payTypeCB.Text = payType;
 
-            string payDetails = payDGV.SelectedRows[0].Cells[6].Value + string.Empty;
-            payDetailsTB.Text = payDetails;
+                string payDetails = payDGV.SelectedRows[0].Cells[6].Value + string.Empty;
+                payDetailsTB.Text = payDetails;
+            }
         }
     }
 }
