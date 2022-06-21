@@ -235,7 +235,7 @@
             this.RemoveSubjectBtn.BackColor = System.Drawing.Color.Red;
             this.RemoveSubjectBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveSubjectBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.RemoveSubjectBtn.Location = new System.Drawing.Point(488, 683);
+            this.RemoveSubjectBtn.Location = new System.Drawing.Point(519, 683);
             this.RemoveSubjectBtn.Margin = new System.Windows.Forms.Padding(4);
             this.RemoveSubjectBtn.Name = "RemoveSubjectBtn";
             this.RemoveSubjectBtn.Size = new System.Drawing.Size(131, 49);
@@ -276,7 +276,7 @@
             this.UpdateSubjectBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.UpdateSubjectBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateSubjectBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.UpdateSubjectBtn.Location = new System.Drawing.Point(834, 683);
+            this.UpdateSubjectBtn.Location = new System.Drawing.Point(797, 683);
             this.UpdateSubjectBtn.Margin = new System.Windows.Forms.Padding(4);
             this.UpdateSubjectBtn.Name = "UpdateSubjectBtn";
             this.UpdateSubjectBtn.Size = new System.Drawing.Size(131, 49);
