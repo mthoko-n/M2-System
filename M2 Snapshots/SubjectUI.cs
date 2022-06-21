@@ -48,7 +48,7 @@ namespace M2_Snapshots
             }
             else
             {
-                MessageBox.Show("Enter All Fields");
+                MessageBox.Show("Enter All Fields","Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -130,24 +130,36 @@ namespace M2_Snapshots
         {
             if ((SubjectIDTextBox.Text != "") && ((SubjectNameTextBox.Text != "") || (SubjectDetailsTextBox.Text != "")))
             {
+                int error = 0;
                 con.Open();
 
                 if ((SubjectNameTextBox.Text != "") && (SubjectIDTextBox.Text != ""))
 
                 {
                     SqlCommand command = new SqlCommand("update subjects set subject_name = '" + SubjectNameTextBox.Text + "' where subject_ID = '" + SubjectIDTextBox.Text + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter a valid subject ID", "Update Subject", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 if ((SubjectDetailsTextBox.Text != "") && (SubjectNameTextBox.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update subjects set subjDetails = '" + SubjectDetailsTextBox.Text + "' where subject_ID = '" + SubjectIDTextBox.Text + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter a valid subject ID", "Update Subject", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                
                
                 
                 con.Close();
-                MessageBox.Show("Subject Successfully Updated", "Subject Added", MessageBoxButtons.OK);
+                if(error==0)
+                     MessageBox.Show("Subject Successfully Updated", "Subject Added", MessageBoxButtons.OK);
                 BindData();
             }
             else
@@ -169,14 +181,17 @@ namespace M2_Snapshots
 
         private void SubjectDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string id = SubjectDataGridView.SelectedRows[0].Cells[0].Value + string.Empty;
-            SubjectIDTextBox.Text = id;
+            if (SubjectDataGridView.SelectedRows.Count == 1)
+            {
+                string id = SubjectDataGridView.SelectedRows[0].Cells[0].Value + string.Empty;
+                SubjectIDTextBox.Text = id;
 
-            string name = SubjectDataGridView.SelectedRows[0].Cells[1].Value + string.Empty;
-            SubjectNameTextBox.Text = name;
+                string name = SubjectDataGridView.SelectedRows[0].Cells[1].Value + string.Empty;
+                SubjectNameTextBox.Text = name;
 
-            string details = SubjectDataGridView.SelectedRows[0].Cells[2].Value + string.Empty;
-            SubjectDetailsTextBox.Text = details;
+                string details = SubjectDataGridView.SelectedRows[0].Cells[2].Value + string.Empty;
+                SubjectDetailsTextBox.Text = details;
+            }
         }
     }
 }

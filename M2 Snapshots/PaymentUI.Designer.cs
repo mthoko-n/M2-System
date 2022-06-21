@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.payUpdateBtn = new System.Windows.Forms.Button();
             this.payAddBtn = new System.Windows.Forms.Button();
             this.paySearchBtn = new System.Windows.Forms.Button();
-            this.payRemoveBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.paySearchTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,25 +54,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.payDGV)).BeginInit();
             this.SuspendLayout();
             // 
-            // payUpdateBtn
-            // 
-            this.payUpdateBtn.BackColor = System.Drawing.Color.RoyalBlue;
-            this.payUpdateBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.payUpdateBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.payUpdateBtn.Location = new System.Drawing.Point(767, 466);
-            this.payUpdateBtn.Name = "payUpdateBtn";
-            this.payUpdateBtn.Size = new System.Drawing.Size(98, 40);
-            this.payUpdateBtn.TabIndex = 5;
-            this.payUpdateBtn.Text = "Update";
-            this.payUpdateBtn.UseVisualStyleBackColor = false;
-            this.payUpdateBtn.Click += new System.EventHandler(this.payUpdateBtn_Click);
-            // 
             // payAddBtn
             // 
             this.payAddBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.payAddBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.payAddBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.payAddBtn.Location = new System.Drawing.Point(629, 466);
+            this.payAddBtn.Location = new System.Drawing.Point(596, 466);
             this.payAddBtn.Name = "payAddBtn";
             this.payAddBtn.Size = new System.Drawing.Size(98, 40);
             this.payAddBtn.TabIndex = 4;
@@ -87,26 +72,13 @@
             this.paySearchBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.paySearchBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paySearchBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.paySearchBtn.Location = new System.Drawing.Point(58, 467);
+            this.paySearchBtn.Location = new System.Drawing.Point(194, 466);
             this.paySearchBtn.Name = "paySearchBtn";
             this.paySearchBtn.Size = new System.Drawing.Size(98, 40);
             this.paySearchBtn.TabIndex = 2;
             this.paySearchBtn.Text = "Search";
             this.paySearchBtn.UseVisualStyleBackColor = false;
             this.paySearchBtn.Click += new System.EventHandler(this.paySearchBtn_Click);
-            // 
-            // payRemoveBtn
-            // 
-            this.payRemoveBtn.BackColor = System.Drawing.Color.Red;
-            this.payRemoveBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.payRemoveBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.payRemoveBtn.Location = new System.Drawing.Point(491, 466);
-            this.payRemoveBtn.Name = "payRemoveBtn";
-            this.payRemoveBtn.Size = new System.Drawing.Size(98, 40);
-            this.payRemoveBtn.TabIndex = 3;
-            this.payRemoveBtn.Text = "Remove";
-            this.payRemoveBtn.UseVisualStyleBackColor = false;
-            this.payRemoveBtn.Click += new System.EventHandler(this.payRemoveBtn_Click);
             // 
             // label2
             // 
@@ -254,7 +226,7 @@
             this.groupBox1.Size = new System.Drawing.Size(807, 205);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add/Update Payment";
+            this.groupBox1.Text = "Add  Payment";
             // 
             // payAdminIdTB
             // 
@@ -288,7 +260,7 @@
             // 
             // payClearBtn
             // 
-            this.payClearBtn.Location = new System.Drawing.Point(265, 467);
+            this.payClearBtn.Location = new System.Drawing.Point(410, 467);
             this.payClearBtn.Name = "payClearBtn";
             this.payClearBtn.Size = new System.Drawing.Size(89, 39);
             this.payClearBtn.TabIndex = 6;
@@ -316,10 +288,8 @@
             this.Controls.Add(this.paySearchTB);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.payRemoveBtn);
             this.Controls.Add(this.paySearchBtn);
             this.Controls.Add(this.payAddBtn);
-            this.Controls.Add(this.payUpdateBtn);
             this.Name = "PaymentUI";
             this.Text = "PaymentUI";
             this.Load += new System.EventHandler(this.PaymentUI_Load);
@@ -332,10 +302,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button payUpdateBtn;
         private System.Windows.Forms.Button payAddBtn;
         private System.Windows.Forms.Button paySearchBtn;
-        private System.Windows.Forms.Button payRemoveBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox paySearchTB;
         private System.Windows.Forms.Label label1;

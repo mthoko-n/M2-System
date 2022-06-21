@@ -127,30 +127,51 @@ namespace M2_Snapshots
 
         private void UpdateAdminButton_Click(object sender, EventArgs e)
         {
-            if ((AdminNameTextBox.Text != "") && ((AdminNameTextBox.Text != "") || (AdminDetailsTextBox.Text != "") || (AdminEmailTextBox.Text != "")))
+            if ((AdminIDTextBox.Text != "") && ((AdminNameTextBox.Text != "") || (AdminDetailsTextBox.Text != "") || (AdminEmailTextBox.Text != "")))
             {
+                int error = 0;
                 con.Open();
 
                 if ((AdminNameTextBox.Text != "") && (AdminIDTextBox.Text != ""))
 
                 {
                     SqlCommand command = new SqlCommand("update admins set admin_name = '" + AdminNameTextBox.Text + "' where admin_id = '" + AdminIDTextBox.Text + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter a valid Admin ID");
+                        error++;
+                    }
                 }
                 if ((AdminEmailTextBox.Text != "") && (AdminIDTextBox.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update admins set admin_email = '" + AdminEmailTextBox.Text + "' where admin_id = '" + AdminIDTextBox.Text + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter a valid Admin ID");
+                        error++;
+                    }
                 }
+                
                 if ((AdminDetailsTextBox.Text != "") && (AdminIDTextBox.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update admins set admin_details = '" + AdminDetailsTextBox.Text + "' where admin_id = '" + AdminIDTextBox.Text + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter a valid Admin ID");
+                        error++;
+                    }
                 }
 
 
                 con.Close();
-                MessageBox.Show("Admin Successfully Updated","Update Admin", MessageBoxButtons.OK);
+                if(error==0)
+                     MessageBox.Show("Admin Successfully Updated","Update Admin", MessageBoxButtons.OK);
                 BindData();
             }
             else
