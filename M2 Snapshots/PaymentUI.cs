@@ -33,7 +33,7 @@ namespace M2_Snapshots
         private void payAddBtn_Click(object sender, EventArgs e)
         {   con.Open();
 
-            if ((PaymentAdminIDCB.Text != "") && (payAmountTB.Text != "") && (payDateTB.Text != "") && (payDetailsTB.Text != "") && (payReceiptNoTB.Text != "") && (payStuIdTB.Text != "")) 
+            if (/*(PaymentAdminIDCB.Text != "") &&*/ (payAmountTB.Text != "") && (payDateTB.Text != "") && (payDetailsTB.Text != "") && (payReceiptNoTB.Text != "") && (payStuIdTB.Text != "")) 
             {
                 if (payReceiptNoTB.Text.All(char.IsDigit))
                 {
@@ -60,28 +60,31 @@ namespace M2_Snapshots
                             int fee = 0;
                             int val = Convert.ToInt32(num2);
                             int val2 = int.Parse(payAmountTB.Text);
-                            if (val>val2) {
+                            if (val>val2) 
+                            {
                                 fee = val - val2;
                                 SqlCommand c = new SqlCommand("update student set stu_Fees = " + fee + " where stu_ID = " + int.Parse(payStuIdTB.Text), con);
-                                if (c.ExecuteNonQuery() > 0)
-                                {
-                                    SqlCommand command2 = new SqlCommand("insert into PaymentService values ('" + int.Parse(payReceiptNoTB.Text) + "','" + PaymentAdminIDCB.Text + "','" + int.Parse(payStuIdTB.Text) + "', '" + payDateTB.Text + "', '" + int.Parse(payAmountTB.Text) + "', '" + payTypeCB.Text + "','" + payDetailsTB.Text + "')", con);
-                                    if (command2.ExecuteNonQuery() > 0)
-                                        MessageBox.Show("Payment Successfully Inserted", "Payment Success", MessageBoxButtons.OK);
+                                    if (c.ExecuteNonQuery() > 0)
+                                    {
+                                        SqlCommand command2 = new SqlCommand("insert into PaymentService values ('" + int.Parse(payReceiptNoTB.Text) + "','" + /*PaymentAdminIDCB.Text + "','"*/ + int.Parse(payStuIdTB.Text) + "', '" + payDateTB.Text + "', '" + int.Parse(payAmountTB.Text) + "', '" + payTypeCB.Text + "','" + payDetailsTB.Text + "')", con);
+                                        if (command2.ExecuteNonQuery() > 0)
+                                            MessageBox.Show("Payment Successfully Inserted", "Payment Success", MessageBoxButtons.OK);
+                                        else
+                                        {
+                                            MessageBox.Show("Enter Details correctly", "Payment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        }
+                                    }
                                     else
                                     {
-                                        MessageBox.Show("Enter Details correctly", "Payment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("Enter valid Student ID", "Payment", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     }
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Enter valid Student ID", "Payment", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
                                 
-                                BindData();
+                                    BindData();
 
+                            }else 
+                            { 
+                                MessageBox.Show("Payment higher than amount owed"); 
                             }
-                            else { MessageBox.Show("Payment higher than amount owed"); }
                            
                         }
                         else
@@ -131,9 +134,9 @@ namespace M2_Snapshots
             DataTable dt = new DataTable();
             dt.Columns.Add("admin_id", typeof(string));
             dt.Load(reader);
-            PaymentAdminIDCB.ValueMember = "admin_id";
-            PaymentAdminIDCB.DataSource = dt;
-            PaymentAdminIDCB.ResetText();
+            //PaymentAdminIDCB.ValueMember = "admin_id";
+            //PaymentAdminIDCB.DataSource = dt;
+            //PaymentAdminIDCB.ResetText();
             con.Close();
 
 
@@ -144,7 +147,7 @@ namespace M2_Snapshots
 
         private void payUpdateBtn_Click(object sender, EventArgs e)
         {
-            /*if ((payReceiptNoTB.Text != "" && payReceiptNoTB.Text.All(char.IsDigit)) && ((PaymentAdminIDCB.Text != "") ||(payAmountTB.Text != "") || (payDateTB.Text != "") ||(payDetailsTB.Text != "") ||(payStuIdTB.Text != "")))
+            if ((payReceiptNoTB.Text != "" && payReceiptNoTB.Text.All(char.IsDigit)) && ((PaymentAdminIDCB.Text != "") ||(payAmountTB.Text != "") || (payDateTB.Text != "") ||(payDetailsTB.Text != "") ||(payStuIdTB.Text != "")))
             {
                 int error = 0;
                 con.Open();
@@ -225,7 +228,7 @@ namespace M2_Snapshots
             {
                 MessageBox.Show("Enter a valid receipt number and at least one other field", "Payment", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            */
+            
 
         }
 
