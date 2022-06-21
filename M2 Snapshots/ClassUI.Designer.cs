@@ -338,7 +338,7 @@
             this.SearchClassDataGridView.Size = new System.Drawing.Size(659, 175);
             this.SearchClassDataGridView.TabIndex = 40;
             this.SearchClassDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchClassDataGridView_CellClick);
-            this.SearchClassDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchClassDataGridView_CellContentClick_1);
+           
             // 
             // classidDataGridViewTextBoxColumn
             // 
