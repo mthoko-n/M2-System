@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.payUpdateBtn = new System.Windows.Forms.Button();
             this.payAddBtn = new System.Windows.Forms.Button();
             this.paySearchBtn = new System.Windows.Forms.Button();
@@ -52,8 +53,20 @@
             this.payTypeCB = new System.Windows.Forms.ComboBox();
             this.payClearBtn = new System.Windows.Forms.Button();
             this.payDGV = new System.Windows.Forms.DataGridView();
+            this.binaryMakersDS = new M2_Snapshots.BinaryMakersDS();
+            this.paymentServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.paymentServiceTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.PaymentServiceTableAdapter();
+            this.receiptNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adminIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.payDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.payAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.payTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.payDetailsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.payDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentServiceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // payUpdateBtn
@@ -298,12 +311,78 @@
             // 
             // payDGV
             // 
+            this.payDGV.AutoGenerateColumns = false;
             this.payDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.payDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.receiptNumDataGridViewTextBoxColumn,
+            this.adminIDDataGridViewTextBoxColumn,
+            this.stuIDDataGridViewTextBoxColumn,
+            this.payDateDataGridViewTextBoxColumn,
+            this.payAmountDataGridViewTextBoxColumn,
+            this.payTypeDataGridViewTextBoxColumn,
+            this.payDetailsDataGridViewTextBoxColumn});
+            this.payDGV.DataSource = this.paymentServiceBindingSource;
             this.payDGV.Location = new System.Drawing.Point(91, 63);
             this.payDGV.Name = "payDGV";
             this.payDGV.Size = new System.Drawing.Size(747, 150);
             this.payDGV.TabIndex = 40;
             this.payDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.payDGV_CellClick);
+            // 
+            // binaryMakersDS
+            // 
+            this.binaryMakersDS.DataSetName = "BinaryMakersDS";
+            this.binaryMakersDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // paymentServiceBindingSource
+            // 
+            this.paymentServiceBindingSource.DataMember = "PaymentService";
+            this.paymentServiceBindingSource.DataSource = this.binaryMakersDS;
+            // 
+            // paymentServiceTableAdapter
+            // 
+            this.paymentServiceTableAdapter.ClearBeforeFill = true;
+            // 
+            // receiptNumDataGridViewTextBoxColumn
+            // 
+            this.receiptNumDataGridViewTextBoxColumn.DataPropertyName = "receiptNum";
+            this.receiptNumDataGridViewTextBoxColumn.HeaderText = "receiptNum";
+            this.receiptNumDataGridViewTextBoxColumn.Name = "receiptNumDataGridViewTextBoxColumn";
+            // 
+            // adminIDDataGridViewTextBoxColumn
+            // 
+            this.adminIDDataGridViewTextBoxColumn.DataPropertyName = "AdminID";
+            this.adminIDDataGridViewTextBoxColumn.HeaderText = "AdminID";
+            this.adminIDDataGridViewTextBoxColumn.Name = "adminIDDataGridViewTextBoxColumn";
+            // 
+            // stuIDDataGridViewTextBoxColumn
+            // 
+            this.stuIDDataGridViewTextBoxColumn.DataPropertyName = "stu_ID";
+            this.stuIDDataGridViewTextBoxColumn.HeaderText = "stu_ID";
+            this.stuIDDataGridViewTextBoxColumn.Name = "stuIDDataGridViewTextBoxColumn";
+            // 
+            // payDateDataGridViewTextBoxColumn
+            // 
+            this.payDateDataGridViewTextBoxColumn.DataPropertyName = "pay_Date";
+            this.payDateDataGridViewTextBoxColumn.HeaderText = "pay_Date";
+            this.payDateDataGridViewTextBoxColumn.Name = "payDateDataGridViewTextBoxColumn";
+            // 
+            // payAmountDataGridViewTextBoxColumn
+            // 
+            this.payAmountDataGridViewTextBoxColumn.DataPropertyName = "pay_Amount";
+            this.payAmountDataGridViewTextBoxColumn.HeaderText = "pay_Amount";
+            this.payAmountDataGridViewTextBoxColumn.Name = "payAmountDataGridViewTextBoxColumn";
+            // 
+            // payTypeDataGridViewTextBoxColumn
+            // 
+            this.payTypeDataGridViewTextBoxColumn.DataPropertyName = "pay_Type";
+            this.payTypeDataGridViewTextBoxColumn.HeaderText = "pay_Type";
+            this.payTypeDataGridViewTextBoxColumn.Name = "payTypeDataGridViewTextBoxColumn";
+            // 
+            // payDetailsDataGridViewTextBoxColumn
+            // 
+            this.payDetailsDataGridViewTextBoxColumn.DataPropertyName = "pay_Details";
+            this.payDetailsDataGridViewTextBoxColumn.HeaderText = "pay_Details";
+            this.payDetailsDataGridViewTextBoxColumn.Name = "payDetailsDataGridViewTextBoxColumn";
             // 
             // PaymentUI
             // 
@@ -326,6 +405,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.payDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentServiceBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,5 +437,15 @@
         private System.Windows.Forms.TextBox payAdminIdTB;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView payDGV;
+        private BinaryMakersDS binaryMakersDS;
+        private System.Windows.Forms.BindingSource paymentServiceBindingSource;
+        private BinaryMakersDSTableAdapters.PaymentServiceTableAdapter paymentServiceTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn receiptNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adminIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn payDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn payAmountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn payTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn payDetailsDataGridViewTextBoxColumn;
     }
 }

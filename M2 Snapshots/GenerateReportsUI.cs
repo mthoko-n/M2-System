@@ -22,22 +22,22 @@ namespace M2_Snapshots
 
         }
 
-        public int getNumStudents()
-        {
-            int sum = 0;
-            foreach (DataRow row in binaryMakersDS1.classes.Rows)
-            {
-                sum = sum + int.Parse(row.ItemArray[2].ToString());
-
-            }
-
-            return sum;
-        }
+       
 
         private void nosBtn_Click(object sender, EventArgs e)
         {
-        
-            textBox1.Text = getNumStudents().ToString();
+
+            int sum = 0;
+           
+            foreach (DataRow row in groupPmb2DataSet1.classes.Rows)
+            {
+                sum = sum + int.Parse(row.ItemArray[2].ToString());
+
+               
+            }
+
+            textBox1.Text = sum.ToString();
+           
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -47,9 +47,57 @@ namespace M2_Snapshots
 
         private void GenerateReportsUI_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'groupPmb2DataSet1.student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter.Fill(this.groupPmb2DataSet1.student);
+            // TODO: This line of code loads data into the 'groupPmb2DataSet1.classes' table. You can move, or remove it, as needed.
+            this.classesTableAdapter1.Fill(this.groupPmb2DataSet1.classes);
             // TODO: This line of code loads data into the 'binaryMakersDS1.classes' table. You can move, or remove it, as needed.
-            this.classesTableAdapter.Fill(this.binaryMakersDS1.classes);
+          
 
         }
+
+        private void nfsLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nsfBtn_Click(object sender, EventArgs e)
+        {
+            int counter = 0;
+            foreach (DataRow row in groupPmb2DataSet1.student.Rows)
+            {
+                
+
+                if (row.ItemArray[7].ToString().Equals("Female") || (row.ItemArray[7].ToString().Equals("female")))
+                {
+                    counter = counter + 1;
+                }
+            }
+
+            textBox5.Text = counter.ToString();
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void nmsBtn_Click(object sender, EventArgs e)
+        {
+            int counter = 0;
+            foreach (DataRow row in groupPmb2DataSet1.student.Rows)
+            {
+
+
+                if (row.ItemArray[7].ToString().Equals("Male") || (row.ItemArray[7].ToString().Equals("male")))
+                {
+                    counter = counter + 1;
+                }
+            }
+
+            textBox6.Text = counter.ToString();
+        }
     }
-}
+    }
+

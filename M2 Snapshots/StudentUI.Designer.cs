@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.stuUpdateBtn = new System.Windows.Forms.Button();
             this.stuRemoveBtn = new System.Windows.Forms.Button();
             this.stuViewBtn = new System.Windows.Forms.Button();
@@ -55,9 +56,31 @@
             this.stuParentNoTB = new System.Windows.Forms.TextBox();
             this.stuParentNoLbl = new System.Windows.Forms.Label();
             this.studentDGV = new System.Windows.Forms.DataGridView();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.binaryMakersDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.binaryMakersDS = new M2_Snapshots.BinaryMakersDS();
             this.stuClearBtn = new System.Windows.Forms.Button();
+            this.studentTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.studentTableAdapter();
+            this.groupPmb2DataSet = new M2_Snapshots.GroupPmb2DataSet();
+            this.studentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.studentTableAdapter1 = new M2_Snapshots.GroupPmb2DataSetTableAdapters.studentTableAdapter();
+            this.stuIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stunameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stusurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuaddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuemailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stugenderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stuFeesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parentContactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // stuUpdateBtn
@@ -333,14 +356,42 @@
             // 
             // studentDGV
             // 
+            this.studentDGV.AutoGenerateColumns = false;
             this.studentDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.studentDGV.Location = new System.Drawing.Point(41, 66);
+            this.studentDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stuIDDataGridViewTextBoxColumn,
+            this.classIDDataGridViewTextBoxColumn,
+            this.stunameDataGridViewTextBoxColumn,
+            this.stusurnameDataGridViewTextBoxColumn,
+            this.stuaddressDataGridViewTextBoxColumn,
+            this.stuemailDataGridViewTextBoxColumn,
+            this.stuageDataGridViewTextBoxColumn,
+            this.stugenderDataGridViewTextBoxColumn,
+            this.stuFeesDataGridViewTextBoxColumn,
+            this.parentContactDataGridViewTextBoxColumn});
+            this.studentDGV.DataSource = this.studentBindingSource1;
+            this.studentDGV.Location = new System.Drawing.Point(41, 63);
             this.studentDGV.Name = "studentDGV";
             this.studentDGV.RowHeadersWidth = 51;
-            this.studentDGV.Size = new System.Drawing.Size(1073, 150);
+            this.studentDGV.Size = new System.Drawing.Size(1150, 150);
             this.studentDGV.TabIndex = 18;
             this.studentDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDGV_CellClick);
             this.studentDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDGV_CellContentClick);
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "student";
+            this.studentBindingSource.DataSource = this.binaryMakersDSBindingSource;
+            // 
+            // binaryMakersDSBindingSource
+            // 
+            this.binaryMakersDSBindingSource.DataSource = this.binaryMakersDS;
+            this.binaryMakersDSBindingSource.Position = 0;
+            // 
+            // binaryMakersDS
+            // 
+            this.binaryMakersDS.DataSetName = "BinaryMakersDS";
+            this.binaryMakersDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // stuClearBtn
             // 
@@ -352,11 +403,89 @@
             this.stuClearBtn.UseVisualStyleBackColor = true;
             this.stuClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
+            // studentTableAdapter
+            // 
+            this.studentTableAdapter.ClearBeforeFill = true;
+            // 
+            // groupPmb2DataSet
+            // 
+            this.groupPmb2DataSet.DataSetName = "GroupPmb2DataSet";
+            this.groupPmb2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentBindingSource1
+            // 
+            this.studentBindingSource1.DataMember = "student";
+            this.studentBindingSource1.DataSource = this.groupPmb2DataSet;
+            // 
+            // studentTableAdapter1
+            // 
+            this.studentTableAdapter1.ClearBeforeFill = true;
+            // 
+            // stuIDDataGridViewTextBoxColumn
+            // 
+            this.stuIDDataGridViewTextBoxColumn.DataPropertyName = "stu_ID";
+            this.stuIDDataGridViewTextBoxColumn.HeaderText = "stu_ID";
+            this.stuIDDataGridViewTextBoxColumn.Name = "stuIDDataGridViewTextBoxColumn";
+            // 
+            // classIDDataGridViewTextBoxColumn
+            // 
+            this.classIDDataGridViewTextBoxColumn.DataPropertyName = "classID";
+            this.classIDDataGridViewTextBoxColumn.HeaderText = "classID";
+            this.classIDDataGridViewTextBoxColumn.Name = "classIDDataGridViewTextBoxColumn";
+            // 
+            // stunameDataGridViewTextBoxColumn
+            // 
+            this.stunameDataGridViewTextBoxColumn.DataPropertyName = "stu_name";
+            this.stunameDataGridViewTextBoxColumn.HeaderText = "stu_name";
+            this.stunameDataGridViewTextBoxColumn.Name = "stunameDataGridViewTextBoxColumn";
+            // 
+            // stusurnameDataGridViewTextBoxColumn
+            // 
+            this.stusurnameDataGridViewTextBoxColumn.DataPropertyName = "stu_surname";
+            this.stusurnameDataGridViewTextBoxColumn.HeaderText = "stu_surname";
+            this.stusurnameDataGridViewTextBoxColumn.Name = "stusurnameDataGridViewTextBoxColumn";
+            // 
+            // stuaddressDataGridViewTextBoxColumn
+            // 
+            this.stuaddressDataGridViewTextBoxColumn.DataPropertyName = "stu_address";
+            this.stuaddressDataGridViewTextBoxColumn.HeaderText = "stu_address";
+            this.stuaddressDataGridViewTextBoxColumn.Name = "stuaddressDataGridViewTextBoxColumn";
+            // 
+            // stuemailDataGridViewTextBoxColumn
+            // 
+            this.stuemailDataGridViewTextBoxColumn.DataPropertyName = "stu_email";
+            this.stuemailDataGridViewTextBoxColumn.HeaderText = "stu_email";
+            this.stuemailDataGridViewTextBoxColumn.Name = "stuemailDataGridViewTextBoxColumn";
+            // 
+            // stuageDataGridViewTextBoxColumn
+            // 
+            this.stuageDataGridViewTextBoxColumn.DataPropertyName = "stu_age";
+            this.stuageDataGridViewTextBoxColumn.HeaderText = "stu_age";
+            this.stuageDataGridViewTextBoxColumn.Name = "stuageDataGridViewTextBoxColumn";
+            // 
+            // stugenderDataGridViewTextBoxColumn
+            // 
+            this.stugenderDataGridViewTextBoxColumn.DataPropertyName = "stu_gender";
+            this.stugenderDataGridViewTextBoxColumn.HeaderText = "stu_gender";
+            this.stugenderDataGridViewTextBoxColumn.Name = "stugenderDataGridViewTextBoxColumn";
+            // 
+            // stuFeesDataGridViewTextBoxColumn
+            // 
+            this.stuFeesDataGridViewTextBoxColumn.DataPropertyName = "stu_Fees";
+            this.stuFeesDataGridViewTextBoxColumn.HeaderText = "stu_Fees";
+            this.stuFeesDataGridViewTextBoxColumn.Name = "stuFeesDataGridViewTextBoxColumn";
+            // 
+            // parentContactDataGridViewTextBoxColumn
+            // 
+            this.parentContactDataGridViewTextBoxColumn.DataPropertyName = "parentContact";
+            this.parentContactDataGridViewTextBoxColumn.HeaderText = "parentContact";
+            this.parentContactDataGridViewTextBoxColumn.Name = "parentContactDataGridViewTextBoxColumn";
+            // 
             // StudentUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1111, 588);
+            this.ClientSize = new System.Drawing.Size(1203, 588);
             this.Controls.Add(this.stuClearBtn);
             this.Controls.Add(this.studentDGV);
             this.Controls.Add(this.stuUpdateBtn);
@@ -373,6 +502,11 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,5 +542,22 @@
         private System.Windows.Forms.TextBox stuClassIdTB;
         private System.Windows.Forms.Label stuClassIdLbl;
         private System.Windows.Forms.Button stuClearBtn;
+        private System.Windows.Forms.BindingSource binaryMakersDSBindingSource;
+        private BinaryMakersDS binaryMakersDS;
+        private System.Windows.Forms.BindingSource studentBindingSource;
+        private BinaryMakersDSTableAdapters.studentTableAdapter studentTableAdapter;
+        private GroupPmb2DataSet groupPmb2DataSet;
+        private System.Windows.Forms.BindingSource studentBindingSource1;
+        private GroupPmb2DataSetTableAdapters.studentTableAdapter studentTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn classIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stunameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stusurnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuaddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuemailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stugenderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuFeesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parentContactDataGridViewTextBoxColumn;
     }
 }

@@ -55,13 +55,23 @@
             this.label4 = new System.Windows.Forms.Label();
             this.clearBtn4 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.binaryMakersDS1 = new M2_Snapshots.BinaryMakersDS();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.groupPmb2DataSet1 = new M2_Snapshots.GroupPmb2DataSet();
             this.classesTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.classesTableAdapter();
+            this.studentTableAdapter1 = new M2_Snapshots.GroupPmb2DataSet1TableAdapters.studentTableAdapter();
+            this.classesTableAdapter1 = new M2_Snapshots.GroupPmb2DataSetTableAdapters.classesTableAdapter();
+            this.binaryMakersDS1 = new M2_Snapshots.BinaryMakersDS();
+            this.tableAdapterManager1 = new M2_Snapshots.GroupPmb2DataSet2TableAdapters.TableAdapterManager();
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.groupPmb2DataSet11 = new M2_Snapshots.GroupPmb2DataSet1();
+            this.studentTableAdapter = new M2_Snapshots.GroupPmb2DataSetTableAdapters.studentTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet11)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -154,6 +164,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(356, 523);
             this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // clearBtn3
             // 
@@ -172,6 +183,7 @@
             this.nsfBtn.TabIndex = 10;
             this.nsfBtn.Text = "Generate";
             this.nsfBtn.UseVisualStyleBackColor = true;
+            this.nsfBtn.Click += new System.EventHandler(this.nsfBtn_Click);
             // 
             // nfsLbl
             // 
@@ -182,6 +194,7 @@
             this.nfsLbl.Size = new System.Drawing.Size(266, 22);
             this.nfsLbl.TabIndex = 9;
             this.nfsLbl.Text = "Number of Female Students";
+            this.nfsLbl.Click += new System.EventHandler(this.nfsLbl_Click);
             // 
             // textBox5
             // 
@@ -227,6 +240,7 @@
             this.nmsBtn.TabIndex = 10;
             this.nmsBtn.Text = "Generate";
             this.nmsBtn.UseVisualStyleBackColor = true;
+            this.nmsBtn.Click += new System.EventHandler(this.nmsBtn_Click);
             // 
             // label6
             // 
@@ -316,19 +330,53 @@
             this.textBox4.Size = new System.Drawing.Size(236, 20);
             this.textBox4.TabIndex = 4;
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataMember = "classes";
+            this.bindingSource1.DataSource = this.groupPmb2DataSet1;
+            // 
+            // groupPmb2DataSet1
+            // 
+            this.groupPmb2DataSet1.DataSetName = "GroupPmb2DataSet";
+            this.groupPmb2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // classesTableAdapter
+            // 
+            this.classesTableAdapter.ClearBeforeFill = true;
+            // 
+            // studentTableAdapter1
+            // 
+            this.studentTableAdapter1.ClearBeforeFill = true;
+            // 
+            // classesTableAdapter1
+            // 
+            this.classesTableAdapter1.ClearBeforeFill = true;
+            // 
             // binaryMakersDS1
             // 
             this.binaryMakersDS1.DataSetName = "BinaryMakersDS";
             this.binaryMakersDS1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // bindingSource1
+            // tableAdapterManager1
             // 
-            this.bindingSource1.DataMember = "classes";
-            this.bindingSource1.DataSource = this.binaryMakersDS1;
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.Connection = null;
+            this.tableAdapterManager1.studentTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = M2_Snapshots.GroupPmb2DataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // classesTableAdapter
+            // bindingSource2
             // 
-            this.classesTableAdapter.ClearBeforeFill = true;
+            this.bindingSource2.DataMember = "student";
+            this.bindingSource2.DataSource = this.groupPmb2DataSet1;
+            // 
+            // groupPmb2DataSet11
+            // 
+            this.groupPmb2DataSet11.DataSetName = "GroupPmb2DataSet1";
+            this.groupPmb2DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentTableAdapter
+            // 
+            this.studentTableAdapter.ClearBeforeFill = true;
             // 
             // GenerateReportsUI
             // 
@@ -345,8 +393,11 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -379,8 +430,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button clearBtn4;
         private System.Windows.Forms.TextBox textBox4;
-        private BinaryMakersDS binaryMakersDS1;
         private System.Windows.Forms.BindingSource bindingSource1;
         private BinaryMakersDSTableAdapters.classesTableAdapter classesTableAdapter;
+        private GroupPmb2DataSet groupPmb2DataSet1;
+        private GroupPmb2DataSet1TableAdapters.studentTableAdapter studentTableAdapter1;
+        private GroupPmb2DataSetTableAdapters.classesTableAdapter classesTableAdapter1;
+        private BinaryMakersDS binaryMakersDS1;
+        private GroupPmb2DataSet2TableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.BindingSource bindingSource2;
+        private GroupPmb2DataSet1 groupPmb2DataSet11;
+        private GroupPmb2DataSetTableAdapters.studentTableAdapter studentTableAdapter;
     }
 }

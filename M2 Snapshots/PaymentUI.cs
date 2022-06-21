@@ -79,22 +79,14 @@ namespace M2_Snapshots
 
         private void PaymentUI_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'binaryMakersDS.PaymentService' table. You can move, or remove it, as needed.
+            this.paymentServiceTableAdapter.Fill(this.binaryMakersDS.PaymentService);
             BindData();
 
 
         }
 
-        private int getTotal() {
-            int sum = 0;
-            foreach (DataRow row in payDGV.Rows) {
-                sum = sum + int.Parse(row.ItemArray[4].ToString());
-
-            }
-
-            return sum;
-
-        }
-
+        
        
 
         private void payUpdateBtn_Click(object sender, EventArgs e)
