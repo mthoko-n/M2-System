@@ -101,7 +101,7 @@ namespace M2_Snapshots
                 {
                     MessageBox.Show("Enter Student ID, can only contain numbers");
                 }
-                
+                con.Close();  
             }
             else {
                 MessageBox.Show("Enter all fields","Empty fields", MessageBoxButtons.OK, MessageBoxIcon.Error);

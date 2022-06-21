@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.subjectResultsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.binaryMakersDS = new M2_Snapshots.BinaryMakersDS();
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -40,9 +39,24 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.subjectResultsTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.subjectResultsTableAdapter();
             this.studentTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.studentTableAdapter();
+            this.dataSet21 = new M2_Snapshots.DataSet2();
+            this.dataSet21BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.subjResults = new M2_Snapshots.subjResults();
+            this.subjResultsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupPmb2DataSet = new M2_Snapshots.GroupPmb2DataSet();
+            this.groupPmb2DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTable1TableAdapter = new M2_Snapshots.DataSet2TableAdapters.DataTable1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.subjectResultsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet21BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subjResults)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subjResultsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // subjectResultsBindingSource
@@ -92,12 +106,9 @@
             // reportViewer1
             // 
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.subjectResultsBindingSource;
-            reportDataSource2.Name = "DataSet2";
-            reportDataSource2.Value = this.studentBindingSource;
+            reportDataSource1.Value = this.dataTable1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "M2_Snapshots.subjResults.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "M2_Snapshots.academicResults.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(1, 38);
             this.reportViewer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reportViewer1.Name = "reportViewer1";
@@ -114,6 +125,45 @@
             // 
             this.studentTableAdapter.ClearBeforeFill = true;
             // 
+            // dataSet21
+            // 
+            this.dataSet21.DataSetName = "DataSet2";
+            this.dataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataSet21BindingSource
+            // 
+            this.dataSet21BindingSource.DataSource = this.dataSet21;
+            this.dataSet21BindingSource.Position = 0;
+            // 
+            // subjResults
+            // 
+            this.subjResults.DataSetName = "subjResults";
+            this.subjResults.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // subjResultsBindingSource
+            // 
+            this.subjResultsBindingSource.DataSource = this.subjResults;
+            this.subjResultsBindingSource.Position = 0;
+            // 
+            // groupPmb2DataSet
+            // 
+            this.groupPmb2DataSet.DataSetName = "GroupPmb2DataSet";
+            this.groupPmb2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupPmb2DataSetBindingSource
+            // 
+            this.groupPmb2DataSetBindingSource.DataSource = this.groupPmb2DataSet;
+            this.groupPmb2DataSetBindingSource.Position = 0;
+            // 
+            // dataTable1BindingSource
+            // 
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.dataSet21BindingSource;
+            // 
+            // dataTable1TableAdapter
+            // 
+            this.dataTable1TableAdapter.ClearBeforeFill = true;
+            // 
             // AcademicReport_UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -123,7 +173,7 @@
             this.Controls.Add(this.searchbutton);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.SeartchText);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AcademicReport_UI";
             this.Text = "AcademicReport_UI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -131,6 +181,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.subjectResultsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.binaryMakersDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet21BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subjResults)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subjResultsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,5 +204,13 @@
         private BinaryMakersDSTableAdapters.subjectResultsTableAdapter subjectResultsTableAdapter;
         private System.Windows.Forms.BindingSource studentBindingSource;
         private BinaryMakersDSTableAdapters.studentTableAdapter studentTableAdapter;
+        private DataSet2 dataSet21;
+        private System.Windows.Forms.BindingSource dataSet21BindingSource;
+        private System.Windows.Forms.BindingSource subjResultsBindingSource;
+        private subjResults subjResults;
+        private System.Windows.Forms.BindingSource groupPmb2DataSetBindingSource;
+        private GroupPmb2DataSet groupPmb2DataSet;
+        private System.Windows.Forms.BindingSource dataTable1BindingSource;
+        private DataSet2TableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
     }
 }

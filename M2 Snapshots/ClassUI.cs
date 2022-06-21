@@ -271,7 +271,7 @@ namespace M2_Snapshots
             // TODO: This line of code loads data into the 'binaryMakersDS.PaymentService' table. You can move, or remove it, as needed.
           
 
-            textBox1.Text = getNumStudents().ToString();
+            //textBox1.Text = getNumStudents().ToString();
             BindData();
             con.Open();
             SqlCommand command = new SqlCommand("select teach_ID from Teachers", con);

@@ -209,6 +209,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="a.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>a.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AcademicReportUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -319,6 +324,7 @@
     <EmbeddedResource Include="AcademicReportUI.resx">
       <DependentUpon>AcademicReportUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="academicResults.rdlc" />
     <EmbeddedResource Include="AdminUI.resx">
       <DependentUpon>AdminUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -360,6 +366,17 @@
     <EmbeddedResource Include="TeacherUI.resx">
       <DependentUpon>TeacherUI.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="a.xsc">
+      <DependentUpon>a.xsd</DependentUpon>
+    </None>
+    <None Include="a.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>a.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="a.xss">
+      <DependentUpon>a.xsd</DependentUpon>
+    </None>
     <None Include="BinaryMakersDS.xsc">
       <DependentUpon>BinaryMakersDS.xsd</DependentUpon>
     </None>
