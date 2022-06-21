@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using System.Drawing.Printing;
 namespace M2_Snapshots
 {
     public partial class PaymentUI : Form
@@ -335,9 +335,25 @@ namespace M2_Snapshots
             }
         }
 
+        PrintPreviewDialog ppd = new PrintPreviewDialog();
+        PrintDocument pd = new PrintDocument();
+        Bitmap bmp;
         private void printBtn_Click(object sender, EventArgs e)
         {
+            bmp = new Bitmap(this.Height, this.Width);
+            this.DrawToBitmap(bmp, this.ClientRectangle);
+            ppd.Document = pd;
 
+            var result = ppd.ShowDialog();
+            if (result == DialogResult.OK) {
+                pd.Print();
+            }
+        }
+
+        private void pd_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+            e.Graphics.DrawImage(bmp,0,0);
         }
     }
 }
