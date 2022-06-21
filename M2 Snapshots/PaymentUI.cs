@@ -43,9 +43,43 @@ namespace M2_Snapshots
                             con.Open();
                             SqlCommand command = new SqlCommand("insert into PaymentService values ('" + int.Parse(payReceiptNoTB.Text) + "','" + payAdminIdTB.Text + "','" + int.Parse(payStuIdTB.Text) + "', '" + payDateTB.Text + "', '" + int.Parse(payAmountTB.Text) + "', '" + payTypeCB.Text + "','" + payDetailsTB.Text + "')", con);
                             command.ExecuteNonQuery();
+                           
+                            string num = "";
+                            double num2 = 0;
+                            
+                            SqlCommand a = new SqlCommand("select stu_Fees from student where stu_ID = " + int.Parse(payStuIdTB.Text), con);
+                            SqlDataReader read = a.ExecuteReader();
+                            while (read.Read())
+                            {
+                                num = num + read.GetValue(0).ToString();
+                                num2 = double.Parse(num);
+                            }
+                            read.Close();
+
+                            int fee = 0;
+                            int val = Convert.ToInt32(num2);
+                            int val2 = int.Parse(payAmountTB.Text);
+                            fee = val - val2;
+
+                            SqlCommand c = new SqlCommand("update student set stu_Fees = " + fee + " where stu_ID = " + int.Parse(payStuIdTB.Text), con);
+                            if (c.ExecuteNonQuery() > 0)
+                            {
+                                SqlCommand command2 = new SqlCommand("insert into PaymentService values ('" + int.Parse(payReceiptNoTB.Text) + "','" + payAdminIdTB.Text + "','" + int.Parse(payStuIdTB.Text) + "', '" + payDateTB.Text + "', '" + int.Parse(payAmountTB.Text) + "', '" + payTypeCB.Text + "','" + payDetailsTB.Text + "')", con);
+                                if(command2.ExecuteNonQuery()>0)
+                                MessageBox.Show("Payment Successfully Inserted", "Payment Success", MessageBoxButtons.OK);
+                                else
+                                {
+                                    MessageBox.Show("Enter Details correctly", "Payment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Enter valid Student ID","Payment",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                             con.Close();
                             BindData();
-                            MessageBox.Show("Payment Successfully Inserted", "Payment Success", MessageBoxButtons.OK);
+                            
+
                         }
                         else
                         {
@@ -194,6 +228,8 @@ namespace M2_Snapshots
             paySearchTB.Clear();
             payStuIdTB.Clear();
             payTypeCB.ResetText();
+
+            
         }
 
         private void paySearchBtn_Click(object sender, EventArgs e)
