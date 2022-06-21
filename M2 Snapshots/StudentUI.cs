@@ -101,7 +101,7 @@ namespace M2_Snapshots
                 {
                     MessageBox.Show("Enter Student ID, can only contain numbers");
                 }
-                
+                con.Close();  
             }
             else {
                 MessageBox.Show("Enter all fields","Empty fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -182,31 +182,56 @@ namespace M2_Snapshots
         {
             if ((stuIdTB.Text != "" && stuIdTB.Text.All(char.IsDigit)) && ((stuAddressTB.Text != "") || (stuSearchTB.Text != "") || (stuClassIdTB.Text != "") || (stuGenderCB.Text != "") /*|| (stuEmailTB.Text != "")*/ || (stuFeesTB.Text != "") || (stuLastNameTB.Text != "") || (stuNameTB.Text != "") || (stuParentNoTB.Text != "") || (stuAgeTB.Text != "")))
             {
+                int error = 0;
                 con.Open();
 
                 if ((stuClassIdTB.Text != "" && stuClassIdTB.Text.All(char.IsDigit)) && (stuIdTB.Text != ""))
 
                 {
                     SqlCommand command = new SqlCommand("update student set classID = '" + int.Parse(stuClassIdTB.Text) + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter valid class ID \nEnter a valid Student ID");
+                        error++;
+                    }
                 }
 
                 if ((stuNameTB.Text != "") && (stuIdTB.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update student set stu_name = '" + stuNameTB.Text + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter a valid Student ID");
+                        error++;
+                    }
                 }
 
                 if ((stuLastNameTB.Text != "") && (stuIdTB.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update student set stu_surname = '"+stuLastNameTB.Text + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter a valid Student ID");
+                        error++;
+                    }
                 }
 
                 if ((stuAddressTB.Text != "" && stuAddressTB.Text.Length >= 10) && (stuIdTB.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update student set stu_address= '" + stuAddressTB.Text + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Student address must be at least 10 characters long  \nEnter a valid Student ID");
+                        error++;
+                    }
                 }
 
                 /*if ((stuEmailTB.Text != "") && (stuIdTB.Text != ""))
@@ -218,31 +243,56 @@ namespace M2_Snapshots
                 if ((stuAgeTB.Text.All(char.IsDigit) && (int.Parse(stuAgeTB.Text) > 12) && (int.Parse(stuAgeTB.Text) < 23)) && (stuIdTB.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update student set stu_age = '" + int.Parse(stuAgeTB.Text) + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter valid student age between ages 12-23\nEnter a valid Student ID");
+                        error++;
+                    }
                 }
 
                 if ((stuGenderCB.Text != "") && (stuIdTB.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update student set stu_gender = '" + stuGenderCB.Text + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Select a valid gender \nEnter a valid Student ID");
+                        error++;
+                    }
                 }
 
                 
                 if ((stuFeesTB.Text != "" && stuFeesTB.Text.All(char.IsDigit)) && (stuIdTB.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update student set stu_Fees = '" + decimal.Parse(stuFeesTB.Text) + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter a valid fee amount for the student \nEnter a valid Student ID");
+                        error++;
+                    }
                 }
 
                 if ((stuParentNoTB.Text != "" && (stuParentNoTB.Text.All(char.IsDigit) && stuParentNoTB.Text.Length == 10)) && (stuIdTB.Text != ""))
                 {
                     SqlCommand command = new SqlCommand("update student set parentContact = '" + stuParentNoTB.Text + "' where stu_ID = '" + int.Parse(stuIdTB.Text) + "'", con);
-                    command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                        error += 0;
+                    else
+                    {
+                        MessageBox.Show("Enter valid parent cell number, must contain 10 digits \nEnter a valid Student ID");
+                        error++;
+                    }
                 }
                
                 con.Close();
                 BindData();
-                MessageBox.Show("Student Successfully Updated","Student Details Updated", MessageBoxButtons.OK);
+                if(error==0)
+                    MessageBox.Show("Student Successfully Updated","Student Details Updated", MessageBoxButtons.OK);
             }
             else
             {

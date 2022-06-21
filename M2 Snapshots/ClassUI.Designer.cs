@@ -140,6 +140,8 @@
             // 
             this.teachID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.teachID.FormattingEnabled = true;
+            this.teachID.Items.AddRange(new object[] {
+            ""});
             this.teachID.Location = new System.Drawing.Point(143, 106);
             this.teachID.Margin = new System.Windows.Forms.Padding(2);
             this.teachID.Name = "teachID";
@@ -255,11 +257,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(529, 30);
+            this.label2.Location = new System.Drawing.Point(487, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 14);
+            this.label2.Size = new System.Drawing.Size(114, 14);
             this.label2.TabIndex = 29;
-            this.label2.Text = "Search Class";
+            this.label2.Text = "Search/Remove Class";
             // 
             // RemoveButton
             // 
@@ -336,6 +338,7 @@
             this.SearchClassDataGridView.Size = new System.Drawing.Size(659, 175);
             this.SearchClassDataGridView.TabIndex = 40;
             this.SearchClassDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchClassDataGridView_CellClick);
+            this.SearchClassDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchClassDataGridView_CellContentClick_1);
             // 
             // classidDataGridViewTextBoxColumn
             // 

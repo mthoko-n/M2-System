@@ -209,6 +209,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="a.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>a.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AcademicReportUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +236,11 @@
     </Compile>
     <Compile Include="ClassUI.Designer.cs">
       <DependentUpon>ClassUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="GenerateReportsUI.cs">
       <SubType>Form</SubType>
@@ -314,6 +324,7 @@
     <EmbeddedResource Include="AcademicReportUI.resx">
       <DependentUpon>AcademicReportUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="academicResults.rdlc" />
     <EmbeddedResource Include="AdminUI.resx">
       <DependentUpon>AdminUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,6 +366,17 @@
     <EmbeddedResource Include="TeacherUI.resx">
       <DependentUpon>TeacherUI.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="a.xsc">
+      <DependentUpon>a.xsd</DependentUpon>
+    </None>
+    <None Include="a.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>a.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="a.xss">
+      <DependentUpon>a.xsd</DependentUpon>
+    </None>
     <None Include="BinaryMakersDS.xsc">
       <DependentUpon>BinaryMakersDS.xsd</DependentUpon>
     </None>
@@ -365,6 +387,17 @@
     </None>
     <None Include="BinaryMakersDS.xss">
       <DependentUpon>BinaryMakersDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
     <None Include="GroupPmb2DataSet.xsc">
       <DependentUpon>GroupPmb2DataSet.xsd</DependentUpon>
