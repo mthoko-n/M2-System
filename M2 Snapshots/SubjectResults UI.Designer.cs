@@ -255,6 +255,7 @@
             this.SearchSubjectBtn.TabIndex = 39;
             this.SearchSubjectBtn.Text = "Search";
             this.SearchSubjectBtn.UseVisualStyleBackColor = false;
+            this.SearchSubjectBtn.Click += new System.EventHandler(this.SearchSubjectBtn_Click);
             // 
             // AddResultBtn
             // 
@@ -298,6 +299,7 @@
             this.searchRes.Name = "searchRes";
             this.searchRes.Size = new System.Drawing.Size(216, 22);
             this.searchRes.TabIndex = 45;
+            this.searchRes.TextChanged += new System.EventHandler(this.searchRes_TextChanged);
             // 
             // SubjectResults_UI
             // 

@@ -88,5 +88,31 @@ namespace M2_Snapshots
         {
 
         }
+
+        private void SearchSubjectBtn_Click(object sender, EventArgs e)
+        {
+            if (searchRes.Text != "")
+            {
+                SqlCommand command = new SqlCommand("select * from subjectResults where " +
+                    "subResultID LIKE '%" + int.Parse(searchRes.Text) + "%' OR " +
+                    "studentID LIKE '%" + int.Parse(searchRes.Text) + "%' OR " +
+                    "subjectID LIKE '%" + searchRes.Text + "%'"+
+                    "subjectTeachID LIKE '%" + int.Parse(searchRes.Text)+ "%'"
+                    , con);
+                SqlDataAdapter sd = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                SubjectResultsGridView.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("Enter Results ID ,Student ID or Subject ID in the Search box", "Search Subject", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void searchRes_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
