@@ -76,6 +76,7 @@ namespace M2_Snapshots
                     m.pay.Enabled = true;
                     m.aca.Enabled = true;
                     m.mstrip.Enabled = true;
+                    m.subR.Enabled = true;
                     m.gen.Enabled = true;
                     m.logout.Enabled = true;
                     }
@@ -88,6 +89,7 @@ namespace M2_Snapshots
                         m.sub.Enabled = true;
                         m.cla.Enabled = true;
                         m.aca.Enabled = true;
+                        m.subR.Enabled = true;
                         m.mstrip.Enabled = false;
                         m.logout.Enabled = true;
                     }

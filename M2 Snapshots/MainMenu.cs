@@ -24,6 +24,7 @@ namespace M2_Snapshots
         public ToolStripButton logout;
         public ToolStripButton pay;
         public ToolStripButton gen;
+        public ToolStripButton subR;
         public MenuStrip mstrip;
 
 
@@ -46,6 +47,7 @@ namespace M2_Snapshots
             logout = logoutBtn;
             mstrip = menuStrip1;
             gen = generateRbtn;
+            subR = subjectResults;
 
            
 
@@ -261,6 +263,18 @@ namespace M2_Snapshots
         {
             GenerateReportsUI geneObj = new GenerateReportsUI();
             FormSetup(geneObj);
+        }
+
+        private void subjectResults_Click(object sender, EventArgs e)
+        {
+            SubjectResults_UI subObj = new SubjectResults_UI();
+            FormSetup(subObj);
+        }
+
+        private void subjectResultsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SubjectResults_UI subObj = new SubjectResults_UI();
+            FormSetup(subObj);
         }
     }
 }

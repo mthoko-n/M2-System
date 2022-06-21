@@ -37,7 +37,9 @@
             this.paymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.academicReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subjectResultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.generateReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.loginBtn = new System.Windows.Forms.ToolStripButton();
             this.studentsBtn = new System.Windows.Forms.ToolStripButton();
@@ -46,11 +48,11 @@
             this.adminBtn = new System.Windows.Forms.ToolStripButton();
             this.classBtn = new System.Windows.Forms.ToolStripButton();
             this.academicReportBtn = new System.Windows.Forms.ToolStripButton();
+            this.subjectResults = new System.Windows.Forms.ToolStripButton();
             this.paymentBtn = new System.Windows.Forms.ToolStripButton();
+            this.generateRbtn = new System.Windows.Forms.ToolStripButton();
             this.logoutBtn = new System.Windows.Forms.ToolStripButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.generateRbtn = new System.Windows.Forms.ToolStripButton();
-            this.generateReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +68,7 @@
             this.paymentToolStripMenuItem,
             this.classToolStripMenuItem,
             this.academicReportToolStripMenuItem,
+            this.subjectResultsToolStripMenuItem,
             this.adminToolStripMenuItem1,
             this.generateReportsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -116,12 +119,26 @@
             this.academicReportToolStripMenuItem.Text = "Academic Report";
             this.academicReportToolStripMenuItem.Click += new System.EventHandler(this.academicReportToolStripMenuItem_Click);
             // 
+            // subjectResultsToolStripMenuItem
+            // 
+            this.subjectResultsToolStripMenuItem.Name = "subjectResultsToolStripMenuItem";
+            this.subjectResultsToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.subjectResultsToolStripMenuItem.Text = "Subject Results";
+            this.subjectResultsToolStripMenuItem.Click += new System.EventHandler(this.subjectResultsToolStripMenuItem_Click);
+            // 
             // adminToolStripMenuItem1
             // 
             this.adminToolStripMenuItem1.Name = "adminToolStripMenuItem1";
             this.adminToolStripMenuItem1.Size = new System.Drawing.Size(66, 20);
             this.adminToolStripMenuItem1.Text = "Payment";
             this.adminToolStripMenuItem1.Click += new System.EventHandler(this.adminToolStripMenuItem1_Click);
+            // 
+            // generateReportsToolStripMenuItem
+            // 
+            this.generateReportsToolStripMenuItem.Name = "generateReportsToolStripMenuItem";
+            this.generateReportsToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
+            this.generateReportsToolStripMenuItem.Text = "Generate Reports";
+            this.generateReportsToolStripMenuItem.Click += new System.EventHandler(this.generateReportsToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -134,6 +151,7 @@
             this.adminBtn,
             this.classBtn,
             this.academicReportBtn,
+            this.subjectResults,
             this.paymentBtn,
             this.generateRbtn,
             this.logoutBtn});
@@ -251,6 +269,21 @@
             this.academicReportBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.academicReportBtn.Click += new System.EventHandler(this.academicReportBtn_Click);
             // 
+            // subjectResults
+            // 
+            this.subjectResults.AutoSize = false;
+            this.subjectResults.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.subjectResults.Enabled = false;
+            this.subjectResults.Image = ((System.Drawing.Image)(resources.GetObject("subjectResults.Image")));
+            this.subjectResults.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.subjectResults.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.subjectResults.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.subjectResults.Name = "subjectResults";
+            this.subjectResults.Size = new System.Drawing.Size(100, 90);
+            this.subjectResults.Text = "Subject Results";
+            this.subjectResults.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.subjectResults.Click += new System.EventHandler(this.subjectResults_Click);
+            // 
             // paymentBtn
             // 
             this.paymentBtn.AutoSize = false;
@@ -265,6 +298,21 @@
             this.paymentBtn.Text = "Payment";
             this.paymentBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.paymentBtn.Click += new System.EventHandler(this.paymentBtn_Click);
+            // 
+            // generateRbtn
+            // 
+            this.generateRbtn.AutoSize = false;
+            this.generateRbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.generateRbtn.Enabled = false;
+            this.generateRbtn.Image = ((System.Drawing.Image)(resources.GetObject("generateRbtn.Image")));
+            this.generateRbtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.generateRbtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.generateRbtn.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.generateRbtn.Name = "generateRbtn";
+            this.generateRbtn.Size = new System.Drawing.Size(100, 90);
+            this.generateRbtn.Text = "Generate Reports";
+            this.generateRbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.generateRbtn.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // logoutBtn
             // 
@@ -286,28 +334,6 @@
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ShowAlways = true;
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            // 
-            // generateRbtn
-            // 
-            this.generateRbtn.AutoSize = false;
-            this.generateRbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.generateRbtn.Enabled = false;
-            this.generateRbtn.Image = ((System.Drawing.Image)(resources.GetObject("generateRbtn.Image")));
-            this.generateRbtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.generateRbtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.generateRbtn.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.generateRbtn.Name = "generateRbtn";
-            this.generateRbtn.Size = new System.Drawing.Size(100, 90);
-            this.generateRbtn.Text = "Generate Reports";
-            this.generateRbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.generateRbtn.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // generateReportsToolStripMenuItem
-            // 
-            this.generateReportsToolStripMenuItem.Name = "generateReportsToolStripMenuItem";
-            this.generateReportsToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
-            this.generateReportsToolStripMenuItem.Text = "Generate Reports";
-            this.generateReportsToolStripMenuItem.Click += new System.EventHandler(this.generateReportsToolStripMenuItem_Click);
             // 
             // MainMenu
             // 
@@ -358,6 +384,8 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolStripButton generateRbtn;
         private System.Windows.Forms.ToolStripMenuItem generateReportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton subjectResults;
+        private System.Windows.Forms.ToolStripMenuItem subjectResultsToolStripMenuItem;
     }
 }
 
