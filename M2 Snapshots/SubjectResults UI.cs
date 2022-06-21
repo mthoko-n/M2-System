@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace M2_Snapshots
 {
@@ -17,12 +18,75 @@ namespace M2_Snapshots
             InitializeComponent();
         }
 
+        SqlConnection con = new SqlConnection("Data Source=146.230.177.46;Initial Catalog=GroupPmb2;Persist Security Info=True;User ID=GroupPmb2;Password=b45dc2");
+
+        void BindData()
+        {
+            SqlCommand command = new SqlCommand("select * from subjectResults", con);
+            SqlDataAdapter sd = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sd.Fill(dt);
+            SubjectResultsGridView.DataSource = dt;
+        }
         private void SubjectResults_UI_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'groupPmb2DataSet.subjectResults' table. You can move, or remove it, as needed.
-            this.subjectResultsTableAdapter.Fill(this.groupPmb2DataSet.subjectResults);
-            //this.subjResultsTableAdapters;
-            this.reportViewer1.RefreshReport();
+                    }
+
+        private void ClearSubjectBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddResultBtn_Click(object sender, EventArgs e)
+        {
+            if ((SubjectResID.Text != "") && (StudentIDTextBox.Text != "") && (subjID.Text != "") && (subjTeachID.Text!=" " )&& (termResult.Text!= "") && (termNO.Text != ""))
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand("insert into subjectResults values ('" + int.Parse(SubjectResID.Text) + "','" + int.Parse(StudentIDTextBox.Text) + "','" + subjID.Text + int.Parse(subjTeachID.Text) + int.Parse(termResult.Text)+ (termNO.Text)+ "')", con);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Successfully Inserted");
+                con.Close();
+                BindData();
+            }
+            else
+            {
+                MessageBox.Show("Enter All Fields", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SubjectIDTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StudentIDTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void subjID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void subjTeachID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SubjectResultsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void termResult_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void termNO_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
