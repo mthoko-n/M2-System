@@ -273,8 +273,8 @@ namespace M2_Snapshots
 
         private void subjectResultsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SubjectResults_UI subObj = new SubjectResults_UI();
-            FormSetup(subObj);
+            SubjectResults_UI subOb = new SubjectResults_UI();
+            FormSetup(subOb);
         }
     }
 }
