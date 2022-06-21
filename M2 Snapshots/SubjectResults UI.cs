@@ -22,6 +22,7 @@ namespace M2_Snapshots
 
         void BindData()
         {
+            
             SqlCommand command = new SqlCommand("select * from subjectResults", con);
             SqlDataAdapter sd = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
@@ -30,7 +31,8 @@ namespace M2_Snapshots
         }
         private void SubjectResults_UI_Load(object sender, EventArgs e)
         {
-                    }
+            BindData();
+        }
 
         private void ClearSubjectBtn_Click(object sender, EventArgs e)
         {
@@ -39,19 +41,20 @@ namespace M2_Snapshots
 
         private void AddResultBtn_Click(object sender, EventArgs e)
         {
+            con.Open();
             if ((SubjectResID.Text != "") && (StudentIDTextBox.Text != "") && (subjID.Text != "") && (subjTeachID.Text!=" " )&& (termResult.Text!= "") && (termNO.Text != ""))
             {
-                con.Open();
-                SqlCommand command = new SqlCommand("insert into subjectResults values ('" + int.Parse(SubjectResID.Text) + "','" + int.Parse(StudentIDTextBox.Text) + "','" + subjID.Text + int.Parse(subjTeachID.Text) + int.Parse(termResult.Text)+ (termNO.Text)+ "')", con);
+                
+                SqlCommand command = new SqlCommand("insert into subjectResults values ('" + int.Parse(SubjectResID.Text) + "','" + int.Parse(StudentIDTextBox.Text) + "','" + subjID.Text+ "','" + int.Parse(subjTeachID.Text)+ "','" + int.Parse(termResult.Text)+ "','" + (termNO.Text)+ "')", con);
                 command.ExecuteNonQuery();
                 MessageBox.Show("Successfully Inserted");
-                con.Close();
                 BindData();
             }
             else
             {
                 MessageBox.Show("Enter All Fields", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            con.Close();
         }
 
         private void SubjectIDTextBox_TextChanged(object sender, EventArgs e)
@@ -94,10 +97,10 @@ namespace M2_Snapshots
             if (searchRes.Text != "")
             {
                 SqlCommand command = new SqlCommand("select * from subjectResults where " +
-                    "subResultID LIKE '%" + int.Parse(searchRes.Text) + "%' OR " +
-                    "studentID LIKE '%" + int.Parse(searchRes.Text) + "%' OR " +
-                    "subjectID LIKE '%" + searchRes.Text + "%'"+
-                    "subjectTeachID LIKE '%" + int.Parse(searchRes.Text)+ "%'"
+                    "subResultID LIKE '%" + searchRes.Text + "%' OR " +
+                    "studentID LIKE '%" + searchRes.Text + "%' OR " +
+                    "subjectID LIKE '%" + searchRes.Text + "%' OR "+
+                    "subjectTeachID LIKE '%" + searchRes.Text+ "%'"
                     , con);
                 SqlDataAdapter sd = new SqlDataAdapter(command);
                 DataTable dt = new DataTable();
