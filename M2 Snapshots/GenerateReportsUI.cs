@@ -104,10 +104,27 @@ namespace M2_Snapshots
             
                 
         }
+        private decimal getTotalPayments() {
+
+
+            decimal sum = 0;
+            foreach (DataRow row in groupPmb2DataSet1.student.Rows)
+            {
+
+
+                sum = sum + Decimal.Parse(row.ItemArray[8].ToString());
+
+            }
+
+            return sum;
+        }
+
+
 
         private void tpsBtn_Click(object sender, EventArgs e)
         {
-
+           
+            textBox2.Text = "R"+getTotalPayments().ToString();
         }
 
         private void clearBtn1_Click(object sender, EventArgs e)
@@ -139,6 +156,18 @@ namespace M2_Snapshots
         private void clearBtn6_Click(object sender, EventArgs e)
         {
             textBox6.Clear();
+        }
+
+        private void sdBtn_Click(object sender, EventArgs e)
+        {
+            decimal fees = getTotalStudents() * 2500;
+            decimal debt = fees - getTotalPayments();
+            textBox3.Text = "R"+debt.ToString();
+        }
+
+        private void nspBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

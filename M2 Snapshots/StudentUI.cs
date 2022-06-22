@@ -183,10 +183,12 @@ namespace M2_Snapshots
 
         private void StudentUI_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'groupPmb2DataSet.student' table. You can move, or remove it, as needed.
-            this.studentTableAdapter1.Fill(this.groupPmb2DataSet.student);
             // TODO: This line of code loads data into the 'binaryMakersDS.student' table. You can move, or remove it, as needed.
-
+            this.studentTableAdapter1.Fill(this.binaryMakersDS.student);
+            // TODO: This line of code loads data into the 'groupPmb2DataSet.student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter.Fill(this.groupPmb2DataSet.student);
+            // TODO: This line of code loads data into the 'groupPmb2DataSet1.student' table. You can move, or remove it, as needed.
+         
             BindData();
 
             con.Open();
