@@ -47,7 +47,7 @@ namespace M2_Snapshots.DataSet2TableAdapters {
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT student.*, subjectResults.*, subjects.*\r\nFROM   student INNER JOIN\r\n      " +
                 "       subjectResults ON student.stu_ID = subjectResults.studentID INNER JOIN\r\n " +
-                "            subjects ON subjectResults.subjectID = subjects.subject_ID where stu_ID="+int.Parse(userID)+ "AND ternNO="+1;
+                "            subjects ON subjectResults.subjectID = subjects.subject_ID where stu_ID="+int.Parse(userID)+ "AND TermNo=" + 1;
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
     }
