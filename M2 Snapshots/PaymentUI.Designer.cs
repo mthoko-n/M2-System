@@ -45,12 +45,12 @@
             this.payDetailsTB = new System.Windows.Forms.TextBox();
             this.payDateTB = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.PaymentAdminIDCB = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.payTypeCB = new System.Windows.Forms.ComboBox();
             this.payClearBtn = new System.Windows.Forms.Button();
             this.payDGV = new System.Windows.Forms.DataGridView();
             this.printBtn = new System.Windows.Forms.Button();
-            this.PaymentAdminIDCB = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.payDGV)).BeginInit();
             this.SuspendLayout();
@@ -229,6 +229,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add  Payment";
             // 
+            // PaymentAdminIDCB
+            // 
+            this.PaymentAdminIDCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PaymentAdminIDCB.FormattingEnabled = true;
+            this.PaymentAdminIDCB.Location = new System.Drawing.Point(111, 130);
+            this.PaymentAdminIDCB.Name = "PaymentAdminIDCB";
+            this.PaymentAdminIDCB.Size = new System.Drawing.Size(185, 22);
+            this.PaymentAdminIDCB.TabIndex = 21;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -284,15 +293,6 @@
             this.printBtn.Text = "Print Receipt";
             this.printBtn.UseVisualStyleBackColor = false;
             this.printBtn.Click += new System.EventHandler(this.printBtn_Click);
-            // 
-            // PaymentAdminIDCB
-            // 
-            this.PaymentAdminIDCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.PaymentAdminIDCB.FormattingEnabled = true;
-            this.PaymentAdminIDCB.Location = new System.Drawing.Point(111, 130);
-            this.PaymentAdminIDCB.Name = "PaymentAdminIDCB";
-            this.PaymentAdminIDCB.Size = new System.Drawing.Size(185, 22);
-            this.PaymentAdminIDCB.TabIndex = 21;
             // 
             // PaymentUI
             // 
