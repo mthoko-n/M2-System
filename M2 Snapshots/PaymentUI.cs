@@ -341,7 +341,7 @@ namespace M2_Snapshots
         private void printBtn_Click(object sender, EventArgs e)
         {
 
-            pd.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(pd_PrintPage);
+            pd.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(pd_PrintPage );
             bmp = new Bitmap(this.Height, this.Width);
             this.DrawToBitmap(bmp, this.ClientRectangle);
             ppd.Document = pd;
