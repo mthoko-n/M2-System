@@ -14,8 +14,8 @@ namespace M2_Snapshots
     
     public partial class AcademicReport_UI : Form
     {
-        
-        
+
+        public string textS;
         public AcademicReport_UI()
         {
             InitializeComponent();
@@ -31,9 +31,11 @@ namespace M2_Snapshots
         
         private void searchbutton_Click(object sender, EventArgs e)
         {
+
             DataTable1TableAdapter F = new DataTable1TableAdapter();
-            F.txtInput = (SeartchText.Text);
+            F.textS = SeartchText.Text;
             this.reportViewer1.RefreshReport();
+           
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

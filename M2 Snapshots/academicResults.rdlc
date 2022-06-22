@@ -6,19 +6,59 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.75625cm</Width>
+              <Width>5.15652cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.71724cm</Width>
+              <Width>4.66471cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.48002cm</Width>
+              <Width>4.6257cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>4.38848cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.4002cm</Height>
+              <Height>0.96981cm</Height>
               <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox23">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>subject name</Value>
+                              <Style>
+                                <FontFamily>Cambria</FontFamily>
+                                <FontSize>18pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox23</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>Yellow</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="Textbox31">
@@ -28,7 +68,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>subject</Value>
+                              <Value>subjects code</Value>
                               <Style>
                                 <FontFamily>Cambria</FontFamily>
                                 <FontSize>18pt</FontSize>
@@ -133,8 +173,46 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>1.10583cm</Height>
+              <Height>1.03528cm</Height>
               <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="subject_name">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!subject_name.Value</Value>
+                              <Style>
+                                <FontFamily>Cambria</FontFamily>
+                                <FontSize>16pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>subject_name</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>Blue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="subject_ID">
@@ -275,6 +353,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -291,9 +370,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Left>1.96451cm</Left>
-        <Height>2.50604cm</Height>
-        <Width>13.9535cm</Width>
+        <Top>0.59972cm</Top>
+        <Left>0.74965cm</Left>
+        <Height>2.00509cm</Height>
+        <Width>18.83541cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -308,10 +388,10 @@
       </Border>
     </Style>
   </Body>
-  <Width>7.7in</Width>
+  <Width>8.27107in</Width>
   <Page>
     <PageHeader>
-      <Height>8.23393cm</Height>
+      <Height>9.01709cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -368,7 +448,7 @@
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
           <Top>3.97163cm</Top>
-          <Left>4.50684cm</Left>
+          <Left>4.93723cm</Left>
           <Height>0.95984cm</Height>
           <Width>4.51789cm</Width>
           <ZIndex>1</ZIndex>
@@ -457,7 +537,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Top>6.20711cm</Top>
+          <Top>5.88425cm</Top>
           <Left>11.78584cm</Left>
           <Height>0.6cm</Height>
           <Width>3.09267cm</Width>
@@ -487,7 +567,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>6.20711cm</Top>
+          <Top>5.88425cm</Top>
           <Left>1.96451cm</Left>
           <Height>0.6cm</Height>
           <Width>1.44167cm</Width>
@@ -552,7 +632,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
           <Top>5.10786cm</Top>
-          <Left>14.26468cm</Left>
+          <Left>14.44107cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>7</ZIndex>
@@ -631,7 +711,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>stu_gender</rd:DefaultName>
-          <Top>6.20711cm</Top>
+          <Top>5.88425cm</Top>
           <Left>3.40618cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
@@ -663,8 +743,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>stu_surname</rd:DefaultName>
-          <Top>6.20711cm</Top>
-          <Left>14.77268cm</Left>
+          <Top>5.88425cm</Top>
+          <Left>15.0549cm</Left>
           <Height>0.6cm</Height>
           <Width>2.60583cm</Width>
           <ZIndex>11</ZIndex>
@@ -693,7 +773,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>7.29888cm</Top>
+          <Top>8.41709cm</Top>
           <Left>1.96451cm</Left>
           <Height>0.6cm</Height>
           <Width>2.246cm</Width>
@@ -731,7 +811,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>7.29888cm</Top>
+          <Top>8.41709cm</Top>
           <Left>3.89301cm</Left>
           <Height>0.6cm</Height>
           <Width>2.77517cm</Width>
@@ -761,7 +841,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox12</rd:DefaultName>
-          <Top>7.29888cm</Top>
+          <Top>8.41709cm</Top>
           <Left>11.78584cm</Left>
           <Height>0.6cm</Height>
           <Width>2.73284cm</Width>
@@ -784,7 +864,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Avg(Fields!termResult.Value, "DataSet1")</Value>
-                  <Style />
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style>
@@ -793,11 +875,135 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>termResult1</rd:DefaultName>
-          <Top>7.29888cm</Top>
+          <Top>8.41709cm</Top>
           <Left>14.26468cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>15</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox25">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Age:</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox25</rd:DefaultName>
+          <Top>6.66063cm</Top>
+          <Left>1.96451cm</Left>
+          <Height>0.6cm</Height>
+          <Width>0.95483cm</Width>
+          <ZIndex>16</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox26">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Fields!stu_age.Value</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox26</rd:DefaultName>
+          <Top>6.66063cm</Top>
+          <Left>2.9899cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <ZIndex>17</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="classID">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Sum(Fields!classID.Value, "DataSet1")</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>classID</rd:DefaultName>
+          <Top>6.66063cm</Top>
+          <Left>14.26468cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <ZIndex>18</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox28">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Class Number:</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox28</rd:DefaultName>
+          <Top>6.66063cm</Top>
+          <Left>11.78584cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <ZIndex>19</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -836,7 +1042,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
           <Top>0.97cm</Top>
-          <Left>6.18493cm</Left>
+          <Left>7.11683cm</Left>
           <Height>0.6cm</Height>
           <Width>8.07975cm</Width>
           <Style>

@@ -47,6 +47,8 @@
             this.groupPmb2DataSet = new M2_Snapshots.GroupPmb2DataSet();
             this.groupPmb2DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTable1TableAdapter = new M2_Snapshots.DataSet2TableAdapters.DataTable1TableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet21BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet21)).BeginInit();
@@ -91,7 +93,7 @@
             // 
             // SeartchText
             // 
-            this.SeartchText.Location = new System.Drawing.Point(88, 12);
+            this.SeartchText.Location = new System.Drawing.Point(165, 17);
             this.SeartchText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeartchText.Name = "SeartchText";
             this.SeartchText.Size = new System.Drawing.Size(191, 22);
@@ -101,7 +103,7 @@
             // Search
             // 
             this.Search.AutoSize = true;
-            this.Search.Location = new System.Drawing.Point(29, 15);
+            this.Search.Location = new System.Drawing.Point(106, 20);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(50, 16);
             this.Search.TabIndex = 1;
@@ -124,11 +126,11 @@
             reportDataSource1.Value = this.dataTable1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "M2_Snapshots.academicResults.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(71, 51);
+            this.reportViewer1.Location = new System.Drawing.Point(100, 50);
             this.reportViewer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1000, 655);
+            this.reportViewer1.Size = new System.Drawing.Size(990, 655);
             this.reportViewer1.TabIndex = 30;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
@@ -163,12 +165,37 @@
             // dataTable1TableAdapter
             // 
             this.dataTable1TableAdapter.ClearBeforeFill = true;
+            //this.dataTable1TableAdapter.txtInput = null;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Term 1",
+            "Term 2",
+            "Term 3",
+            "Term 4"});
+            this.comboBox1.Location = new System.Drawing.Point(969, 14);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 31;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(876, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 16);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Term Results";
             // 
             // AcademicReport_UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1145, 787);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.searchbutton);
             this.Controls.Add(this.Search);
@@ -211,5 +238,7 @@
         private System.Windows.Forms.BindingSource dataTable1BindingSource;
         private DataSet2TableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
         public System.Windows.Forms.TextBox SeartchText;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

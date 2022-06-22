@@ -148,7 +148,10 @@ namespace M2_Snapshots
             textBox3.Clear();
         }
 
-        
+        private void clearBtn5_Click(object sender, EventArgs e)
+        {
+            //textBox4.Clear();
+        }
 
         private void clearBtn6_Click(object sender, EventArgs e)
         {

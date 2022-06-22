@@ -9,15 +9,7 @@
 //------------------------------------------------------------------------------
 
 #pragma warning disable 1591
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 namespace M2_Snapshots {
     
     
@@ -35,7 +27,7 @@ namespace M2_Snapshots {
         private DataTable1DataTable tableDataTable1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-         
+        
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public DataSet2() {
@@ -47,7 +39,7 @@ namespace M2_Snapshots {
             this.EndInit();
         }
         
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         protected DataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
@@ -207,7 +199,6 @@ namespace M2_Snapshots {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-           
             this.DataSetName = "DataSet2";
             this.Prefix = "";
             this.Namespace = "http://tempuri.org/DataSet2.xsd";
@@ -1281,23 +1272,7 @@ namespace M2_Snapshots.DataSet2TableAdapters {
                 this._clearBeforeFill = value;
             }
         }
-        //AcademicReport_UI f = new AcademicReport_UI();
-        public string txtStu = "22010";
         
-        AcademicReport_UI f1;
-        public string stuID;
-        public string txtInput
-        {
-            get { return stuID; }
-            set { stuID = value; }
-        }
-        private void DataSet2TableAdapters_Load(object sender, EventArgs e)
-        {
-            txtStu = "" + stuID;
-            
-
-
-        }
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitAdapter() {
@@ -1336,19 +1311,18 @@ namespace M2_Snapshots.DataSet2TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            
+        /*private void InitCommandCollection() {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT student.*, subjectResults.*, subjects.*\r\nFROM   student INNER JOIN\r\n      " +
                 "       subjectResults ON student.stu_ID = subjectResults.studentID INNER JOIN\r\n " +
-                "            subjects ON subjectResults.subjectID = subjects.subject_ID where stu_ID = "+int.Parse(txtStu)+ " AND TermNo=" +1;
+                "            subjects ON subjectResults.subjectID = subjects.subject_ID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
+        }*/
         
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+       //[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
         public virtual int Fill(DataSet2.DataTable1DataTable dataTable) {
@@ -1381,9 +1355,7 @@ namespace M2_Snapshots.DataSet2TableAdapters {
         "esigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapterManager")]
     public partial class TableAdapterManager : global::System.ComponentModel.Component {
-
-        AcademicReport_UI f = new AcademicReport_UI();
-
+        
         private UpdateOrderOption _updateOrder;
         
         private bool _backupDataSetBeforeUpdate;
