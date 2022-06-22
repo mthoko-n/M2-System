@@ -33,12 +33,10 @@ namespace M2_Snapshots
         {
           
 
-            if ((stuAddressTB.Text != "")&& /*(stuClassIdTB.Text != "")*/ (StuClassIDCB.Text!="") && (stuIdTB.Text != "") && (stuGenderCB.Text != "")  && (stuFeesTB.Text != "") && (stuLastNameTB.Text != "") && (stuNameTB.Text != "") && (stuParentNoTB.Text != "") && (stuAgeCB.Text != ""))
+            if ((stuAddressTB.Text != "")&&  (StuClassIDCB.Text!="") && (stuIdTB.Text == "") && (stuGenderCB.Text != "")  && (stuFeesTB.Text != "") && (stuLastNameTB.Text != "") && (stuNameTB.Text != "") && (stuParentNoTB.Text != "") && (stuAgeCB.Text != ""))
             {
-                con.Open();
-                string stuEmail = stuIdTB.Text+"@stu.kharina.ac.za";
                
-               if(stuIdTB.Text.All(char.IsDigit) && stuIdTB.Text != "")
+               if(stuIdTB.Text == "")
                 {
                     /*if (stuClassIdTB.Text != "" && stuClassIdTB.Text.All(char.IsDigit))*/
                     if (StuClassIDCB.Text != "" && StuClassIDCB.Text.All(char.IsDigit))
@@ -51,21 +49,77 @@ namespace M2_Snapshots
                                 {
                                     if (stuGenderCB.Text != "")
                                     {
-                                        if(stuAgeCB.Text.All(char.IsDigit) && (int.Parse(stuAgeCB.Text)>12) && (int.Parse(stuAgeCB.Text) < 23))
+                                        if(stuAgeCB.Text.All(char.IsDigit) && (int.Parse(stuAgeCB.Text)>12) && (int.Parse(stuAgeCB.Text) < 23) && (stuAgeCB.Text!=""))
                                         {
                                            
                                                 if (stuFeesTB.Text!="" && stuFeesTB.Text.All(char.IsDigit))
                                                 {
                                                     if (stuParentNoTB.Text!="" && (stuParentNoTB.Text.All(char.IsDigit) && stuParentNoTB.Text.Length == 10))
                                                     {
-                                                        SqlCommand command = new SqlCommand("INSERT INTO student values('" + int.Parse(stuIdTB.Text) + "','" + int.Parse(StuClassIDCB.Text) + "','" + stuNameTB.Text + "','" + stuLastNameTB.Text + "','" + stuAddressTB.Text + "','" + stuEmail + "','" + int.Parse(stuAgeCB.Text) + "','" + stuGenderCB.Text + "','" + decimal.Parse(stuFeesTB.Text) + "','" + stuParentNoTB.Text + "')", con);
+                                                    //increment student ID
+                                                    string num = "";
+                                                    double num2 = 0;
+                                                    con.Open();
+                                                    SqlCommand a = new SqlCommand("select stu_ID from student order by stu_ID desc", con);
+                                                    SqlDataReader read = a.ExecuteReader();
+                                                    while (read.Read())
+                                                    {
+                                                        num = num + "  " + read.GetValue(0).ToString();
+                                                        num2 = double.Parse(num);
+                                                        break;
+                                                    }
 
-                                                        if(command.ExecuteNonQuery()>0)
-                                                             MessageBox.Show("Successfully added", "Success!", MessageBoxButtons.OK);
+                                                    read.Close();
+                                                    con.Close();
+                                                    //end of student id
+
+                                                    double num3 = Convert.ToInt32(num2);
+                                                    double num4 = (num3 + 1);
+                                                    int num5 = Convert.ToInt32(num4);
+
+                                                    //increment roll of class
+                                                    string roll = "";
+                                                    double roll2 = 0;
+                                                    con.Open();
+                                                    SqlCommand b = new SqlCommand("select numStudents from classes where class_id = " + int.Parse(StuClassIDCB.Text), con);
+                                                    SqlDataReader read2 = b.ExecuteReader();
+                                                    while (read2.Read())
+                                                    {
+                                                        roll = roll + "  " + read2.GetValue(0).ToString();
+                                                        roll2 = double.Parse(roll);
+                                                        break;
+                                                    }
+
+                                                    read2.Close();
+                                                    con.Close();
+
+                                                    double roll3 = Convert.ToInt32(roll2);
+                                                    double roll4 = (roll3 + 1);
+                                                    int roll5 = Convert.ToInt32(roll4);
+                                                    //end of roll
+
+                                                    con.Open();
+
+                                                    string stuEmail = num5 + "@stu.kharina.ac.za";
+
+                                                    if (roll5 < 31)
+                                                    {
+                                                        SqlCommand command1 = new SqlCommand("update classes set numStudents = '" + roll5 + "' where class_id = '" + int.Parse(StuClassIDCB.Text) + "'", con);
+
+
+                                                        SqlCommand command = new SqlCommand("INSERT INTO student values('" + /*int.Parse(stuIdTB.Text)*/ num5 + "','" + int.Parse(StuClassIDCB.Text) + "','" + stuNameTB.Text + "','" + stuLastNameTB.Text + "','" + stuAddressTB.Text + "','" + stuEmail + "','" + int.Parse(stuAgeCB.Text) + "','" + stuGenderCB.Text + "','" + decimal.Parse(stuFeesTB.Text) + "','" + stuParentNoTB.Text + "')", con);
+
+                                                        if ((command.ExecuteNonQuery() > 0) && (command1.ExecuteNonQuery() > 0))
+                                                            MessageBox.Show("Successfully added \n\n\nStudent ID is:\t" + num5 + "\nStudent Email is:\t" + stuEmail, "Success!", MessageBoxButtons.OK);
                                                         else
                                                             MessageBox.Show("Enter a valid Student number", "Add Student Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                                        con.Close();
-                                                        BindData();
+                                                    }
+                                                    else
+                                                    {
+                                                        MessageBox.Show("Cannot enroll student into this class, Class is already at full capacity of 30 students", "Add Student Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                                    }
+                                                    con.Close();
+                                                    BindData();
                                                        
                                                     }
                                                     else
@@ -103,12 +157,12 @@ namespace M2_Snapshots
                 }
                 else
                 {
-                    MessageBox.Show("Enter Student ID, can only contain numbers");
+                    MessageBox.Show("Remove Student ID");
                 }
-                con.Close();  
+                
             }
             else {
-                MessageBox.Show("Enter all fields","Empty fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Enter all fields except Student ID","Empty fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -161,12 +215,42 @@ namespace M2_Snapshots
 
                     if (res == DialogResult.Yes)
                     {
+                        //increment roll of class
+                        string roll = "";
+                        double roll2 = 0;
                         con.Open();
-                        SqlCommand command = new SqlCommand("Delete student where stu_ID = '" + int.Parse(stuSearchTB.Text) + "'", con);
-                        if(command.ExecuteNonQuery()>0)
-                            MessageBox.Show("Successfully Removed Student","Remove Student", MessageBoxButtons.OK);
+                        SqlCommand b = new SqlCommand("select numStudents from classes where class_id = " + int.Parse(StuClassIDCB.Text), con);
+                        SqlDataReader read = b.ExecuteReader();
+                        while (read.Read())
+                        {
+                            roll = roll + "  " + read.GetValue(0).ToString();
+                            roll2 = double.Parse(roll);
+                            break;
+                        }
+
+                        read.Close();
+                        con.Close();
+
+                        double roll3 = Convert.ToInt32(roll2);
+                        double roll4 = (roll3 - 1);
+                        int roll5 = Convert.ToInt32(roll4);
+                        //end of roll
+
+                        con.Open();
+                        if (roll5 > 0)
+                        {
+                            SqlCommand command1 = new SqlCommand("update classes set numStudents = '" + roll5 + "' where class_id = '" + int.Parse(StuClassIDCB.Text) + "'", con);
+
+                            SqlCommand command = new SqlCommand("Delete student where stu_ID = '" + int.Parse(stuSearchTB.Text) + "'", con);
+                            if ((command.ExecuteNonQuery() > 0) && (command1.ExecuteNonQuery() > 0))
+                                MessageBox.Show("Successfully Removed Student", "Remove Student", MessageBoxButtons.OK);
+                            else
+                                MessageBox.Show("Invalid student data, Student does not exist", "Remove Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         else
-                            MessageBox.Show("Invalid student data, Student does not exist", "Remove Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        {
+                            MessageBox.Show("Class is currently empty", "Remove Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         con.Close();
                         BindData();
                     }

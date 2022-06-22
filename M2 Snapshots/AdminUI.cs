@@ -24,18 +24,39 @@ namespace M2_Snapshots
         //add admin
         private void button3_Click(object sender, EventArgs e)
         {
-            if ((AdminIDTextBox.Text != "") && (AdminNameTextBox.Text != "") && (AdminEmailTextBox.Text != "") && (AdminDetailsTextBox.Text != ""))
+            if ((AdminIDTextBox.Text == "") && (AdminNameTextBox.Text != "") && (AdminEmailTextBox.Text != "") && (AdminDetailsTextBox.Text != ""))
             {
+
+                string num = "";
+                double num2 = 0;
                 con.Open();
-                SqlCommand command = new SqlCommand("insert into admins values ('" + AdminIDTextBox.Text + "','" + AdminNameTextBox.Text + "','" + AdminDetailsTextBox.Text + "','" + AdminEmailTextBox.Text +  "')", con);
+                SqlCommand a = new SqlCommand("select admin_id from admins order by admin_id desc", con);
+                SqlDataReader read = a.ExecuteReader();
+                while (read.Read())
+                {
+                    num = num + "  " + read.GetValue(0).ToString();
+                    num2 = double.Parse(num);
+                    break;
+                }
+
+                read.Close();
+                con.Close();
+
+                double num3 = Convert.ToInt32(num2);
+                double num4 = (num3 + 10000);
+                int num5 = Convert.ToInt32(num4);
+
+
+                con.Open();
+                SqlCommand command = new SqlCommand("insert into admins values ('" + /*AdminIDTextBox.Text*/ num5 + "','" + AdminNameTextBox.Text + "','" + AdminDetailsTextBox.Text + "','" + AdminEmailTextBox.Text +  "')", con);
                 command.ExecuteNonQuery();
-                MessageBox.Show("Admin Successfully Inserted","Add Admin", MessageBoxButtons.OK);
+                MessageBox.Show("Admin Successfully Inserted\n\n\nAdmin ID is:\t" + num5,"Add Admin", MessageBoxButtons.OK);
                 con.Close();
                 BindData();
             }
             else
             {
-                MessageBox.Show("Enter All Fields","Add Admin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Enter All Fields except Admin ID","Add Admin", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
