@@ -1272,7 +1272,9 @@ namespace M2_Snapshots.DataSet2TableAdapters {
                 this._clearBeforeFill = value;
             }
         }
+        //AcademicReport_UI f = new AcademicReport_UI();
         
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitAdapter() {
@@ -1312,12 +1314,13 @@ namespace M2_Snapshots.DataSet2TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
+            
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT student.*, subjectResults.*, subjects.*\r\nFROM   student INNER JOIN\r\n      " +
                 "       subjectResults ON student.stu_ID = subjectResults.studentID INNER JOIN\r\n " +
-                "            subjects ON subjectResults.subjectID = subjects.subject_ID";
+                "            subjects ON subjectResults.subjectID = subjects.subject_ID where stu_ID="+22010;
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
