@@ -222,7 +222,7 @@ namespace M2_Snapshots
                     if ((subjIDCB.Text != ""))
                     {
 
-                        SqlCommand command = new SqlCommand("update subjectResults set subjID = '" + subjIDCB.Text + "' where subResultID = '" + int.Parse(SubjectResID.Text) + "'", con);
+                        SqlCommand command = new SqlCommand("update subjectResults set subjectID = '" + subjIDCB.Text + "' where subResultID = '" + int.Parse(SubjectResID.Text) + "'", con);
                         if (command.ExecuteNonQuery() > 0)
                             error += 0;
                         else
