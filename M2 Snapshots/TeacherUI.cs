@@ -57,7 +57,7 @@ namespace M2_Snapshots
 
                                             comm.ExecuteNonQuery();
                                             command.ExecuteNonQuery();
-                                            MessageBox.Show("Successfully added", "Success!", MessageBoxButtons.OK);
+                                            MessageBox.Show("Teacher Successfully added \n\n\nTeacher ID is:\t"+teachID+"\nTeacher email is:\t"+email, "Success!", MessageBoxButtons.OK);
                                             con.Close();
                                             BindData2();
                                         }

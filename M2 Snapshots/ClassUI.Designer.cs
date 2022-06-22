@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.DivisionCB = new System.Windows.Forms.ComboBox();
+            this.GradeCB = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.teachID = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -63,8 +65,6 @@
             this.paymentServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.paymentServiceTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.PaymentServiceTableAdapter();
             this.classesTableAdapter = new M2_Snapshots.BinaryMakersDSTableAdapters.classesTableAdapter();
-            this.GradeCB = new System.Windows.Forms.ComboBox();
-            this.DivisionCB = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchClassDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesBindingSource)).BeginInit();
@@ -119,6 +119,37 @@
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update Class";
+            // 
+            // DivisionCB
+            // 
+            this.DivisionCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DivisionCB.FormattingEnabled = true;
+            this.DivisionCB.Items.AddRange(new object[] {
+            "",
+            "A",
+            "B",
+            "C",
+            "D"});
+            this.DivisionCB.Location = new System.Drawing.Point(598, 150);
+            this.DivisionCB.Name = "DivisionCB";
+            this.DivisionCB.Size = new System.Drawing.Size(171, 22);
+            this.DivisionCB.TabIndex = 29;
+            // 
+            // GradeCB
+            // 
+            this.GradeCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GradeCB.FormattingEnabled = true;
+            this.GradeCB.Items.AddRange(new object[] {
+            "",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.GradeCB.Location = new System.Drawing.Point(598, 106);
+            this.GradeCB.Name = "GradeCB";
+            this.GradeCB.Size = new System.Drawing.Size(171, 22);
+            this.GradeCB.TabIndex = 28;
             // 
             // label9
             // 
@@ -398,37 +429,6 @@
             // classesTableAdapter
             // 
             this.classesTableAdapter.ClearBeforeFill = true;
-            // 
-            // GradeCB
-            // 
-            this.GradeCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GradeCB.FormattingEnabled = true;
-            this.GradeCB.Items.AddRange(new object[] {
-            "",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.GradeCB.Location = new System.Drawing.Point(598, 106);
-            this.GradeCB.Name = "GradeCB";
-            this.GradeCB.Size = new System.Drawing.Size(171, 22);
-            this.GradeCB.TabIndex = 28;
-            // 
-            // DivisionCB
-            // 
-            this.DivisionCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DivisionCB.FormattingEnabled = true;
-            this.DivisionCB.Items.AddRange(new object[] {
-            "",
-            "A",
-            "B",
-            "C",
-            "D"});
-            this.DivisionCB.Location = new System.Drawing.Point(598, 150);
-            this.DivisionCB.Name = "DivisionCB";
-            this.DivisionCB.Size = new System.Drawing.Size(171, 22);
-            this.DivisionCB.TabIndex = 29;
             // 
             // ClassUI
             // 

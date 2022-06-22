@@ -121,7 +121,7 @@ namespace M2_Snapshots
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            if ((ClassIDTextBox.Text != "") && (teachID.Text != "") && (ClassRollTextBox.Text != "") && (GradeCB.Text != "") && (DivisionCB.Text != ""))
+            if ((ClassIDTextBox.Text == "") && (teachID.Text != "") && (ClassRollTextBox.Text != "") && (GradeCB.Text != "") && (DivisionCB.Text != ""))
             {
                 if (ClassIDTextBox.Text.All(char.IsDigit))
                 {
@@ -136,8 +136,28 @@ namespace M2_Snapshots
 
                                     if (BuildingNoTextBox.Text == "")
                                     {
+                                        
+                                        string num = "";
+                                        double num2 = 0;
                                         con.Open();
-                                        SqlCommand command = new SqlCommand("insert into classes values ('" + int.Parse(ClassIDTextBox.Text) + "','" + teachID.Text + "','" + int.Parse(ClassRollTextBox.Text) + "', '" + -1 + "', '" + int.Parse(GradeCB.Text) + "', '" + char.Parse(DivisionCB.Text.ToUpper()) + "')", con);
+                                        SqlCommand a = new SqlCommand("select class_id from classes order by class_id desc", con);
+                                        SqlDataReader read = a.ExecuteReader();
+                                        while (read.Read())
+                                        {
+                                            num = num + "  " + read.GetValue(0).ToString();
+                                            num2 = double.Parse(num);
+                                            break;
+                                        }
+
+                                        read.Close();
+                                        con.Close();
+                                       
+                                        double num3 = Convert.ToInt32(num2);
+                                        double num4 = (num3 + 500);
+                                        int num5 = Convert.ToInt32(num4);
+
+                                        con.Open();
+                                        SqlCommand command = new SqlCommand("insert into classes values ('" + /*int.Parse(ClassIDTextBox.Text)*/ num5 + "','" + teachID.Text + "','" + int.Parse(ClassRollTextBox.Text) + "', '" + -1 + "', '" + int.Parse(GradeCB.Text) + "', '" + char.Parse(DivisionCB.Text.ToUpper()) + "')", con);
                                         command.ExecuteNonQuery();
                                         MessageBox.Show("Class Successfully Added", "Class Added", MessageBoxButtons.OK);
                                         con.Close();
@@ -173,7 +193,7 @@ namespace M2_Snapshots
             }
             else
             {
-                MessageBox.Show("Enter All Fields", "Add Class", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Enter All Fields except Class ID", "Add Class", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 

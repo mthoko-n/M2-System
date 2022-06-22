@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace M2_Snapshots
 {
+    
     public partial class AcademicReport_UI : Form
     {
+        public static string txtInput = string.Empty;
         public AcademicReport_UI()
         {
             InitializeComponent();
@@ -21,10 +23,11 @@ namespace M2_Snapshots
         {
 
         }
-
+        
         private void searchbutton_Click(object sender, EventArgs e)
         {
-
+            txtInput = SeartchText.Text;
+            
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -50,6 +53,7 @@ namespace M2_Snapshots
            
             this.reportViewer1.RefreshReport();
         }
+        
     }
 }
 

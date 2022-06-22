@@ -173,6 +173,9 @@
     <Reference Include="Guna.UI2">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Magnum, Version=2.1.3.0, Culture=neutral, PublicKeyToken=b800c4cfcdeea87b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Magnum.2.1.3\lib\NET40\Magnum.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -195,6 +198,9 @@
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -225,6 +231,11 @@
     </Compile>
     <Compile Include="AdminUI.Designer.cs">
       <DependentUpon>AdminUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ALL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ALL.xsd</DependentUpon>
     </Compile>
     <Compile Include="BinaryMakersDS.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -376,6 +387,17 @@
     </None>
     <None Include="a.xss">
       <DependentUpon>a.xsd</DependentUpon>
+    </None>
+    <None Include="ALL.xsc">
+      <DependentUpon>ALL.xsd</DependentUpon>
+    </None>
+    <None Include="ALL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ALL.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ALL.xss">
+      <DependentUpon>ALL.xsd</DependentUpon>
     </None>
     <None Include="BinaryMakersDS.xsc">
       <DependentUpon>BinaryMakersDS.xsd</DependentUpon>
