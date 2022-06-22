@@ -1,4 +1,5 @@
-﻿using System;
+﻿using M2_Snapshots.DataSet2TableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,12 +14,16 @@ namespace M2_Snapshots
     
     public partial class AcademicReport_UI : Form
     {
-        public static string txtInput = string.Empty;
+        
+        
         public AcademicReport_UI()
         {
             InitializeComponent();
         }
+        public AcademicReport_UI(string search)
+        {
 
+        }
         private void SeartchText_TextChanged(object sender, EventArgs e)
         {
 
@@ -26,8 +31,9 @@ namespace M2_Snapshots
         
         private void searchbutton_Click(object sender, EventArgs e)
         {
-            txtInput = SeartchText.Text;
-            
+            DataTable1TableAdapter F = new DataTable1TableAdapter();
+            F.txtInput = (SeartchText.Text);
+            this.reportViewer1.RefreshReport();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

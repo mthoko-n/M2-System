@@ -194,8 +194,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox SeartchText;
         private System.Windows.Forms.Label Search;
         private System.Windows.Forms.Button searchbutton;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
@@ -212,5 +210,6 @@
         private GroupPmb2DataSet groupPmb2DataSet;
         private System.Windows.Forms.BindingSource dataTable1BindingSource;
         private DataSet2TableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
+        public System.Windows.Forms.TextBox SeartchText;
     }
 }
