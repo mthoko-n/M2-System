@@ -37,10 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.termNO = new System.Windows.Forms.TextBox();
             this.termResult = new System.Windows.Forms.TextBox();
             this.subjTeachID = new System.Windows.Forms.TextBox();
-            this.subjID = new System.Windows.Forms.TextBox();
             this.subjResID = new System.Windows.Forms.Label();
             this.SubjectResID = new System.Windows.Forms.TextBox();
             this.studID = new System.Windows.Forms.Label();
@@ -53,6 +51,8 @@
             this.UpdateSubjectBtn = new System.Windows.Forms.Button();
             this.Search = new System.Windows.Forms.Label();
             this.searchRes = new System.Windows.Forms.TextBox();
+            this.termNoCB = new System.Windows.Forms.ComboBox();
+            this.subjIDCB = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.subjectResultsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupPmb2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubjectResultsGridView)).BeginInit();
@@ -81,17 +81,18 @@
             this.SubjectResultsGridView.RowHeadersWidth = 51;
             this.SubjectResultsGridView.Size = new System.Drawing.Size(784, 218);
             this.SubjectResultsGridView.TabIndex = 31;
+            this.SubjectResultsGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SubjectResultsGridView_CellClick);
             this.SubjectResultsGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SubjectResultsGridView_CellContentClick);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.subjIDCB);
+            this.groupBox1.Controls.Add(this.termNoCB);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.termNO);
             this.groupBox1.Controls.Add(this.termResult);
             this.groupBox1.Controls.Add(this.subjTeachID);
-            this.groupBox1.Controls.Add(this.subjID);
             this.groupBox1.Controls.Add(this.subjResID);
             this.groupBox1.Controls.Add(this.SubjectResID);
             this.groupBox1.Controls.Add(this.studID);
@@ -136,15 +137,6 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Subject Teacher ID:";
             // 
-            // termNO
-            // 
-            this.termNO.Location = new System.Drawing.Point(532, 148);
-            this.termNO.Margin = new System.Windows.Forms.Padding(2);
-            this.termNO.Name = "termNO";
-            this.termNO.Size = new System.Drawing.Size(194, 20);
-            this.termNO.TabIndex = 21;
-            this.termNO.TextChanged += new System.EventHandler(this.termNO_TextChanged);
-            // 
             // termResult
             // 
             this.termResult.Location = new System.Drawing.Point(532, 95);
@@ -162,15 +154,6 @@
             this.subjTeachID.Size = new System.Drawing.Size(194, 20);
             this.subjTeachID.TabIndex = 19;
             this.subjTeachID.TextChanged += new System.EventHandler(this.subjTeachID_TextChanged);
-            // 
-            // subjID
-            // 
-            this.subjID.Location = new System.Drawing.Point(125, 151);
-            this.subjID.Margin = new System.Windows.Forms.Padding(2);
-            this.subjID.Name = "subjID";
-            this.subjID.Size = new System.Drawing.Size(194, 20);
-            this.subjID.TabIndex = 18;
-            this.subjID.TextChanged += new System.EventHandler(this.subjID_TextChanged);
             // 
             // subjResID
             // 
@@ -227,6 +210,7 @@
             this.ClearSubjectBtn.TabIndex = 43;
             this.ClearSubjectBtn.Text = "Clear";
             this.ClearSubjectBtn.UseVisualStyleBackColor = true;
+            this.ClearSubjectBtn.Click += new System.EventHandler(this.ClearSubjectBtn_Click_1);
             // 
             // RemoveSubjectBtn
             // 
@@ -239,6 +223,7 @@
             this.RemoveSubjectBtn.TabIndex = 40;
             this.RemoveSubjectBtn.Text = "Remove";
             this.RemoveSubjectBtn.UseVisualStyleBackColor = false;
+            this.RemoveSubjectBtn.Click += new System.EventHandler(this.RemoveSubjectBtn_Click);
             // 
             // SearchSubjectBtn
             // 
@@ -277,6 +262,7 @@
             this.UpdateSubjectBtn.TabIndex = 42;
             this.UpdateSubjectBtn.Text = "Update";
             this.UpdateSubjectBtn.UseVisualStyleBackColor = false;
+            this.UpdateSubjectBtn.Click += new System.EventHandler(this.UpdateSubjectBtn_Click);
             // 
             // Search
             // 
@@ -296,6 +282,36 @@
             this.searchRes.Size = new System.Drawing.Size(163, 20);
             this.searchRes.TabIndex = 45;
             this.searchRes.TextChanged += new System.EventHandler(this.searchRes_TextChanged);
+            // 
+            // termNoCB
+            // 
+            this.termNoCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.termNoCB.FormattingEnabled = true;
+            this.termNoCB.Items.AddRange(new object[] {
+            "",
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.termNoCB.Location = new System.Drawing.Point(532, 146);
+            this.termNoCB.Name = "termNoCB";
+            this.termNoCB.Size = new System.Drawing.Size(194, 22);
+            this.termNoCB.TabIndex = 25;
+            // 
+            // subjIDCB
+            // 
+            this.subjIDCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.subjIDCB.FormattingEnabled = true;
+            this.subjIDCB.Items.AddRange(new object[] {
+            "",
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.subjIDCB.Location = new System.Drawing.Point(125, 146);
+            this.subjIDCB.Name = "subjIDCB";
+            this.subjIDCB.Size = new System.Drawing.Size(194, 22);
+            this.subjIDCB.TabIndex = 26;
             // 
             // SubjectResults_UI
             // 
@@ -331,7 +347,6 @@
         private GroupPmb2DataSetTableAdapters.subjectResultsTableAdapter subjectResultsTableAdapter;
         private System.Windows.Forms.DataGridView SubjectResultsGridView;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox subjID;
         private System.Windows.Forms.Label subjResID;
         private System.Windows.Forms.TextBox SubjectResID;
         private System.Windows.Forms.Label studID;
@@ -339,7 +354,6 @@
         private System.Windows.Forms.TextBox StudentIDTextBox;
         private System.Windows.Forms.TextBox termResult;
         private System.Windows.Forms.TextBox subjTeachID;
-        private System.Windows.Forms.TextBox termNO;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
@@ -350,5 +364,7 @@
         private System.Windows.Forms.Button UpdateSubjectBtn;
         private System.Windows.Forms.Label Search;
         private System.Windows.Forms.TextBox searchRes;
+        private System.Windows.Forms.ComboBox termNoCB;
+        private System.Windows.Forms.ComboBox subjIDCB;
     }
 }
